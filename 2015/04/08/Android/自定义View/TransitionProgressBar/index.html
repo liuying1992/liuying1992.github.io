@@ -1,0 +1,644 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="自定义View,进度和透明度变化的ProgressBar," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="自定义渐进的进度条结果图
+自定义进度条的需求需求是：他可以根据进度的多少显示进度条，然后同时改变进度显示的透明度和当前进度，比如50%的时候显示的进度是50分，透明度是当前颜色的一半透明度。进度是70%的时候，则是70%的透明度。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义具有透明度变化和前进的ProgressBar">
+<meta property="og:url" content="http://yoursite.com/2015/04/08/Android/自定义View/TransitionProgressBar/index.html">
+<meta property="og:site_name" content="黎伟杰blog">
+<meta property="og:description" content="自定义渐进的进度条结果图
+自定义进度条的需求需求是：他可以根据进度的多少显示进度条，然后同时改变进度显示的透明度和当前进度，比如50%的时候显示的进度是50分，透明度是当前颜色的一半透明度。进度是70%的时候，则是70%的透明度。">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/GIF.gif">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/test.gif">
+<meta property="og:updated_time" content="2016-10-16T09:52:39.496Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义具有透明度变化和前进的ProgressBar">
+<meta name="twitter:description" content="自定义渐进的进度条结果图
+自定义进度条的需求需求是：他可以根据进度的多少显示进度条，然后同时改变进度显示的透明度和当前进度，比如50%的时候显示的进度是50分，透明度是当前颜色的一半透明度。进度是70%的时候，则是70%的透明度。">
+<meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/GIF.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/04/08/Android/自定义View/TransitionProgressBar/"/>
+
+
+  <title> 自定义具有透明度变化和前进的ProgressBar | 黎伟杰blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                自定义具有透明度变化和前进的ProgressBar
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-04-08T22:56:29+08:00" content="2015-04-08">
+              2015-04-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/自定义View/" itemprop="url" rel="index">
+                    <span itemprop="name">自定义View</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="自定义渐进的进度条"><a href="#自定义渐进的进度条" class="headerlink" title="自定义渐进的进度条"></a>自定义渐进的进度条</h2><p>结果图<img src="http://ocxgpwj6l.bkt.clouddn.com/GIF.gif" alt=""></p>
+<h3 id="自定义进度条的需求"><a href="#自定义进度条的需求" class="headerlink" title="自定义进度条的需求"></a>自定义进度条的需求</h3><p>需求是：他可以根据进度的多少显示进度条，然后同时改变进度显示的透明度和当前进度，比如50%的时候显示的进度是50分，透明度是当前颜色的一半透明度。进度是70%的时候，则是70%的透明度。<br><a id="more"></a></p>
+<h3 id="自定义进度条的分析"><a href="#自定义进度条的分析" class="headerlink" title="自定义进度条的分析"></a>自定义进度条的分析</h3><p>首先我们不是使用Handler实现，当然你也可以使用handler，我们这里完全使用自定义View的形式。 我们需要哪些属性，为了扩展性，我们定义了一些属性，分别如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;declare-styleable name=&quot;DynamicProgressBarStyle&quot;&gt;</div><div class="line">       &lt;!--当前进度,进度条没有透明度时候的颜色,进度条更新速率(ms),文字大小，进度条最大值，文字宽度，文字--&gt;</div><div class="line">       &lt;attr name=&quot;dynamicProgress&quot; format=&quot;integer&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicColor&quot; format=&quot;color|reference&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicRate&quot; format=&quot;integer&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicTextSize&quot; format=&quot;dimension|reference&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicMax&quot; format=&quot;integer&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicSpec&quot; format=&quot;dimension|reference&quot; /&gt;</div><div class="line">       &lt;attr name=&quot;dynamicText&quot; format=&quot;string|reference&quot; /&gt;</div><div class="line">   &lt;/declare-styleable&gt;</div></pre></td></tr></table></figure></p>
+<p>他们代表的是：</p>
+<ol>
+<li>目前的进度</li>
+<li>进度条的颜色</li>
+<li>更新频率(毫秒)</li>
+<li>文字大小</li>
+<li>进度条最大值</li>
+<li>文字需要的间距</li>
+<li>文字，只是需要后面的文字，比如当前进度是50分，那么text就应该是”分”<br>然后，我们需要分析是怎么画的，我们使用一个可以带有边角的RectF去画进度，drawText画文字，每隔一段时间重画，这个时间就是我们自己定义的rate</li>
+</ol>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>我们需要的属性有<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> private Paint mPaint;</div><div class="line">private int progress; // 总分数</div><div class="line">private int progressColor;// 颜色</div><div class="line">private int currentAlphaLevel;// 实时的透明度比例</div><div class="line">private float currentProgress;// 实时的长度</div><div class="line">private float textSize;// 字体大小</div><div class="line">private int rateProgress; //每隔30毫秒画一次，最多一百次</div><div class="line">private float specProgress; // 文字需要占整一个View的宽度</div><div class="line">//三种rgb的原值</div><div class="line">private int redProgress;</div><div class="line">private int greenProgress;</div><div class="line">private int blueProgress;</div><div class="line">private String textProgress; // 后边的文字</div><div class="line">private float proportion;// 总体比例，是一个float，小于等于1</div><div class="line">private float perProgress; // 每次更新的进度</div></pre></td></tr></table></figure></p>
+<p>我们有两个使用的方法，一种是通过java代码，一种是通过xml，使用xml的需要find到这个view之后再根据具体的传入progress就好。代码如下：第一种的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * Java代码直接new的使用</div><div class="line">     *</div><div class="line">     * @param context</div><div class="line">     */</div><div class="line">    public DynamicProgressBar(Context context) &#123;</div><div class="line">        this(context, MAX_PROGRESS);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    /**</div><div class="line">     * 动态添加View的时候可以使用该View</div><div class="line">     *</div><div class="line">     * @param context</div><div class="line">     * @param progress</div><div class="line">     */</div><div class="line">    public DynamicProgressBar(Context context, int progress) &#123;</div><div class="line">        super(context);</div><div class="line">        this.textSize = LiWeiJieUtil.getDimen(R.dimen.default_dynamic_text_size, getContext());</div><div class="line">        setRGB(DEFAULT_COLOR);</div><div class="line">        rateProgress = DEFAULT_RATE;</div><div class="line">        specProgress = LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div class="line">        progressColor = DEFAULT_COLOR;</div><div class="line">        perProgress = (float) (progress*1.0 / 100);</div><div class="line">        init(progress);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>使用xml的构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public DynamicProgressBar(Context context, AttributeSet attrs) &#123;</div><div class="line">       this(context, attrs, 0);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   public DynamicProgressBar(Context context, AttributeSet attrs, int defStyleAttr) &#123;</div><div class="line">       super(context, attrs, defStyleAttr);</div><div class="line">       init(context, attrs, defStyleAttr);</div><div class="line">   &#125;</div><div class="line">   private void init(Context context, AttributeSet attrs, int defStyleAttr) &#123;</div><div class="line">       TypedArray array = context.getTheme().obtainStyledAttributes(attrs, R.styleable.DynamicProgressBarStyle, defStyleAttr, 0);</div><div class="line">       progress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicProgress, MAX_PROGRESS);</div><div class="line">       textSize = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicTextSize, LiWeiJieUtil.getDimen(R.dimen.default_dynamic_text_size, context));</div><div class="line">       progressColor = array.getColor(R.styleable.DynamicProgressBarStyle_dynamicColor, DEFAULT_COLOR);</div><div class="line">       setRGB(progressColor);</div><div class="line">       rateProgress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicRate, DEFAULT_RATE);</div><div class="line">       int maxProgress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicMax, DEFAULT_RATE);</div><div class="line">       perProgress = (float) (maxProgress*1.0 / 100);</div><div class="line">       specProgress = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicSpec, LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, context));</div><div class="line">       textProgress = array.getString(R.styleable.DynamicProgressBarStyle_dynamicText);</div><div class="line">       array.recycle();</div><div class="line">       init(progress);</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>共同初始化的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">    * 基本的初始化</div><div class="line">    *</div><div class="line">    * @param progress</div><div class="line">    */</div><div class="line">   private void init(int progress) &#123;</div><div class="line">       mPaint = new Paint();</div><div class="line">       mPaint.setStyle(Paint.Style.FILL);</div><div class="line">       mPaint.setTextSize(textSize);</div><div class="line">       setBackgroundColor(Color.TRANSPARENT);</div><div class="line">       currentAlphaLevel = 1;</div><div class="line">       currentProgress = 1;</div><div class="line">       this.progress = progress;</div><div class="line">       proportion = (float) (1.0 * progress / MAX_PROGRESS);</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>draw方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">    protected void onDraw(Canvas canvas) &#123;</div><div class="line">        super.onDraw(canvas);</div><div class="line">        // 画矩形</div><div class="line">        canvas.drawColor(Color.TRANSPARENT);</div><div class="line">        drawProgress(canvas);</div><div class="line"> </div><div class="line">        // 还需要画</div><div class="line">        if (currentProgress &lt; progress) &#123;</div><div class="line">            postDelayed(new Runnable() &#123;</div><div class="line">                @Override</div><div class="line">                public void run() &#123;</div><div class="line">                    // 每次变化的长度</div><div class="line">                    currentProgress += perProgress;</div><div class="line">                    // 每次变化的透明度</div><div class="line">                    currentAlphaLevel += 2.55;</div><div class="line">                    invalidate();</div><div class="line">                &#125;</div><div class="line">            &#125;, rateProgress);</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>画具体进度条和文字的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">     * 画进度条和文字</div><div class="line">     *</div><div class="line">     * @param canvas</div><div class="line">     */</div><div class="line">    private void drawProgress(Canvas canvas) &#123;</div><div class="line">        // 计算需要画的位置</div><div class="line">        mPaint.setAntiAlias(true);</div><div class="line">        int color = Color.argb(0xFF - 0xFF * currentAlphaLevel, redProgress, greenProgress, blueProgress);</div><div class="line">        mPaint.setColor(color);</div><div class="line">        RectF rectF = new RectF();</div><div class="line">        rectF.left = 0;</div><div class="line">        rectF.top = 0;</div><div class="line">        rectF.right = (getMeasuredWidth() - specProgress) * currentProgress * proportion / progress;</div><div class="line">        rectF.bottom = getMeasuredHeight();</div><div class="line">        canvas.drawRoundRect(rectF, 4, 4, mPaint);</div><div class="line">        float textX = rectF.right + LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div class="line">        float textY = rectF.bottom;</div><div class="line">        mPaint.setTextAlign(Paint.Align.CENTER);</div><div class="line">        Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();</div><div class="line">        mPaint.setColor(progressColor);</div><div class="line">        //计算文字高度</div><div class="line">        float fontHeight = fontMetrics.bottom - fontMetrics.top;</div><div class="line">        //计算文字baseline</div><div class="line">        float textBaseY = textY - (textY - fontHeight) / 2 - fontMetrics.bottom;</div><div class="line">        canvas.drawText(String.valueOf(currentProgress) + textProgress, textX, textBaseY, mPaint);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>关于代码的解析代码中已经包含了。</p>
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    android:id=&quot;@+id/activity_main&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:gravity=&quot;center&quot;</div><div class="line">    android:background=&quot;#ffffff&quot;</div><div class="line">    android:orientation=&quot;vertical&quot;</div><div class="line">    tools:context=&quot;com.liweijie.view.silmpleswitchbtn.sample.MainActivity&quot;&gt;</div><div class="line"> </div><div class="line">    &lt;com.liweijie.view.progress.DynamicProgressBar</div><div class="line">        android:layout_width=&quot;120dp&quot;</div><div class="line">        android:layout_height=&quot;20dp&quot;</div><div class="line">        app:dynamicColor=&quot;#ff0000&quot;</div><div class="line">        app:dynamicMax=&quot;100&quot;</div><div class="line">        app:dynamicProgress=&quot;60&quot;</div><div class="line">        app:dynamicRate=&quot;30&quot;</div><div class="line">        app:dynamicSpec=&quot;20dp&quot;</div><div class="line">        app:dynamicText=&quot;%&quot;</div><div class="line">        app:dynamicTextSize=&quot;14sp&quot; /&gt;</div><div class="line">    &lt;com.liweijie.view.progress.DynamicProgressBar</div><div class="line">        android:id=&quot;@+id/progressbar&quot;</div><div class="line">        android:layout_width=&quot;120dp&quot;</div><div class="line">        android:layout_height=&quot;20dp&quot;</div><div class="line">        app:dynamicColor=&quot;#ff0000&quot;</div><div class="line">        app:dynamicMax=&quot;100&quot;</div><div class="line">        app:dynamicProgress=&quot;0&quot;</div><div class="line">        app:dynamicRate=&quot;30&quot;</div><div class="line">        app:dynamicSpec=&quot;20dp&quot;</div><div class="line">        app:dynamicText=&quot;%&quot;</div><div class="line">        app:dynamicTextSize=&quot;14sp&quot; /&gt;</div><div class="line"> </div><div class="line">&lt;/LinearLayout&gt;</div></pre></td></tr></table></figure>
+<p>代码设置的进度条</p>
+<pre><code>@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_progress);
+        DynamicProgressBar progressBar = (DynamicProgressBar) findViewById(R.id.progressbar);
+        progressBar.setProgress(80);
+    }
+</code></pre><p>结果截图：<br> <img src="http://ocxgpwj6l.bkt.clouddn.com/test.gif" alt=""><br>好了，这样子就可以完成一个具有透明度变化，进度条前进的进度条了，biubiubiu~。源码下载：<a href=""></a>求star，求星星。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/自定义View/" rel="tag">#自定义View</a>
+          
+            <a href="/tags/进度和透明度变化的ProgressBar/" rel="tag">#进度和透明度变化的ProgressBar</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="liweijie" />
+          <p class="site-author-name" itemprop="name">liweijie</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义渐进的进度条"><span class="nav-number">1.</span> <span class="nav-text">自定义渐进的进度条</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义进度条的需求"><span class="nav-number">1.1.</span> <span class="nav-text">自定义进度条的需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义进度条的分析"><span class="nav-number">1.2.</span> <span class="nav-text">自定义进度条的分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">1.3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试代码"><span class="nav-number">1.4.</span> <span class="nav-text">测试代码</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liweijie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
