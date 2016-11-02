@@ -95,7 +95,7 @@
 在上一片文章中，我们只是在ACTION_MOVE中有动画效果，在这一片中，我们会在ACTION_DOWN和ACTION_UP中带有动画。
 分析关于自定义的属性和初始化那些，跟上一篇文章类似，假如你还没有阅读，请先阅读上一篇文章：自定义有动画的Switch控件我们现在需要处理的是down和up事件，我们就需要添加一些属性去标记，比如down的位置，up之后应">
 <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/animswitch.gif">
-<meta property="og:updated_time" content="2016-10-16T11:08:19.113Z">
+<meta property="og:updated_time" content="2016-11-02T15:16:45.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义SwitchView升级版">
 <meta name="twitter:description" content="自定义SwitchView升级版效果图：
@@ -330,6 +330,7 @@
     
 
 
+
     <div class="post-body" itemprop="articleBody">
 
       
@@ -353,7 +354,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 是否有结束动画</div><div class="line">   *</div><div class="line">   * @param x</div><div class="line">   * @return</div><div class="line">   */</div><div class="line">  private boolean calculateUpAnim(float x) &#123;</div><div class="line">      // 如果在边界</div><div class="line">      animEnd = hasHalfWidth(x) ? width - radius : radius;</div><div class="line">      perAnim = Math.abs(animEnd - circleX) / SEPARATION_LENGHT;</div><div class="line">      animDirection = isChecked;</div><div class="line">      return true;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
 <p>这样子，我们就完成了整一个带有移动动画的SwitchView控件了。</p>
 <p><a href="https://github.com/liweijieok/SilmpleView" target="_blank" rel="external">源码下载</a></p>
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=28947001&auto=1&height=66"></iframe>
       
     </div>
 
@@ -526,7 +527,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright" >
   
   &copy; 
   <span itemprop="copyrightYear">2016</span>
