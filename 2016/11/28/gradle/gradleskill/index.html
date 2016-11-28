@@ -1,0 +1,624 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="-gradle使用技巧," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="Gradle的使用技巧定义一些统一的编译变量当我们在一个AS的Project里面，有挺多的module和library的时候，我们需要统一各个模块的编译版本，sdk版本等，我们可以通过gradle设置，这样子设置的好处就是只要我们有修改需求，那么只是修改一个地方就好了，例子如下：我们在项目目录下的gradle.properties文件中，添加如下代码1234SDK_COMPILE_VSERION=">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gradle的使用技巧">
+<meta property="og:url" content="http://yoursite.com/2016/11/28/gradle/gradleskill/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="Gradle的使用技巧定义一些统一的编译变量当我们在一个AS的Project里面，有挺多的module和library的时候，我们需要统一各个模块的编译版本，sdk版本等，我们可以通过gradle设置，这样子设置的好处就是只要我们有修改需求，那么只是修改一个地方就好了，例子如下：我们在项目目录下的gradle.properties文件中，添加如下代码1234SDK_COMPILE_VSERION=">
+<meta property="og:updated_time" content="2016-11-28T15:46:54.235Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gradle的使用技巧">
+<meta name="twitter:description" content="Gradle的使用技巧定义一些统一的编译变量当我们在一个AS的Project里面，有挺多的module和library的时候，我们需要统一各个模块的编译版本，sdk版本等，我们可以通过gradle设置，这样子设置的好处就是只要我们有修改需求，那么只是修改一个地方就好了，例子如下：我们在项目目录下的gradle.properties文件中，添加如下代码1234SDK_COMPILE_VSERION=">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/28/gradle/gradleskill/"/>
+
+
+  <title> Gradle的使用技巧 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Gradle的使用技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-28T23:44:04+08:00" content="2016-11-28">
+              2016-11-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/gradle/" itemprop="url" rel="index">
+                    <span itemprop="name">gradle</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Gradle的使用技巧"><a href="#Gradle的使用技巧" class="headerlink" title="Gradle的使用技巧"></a>Gradle的使用技巧</h1><h2 id="定义一些统一的编译变量"><a href="#定义一些统一的编译变量" class="headerlink" title="定义一些统一的编译变量"></a>定义一些统一的编译变量</h2><p>当我们在一个AS的Project里面，有挺多的module和library的时候，我们需要统一各个模块的编译版本，sdk版本等，我们可以通过gradle设置，这样子设置的好处就是只要我们有修改需求，那么只是修改一个地方就好了，例子如下：<br>我们在项目目录下的gradle.properties文件中，添加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SDK_COMPILE_VSERION=23</div><div class="line">SDK_TOOLS_VERSION= 23.0.2</div><div class="line">SDK_MIN_SDK_VERSION=14</div><div class="line">SDK_TARGET_SDK_VERSION=23</div></pre></td></tr></table></figure></p>
+<p>使用，在需要的module中的build.gradle设置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">compileSdkVersion Integer.valueOf(project.SDK_COMPILE_VSERION)</div><div class="line">buildToolsVersion project.SDK_TOOLS_VERSION</div><div class="line"> </div><div class="line">defaultConfig &#123;</div><div class="line">    applicationId &quot;com.example.user.testproject&quot;</div><div class="line">    minSdkVersion Integer.valueOf(project.SDK_MIN_SDK_VERSION)</div><div class="line">    targetSdkVersion Integer.valueOf(project.SDK_TARGET_SDK_VERSION)</div><div class="line">    versionCode 1</div><div class="line">    versionName &quot;1.0&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样子就可以使用了，你还可以添加其他的属性去设置每个module共同的东西。只要通过project去引用对应的属性就行了，假如我们的项目需要更换编译版本或者其他，我们只是需要在gradle.properties中修改就可以了。</p>
+<h2 id="定义编程生成的变量"><a href="#定义编程生成的变量" class="headerlink" title="定义编程生成的变量"></a>定义编程生成的变量</h2><p>比如有时候我们需要区分debug版本还是release版本，我们没有去判断签名来觉得是否是正式版本的时候，我们可以通过在对应模块的build.gradle中去添加一些我们需要编译生成之后才去确定的东西，例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">buildTypes &#123;</div><div class="line">       release &#123;</div><div class="line">           buildConfigField (&quot;Boolean&quot;,&quot;enableLog&quot; ,&quot;false&quot;)</div><div class="line">           buildConfigField (&quot;String&quot;,&quot;HOST_URL&quot; ,&quot;\&quot;releaseURL\&quot;&quot;)</div><div class="line"></div><div class="line">           minifyEnabled false</div><div class="line">           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">       &#125;</div><div class="line">       debug&#123;</div><div class="line">           buildConfigField (&quot;Boolean&quot; ,&quot;enableLog&quot; ,&quot;true&quot;)</div><div class="line">           buildConfigField (&quot;String&quot;,&quot;HOST_URL&quot; ,&quot;\&quot;debugURL\&quot;&quot;)</div><div class="line">           minifyEnabled false</div><div class="line">           proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>他将会在BuildConfig这个编译之后生成的类中产生一个布尔类型的enableLog变量，一个String类型的HOST_URL变量，我们运行不同的builtType就可以有不同的值。他的使用时：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">buildConfigField &quot;Type&quot;,&quot;varName&quot;,&quot;Value&quot;</div></pre></td></tr></table></figure></p>
+<p>Type可以是JAVA的基本类型其中一种，第二个是变量名，最后一个是变量值。这里需要注意的是String类型需要转义一下，我使用的AS版本是2.2，Gradle插件版本是2.2.1，Gradle版本是2.14.1，不知道其他版本是否也需要。自行测试。<br>在BuildConfig文件中，自动会为我们生成的变量有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DEBUG 是否是debug，除了debug类型的BuildType，其他是false</div><div class="line">APPLICATION_ID 包名</div><div class="line">BUILD_TYPE 构建类型名，比如debug/release，或者是自定义的buildType</div><div class="line">FLAVOR 变种名字，假如你有使用productFlavors，那么他将会有对应的值，否则会为null</div><div class="line">VERSION_CODE 版本号</div><div class="line">VERSION_NAME 版本名字</div></pre></td></tr></table></figure></p>
+<h2 id="输出定制化apk名字"><a href="#输出定制化apk名字" class="headerlink" title="输出定制化apk名字"></a>输出定制化apk名字</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">applicationVariants.all &#123; variant -&gt;</div><div class="line">        variant.outputs.each &#123; output -&gt;</div><div class="line">            if (output.outputFile != null &amp;&amp; output.outputFile.name.endsWith(&quot;.apk&quot;)</div><div class="line">                    &amp;&amp; variant.buildType.name.equals(&quot;release&quot;)) &#123;</div><div class="line">                def file = output.outputFile;</div><div class="line">                def buildTime = new Date().format(&quot;yyyy-MM-dd&quot;)</div><div class="line">                def buildName = variant.flavorName;</div><div class="line">                output.outputFile = new File(file.parent, &quot;$&#123;buildTime&#125;-$&#123;buildName&#125;-$&#123;variant.getVersionCode()&#125;-release.apk&quot;)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>这里就可以输出定制化的release包的名字，我们使用多渠道打包的时候就可以这样子去指定我们需要的apk名字。他只要是位于Android节点下面就可以了。当我们需要把打包出来的apk输出到指定目录的时候，只是需要把file.parent改为自己需要输出的目录就可以了。</p>
+<h2 id="编译优化"><a href="#编译优化" class="headerlink" title="编译优化"></a>编译优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">      dexOptions &#123;</div><div class="line">        javaMaxHeapSize &quot;2g&quot;</div><div class="line">    &#125;</div><div class="line">// 在一般在buildType为release的节点添加</div><div class="line">             //混淆</div><div class="line">            minifyEnabled true</div><div class="line">            //Zipalign优化</div><div class="line">            zipAlignEnabled true</div><div class="line">            //资源优化，去除无用资源</div><div class="line">            shrinkResources true</div></pre></td></tr></table></figure>
+<h2 id="分包"><a href="#分包" class="headerlink" title="分包"></a>分包</h2><p>由于Android apk方法引用数是short标记，所以我们的方法数目不能超出65535，一旦超出，我们就需要进行分包，分包的步骤，<br>1，引入依赖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.android.support:multidex:1.0.1&apos;</div></pre></td></tr></table></figure></p>
+<p>2，在我们自定义的Application中加载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class DevApplication  extends Application &#123;</div><div class="line">    @Override</div><div class="line">    protected void attachBaseContext(Context base) &#123;</div><div class="line">        super.attachBaseContext(base);</div><div class="line">        MultiDex.install(base);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3，在gradle中开启分包和指定分包规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//在defaultConfig节点添加</div><div class="line">  multiDexEnabled true</div><div class="line">//在android节点下面添加</div><div class="line"></div><div class="line">afterEvaluate &#123;</div><div class="line">        tasks.matching &#123;</div><div class="line">            it.name.startsWith(&apos;dex&apos;)</div><div class="line">        &#125;.each &#123; dx -&gt;</div><div class="line">            if (dx.additionalParameters == null) &#123;</div><div class="line">                dx.additionalParameters = []</div><div class="line">            &#125;</div><div class="line">            dx.additionalParameters += &apos;--multi-dex&apos; // enable multidex</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="依赖冲突解决"><a href="#依赖冲突解决" class="headerlink" title="依赖冲突解决"></a>依赖冲突解决</h2><p>使用packagingOptions，我们可以去除依赖中认为是不需要的内容，常用的有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">packagingOptions &#123; // 打包配置</div><div class="line">        exclude &apos;META-INF/LICENSE&apos; // 排除一些文件</div><div class="line">        exclude &apos;META-INF/NOTICE&apos;</div><div class="line">        exclude &apos;META-INF/LICENSE.txt&apos;</div><div class="line">        exclude &apos;META-INF/NOTICE.txt&apos;</div><div class="line">     &#125;</div></pre></td></tr></table></figure></p>
+<p>当我们在依赖冲突的时候，只是使用其中的一个依赖库的一部分时候，使用例子如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 去除整个库，只是需要完整的groupId</div><div class="line">exclude group: &apos;com.android.support&apos; </div><div class="line">//去除其中的一部分，需要groupId和artifactId</div><div class="line"> exclude group: &apos;com.android.support&apos;, module: &apos;support-annotations&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="设置java版本"><a href="#设置java版本" class="headerlink" title="设置java版本"></a>设置java版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">compileOptions &#123;</div><div class="line">        sourceCompatibility JavaVersion.VERSION_1_8</div><div class="line">        targetCompatibility JavaVersion.VERSION_1_8</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>有时候比如我们需要使用lambda表达式的时候就可以使用。<br>注意点： 我们使用BuiltType+productFlavors的时候，他们的名字不能够相同。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/gradle使用技巧/" rel="tag">#-gradle使用技巧</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/23/gradle/GroovyLan/" rel="next" title="Groovy语言学习基础">
+                <i class="fa fa-chevron-left"></i> Groovy语言学习基础
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle的使用技巧"><span class="nav-number">1.</span> <span class="nav-text">Gradle的使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义一些统一的编译变量"><span class="nav-number">1.1.</span> <span class="nav-text">定义一些统一的编译变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义编程生成的变量"><span class="nav-number">1.2.</span> <span class="nav-text">定义编程生成的变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出定制化apk名字"><span class="nav-number">1.3.</span> <span class="nav-text">输出定制化apk名字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译优化"><span class="nav-number">1.4.</span> <span class="nav-text">编译优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分包"><span class="nav-number">1.5.</span> <span class="nav-text">分包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖冲突解决"><span class="nav-number">1.6.</span> <span class="nav-text">依赖冲突解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置java版本"><span class="nav-number">1.7.</span> <span class="nav-text">设置java版本</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
