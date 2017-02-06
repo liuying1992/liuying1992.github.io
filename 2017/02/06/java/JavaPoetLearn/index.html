@@ -1,0 +1,703 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javaAnnotation," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="JavaPoet开源项目使用JavaPoet项目可以为我们动态的生成Java文件，这是一个很强大和很动态的方法。我们使用注解的时候假如需要生成新的Java文件就可以通过这个开源项目实现。项目地址：Javapoet
+引入我们在AndroidStudio中新建一个Java module，声明如下：123456789apply plugin: &amp;apos;java&amp;apos;dependencies &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaPoet开源项目使用">
+<meta property="og:url" content="http://yoursite.com/2017/02/06/java/JavaPoetLearn/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="JavaPoet开源项目使用JavaPoet项目可以为我们动态的生成Java文件，这是一个很强大和很动态的方法。我们使用注解的时候假如需要生成新的Java文件就可以通过这个开源项目实现。项目地址：Javapoet
+引入我们在AndroidStudio中新建一个Java module，声明如下：123456789apply plugin: &amp;apos;java&amp;apos;dependencies &amp;">
+<meta property="og:updated_time" content="2017-02-06T14:39:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaPoet开源项目使用">
+<meta name="twitter:description" content="JavaPoet开源项目使用JavaPoet项目可以为我们动态的生成Java文件，这是一个很强大和很动态的方法。我们使用注解的时候假如需要生成新的Java文件就可以通过这个开源项目实现。项目地址：Javapoet
+引入我们在AndroidStudio中新建一个Java module，声明如下：123456789apply plugin: &amp;apos;java&amp;apos;dependencies &amp;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/06/java/JavaPoetLearn/"/>
+
+
+  <title> JavaPoet开源项目使用 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaPoet开源项目使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-06T22:37:12+08:00" content="2017-02-06">
+              2017-02-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaPoet开源项目使用"><a href="#JavaPoet开源项目使用" class="headerlink" title="JavaPoet开源项目使用"></a>JavaPoet开源项目使用</h1><p>JavaPoet项目可以为我们动态的生成Java文件，这是一个很强大和很动态的方法。我们使用注解的时候假如需要生成新的Java文件就可以通过这个开源项目实现。<br>项目地址：<a href="https://github.com/square/javapoet" target="_blank" rel="external">Javapoet</a></p>
+<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>我们在AndroidStudio中新建一个Java module，声明如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;java&apos;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</div><div class="line">    compile &apos;com.squareup:javapoet:1.8.0&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">sourceCompatibility = &quot;1.7&quot;</div><div class="line">targetCompatibility = &quot;1.7&quot;</div></pre></td></tr></table></figure></p>
+<p>这样子我们就引入了javapoet。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>我们新建了一个名字为javapoettest的java module，然后就开始使用它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">package com.example;</div><div class="line"></div><div class="line">import com.squareup.javapoet.JavaFile;</div><div class="line">import com.squareup.javapoet.MethodSpec;</div><div class="line">import com.squareup.javapoet.TypeSpec;</div><div class="line"></div><div class="line">import java.io.File;</div><div class="line">import java.io.IOException;</div><div class="line"></div><div class="line">import javax.lang.model.element.Modifier;</div><div class="line"></div><div class="line">public class MyClass &#123;</div><div class="line">    public static void main(String args[]) throws IOException &#123;</div><div class="line">        MyClass instance = new MyClass();</div><div class="line">        instance.generate();</div><div class="line">    &#125;</div><div class="line">       private void generate() throws IOException &#123;</div><div class="line">        // 定义方法</div><div class="line">        MethodSpec main = MethodSpec.methodBuilder(&quot;main&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC, Modifier.STATIC)//修饰符</div><div class="line">                .returns(void.class)//返回值</div><div class="line">                .addParameter(String[].class, &quot;args&quot;)//参数合参数类型</div><div class="line">                .addStatement(&quot;$T.out.println($S)&quot;, System.class, &quot;Hello, JavaPoet!&quot;)//使用format</div><div class="line">                .build();</div><div class="line"></div><div class="line">        //生成类</div><div class="line">        TypeSpec helloWorld = TypeSpec.classBuilder(&quot;HelloWorld&quot;)//类名字</div><div class="line">                .addModifiers(Modifier.PUBLIC, Modifier.FINAL)//类修饰符</div><div class="line">                .addMethod(main)//添加方法</div><div class="line">                .build();</div><div class="line">        //生成一个顶级的java文件描述对象</div><div class="line">        JavaFile javaFile = JavaFile.builder(&quot;com.example.helloworld&quot;, helloWorld)</div><div class="line">                .build();</div><div class="line">        File outputFile = new File(&quot;javapoettest/src/main/java&quot;);</div><div class="line">        //输出文件</div><div class="line">        javaFile.writeTo(outputFile);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>运行之后，我们可以看到在同一个包名下面，生成了HelloWorld.java文件。同时输出了该Java文件的源码。</p>
+<h3 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h3><ol>
+<li>JavaFile，生成Java文件</li>
+<li>MethodSpec 生成方法，构造器</li>
+<li>TypeSpec 生成类，接口</li>
+<li>FieldSpec 生成属性</li>
+<li>ParameterSpec 生成参数<h4 id="MethodSpec"><a href="#MethodSpec" class="headerlink" title="MethodSpec"></a>MethodSpec</h4></li>
+</ol>
+<ul>
+<li>生成方法使用的是MethodSpec类，他的使用如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MethodSpec hi = MethodSpec.methodBuilder(&quot;sayHi&quot;).addCode(&quot;String s;\n&quot; +</div><div class="line">              &quot;s=\&quot;java\&quot;;\n&quot; +</div><div class="line">              &quot;System.out.println(s);\n&quot;).build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这样子就能够生成一个名字为sayHi()，参数是空，返回值是void的函数，是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">void sayHi() &#123;</div><div class="line">    String s;</div><div class="line">    s=&quot;java&quot;;</div><div class="line">    System.out.println(s);</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>methodBuilder(String)方法指定方法名称，添加代码可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">addCode(String format, Object... args)</div><div class="line">addCode(CodeBlock codeBlock)</div></pre></td></tr></table></figure></p>
+<p>例子是使用了第一种，他没有使用format对应的占位符，只是单纯的format。</p>
+<ul>
+<li>addCode方法需要我们自己手动添加分号好换行，我们可以使用另外一个方法实现，就是addStatement，例子：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">MethodSpec sayHi = MethodSpec.methodBuilder(&quot;sayHi&quot;)</div><div class="line">               .addStatement(&quot;int a = 1&quot;)</div><div class="line">               .addStatement(&quot;int b =2&quot;)</div><div class="line">               .addStatement(&quot;int sum=a+b&quot;)</div><div class="line">               .addCode(&quot;System.out.println(sum);\n&quot;)</div><div class="line">               .build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>生成的方法就是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">void sayHi() &#123;</div><div class="line">   int a = 1;</div><div class="line">   int b =2;</div><div class="line">   int sum=a+b;</div><div class="line">   System.out.println(sum);</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>循环<br>我们使用beginControlFlow开始循环，使用endControlFlow结束循环。在这二者之间是循环体。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">MethodSpec sayHello = MethodSpec.methodBuilder(&quot;sayHello&quot;)</div><div class="line">                .addStatement(&quot;int sum=0&quot;)</div><div class="line">                .beginControlFlow(&quot;for(int i=0;i&lt;10;i++)&quot;)</div><div class="line">                .addStatement(&quot;sum+=i&quot;)</div><div class="line">                .endControlFlow()</div><div class="line">                .addStatement(&quot;System.out.println(sum)&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC,Modifier.STATIC)</div><div class="line">                .build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出的方法是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public static void sayHello() &#123;</div><div class="line">       int sum = 0;</div><div class="line">       for (int i = 0; i &lt; 10; i++) &#123;</div><div class="line">           sum += i;</div><div class="line">       &#125;</div><div class="line">       System.out.println(sum);</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<p>我们通过addModifiers()添加方法的修饰符，这里是public static的，当然你可以选择其他的。</p>
+<ul>
+<li>返回值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">returns(TypeName returnType)</div><div class="line">Builder returns(Type returnType)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>第一种用于指定常用的类型，第二种可以通过反射获取指定的类型，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">MethodSpec say = MethodSpec.methodBuilder(&quot;say&quot;)</div><div class="line">               .returns(TypeName.BOOLEAN)</div><div class="line">               .addStatement(&quot;int a = 0&quot;)</div><div class="line">               .addStatement(&quot;int b = 1&quot;)</div><div class="line">               .addStatement(&quot;return a&gt; b&quot;)</div><div class="line">               .build();</div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">MethodSpec say = null;</div><div class="line">      try &#123;</div><div class="line">          say = MethodSpec.methodBuilder(&quot;say&quot;)</div><div class="line">                  .returns(Class.forName(&quot;java.io.File&quot;))</div><div class="line">                  .addStatement(&quot;File newFile = new File(\&quot;\&quot;)&quot;)</div><div class="line">                  .addStatement(&quot;return newFile&quot;).build();</div><div class="line">      &#125; catch (ClassNotFoundException e) &#123;</div><div class="line">          e.printStackTrace();</div><div class="line">      &#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>占位符format<br>这里的占位符跟我们使用java时候的String.format()很类似。他有四种占位符</li>
+</ul>
+<ol>
+<li>$L，就是一个字面量，变量值</li>
+<li>$S，代表Strings，可以替换多个String</li>
+<li>$T，导入class，添加类型</li>
+<li>$N，代表名字<br>例子：</li>
+</ol>
+<p>生成方法是：<br>$L<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">MethodSpec methodL = MethodSpec.methodBuilder(&quot;methodL&quot;)</div><div class="line">                .addStatement(&quot;String s1=\&quot;$L\&quot;&quot;, s1)</div><div class="line">                .addStatement(&quot;int a = $L&quot;, a)</div><div class="line">                .addModifiers(Modifier.PUBLIC)</div><div class="line">                .addStatement(&quot;return a+s1&quot;)</div><div class="line">                .returns(String.class)</div><div class="line">                .build();</div><div class="line">// 生成方法</div><div class="line">public String methodL() &#123;</div><div class="line">    String s1=&quot;hi&quot;;</div><div class="line">    int a = 10;</div><div class="line">    return a+s1;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>$S<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> String s2 = &quot;hi&quot;;</div><div class="line">        String s3 = &quot;hello&quot;;</div><div class="line">        MethodSpec methodS = MethodSpec.methodBuilder(&quot;methodS&quot;)</div><div class="line">                .addStatement(&quot;String a=$S,b=$S&quot;, s2, s3)</div><div class="line">                .addModifiers(Modifier.PUBLIC)</div><div class="line">                .build();</div><div class="line">// 生成方法是</div><div class="line">public void methodS() &#123;</div><div class="line">    String a=&quot;hi&quot;,b=&quot;hello&quot;;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>$T<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">TypeSpec dog = TypeSpec.classBuilder(&quot;Dog&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC).build();</div><div class="line">        JavaFile dogJava = JavaFile.builder(&quot;com.example.bean&quot;, dog).build();</div><div class="line">        File dogFile = new File(&quot;javapoettest/src/main/java&quot;);</div><div class="line">        dogJava.writeTo(dogFile);</div><div class="line">        Class dogClass = Class.forName(&quot;com.example.bean.Dog&quot;);</div><div class="line">        MethodSpec methodT = MethodSpec.methodBuilder(&quot;methodT&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC)</div><div class="line">                .addStatement(&quot;$T dog= new $T()&quot;, dogClass,dogClass)</div><div class="line">                .returns(Class.forName(&quot;com.example.bean.Dog&quot;))</div><div class="line">                .addStatement(&quot;return dog&quot;)</div><div class="line">                .build();</div></pre></td></tr></table></figure></p>
+<p>这里的例子是我们动态生成了一个dog类，在bean包下，我们需要在HelloWord中引入，所以我们就需要进行导入了。那里使用就可以导入，只是需要导入一次即可。但是第一次的时候运行时不可以的，因为这时候还没有生成Dog类，需要运行第二次就ok了。如有同学之后如何第一次运行就可以导入请评论告知，谢谢。当然这里我们导入一些java自带的类的时候就不用反射直接使用XXX.class这样子就ok了。<br>静态导入，我们在JavaFile构建的时候就可以添加静态导入，静态导入的好处就是可以直接使用一些被静态导入的属性方法不需要通过class.method()调用。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JavaFile javaFile = JavaFile.builder(&quot;com.example&quot;, typeSpec)</div><div class="line">                .addStaticImport(Calendar.class,&quot;*&quot;)</div><div class="line">                .build();</div></pre></td></tr></table></figure></p>
+<p>在HelloWorld中就可以使用Calendar类的所有静态属性和静态方法了。需要注意的是静态导入的方式是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import static packageName.className.staticField/staticMethod;</div><div class="line">import static packageName.className.*;</div></pre></td></tr></table></figure></p>
+<p>$N<br>引用一个已经存在的变量作为参数替换，比如一个已经声明存在的方法。例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">MethodSpec hxDigit = MethodSpec.methodBuilder(&quot;hexDigit&quot;)</div><div class="line">           .addParameter(int.class,&quot;i&quot;)</div><div class="line">           .returns(char.class)</div><div class="line">           .addStatement(&quot;return (char)(i&lt;10?i+&apos;0&apos;:i-10+&apos;a&apos;)&quot;)</div><div class="line">           .build();</div><div class="line">   MethodSpec byteThHex = MethodSpec.methodBuilder(&quot;byteToHex&quot;)</div><div class="line">           .addParameter(int.class, &quot;b&quot;)</div><div class="line">           .returns(String.class)</div><div class="line">           .addStatement(&quot;char[] result = new char[2]&quot;)</div><div class="line">           .addStatement(&quot;result[0]=$N((b&gt;&gt;4)%0xf)&quot;,hxDigit)</div><div class="line">           .addStatement(&quot;result[1]=$N(b&amp;0xf)&quot;,hxDigit)</div><div class="line">           .addStatement(&quot;return new String(result)&quot;)</div><div class="line">           .build();</div></pre></td></tr></table></figure></p>
+<p>就会生成方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">char hexDigit(int i) &#123;</div><div class="line">  return (char)(i&lt;10?i+&apos;0&apos;:i-10+&apos;a&apos;);</div><div class="line">&#125;</div><div class="line">String byteToHex(int b) &#123;</div><div class="line">  char[] result = new char[2];</div><div class="line">  result[0]=hexDigit((b&gt;&gt;4)%0xf);</div><div class="line">  result[1]=hexDigit(b&amp;0xf);</div><div class="line">  return new String(result);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>添加参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> .addParameter(String.class,&quot;str&quot;,Modifier.FINAL)</div><div class="line">.addParameter(TypeName.BOOLEAN,&quot;isLogin&quot;,Modifier.FINAL)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>第一个是类型，值可以是class或者是TypeName中的某一个，第二个是参数名称，第三个是参数修饰符，方法参数修饰符一般只有final，或者是没有。</p>
+<ul>
+<li>生成构造方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//生成空的构造方法</div><div class="line">  MethodSpec construct = MethodSpec.constructorBuilder()</div><div class="line">                .build();</div><div class="line">        MethodSpec construct2 = MethodSpec.constructorBuilder()</div><div class="line">                .addParameter(String.class,&quot;str&quot;)</div><div class="line">                .addParameter(TypeName.BOOLEAN,&quot;isShow&quot;)</div><div class="line">                .addStatement(&quot;init(str,isShow)&quot;)</div><div class="line">                .build();</div><div class="line">//带参数和初始化的构造方法</div><div class="line">        MethodSpec init = MethodSpec.methodBuilder(&quot;init&quot;)</div><div class="line">                .addParameter(String.class,&quot;str&quot;)</div><div class="line">                .addParameter(Boolean.class,&quot;isShow&quot;)</div><div class="line">                .addStatement(&quot;this.str = str&quot;)</div><div class="line">                .addStatement(&quot;this.isShow = isShow&quot;)</div><div class="line">                .build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>生成构造方法是使用MethodSpec.constructorBuilder()函数，并且不用指定函数名称的。其他的跟调用MethodSpec.methodBuilder(String)差不多。</p>
+<h4 id="TypeSpec"><a href="#TypeSpec" class="headerlink" title="TypeSpec"></a>TypeSpec</h4><p>生成类描述的类。</p>
+<ul>
+<li>设置类名：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Builder classBuilder(String name)</div><div class="line">Builder classBuilder(ClassName className)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这两个方法去设置类名，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TypeSpec Hi = TypeSpec.classBuilder(&quot;Hi&quot;).build();</div><div class="line">       JavaFile HiJavaFile = JavaFile.builder(&quot;com.example&quot;, Hi).build();</div><div class="line">       File HiFile = new File(&quot;javapoettest/src/main/java&quot;);</div><div class="line">       HiJavaFile.writeTo(HiFile);</div></pre></td></tr></table></figure></p>
+<p>这样子就可以输出Hi.java类。或者是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TypeSpec Hello= TypeSpec.classBuilder(ClassName.get(&quot;com.example&quot;,&quot;Hello&quot;)).build();</div><div class="line">      JavaFile HelloJavaFile = JavaFile.builder(&quot;com.example&quot;, Hello).build();</div><div class="line">      File HelloFile = new File(&quot;javapoettest/src/main/java&quot;);</div><div class="line">      HelloJavaFile.writeTo(HelloFile);</div></pre></td></tr></table></figure></p>
+<p>这样子通过自定获取一个ClassName来生成一个Java类。</p>
+<ul>
+<li>添加方法。<br>这些其实上面有提到，就死使用addMethod(MethodSpec)就好，无论是普通还是构造方法，还是静态方法。</li>
+<li>添加属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.addField(String.class,&quot;str&quot;,Modifier.PRIVATE)</div><div class="line">.addField(TypeName.BOOLEAN,&quot;isShow&quot;,Modifier.PRIVATE)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>跟MethodSpec添加一个参数类似，可以是使用Class声明或者是使用TypeName。</p>
+<ul>
+<li>生成接口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">TypeSpec int  MethodSpec interfaceMethod = MethodSpec.methodBuilder(&quot;beep&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC,Modifier.ABSTRACT).build();</div><div class="line">        TypeSpec interfaceTest = TypeSpec.interfaceBuilder(&quot;InterfaceA&quot;)</div><div class="line">                .addModifiers(Modifier.PUBLIC,Modifier.PUBLIC)</div><div class="line">                .addMethod(interfaceMethod)</div><div class="line">                .build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>需要注意的是生成的抽象方法需要手动加上public和abstract，对于Interface中的常量也是要加上public final的。<br>生成抽象方法：</p>
+<ul>
+<li>继承接口复写方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">MethodSpec mb = MethodSpec.methodBuilder(&quot;beep&quot;)</div><div class="line">        .addModifiers(Modifier.PUBLIC).addAnnotation(Override.class).build();</div><div class="line">TypeSpec mbClass = TypeSpec.classBuilder(&quot;B&quot;)</div><div class="line">        .addModifiers(Modifier.PUBLIC)</div><div class="line">        .addMethod(mb)</div><div class="line">        .addSuperinterface(InterfaceA.class)</div><div class="line">        .build();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>跟一般生类一样，只不过是需要添加addSuperinterface方法。复写方法的时候可以添加一个注解Override.class注明。<br>还可以通过superclass(Type/TypeName)方法添加父类。复写父类的方法跟上面的类似。</p>
+<h4 id="FieldSpec"><a href="#FieldSpec" class="headerlink" title="FieldSpec"></a>FieldSpec</h4><p>生成属性的描述类<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">FieldSpec var = FieldSpec.builder(int.class,&quot;i&quot;).build();</div><div class="line">   FieldSpec var2 = FieldSpec.builder(int.class,&quot;j&quot;,Modifier.PUBLIC,Modifier.STATIC,Modifier.FINAL)</div><div class="line">           .initializer(&quot;1&quot;).build();</div></pre></td></tr></table></figure></p>
+<p>生成的属性是:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">public static final int j = 1;</div><div class="line">  int i;</div></pre></td></tr></table></figure></p>
+<p>可以使用initializer()方法对变量进行初始化。初始化的时候可以使用占位符替换实现动态。</p>
+<h4 id="ParameterSpec"><a href="#ParameterSpec" class="headerlink" title="ParameterSpec"></a>ParameterSpec</h4><p>生成参数描述类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ParameterSpec spec = ParameterSpec.builder(String.class, &quot;string&quot;, Modifier.FINAL).build();</div><div class="line">  MethodSpec mb2 = MethodSpec.methodBuilder(&quot;beep&quot;)</div><div class="line">              .addModifiers(Modifier.PUBLIC)</div><div class="line">              .addParameter(spec)</div><div class="line">              .build();</div></pre></td></tr></table></figure></p>
+<p>最后一个参数是修饰符，可以要或者不要，生成的是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">public void beep(final String string) &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>square还有另外一个类似的项目 <a href="https://github.com/square/javapoet/tree/javawriter_2" target="_blank" rel="external">javawriter</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javaAnnotation/" rel="tag">#javaAnnotation</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/05/java/JavaAnnotation/" rel="next" title="Java注解基础">
+                <i class="fa fa-chevron-left"></i> Java注解基础
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaPoet开源项目使用"><span class="nav-number">1.</span> <span class="nav-text">JavaPoet开源项目使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引入"><span class="nav-number">1.1.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.2.1.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细"><span class="nav-number">1.2.2.</span> <span class="nav-text">详细</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MethodSpec"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">MethodSpec</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TypeSpec"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">TypeSpec</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FieldSpec"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">FieldSpec</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ParameterSpec"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">ParameterSpec</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">1.3.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
