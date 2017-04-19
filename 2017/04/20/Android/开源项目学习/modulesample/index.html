@@ -1,0 +1,688 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android组件化," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="使用ARouter实现组件化ARouter是阿里在github上面的一个开源项目，地址是：ARouter本文不是重点分享ARouter的使用，而是分享使用ARouter如何去组件化。关于它的详细使用，大家可以看文档以及加群向询问。关于如何编写一个路由实现组件化，推荐看我同事的一篇文章手把手教你写Router框架入门篇
+组件化的优点
+解耦，使得各自业务模块专注于自己的业务实现，而可以不关系别的模块业">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Arouter实现组件化">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/Android/开源项目学习/modulesample/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="使用ARouter实现组件化ARouter是阿里在github上面的一个开源项目，地址是：ARouter本文不是重点分享ARouter的使用，而是分享使用ARouter如何去组件化。关于它的详细使用，大家可以看文档以及加群向询问。关于如何编写一个路由实现组件化，推荐看我同事的一篇文章手把手教你写Router框架入门篇
+组件化的优点
+解耦，使得各自业务模块专注于自己的业务实现，而可以不关系别的模块业">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/moduleDirectory.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/module.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/module1.png">
+<meta property="og:image" content="https://github.com/liweijieok/ModularSample/blob/master/art/app1.gif">
+<meta property="og:image" content="https://github.com/liweijieok/ModularSample/blob/master/art/app2.gif">
+<meta property="og:image" content="https://github.com/liweijieok/ModularSample/blob/master/art/home.gif">
+<meta property="og:image" content="https://github.com/liweijieok/ModularSample/blob/master/art/module.gif">
+<meta property="og:updated_time" content="2017-04-19T16:45:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Arouter实现组件化">
+<meta name="twitter:description" content="使用ARouter实现组件化ARouter是阿里在github上面的一个开源项目，地址是：ARouter本文不是重点分享ARouter的使用，而是分享使用ARouter如何去组件化。关于它的详细使用，大家可以看文档以及加群向询问。关于如何编写一个路由实现组件化，推荐看我同事的一篇文章手把手教你写Router框架入门篇
+组件化的优点
+解耦，使得各自业务模块专注于自己的业务实现，而可以不关系别的模块业">
+<meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/moduleDirectory.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/20/Android/开源项目学习/modulesample/"/>
+
+
+  <title> 使用Arouter实现组件化 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用Arouter实现组件化
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-20T00:24:00+08:00" content="2017-04-20">
+              2017-04-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/组件化/" itemprop="url" rel="index">
+                    <span itemprop="name">组件化</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/组件化/Arouter/" itemprop="url" rel="index">
+                    <span itemprop="name">Arouter</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="使用ARouter实现组件化"><a href="#使用ARouter实现组件化" class="headerlink" title="使用ARouter实现组件化"></a>使用ARouter实现组件化</h1><p>ARouter是阿里在github上面的一个开源项目，地址是：<a href="https://github.com/alibaba/ARouter/" target="_blank" rel="external">ARouter</a><br>本文不是重点分享ARouter的使用，而是分享使用ARouter如何去组件化。关于它的详细使用，大家可以看文档以及加群向询问。关于如何编写一个路由实现组件化，推荐看我同事的一篇文章<a href="http://www.jianshu.com/p/fe436a4ac530" target="_blank" rel="external">手把手教你写Router框架入门篇</a></p>
+<h2 id="组件化的优点"><a href="#组件化的优点" class="headerlink" title="组件化的优点"></a>组件化的优点</h2><ol>
+<li>解耦，使得各自业务模块专注于自己的业务实现，而可以不关系别的模块业务。</li>
+<li>方便开发，在多人开发的时候，可以各自开发自己的特定模块，除了底层模块之外</li>
+<li>可配置，复用性强，针对不同的App，可以有不同的模块而不必做出大的改变。</li>
+<li>每个模块可以独立运行，方便开发调试。</li>
+<li>大家补充</li>
+</ol>
+<h2 id="组件化开发的实现"><a href="#组件化开发的实现" class="headerlink" title="组件化开发的实现"></a>组件化开发的实现</h2><p>项目结构是:<br><img src="http://ocxgpwj6l.bkt.clouddn.com/moduleDirectory.png" alt=""></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li>大家按照ARouter的文档去配置一些东西，需要注意的是每一个模块都必须引入compile sdk，处理API SDk可以在Base sdk里面引入就行。</li>
+<li>Annotation sdk不用我们引入，他会自己自动依赖引入</li>
+<li>在开发的时候，每一个module 的分组都必须不同，或者将会有一个 类重复的错误。分组就是path的第一个”/“与第二个”/“之间。</li>
+</ol>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>我们是需要拆分组件，不同的模块负责自己的业务实现，不和其他模块有依赖关系的存在。假如这个模块需要启动别的Activity或者是调用别的模块方法，我们就通过ARouter提供的方法去实现。模块图如下：<br><img src="http://ocxgpwj6l.bkt.clouddn.com/module.png" alt=""><br>模块解析与划分规则：</p>
+<ol>
+<li>App模块<br>App模块就是我们的Apk模块，他是我们的最终产物。他可以按照需要配置自己需要的模块，进行一些初始化的工作。</li>
+<li>module模块<br>Module模块就是我们的业务实现模块，他是只负责本module的业务而不负责其他的业务，他是通过使用ARouter提供的方法和接口，实现调用外部数据和提供方法给外部调用，也就是图里面的Provider。</li>
+<li>base模块<br>关于base模块，大家也可以继续拆分一些细的模块，比如把router独立处理，但是不建议拆分太多，因为base模块是会变动较大，就是在版本的迭代过程中，不断变化的，被拆分较多的话开发起来不是很方便。因为有依赖的传递的关系，比如base 依赖于本project的较多模块，当设计到底层较多模块修改，那么就需要一层一层的在传递上去。<br>base模块应该是与业务无关的模块,在本例子中，base模块负责管理Router，同时提供一些基础的东西，比如BaseActivit，Util资源等。假如我们有自家的sdk，网络库依赖等，建议是在base中引入。</li>
+</ol>
+<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><h4 id="管理Router"><a href="#管理Router" class="headerlink" title="管理Router"></a>管理Router</h4><p>我们使用一个ModuleManager，提供一个Map，Map是使用对应module的Provider的path作为key和value。以及相关的数据结构，用来对ARouter的进行二次封装和管理模块。<br>大概实现如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class ModuleManager &#123;</div><div class="line">    private ModuleOptions options;</div><div class="line">    private ModuleManager() &#123;</div><div class="line">    &#125;</div><div class="line">    private static class ModuleManagerHolder &#123;</div><div class="line">        private static final ModuleManager instance = new ModuleManager();</div><div class="line">    &#125;</div><div class="line">    public static ModuleManager getInstance() &#123;</div><div class="line">        return ModuleManagerHolder.instance;</div><div class="line">    &#125;</div><div class="line">    public void init(ModuleOptions options) &#123;</div><div class="line">        if (this.options == null &amp;&amp; options != null) &#123;</div><div class="line">            this.options = options;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    public ModuleOptions getOptions() &#123;</div><div class="line">        return options;</div><div class="line">    &#125;</div><div class="line">    public boolean hasModule(String key) &#123;</div><div class="line">        return options.hasModule(key);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ModuleOptions就是具体管理那些包含那些模块的配置。该类是在App或者是测试module独立运行(后面提到)的时候进行初始化。例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class CustomApplication extends BaseApplication &#123;</div><div class="line">    @Override</div><div class="line">    public void onCreate() &#123;</div><div class="line">        super.onCreate();</div><div class="line">        initARouter();</div><div class="line">    &#125;</div><div class="line">    private void initARouter() &#123;</div><div class="line">        if (LG.isDebug) &#123;</div><div class="line">            ARouter.openLog();</div><div class="line">            ARouter.openDebug();</div><div class="line">            ARouter.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        ARouter.init(this);</div><div class="line">        ModuleOptions.ModuleBuilder builder = new ModuleOptions.ModuleBuilder(this)</div><div class="line">                .addModule(IHomeProvider.HOME_MAIN_SERVICE, IHomeProvider.HOME_MAIN_SERVICE)</div><div class="line">                .addModule(IModule1Provider.MODULE1_MAIN_SERVICE, IModule1Provider.MODULE1_MAIN_SERVICE)</div><div class="line">                .addModule(IModule2Provider.MODULE2_MAIN_SERVICE, IModule2Provider.MODULE2_MAIN_SERVICE)</div><div class="line">                .addModule(IModule4Provider.MODULE4_MAIN_SERVICE, IModule4Provider.MODULE4_MAIN_SERVICE)</div><div class="line">                .addModule(IModule5Provider.MODULE5_MAIN_SERVICE, IModule5Provider.MODULE5_MAIN_SERVICE);</div><div class="line">        ModuleManager.getInstance().init(builder.build());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这样子就完成了对改App或者是module的管理。</p>
+<h4 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h4><p>我们使用一个ServiceManager，用来获取不同模块的服务，即Provider。安装ARouter的文档，我们通过继承IProvider，编写一个对应模块的接口，提供接口方法，在对应模块实现该Provider。然后该Provider我们就是在ServiceManager里面进行管理和获取。比如：<br>home模块实现一个IHomeProvider，实现类是HomeProvider。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">//接口</div><div class="line">public interface IHomeProvider extends IBaseProvider &#123;</div><div class="line">    //Service</div><div class="line">    String HOME_MAIN_SERVICE = &quot;/home/main/service&quot;;</div><div class="line">    //开屏</div><div class="line">    String HOME_ACT_SPLASH = &quot;/home/act/splash&quot;;</div><div class="line">    //home主页</div><div class="line">    String HOME_ACT_HOME = &quot;/home/act/home&quot;;</div><div class="line">    String HOME_TABTYPE = &quot;home_tab_type&quot;;</div><div class="line">    void toast(String msg);</div><div class="line">    void selectedTab(Activity activity,int position);</div><div class="line">&#125;</div><div class="line">//实现类</div><div class="line">@Route(path = IHomeProvider.HOME_MAIN_SERVICE)</div><div class="line">public class HomeProvider implements IHomeProvider &#123;</div><div class="line">    private Context context;</div><div class="line">    @Override</div><div class="line">    public void init(Context context) &#123;</div><div class="line">        this.context = context;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public void toast(String msg) &#123;</div><div class="line">        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public void selectedTab(Activity activity,int position) &#123;</div><div class="line">        if (activity instanceof HomeActivity) &#123;</div><div class="line">            ((HomeActivity) activity).selectedTab(position);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后在ServiceManager中，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  //也可以使用自动注入，这里是手动发现并且调用</div><div class="line">public IModule1Provider getModule1Provider() &#123;</div><div class="line">      return module1Provider != null ? module1Provider : (module1Provider = ((IModule1Provider) MyRouter.newInstance(IModule1Provider.MODULE1_MAIN_SERVICE).navigation()));</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>我们对本Project的所有服务进行管理。然后，在base当中，提供不同的Service，对Provider进行调用，同时提供Intent方法，去启动不同模块的Activity，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//管理调用Provider的某一个特定模块的Service</div><div class="line">public class HomeService &#123;</div><div class="line">    private static boolean hasModule() &#123;</div><div class="line">        return ModuleManager.getInstance().hasModule(IHomeProvider.HOME_MAIN_SERVICE);</div><div class="line">    &#125;</div><div class="line">    public static void selectedTab(Activity activity, int position) &#123;</div><div class="line">        if (!hasModule()) return;</div><div class="line">        ServiceManager.getInstance().getHomeProvider().selectedTab(activity, position);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//管理该module的Activity跳转</div><div class="line">public class HomeIntent &#123;</div><div class="line">    private static boolean hasModule() &#123;</div><div class="line">        return ModuleManager.getInstance().hasModule(IHomeProvider.HOME_MAIN_SERVICE);</div><div class="line">    &#125;</div><div class="line">    public static void launchHome(int tabType) &#123;</div><div class="line">        //HomeActivity</div><div class="line">        MyBundle bundle = new MyBundle();</div><div class="line">        bundle.put(IHomeProvider.HOME_TABTYPE, tabType);</div><div class="line">        MyRouter.newInstance(IHomeProvider.HOME_ACT_HOME)</div><div class="line">                .withBundle(bundle)</div><div class="line">                .navigation();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="Module可独立运行配置"><a href="#Module可独立运行配置" class="headerlink" title="Module可独立运行配置"></a>Module可独立运行配置</h4><p>经过这两个，我们就已经基本完成了项目组件化。但是对于组件化，我们还有一个特点，就是每一个module都是可以独立运行的，方便开发和调试。那么，我们应该怎么弄？</p>
+<ol>
+<li>我们提供两种环境，一个是debug，一种是release，debug的时候，我们是可运行的独立模块，release的时候，我们是library。</li>
+<li>debug的时候，我们需要提供一些测试代码和一套初始化。<br>例如:我们需要module1是可以独立运行的，在本demo中，他是一个Fragment作为主入口被别的模块添加使用，所以我们的debug中需要添加一个Activity，一套清单，一些资源。<br>我们使用config.gradle去管理我们的一些外部依赖arr以及我们的一些编译版本号，sdk版本号等，如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ext &#123;</div><div class="line">       //...版本号以及arr管理</div><div class="line">    //home是否是作为模块，true的时候是，false的时候可以独立运行，ps名字有点不对，不想改了ORZ</div><div class="line">    isMouleDebugHome = true;</div><div class="line">    //module1是否是作为模块，true的时候是，false的时候可以独立运行</div><div class="line">    isModule1Debug = true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后，在跟build.gradle第一行中apply 进去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apply from: &quot;config.gradle&quot;</div></pre></td></tr></table></figure></p>
+<p>然后，使用sourceSets对代码进行管理，配置debug和release的代码，module1的结构如下<br><img src="http://ocxgpwj6l.bkt.clouddn.com/module1.png" alt=""><br>他的gradle配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">if (rootProject.ext.isModule1Debug) &#123;</div><div class="line">    apply plugin: &apos;com.android.library&apos;</div><div class="line">&#125; else &#123;</div><div class="line">    apply plugin: &apos;com.android.application&apos;</div><div class="line">&#125;</div><div class="line">android &#123;</div><div class="line">    compileSdkVersion rootProject.ext.android.compileSdkVersion</div><div class="line">    buildToolsVersion rootProject.ext.android.buildToolsVersion</div><div class="line">    defaultConfig &#123;</div><div class="line">        minSdkVersion rootProject.ext.android.minSdkVersion</div><div class="line">        targetSdkVersion rootProject.ext.android.targetSdkVersion</div><div class="line">        versionCode 101</div><div class="line">        versionName &quot;1.0.1&quot;</div><div class="line">        if (!rootProject.ext.isModule1Debug) &#123;</div><div class="line">            applicationId &quot;com.github.io.liweijie.lib1&quot;</div><div class="line">        &#125;</div><div class="line">        javaCompileOptions &#123;</div><div class="line">            annotationProcessorOptions &#123;</div><div class="line">                arguments = [moduleName: project.getName()]</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    compileOptions &#123;</div><div class="line">        sourceCompatibility JavaVersion.VERSION_1_7</div><div class="line">        targetCompatibility JavaVersion.VERSION_1_7</div><div class="line">    &#125;</div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            minifyEnabled false</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    sourceSets &#123;</div><div class="line">        main &#123;</div><div class="line">            if (!rootProject.ext.isModule1Debug) &#123;</div><div class="line">                manifest.srcFile &apos;src/debug/AndroidManifest.xml&apos;</div><div class="line">                java.srcDir &apos;src/debug/java/&apos;</div><div class="line">                res.srcDirs=[&apos;src/debug/res&apos;]</div><div class="line">            &#125; else &#123;</div><div class="line">                manifest.srcFile &apos;src/release/AndroidManifest.xml&apos;</div><div class="line">                java.srcDir &apos;src/release/java/&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">dependencies &#123;</div><div class="line">    compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</div><div class="line">    androidTestCompile(&apos;com.android.support.test.espresso:espresso-core:2.2.2&apos;, &#123;</div><div class="line">        exclude group: &apos;com.android.support&apos;, module: &apos;support-annotations&apos;</div><div class="line">    &#125;)</div><div class="line">    compile project(&apos;:base&apos;)</div><div class="line">    testCompile &apos;junit:junit:4.12&apos;</div><div class="line">    annotationProcessor rootProject.ext.dependencies[&quot;aroutercompiler&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里需要注意的问题是，debug和relase的清单都需要声明需要的activity以及其他组件。debug中还应该配置Application，进行ARouter的初始化。<br>经过这样子，我们的每一个module都是可以独立运行的模块了。一般而言，release其实是没有什么东西的，因为release需要的就是我们module本身需要的业务逻辑实现代码，他是作为library去使用的，看自己项目是否需要配置relase。<br>最终结果如图：<br>App独立运行：<br><img src="https://github.com/liweijieok/ModularSample/blob/master/art/app1.gif" alt=""><br>App2独立运行：<br><img src="https://github.com/liweijieok/ModularSample/blob/master/art/app2.gif" alt=""><br>home独立运行：<br><img src="https://github.com/liweijieok/ModularSample/blob/master/art/home.gif" alt=""><br>module1独立运行：<br><img src="https://github.com/liweijieok/ModularSample/blob/master/art/module.gif" alt=""></p>
+<h2 id="组件化开发的建议"><a href="#组件化开发的建议" class="headerlink" title="组件化开发的建议"></a>组件化开发的建议</h2><ol>
+<li>在我们每一个模块文档之后，我们应该使用arr的形式引入依赖，上传我们的maven库，再去compile下来，同时注释掉setting.gradle的配置，这样子有助于编译加快。</li>
+<li>删除各个module的test代码，也就是src目录下的test，因为那些都是包含一些task的，在同步或者是编译的时候会被执行，减慢了编译速度。</li>
+<li>四大组件应该在各自module里面声明。</li>
+<li>在Base中提供一个BaseApplication。</li>
+</ol>
+<h2 id="旧项目组件化过程实践"><a href="#旧项目组件化过程实践" class="headerlink" title="旧项目组件化过程实践"></a>旧项目组件化过程实践</h2><p>最近在做公司的App，和同事一起把负责的App组件化了，在这个过程中有一些坑跟大家分享一下，避免大家再踩。</p>
+<ol>
+<li>不要一步彻底的组件化，步子不要迈得太大，建议是先将比较容易的组件进行拆分出来，先做成模块，然后一边进行业务的迭代，两边都不耽误，除非你有足够时间进行组件化工作才去彻底组件化。</li>
+<li>关于资源的拆分，一些style，一些常见的string，一些共用的图片，drawable等资源，建议存放在base module当中，可以共用。对于属于不同模块的资源，建议不要存放在base，可能一开始你直接把所有的资源都放到base里面会比较好做，比如不用担心编译错误，资源无法寻找到，需要一个一个的复制的问题，但是，你存放到了base，而base模块，一般开发过程中，是经常变动的，那么，就是他会经常被编译，就会带来一个编译的速度问题，所以应该各个模块存放自己的资源。</li>
+<li>关于Base的依赖库问题，比如我们可能有自家的sdk，第三方的依赖等等，这些，与业务逻辑无关的依赖，建议是使用一个单独的project 进行二次封装，封装完成之后，打包arr 依赖，上传自家maven库，通过compile 进行base，或者是特定模块，不建议直接在app中新建module。比如，我们要引入volley，我们应该使用一个新的project，对volley进行二次封装，稳定之后，通过compile arr 引入base 或者是其他模块中。这样子这些与业务逻辑无关的也方便公司其他项目使用。</li>
+<li>针对旧项目拆分的module，可以暂时不编写debug，也就是可以不用使得旧项目可以独立运行，因为他涉及的初始化逻辑可能较多，时间不够，直接被app依赖运行测试。针对新的module，可以编写debug来使得新module独立运行，方便调试。</li>
+</ol>
+<h2 id="组件化带来的问题"><a href="#组件化带来的问题" class="headerlink" title="组件化带来的问题"></a>组件化带来的问题</h2><ol>
+<li>由于项目的组价话，可能需要每个业务拆分的比较开，那么将会导致module也比较的多。到了最后，可能是一个模块带一个Activity以及一个Fragment作为一个组件，那么将会比较难的开发，所以，模块的拆分，我们需要按照我们实际项目进行划分模块，不要划分太细致。同时，在旧项目组件化过程中，由于各个模块尚未成熟，还没有稳定，那么就会有比较多的模块进行编译，速度也是比较慢的，所以旧项目的拆分也是需要按照一定的步骤慢慢拆分。同时，建议使用Activity+Fragment的方式进行组件化，方便被别的组件使用，Activity不涉及一般逻辑。</li>
+<li>有时候修改base库，需要修改依赖方式会比较的麻烦。</li>
+<li>有时候会有资源冲突问题,这个我们在gradle里面为模块资源添加一个前缀解决</li>
+</ol>
+<p>项目GitHub地址:<a href="https://github.com/liweijieok/ModularSample" target="_blank" rel="external">ModularSample</a><br>本文如有什么写的错误的，请大家指正，一起进步。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android组件化/" rel="tag">#Android组件化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/16/Android/自定义View/viewevent/" rel="next" title="View的事件传递深入理解">
+                <i class="fa fa-chevron-left"></i> View的事件传递深入理解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用ARouter实现组件化"><span class="nav-number">1.</span> <span class="nav-text">使用ARouter实现组件化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化的优点"><span class="nav-number">1.1.</span> <span class="nav-text">组件化的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化开发的实现"><span class="nav-number">1.2.</span> <span class="nav-text">组件化开发的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.2.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.2.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实践"><span class="nav-number">1.2.3.</span> <span class="nav-text">实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管理Router"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">管理Router</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理服务"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">管理服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Module可独立运行配置"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">Module可独立运行配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化开发的建议"><span class="nav-number">1.3.</span> <span class="nav-text">组件化开发的建议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#旧项目组件化过程实践"><span class="nav-number">1.4.</span> <span class="nav-text">旧项目组件化过程实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件化带来的问题"><span class="nav-number">1.5.</span> <span class="nav-text">组件化带来的问题</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
