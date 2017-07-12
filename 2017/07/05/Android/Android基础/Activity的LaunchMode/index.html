@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git学习资源," />
+  <meta name="keywords" content="Activity生命周期," />
 
 
 
@@ -84,25 +84,75 @@
 
 
 
-<meta name="description" content="官网git
-推荐教程，中文版的Git教程Git远程操作详解Git教程git - 简易指南
-git代码管理官网git flow
-    本站总访问量次">
+<meta name="description" content="Activity启动模式分类和大概区别Activity有四种启动模式。本文主要是详细尝试一下各种启动模式的不同以及模式之间切换会导致Activity的生命周期发送那些变化以及不同。
+
+
+
+用例
+启动模式
+多个实例？
+注释
+
+
+
+
+大多数Activity的正常启动
+standar
+是
+默认值。系统始终会在目标任务中创建新的Activity实例并向其传送Intent
+
+
+大多数Activity的正常启">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git学习推荐">
-<meta property="og:url" content="http://yoursite.com/2016/11/04/资源学习/gitrerecommend/index.html">
+<meta property="og:title" content="Activity的启动模式">
+<meta property="og:url" content="http://yoursite.com/2017/07/05/Android/Android基础/Activity的LaunchMode/index.html">
 <meta property="og:site_name" content="黎伟杰">
-<meta property="og:description" content="官网git
-推荐教程，中文版的Git教程Git远程操作详解Git教程git - 简易指南
-git代码管理官网git flow
-    本站总访问量次">
-<meta property="og:updated_time" content="2016-11-04T14:38:46.000Z">
+<meta property="og:description" content="Activity启动模式分类和大概区别Activity有四种启动模式。本文主要是详细尝试一下各种启动模式的不同以及模式之间切换会导致Activity的生命周期发送那些变化以及不同。
+
+
+
+用例
+启动模式
+多个实例？
+注释
+
+
+
+
+大多数Activity的正常启动
+standar
+是
+默认值。系统始终会在目标任务中创建新的Activity实例并向其传送Intent
+
+
+大多数Activity的正常启">
+<meta property="og:image" content="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-standard.gif?raw=true">
+<meta property="og:image" content="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singletop.gif?raw=true">
+<meta property="og:image" content="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singletask.gif?raw=true">
+<meta property="og:image" content="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singleinstance.gif?raw=true">
+<meta property="og:updated_time" content="2017-07-12T08:00:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git学习推荐">
-<meta name="twitter:description" content="官网git
-推荐教程，中文版的Git教程Git远程操作详解Git教程git - 简易指南
-git代码管理官网git flow
-    本站总访问量次">
+<meta name="twitter:title" content="Activity的启动模式">
+<meta name="twitter:description" content="Activity启动模式分类和大概区别Activity有四种启动模式。本文主要是详细尝试一下各种启动模式的不同以及模式之间切换会导致Activity的生命周期发送那些变化以及不同。
+
+
+
+用例
+启动模式
+多个实例？
+注释
+
+
+
+
+大多数Activity的正常启动
+standar
+是
+默认值。系统始终会在目标任务中创建新的Activity实例并向其传送Intent
+
+
+大多数Activity的正常启">
+<meta name="twitter:image" content="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-standard.gif?raw=true">
 
 
 
@@ -123,10 +173,10 @@ git代码管理官网git flow
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/04/资源学习/gitrerecommend/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/05/Android/Android基础/Activity的LaunchMode/"/>
 
 
-  <title> Git学习推荐 | 黎伟杰 </title>
+  <title> Activity的启动模式 | 黎伟杰 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -266,7 +316,7 @@ git代码管理官网git flow
             
             
               
-                Git学习推荐
+                Activity的启动模式
               
             
           </h1>
@@ -278,8 +328,8 @@ git代码管理官网git flow
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-04T22:38:46+08:00" content="2016-11-04">
-              2016-11-04
+            <time itemprop="dateCreated" datetime="2017-07-05T17:23:31+08:00" content="2017-07-05">
+              2017-07-05
             </time>
           </span>
 
@@ -292,8 +342,20 @@ git代码管理官网git flow
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/资源/" itemprop="url" rel="index">
-                    <span itemprop="name">资源</span>
+                  <a href="/categories/Android基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Android基础</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android基础/Activity启动模式/" itemprop="url" rel="index">
+                    <span itemprop="name">Activity启动模式</span>
                   </a>
                 </span>
 
@@ -325,10 +387,54 @@ git代码管理官网git flow
       
 
       
-        <h3 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h3><p><a href="https://git-scm.com/" target="_blank" rel="external">git</a></p>
-<h3 id="推荐教程，中文版的"><a href="#推荐教程，中文版的" class="headerlink" title="推荐教程，中文版的"></a>推荐教程，中文版的</h3><p><a href="http://www.yiibai.com/git/" target="_blank" rel="external">Git教程</a><br><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a><br><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">git - 简易指南</a></p>
-<h3 id="git代码管理"><a href="#git代码管理" class="headerlink" title="git代码管理"></a>git代码管理</h3><p><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/" target="_blank" rel="external">官网</a><br><a href="http://www.ituring.com.cn/article/56870" target="_blank" rel="external">git flow</a></p>
-<p><span id="busuanzi_container_site_pv"><br>    本站总访问量<span id="busuanzi_value_site_pv"></span>次<br></span></p>
+        <h2 id="Activity启动模式分类和大概区别"><a href="#Activity启动模式分类和大概区别" class="headerlink" title="Activity启动模式分类和大概区别"></a>Activity启动模式分类和大概区别</h2><p>Activity有四种启动模式。本文主要是详细尝试一下各种启动模式的不同以及模式之间切换会导致Activity的生命周期发送那些变化以及不同。</p>
+<table>
+<thead>
+<tr>
+<th>用例</th>
+<th>启动模式</th>
+<th>多个实例？</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大多数Activity的正常启动</td>
+<td>standar</td>
+<td>是</td>
+<td>默认值。系统始终会在目标任务中创建新的Activity实例并向其传送Intent</td>
+</tr>
+<tr>
+<td>大多数Activity的正常启动</td>
+<td>singleTop</td>
+<td>有条件</td>
+<td>如果目标任务的顶部已经存在一个Activity实例，则系统会通过调用该实例的newIntent()方法向其传送Intent，而不是创建新的Activity实例</td>
+</tr>
+<tr>
+<td>专用启动(不建议作常规用途)</td>
+<td>singleTask</td>
+<td>否</td>
+<td>系统在新任务的根位置创建Activity并向其传送Intent，不过，如果已经存在一个Activity实例，则系统会通过调用该实例的onNewIntent,而不是创建新的Activity实例</td>
+</tr>
+<tr>
+<td>专用启动(不建议作常规用途)</td>
+<td>singleInstance</td>
+<td>否</td>
+<td>与singleTask相同，只是系统不会将其他任何Activity启动到包含实例的任务中，该Activity始终是其任务的唯一仅有成员。</td>
+</tr>
+</tbody>
+</table>
+<p>以上是来自官方文档的总结，里面说的任务就是我们平时说的Activity栈。</p>
+<h2 id="standar启动模式"><a href="#standar启动模式" class="headerlink" title="standar启动模式"></a>standar启动模式</h2><p>标准启动模式。图示<br><img src="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-standard.gif?raw=true" alt=""></p>
+<p>每次启动Activity都会生成新的实例。这是默认的启动方式，由于Activity实例是由反射生成，所以较为耗性能。</p>
+<h2 id="singleTop启动模式"><a href="#singleTop启动模式" class="headerlink" title="singleTop启动模式"></a>singleTop启动模式</h2><p>栈顶模式，图示<br><img src="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singletop.gif?raw=true" alt=""></p>
+<p>当需要被启动的Activity位于栈顶的时候，不会新建实例，当需要被启动的Activity不是位于栈顶的时候，则会新建实例，来到栈顶。原来旧的实例不会被弹出旧栈。<br>比如A是singleTop ，现在的模式是栈情况是A-B，这时候启动A，则会使A-B-A。<br>但是当A位于栈顶的时候，比如，B-A，这时候启动A，这还是B-A，A的生命周期变化是onNewIntent()-onResume()。不会调用onCreate()和onStart()方法。</p>
+<h2 id="singleTask启动模式"><a href="#singleTask启动模式" class="headerlink" title="singleTask启动模式"></a>singleTask启动模式</h2><p>图示<br><img src="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singletask.gif?raw=true" alt=""></p>
+<p>当需要被启动的Activity实例已经存在，但是不是位于该栈的栈顶的时候，则会把该Activity之上的移除，然后调用onNewIntent()方法。当改Activity实例不存在的时候，则会新建存入栈顶。他跟singleTop基本一样，除了存在实例不位于栈顶被启动的情况外。</p>
+<h2 id="singleInstance启动模式"><a href="#singleInstance启动模式" class="headerlink" title="singleInstance启动模式"></a>singleInstance启动模式</h2><p>单栈模式，图示<br><img src="https://github.com/HIT-Alibaba/interview/blob/master/img/android-lanchmode-singleinstance.gif?raw=true" alt=""></p>
+<p>他会在整个应用程序中，单独一个栈出来存储这个Activity，当别的应用启动他的时候，则会在寻找，没有新建栈存储，有的话就直接启动，不同的栈启动这个Activity，假如已经存在，都是不会新建实例的。</p>
+<p>推荐阅读：</p>
+<p><a href="https://developer.android.com/guide/topics/manifest/activity-element.html#lmode" target="_blank" rel="external">应用清单</a></p>
 
       
     </div>
@@ -351,7 +457,7 @@ git代码管理官网git flow
       
         <div class="post-tags">
           
-            <a href="/tags/git学习资源/" rel="tag">#git学习资源</a>
+            <a href="/tags/Activity生命周期/" rel="tag">#Activity生命周期</a>
           
         </div>
       
@@ -360,17 +466,13 @@ git代码管理官网git flow
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/04/Android/开源项目学习/RxJavacmd/" rel="next" title="RxJava全部操作符例子">
-                <i class="fa fa-chevron-left"></i> RxJava全部操作符例子
+              <a href="/2017/07/05/Android/Android基础/Activity的生命周期介绍/" rel="next" title="Activity的生命周期介绍">
+                <i class="fa fa-chevron-left"></i> Activity的生命周期介绍
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/04/资源学习/git命令/" rel="prev" title="Git常用命令">
-                Git常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -484,7 +586,7 @@ git代码管理官网git flow
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#官网"><span class="nav-number">1.</span> <span class="nav-text">官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐教程，中文版的"><span class="nav-number">2.</span> <span class="nav-text">推荐教程，中文版的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git代码管理"><span class="nav-number">3.</span> <span class="nav-text">git代码管理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity启动模式分类和大概区别"><span class="nav-number">1.</span> <span class="nav-text">Activity启动模式分类和大概区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#standar启动模式"><span class="nav-number">2.</span> <span class="nav-text">standar启动模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singleTop启动模式"><span class="nav-number">3.</span> <span class="nav-text">singleTop启动模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singleTask启动模式"><span class="nav-number">4.</span> <span class="nav-text">singleTask启动模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singleInstance启动模式"><span class="nav-number">5.</span> <span class="nav-text">singleInstance启动模式</span></a></li></ol></div>
             
           </div>
         </section>
