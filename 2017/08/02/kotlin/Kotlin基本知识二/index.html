@@ -1,0 +1,631 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="kotlin," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="面向对象类构造器和继承：12open class Man constructor(var name: String, var sex: String)class Boy(name: String, sex: String = &amp;quot;男&amp;quot;) : Man(name, sex)
+类定义也是使用class关键字，构造器使用constructor关键字，里面定义属性。继承类使用:，需要写出父">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础知识二">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/kotlin/Kotlin基本知识二/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="面向对象类构造器和继承：12open class Man constructor(var name: String, var sex: String)class Boy(name: String, sex: String = &amp;quot;男&amp;quot;) : Man(name, sex)
+类定义也是使用class关键字，构造器使用constructor关键字，里面定义属性。继承类使用:，需要写出父">
+<meta property="og:updated_time" content="2017-08-01T18:31:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础知识二">
+<meta name="twitter:description" content="面向对象类构造器和继承：12open class Man constructor(var name: String, var sex: String)class Boy(name: String, sex: String = &amp;quot;男&amp;quot;) : Man(name, sex)
+类定义也是使用class关键字，构造器使用constructor关键字，里面定义属性。继承类使用:，需要写出父">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/02/kotlin/Kotlin基本知识二/"/>
+
+
+  <title> Kotlin基础知识二 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Kotlin基础知识二
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-02T00:00:00+08:00" content="2017-08-02">
+              2017-08-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>类构造器和继承：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">open class Man constructor(var name: String, var sex: String)</div><div class="line">class Boy(name: String, sex: String = &quot;男&quot;) : Man(name, sex)</div></pre></td></tr></table></figure></p>
+<p>类定义也是使用class关键字，构造器使用constructor关键字，里面定义属性。继承类使用:，需要写出父类的属性和自己构造器的属性。父类的属性使用它的构造器的参数名既可，类需要被继承需要加上open关键字，否则是final的类不能被继承。</p>
+<h3 id="普通属性和组合属性"><a href="#普通属性和组合属性" class="headerlink" title="普通属性和组合属性"></a>普通属性和组合属性</h3><p>普通属性就是一般的构造器中的属性，组合属性就是通过计算得到值的属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">open class Chinese constructor(var sex :Boolean,var region :String)&#123;</div><div class="line">    var skin = &quot;yellow&quot;</div><div class="line">    //var变量必须初始化，val不用</div><div class="line">    val avgLife :Double</div><div class="line">    get() &#123;</div><div class="line">        when (region) &#123;</div><div class="line">            &quot;sh&quot; -&gt; &#123;</div><div class="line">                return 80.9</div><div class="line">            &#125;</div><div class="line">            else -&gt; &#123;</div><div class="line">                return 80.1</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    var avgSalary :Int</div><div class="line">    get() &#123;</div><div class="line">        when (region) &#123;</div><div class="line">            &quot;sh&quot; -&gt; &#123;</div><div class="line">                return 4000</div><div class="line">            &#125;</div><div class="line">            else -&gt; &#123;</div><div class="line">                return 3000</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    set(value) &#123;</div><div class="line">        when (value) &#123;</div><div class="line">            in 2000..3000 -&gt; &#123;</div><div class="line">                this.region = &quot;an&quot;</div><div class="line">            &#125;</div><div class="line">            else -&gt; &#123;</div><div class="line">                this.region = &quot;sh&quot;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    override fun toString(): String &#123;</div><div class="line">        return &quot;Chinese(sex=$sex, region=&apos;$region&apos;, skin=&apos;$skin&apos;, avgLife=&apos;$avgLife&apos;)&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val c = Chinese(false, &quot;sh&quot;)</div><div class="line">    println(c.toString())</div><div class="line">    c.avgSalary = 3000</div><div class="line">    println(c.toString())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>get和set是关键字，通过get为该组合属性复制，通过set改变其他属性。当没有使用set的时候，组合属性类型为val。</p>
+<h3 id="子类中的属性和属性覆盖"><a href="#子类中的属性和属性覆盖" class="headerlink" title="子类中的属性和属性覆盖"></a>子类中的属性和属性覆盖</h3><p>子类可以定义自己特有的属性<br>当父类定义了一个属性，子类也是定了了同名的属性的时候，父类属性需要加入open关键字，子类属性需要加上override关键字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">open class A &#123;</div><div class="line">    open var v = &quot;A&quot;</div><div class="line">&#125;</div><div class="line">class B : A() &#123;</div><div class="line">    override var v = &quot;B&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>方法定义，上面已经有一些示例了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun methodName(args):ReturnType&#123;</div><div class="line">return ReturnType</div><div class="line">&#125;</div><div class="line">//例如</div><div class="line">fun add(x :Int,y:Int):Int&#123;</div><div class="line">return x+y</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>方法覆盖：方法的覆盖也是需要加上open关键字，覆盖时需要调用父类的方法可以使用supe，跟java一样。</p>
+<h3 id="可见性修饰符"><a href="#可见性修饰符" class="headerlink" title="可见性修饰符"></a>可见性修饰符</h3><p>类本身以及其属性，方法，构造器以及接口和对象的对外访问权限。<br>修饰四种权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">private     //当前类可见，最小的可见性，不可以与open一起使用</div><div class="line">protected //仅仅子类可见以及自身可见，不可外部直接调用</div><div class="line">internal //当前模块内可见</div><div class="line">public  //公开的，对外完全可见</div></pre></td></tr></table></figure></p>
+<h3 id="嵌套类"><a href="#嵌套类" class="headerlink" title="嵌套类"></a>嵌套类</h3><p>类之中嵌套其他类。有普通嵌套类和内部类，前者不需要外部类的对象可以实例化，后者需要外部类实例化之后才能实例化。类似java内部类需要加上static之后才能独立使用类似。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class A &#123;</div><div class="line">    class B &#123;</div><div class="line">        fun add(x: Int, y: Int): Int &#123;</div><div class="line">            return x + y</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    inner class C &#123;</div><div class="line">        fun add(x: Int, y: Int): Int &#123;</div><div class="line">            return x + y</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(A.B().add(1, 2))</div><div class="line">// 错误println(A().B().add(1,2))</div><div class="line">    println(A().C().add(1,2))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Bean-类"><a href="#Bean-类" class="headerlink" title="Bean 类"></a>Bean 类</h3><p>类似java Bean，格式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data ClassName(var,var...)</div></pre></td></tr></table></figure></p>
+<p>这样子声明的类会多出一些常用的方法，比如copy()，相当于clone一个新对象，不改变原来对象值，比如列举属性的componentN方法。例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">data class Boy(var name: String, var age: Int)</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val boy = Boy(&quot;Los&quot;, 14)</div><div class="line">    println(boy.toString())</div><div class="line">    val copyBoy = boy.copy(age = 1)</div><div class="line">    println(boy.toString())</div><div class="line">    println(copyBoy.toString())</div><div class="line">    println(&quot;$&#123;boy.component1()&#125;,$&#123;boy.component2()&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><p>有限类型枚举，比如星期一二三。这时候可以使用枚举类型列举出来，直接使用这些集合元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">enum class enumClass(val v: Int) &#123;</div><div class="line">    A(1),B(2),C(3)</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(enumClass.values().joinToString())</div><div class="line">    println(&quot;$&#123;enumClass.A.name&#125;,$&#123;enumClass.A.ordinal&#125;,$&#123;enumClass.A.v&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>跟java的枚举的操作基本一样。</p>
+<h3 id="对象声明和表达式"><a href="#对象声明和表达式" class="headerlink" title="对象声明和表达式"></a>对象声明和表达式</h3><p>跟java的匿名内部类类似。使用object关键字。格式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">val name=object :类，接口&#123;//属性或者是方法&#125;</div></pre></td></tr></table></figure></p>
+<p>他避免了继承，过程会较为简单，对于一些简单对象可以使用这种方式。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">open class A&#123;</div><div class="line">    open fun method()&#123;</div><div class="line">        print(&quot;父类的method&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val obj = object : A()&#123;</div><div class="line">        override fun method() &#123;</div><div class="line">            super.method()</div><div class="line">            print(&quot;对象表达式的method&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    obj.method()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>纯对象表达式，临时使用，无需继承任何类，相当于零时使用了一个类然后使用它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val obj = object &#123;</div><div class="line">        val temp = 1</div><div class="line">        fun method() &#123;</div><div class="line">            print(&quot;method&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    obj.method()</div><div class="line">    print(obj.temp)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对象声明，不能用在函数里面，一般是对其他类的一个管理包装。调用的时候是直接ClassName.method()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    ClassA.method()</div><div class="line">&#125;</div><div class="line">object ClassA &#123;</div><div class="line">    fun method() &#123;</div><div class="line">        print(&quot;对象声明&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>伴生对象，一般用于创建一个类的实例的工厂方法。类似java的静态成员变量。需要同时使用companion 跟object关键字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    ClassA.create()</div><div class="line">&#125;</div><div class="line">class ClassA&#123;</div><div class="line">    companion object &#123;</div><div class="line">        fun create()= ClassA()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="异常错误处理"><a href="#异常错误处理" class="headerlink" title="异常错误处理"></a>异常错误处理</h3><p>他的使用更java的类似，但是他是可以作为一个表达式返回的。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    //最终值是1</div><div class="line">    val a: Int? = try &#123;</div><div class="line">        &quot;123abc&quot;.toInt()</div><div class="line">    &#125; catch (e: Exception) &#123;</div><div class="line">        //必须返回一个int或者是Null</div><div class="line">        1</div><div class="line">    &#125;</div><div class="line">    //Unit类型</div><div class="line">    val b = try &#123;</div><div class="line">        &quot;123abc&quot;.toInt()</div><div class="line">    &#125; catch (e: Exception) &#123;</div><div class="line">        //可以不返回</div><div class="line">    &#125;</div><div class="line">    print(a)</div><div class="line">    print(b)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>类型的判断可以使用is 以及!is进行判断，类型的转换，在一般情况下kotlin会帮我们自动进行类型匹配转换，我们需要手动转换的时候可以使用as或者是as?进行转换，前者是强制转换，可能报错不能为空，后者是安全转换，类型不对可以为空。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val a = 2</div><div class="line">    val b = 3</div><div class="line">    val c = if (a &gt; b) &quot;a大于b&quot; else a</div><div class="line">    when (c) &#123;</div><div class="line">        c is String -&gt; &#123;</div><div class="line">            print(&quot;C 是String&quot;)</div><div class="line">        &#125;</div><div class="line">        c is Int -&gt; &#123;</div><div class="line">            print(&quot;C 是Int&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    val d = c as? String</div><div class="line">    //报错</div><div class="line">    val e = c as String</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kotlin/" rel="tag">#kotlin</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/21/kotlin/Kotlin基本知识一/" rel="next" title="Kotlin基本知识一">
+                <i class="fa fa-chevron-left"></i> Kotlin基本知识一
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通属性和组合属性"><span class="nav-number">2.</span> <span class="nav-text">普通属性和组合属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子类中的属性和属性覆盖"><span class="nav-number">3.</span> <span class="nav-text">子类中的属性和属性覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性修饰符"><span class="nav-number">5.</span> <span class="nav-text">可见性修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套类"><span class="nav-number">6.</span> <span class="nav-text">嵌套类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bean-类"><span class="nav-number">7.</span> <span class="nav-text">Bean 类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类"><span class="nav-number">8.</span> <span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象声明和表达式"><span class="nav-number">9.</span> <span class="nav-text">对象声明和表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常错误处理"><span class="nav-number">10.</span> <span class="nav-text">异常错误处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型转换"><span class="nav-number">11.</span> <span class="nav-text">类型转换</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
