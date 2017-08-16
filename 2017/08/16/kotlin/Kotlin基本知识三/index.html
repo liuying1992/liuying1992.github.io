@@ -1,0 +1,637 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="kotlin," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="接口kotlin中的接口会可以包含属性，方法，作用跟java的一样，是没有实现的，是一个标准。定义123456789101112131415interface Name&amp;#123;//属性或者是方法定义&amp;#125;//例子open class A//不能有构造方法interface B &amp;#123;    //属性,不能初始化    var a: Int    //方法，不能实现    fun m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础知识三">
+<meta property="og:url" content="http://yoursite.com/2017/08/16/kotlin/Kotlin基本知识三/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="接口kotlin中的接口会可以包含属性，方法，作用跟java的一样，是没有实现的，是一个标准。定义123456789101112131415interface Name&amp;#123;//属性或者是方法定义&amp;#125;//例子open class A//不能有构造方法interface B &amp;#123;    //属性,不能初始化    var a: Int    //方法，不能实现    fun m">
+<meta property="og:updated_time" content="2017-08-16T04:19:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础知识三">
+<meta name="twitter:description" content="接口kotlin中的接口会可以包含属性，方法，作用跟java的一样，是没有实现的，是一个标准。定义123456789101112131415interface Name&amp;#123;//属性或者是方法定义&amp;#125;//例子open class A//不能有构造方法interface B &amp;#123;    //属性,不能初始化    var a: Int    //方法，不能实现    fun m">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/16/kotlin/Kotlin基本知识三/"/>
+
+
+  <title> Kotlin基础知识三 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Kotlin基础知识三
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-16T00:00:00+08:00" content="2017-08-16">
+              2017-08-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>kotlin中的接口会可以包含属性，方法，作用跟java的一样，是没有实现的，是一个标准。定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">interface Name&#123;//属性或者是方法定义&#125;</div><div class="line">//例子</div><div class="line">open class A</div><div class="line">//不能有构造方法</div><div class="line">interface B &#123;</div><div class="line">    //属性,不能初始化</div><div class="line">    var a: Int</div><div class="line">    //方法，不能实现</div><div class="line">    fun method(): Int</div><div class="line">&#125;</div><div class="line">class C(override var a: Int) : A(), B &#123;</div><div class="line">    override fun method(): Int &#123;</div><div class="line">        return 1</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接口的属性：不能初始化，但是可以有get方法,但是是需要val修饰，不能是var。<br>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//不能有构造方法</div><div class="line">interface B &#123;</div><div class="line">    //属性</div><div class="line">    val a: Int</div><div class="line">    get() = 1</div><div class="line">    //下面是错误写法</div><div class="line">    var b : Int</div><div class="line">    get()=1</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当接口的属性有了get()之后，在实现类可以不用实现该属性，直接当做常量使用，这也是他的主要作用。</p>
+<p>方法,可以不实现，也可以实现，但是实现的时候，约定是该方法是不变的,，直接被实现类调用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//方法</div><div class="line">   fun method(): Int</div><div class="line">   fun method1(): Int &#123;</div><div class="line">       return 1</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<h3 id="类实现接口冲突问题"><a href="#类实现接口冲突问题" class="headerlink" title="类实现接口冲突问题"></a>类实现接口冲突问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">interface A &#123;</div><div class="line">    fun foo() &#123;</div><div class="line">        print(&quot;A&quot;)</div><div class="line">    &#125;</div><div class="line">    fun bar()</div><div class="line">&#125;</div><div class="line">interface B &#123;</div><div class="line">    fun foo()&#123;</div><div class="line">        print(&quot;B foo&quot;)</div><div class="line">    &#125;</div><div class="line">    fun bar() &#123;</div><div class="line">        print(&quot;B&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class C :A,B&#123;</div><div class="line">    override fun bar() &#123;</div><div class="line">    &#125;</div><div class="line">    override fun foo() &#123;</div><div class="line">        super&lt;A&gt;.foo()</div><div class="line">        super&lt;B&gt;.foo()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class D : A &#123;</div><div class="line">    override fun bar() &#123; print(&quot;bar&quot;) &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在接口A和B中，都实现了foo方法，C中override了方法，在super的时候，因为不知道是super哪一个，所以需要制定，通过&lt;&gt;来制定调用那个类的实现。</p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>让一个类型能被广泛使用，通用化。用于函数的参数类型，函数的返回类型，类的泛型。</p>
+<ul>
+<li>泛型函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun &lt;T&gt; showMsg(msg: T) &#123;</div><div class="line">    println(msg)</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    showMsg(&quot;1&quot;)</div><div class="line">    showMsg(12)</div><div class="line">    showMsg(arrayListOf(1, 2, 3))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面表示接受一个参数类型是泛型(即不确定类型)，然后打印。调用的时候我们就可以随便输入任意类型的参数了。</p>
+<ul>
+<li>泛型约束：</li>
+</ul>
+<ol>
+<li>边界约束，即需要是某个类，或者其子类才能作为参数输入的泛型话。使用格式是 <t :="" 类型="">，例如：</t></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(sum(1,2,3,4,5.0))</div><div class="line">    println(sum1(1,2,3,4,5.0))</div><div class="line">&#125;</div><div class="line">fun &lt;T : Number&gt; sum(vararg number: T): Double &#123;</div><div class="line">    return number.map &#123; it.toDouble() &#125;</div><div class="line">            .sum()</div><div class="line">&#125;</div><div class="line">fun &lt;T : Number&gt; sum1(vararg numbers: T): Double &#123;</div><div class="line">    return numbers.sumByDouble &#123; it.toDouble() &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面例子功能一样，输入参数都是可变参数，类型必须是Number或者Number的子类。</p>
+<ul>
+<li>where约束，where约束是反正方法体声明之后，”{“之前。多个约束使用逗号分割。可以起到跟上面一样的作用，但是他同时可以有多个约束。比如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> fun &lt;T&gt; fillter(arr: List&lt;T&gt;, bound: T): List&lt;T&gt; where T : Number, T : Comparable&lt;T&gt; &#123;</div><div class="line">    return arr.filter &#123; it &gt;= bound &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>他就会要求输入参数必须是Number以及Comparable的子类才行。</p>
+<ul>
+<li>属性扩展<br>给某一个类加一个临时额外参数或者是通过泛型类给某一个群体加一个属性，然后可以对他进行操作。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class A(val num: Int)</div><div class="line">//给A加一个临时属性next，他的值是在num基础上+1</div><div class="line">val A.next: Int get() = 1 + this.num</div><div class="line">//给Number以及他的子类扩展了一个属性叫做area，他们可以调用这个属性</div><div class="line">val &lt;T : Number&gt; T.area get() = 3.14 * this.toDouble() * this.toDouble()</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val a = A(1)</div><div class="line">    println(a.next)</div><div class="line">    println(1.area)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kotlin/" rel="tag">#kotlin</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/02/kotlin/Kotlin基本知识二/" rel="next" title="Kotlin基础知识二">
+                <i class="fa fa-chevron-left"></i> Kotlin基础知识二
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类实现接口冲突问题"><span class="nav-number">2.</span> <span class="nav-text">类实现接口冲突问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型"><span class="nav-number">3.</span> <span class="nav-text">泛型</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
