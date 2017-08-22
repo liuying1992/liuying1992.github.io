@@ -1,0 +1,660 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="kotlin," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="本篇文章主要是总结之前没有的一些kotlin使用到的功能和语法特点。
+构造器Kotlin是支持多构造器的，一个类可以有多个构造函数，其中跟在类名声明后面的是主构造函数，其他是次构造函数。主构造函数可以在没有任何注解或者可见性修饰符的时候省略constructor关键字，直接声明，同时，主构造函数不能包含任何代码，可以把代码存放在init关键字包含的代码块里面。
+
+主构造函数的参数可以在初始化块中使">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础知识四(补缺)">
+<meta property="og:url" content="http://yoursite.com/2017/08/23/kotlin/Kotlin基础知识四(补缺)/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="本篇文章主要是总结之前没有的一些kotlin使用到的功能和语法特点。
+构造器Kotlin是支持多构造器的，一个类可以有多个构造函数，其中跟在类名声明后面的是主构造函数，其他是次构造函数。主构造函数可以在没有任何注解或者可见性修饰符的时候省略constructor关键字，直接声明，同时，主构造函数不能包含任何代码，可以把代码存放在init关键字包含的代码块里面。
+
+主构造函数的参数可以在初始化块中使">
+<meta property="og:updated_time" content="2017-08-22T17:03:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础知识四(补缺)">
+<meta name="twitter:description" content="本篇文章主要是总结之前没有的一些kotlin使用到的功能和语法特点。
+构造器Kotlin是支持多构造器的，一个类可以有多个构造函数，其中跟在类名声明后面的是主构造函数，其他是次构造函数。主构造函数可以在没有任何注解或者可见性修饰符的时候省略constructor关键字，直接声明，同时，主构造函数不能包含任何代码，可以把代码存放在init关键字包含的代码块里面。
+
+主构造函数的参数可以在初始化块中使">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/23/kotlin/Kotlin基础知识四(补缺)/"/>
+
+
+  <title> Kotlin基础知识四(补缺) | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Kotlin基础知识四(补缺)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-23T00:00:00+08:00" content="2017-08-23">
+              2017-08-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本篇文章主要是总结之前没有的一些kotlin使用到的功能和语法特点。</p>
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p>Kotlin是支持多构造器的，一个类可以有多个构造函数，其中跟在类名声明后面的是主构造函数，其他是次构造函数。主构造函数可以在没有任何注解或者可见性修饰符的时候省略constructor关键字，直接声明，同时，主构造函数不能包含任何代码，可以把代码存放在init关键字包含的代码块里面。</p>
+<ul>
+<li><p>主构造函数的参数可以在初始化块中使用，也可以在类体声明的属性初始化使用，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">class Food(name: String) &#123;</div><div class="line">    var nameUpper = name.toUpperCase()</div><div class="line"></div><div class="line">    init &#123;</div><div class="line">        print(name.toLowerCase())</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>当我们需要写一个单例模式的时候，这时候由于构造器需要私有，需要使用private关键字，所以需要construtor关键字修饰，比如下面的单例模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class SingleInstance private constructor(private var name: String) &#123;</div><div class="line">    companion object &#123;</div><div class="line">        private var instance: SingleInstance? = null</div><div class="line">        fun get(name: String): SingleInstance &#123;</div><div class="line">            if (instance == null) &#123;</div><div class="line">                synchronized(SingleInstance::class) &#123;</div><div class="line">                    if (instance == null)</div><div class="line">                        instance = SingleInstance(name)</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            //为null会报错，assert的效果</div><div class="line">            return instance!!</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    fun print() &#123;</div><div class="line">        print(this.name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    SingleInstance.get(&quot;Kotlin&quot;).print()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>构造器的属性需要使用var/val修饰的时候，我们的类内部方法才能去使用。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//编译不通过</div><div class="line">class A(name: String) &#123;</div><div class="line">    fun println() &#123;</div><div class="line">        println(name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//下面两个ok</div><div class="line">class B(var name: String) &#123;</div><div class="line">    fun println() &#123;</div><div class="line">        println(name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">class C(val name: String) &#123;</div><div class="line">    fun println() &#123;</div><div class="line">        println(name)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>次构造函数<br>需要使用construtor关键字。如果这个类已经有了一个主构造函数，那么每一个次构造函数都需要委托给主构造函数，可以是直接或者间接的通过别的次构造函数进行委托。使用this关键字进行委托。次构造函数中，不能使用val或者var去声明参数。例子如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//没有主构造函数</div><div class="line">class A &#123;</div><div class="line">    constructor()</div><div class="line">    //不能使用val/var关键字</div><div class="line">    constructor(name: String)</div><div class="line">&#125;</div><div class="line">//有主构造函数</div><div class="line">class B() &#123;</div><div class="line">    //</div><div class="line">    constructor(name: String) : this()</div><div class="line">    constructor(name: String, age: Int) : this(name)</div><div class="line">&#125;</div><div class="line">class C(var name: String?) &#123;</div><div class="line">    constructor(name: String, age: Int) : this(name)</div><div class="line">    constructor(age: Int) : this(null)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在没有主构造函数的时候，例如上面的class A，可以选择其中一个作为首要构造函数，不能使用this委托，其他的可以使用this委托给这个函数，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//没有主构造函数</div><div class="line">class D &#123;</div><div class="line">    //不能使用this，但是别的构造函数可以委托给他</div><div class="line">    constructor(age: Int)</div><div class="line">    constructor(name: String):this(0)</div><div class="line">    constructor(name: String,age: Int):this(age)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>所有的类都会有一个共同的超类，Any，没有显示继承某一个类会继承该类。<br>Any类有只有三个方法，没有其他的东西，分别是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">equals()</div><div class="line">hashCode()</div><div class="line">toString()</div></pre></td></tr></table></figure></p>
+<p>在Kotlin中，所有的类默认都是final的，不可以被继承，需要被继承该类需要使用open关键字修饰。<br>对于抽象类，使用abstract关键字声明，他的一些成员可以声明为abstract不实现，我们可以不需要一个open关键字修饰一个抽嫌类或者他的函数。而且抽象类可以继承非抽象类并且覆盖使得他的覆盖方法变为抽象，例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">abstract class A() &#123;</div><div class="line">    abstract fun run()</div><div class="line">    abstract val i: Int</div><div class="line">    fun run1() &#123;&#125;</div><div class="line">    val j = 1</div><div class="line">&#125;</div><div class="line">class B : A() &#123;</div><div class="line">    //不能override run1()和j，因为他们是final的</div><div class="line">    override fun run() &#123;</div><div class="line">        println(&quot;run&quot;)</div><div class="line">    &#125;</div><div class="line">    override val i = 2</div><div class="line">&#125;</div><div class="line">open class C&#123;</div><div class="line">    open fun method()&#123;&#125;</div><div class="line">&#125;</div><div class="line">//抽像类覆盖普通类的方法并且使得该方法为抽象方法</div><div class="line">abstract class D:C()&#123;</div><div class="line">  abstract override fun method()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><p>Kotlin中没有跟java一样的静态方法的声明，他是需要通过声明一个伴生对象来实现这种需求，假如是整一个类(比如我们的Util类)都是静态方法，可以直接把class关键字换成object关键字既可。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">    companion object &#123;</div><div class="line">        fun print(msg:String)&#123;</div><div class="line">            println(msg)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">object B&#123;</div><div class="line">    fun print(msg: String) &#123;</div><div class="line">        println(msg)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    fun add(a:Int,b:Int):Int&#123;</div><div class="line">        return a+b</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    A.print(&quot;java&quot;)</div><div class="line">    B.print(&quot;kotlin&quot;)</div><div class="line">    B.add(1, 2)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="属性和字段"><a href="#属性和字段" class="headerlink" title="属性和字段"></a>属性和字段</h3><h4 id="属性声明"><a href="#属性声明" class="headerlink" title="属性声明"></a>属性声明</h4><p>一个完整的属性声明如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var &lt;propertyName&gt; [: &lt;&gt;PropertyType] [= &lt;property_initializer&gt;]</div><div class="line">      [&lt;getter&gt;]</div><div class="line">      [&lt;setter&gt;]</div></pre></td></tr></table></figure></p>
+<p>[]表示是可选的。属性的类型可以从初始化或者是getter返回值进行推断出来，也可以省略，其他时候则是需要加上并且做初始化工作(除开抽象类或者接口中的，或者是在init中进行初始化)。比如下面情况是会比编译错误的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val i;</div><div class="line">var j: Int?</div></pre></td></tr></table></figure></p>
+<p>会编译不通过，一个是不知道类型是什么，一个是没有初始化。</p>
+<h4 id="关于get-set："><a href="#关于get-set：" class="headerlink" title="关于get/set："></a>关于get/set：</h4><ol>
+<li>get()是设置对象获取该属性时候的返回</li>
+<li>set是通过该属性的值可以对其他属性或者方法进行设置或者调用。他被调用的时间是该对象对该属性赋值的时候</li>
+<li>对于val属性他是只有get没有set的</li>
+<li>在get方法中不可以再次调用本身属性，否则会栈溢出。</li>
+</ol>
+<h4 id="幕后字段：field"><a href="#幕后字段：field" class="headerlink" title="幕后字段：field"></a>幕后字段：field</h4><p>使用它的时候需要进行初始化，他会用在set方法中，对自身的值进行再次修改。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">    var a : Int = 1</div><div class="line">    set(value) &#123;</div><div class="line">        if (value == 1) &#123;</div><div class="line">            field = 4</div><div class="line">        &#125;else&#123;</div><div class="line">            field = 5</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    var a = A()</div><div class="line">    println(a.a)</div><div class="line">    a.a = 1</div><div class="line">    println(a.a)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>打印结果是1，4。这里的field初始化时候的值是1，后面对该属性值进行修改之后再次在set中进行了二次修改,field相当于this.a，属性通过this关键字调用本身再次复制。field也叫做幕后字段。在一个属性至少包含一个访问器(get/set)使用默认实现，或者自定义实现通过field引用field幕后字段，才会有field属性，他只能在访问器中使用。</p>
+<h4 id="编译器常量："><a href="#编译器常量：" class="headerlink" title="编译器常量："></a>编译器常量：</h4><p>我们使用val把一个属性修饰成为常量，比如在一个名为Test.kt的文件中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">class A</div><div class="line">val b = 1;</div><div class="line">const val c = 2</div></pre></td></tr></table></figure></p>
+<p>编译之后会生成两个类，一个是A，另外一个是Test。属性b存在的方式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">public final class Test &#123;</div><div class="line">    public static final int c = 2;</div><div class="line">    private static final int b = 1;</div><div class="line">    public static final int getB() &#123;</div><div class="line">        return b;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最终通过get()的方式获取这个常量值，但是假如我们是需要实现类型java的那种static final的常量，可以使用const val进行，那么他就会变为编译器常量。使用它的时候有规定：</p>
+<ol>
+<li>只能对应在类外部或者object(伴生对象或者对象表达式)内部</li>
+<li>只能使用String或者是原生的数据类型(Int，Double等)</li>
+<li>不能自定义getter(因为调用的时候直接调用或者内部为我们生成了，所以不需要)</li>
+</ol>
+<p>在Kotlin使用注解的时候，注解参数中的属性，只能是编译期常量(其他形式的属性都不能使用在注解参数中)</p>
+<h4 id="延迟初始化属性-lateinit"><a href="#延迟初始化属性-lateinit" class="headerlink" title="延迟初始化属性:lateinit"></a>延迟初始化属性:lateinit</h4><p>再一个非抽象或者是非接口的类中，我们的变量都是需要先进行初始化的，但是在一些情况下，比如需要注解进行初始化，或者是不需要新建实例的时候初始化，这些需求我们可以使用lateinit进行解决。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">    lateinit var menber: String</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val t = Test()</div><div class="line">    t.menber = &quot;hello&quot;</div><div class="line">    println(t.menber)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>需要注意的是lateinit只能修饰var，非基本数据类型的数据。比如Int等是不能使用的，同时该对象是不能为Null值的。比如下面是错误的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lateinit var menber: String?</div><div class="line">lateinit var menber: Int</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kotlin/" rel="tag">#kotlin</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/16/kotlin/Kotlin基本知识三/" rel="next" title="Kotlin基础知识三">
+                <i class="fa fa-chevron-left"></i> Kotlin基础知识三
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造器"><span class="nav-number">1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态方法"><span class="nav-number">3.</span> <span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性和字段"><span class="nav-number">4.</span> <span class="nav-text">属性和字段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性声明"><span class="nav-number">4.1.</span> <span class="nav-text">属性声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于get-set："><span class="nav-number">4.2.</span> <span class="nav-text">关于get/set：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#幕后字段：field"><span class="nav-number">4.3.</span> <span class="nav-text">幕后字段：field</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译器常量："><span class="nav-number">4.4.</span> <span class="nav-text">编译器常量：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#延迟初始化属性-lateinit"><span class="nav-number">4.5.</span> <span class="nav-text">延迟初始化属性:lateinit</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
