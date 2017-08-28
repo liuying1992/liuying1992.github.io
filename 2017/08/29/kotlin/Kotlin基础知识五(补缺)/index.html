@@ -1,0 +1,651 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="kotlin," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="可见性修饰符可见性修饰符可以用在类，对象，接口，构造函数，方法，属性以及他们的get/set中。
+
+private 对于属性，方法，构造函数而已，他们只是会在自身类可见，对于类而已，只是在该文件内可见。
+protected 他的范围是private+子类可见，同时，对于继承的protected成员，没有显示指定可见性时，还是会是protected的。
+internal 会在相同的模块内随处可见(即">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础知识五(补漏)">
+<meta property="og:url" content="http://yoursite.com/2017/08/29/kotlin/Kotlin基础知识五(补缺)/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="可见性修饰符可见性修饰符可以用在类，对象，接口，构造函数，方法，属性以及他们的get/set中。
+
+private 对于属性，方法，构造函数而已，他们只是会在自身类可见，对于类而已，只是在该文件内可见。
+protected 他的范围是private+子类可见，同时，对于继承的protected成员，没有显示指定可见性时，还是会是protected的。
+internal 会在相同的模块内随处可见(即">
+<meta property="og:updated_time" content="2017-08-28T16:06:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础知识五(补漏)">
+<meta name="twitter:description" content="可见性修饰符可见性修饰符可以用在类，对象，接口，构造函数，方法，属性以及他们的get/set中。
+
+private 对于属性，方法，构造函数而已，他们只是会在自身类可见，对于类而已，只是在该文件内可见。
+protected 他的范围是private+子类可见，同时，对于继承的protected成员，没有显示指定可见性时，还是会是protected的。
+internal 会在相同的模块内随处可见(即">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/29/kotlin/Kotlin基础知识五(补缺)/"/>
+
+
+  <title> Kotlin基础知识五(补漏) | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Kotlin基础知识五(补漏)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-08-29T00:00:00+08:00" content="2017-08-29">
+              2017-08-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/kotlin/" itemprop="url" rel="index">
+                    <span itemprop="name">kotlin</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="可见性修饰符"><a href="#可见性修饰符" class="headerlink" title="可见性修饰符"></a>可见性修饰符</h3><p>可见性修饰符可以用在类，对象，接口，构造函数，方法，属性以及他们的get/set中。</p>
+<ul>
+<li>private 对于属性，方法，构造函数而已，他们只是会在自身类可见，对于类而已，只是在该文件内可见。</li>
+<li>protected 他的范围是private+子类可见，同时，对于继承的protected成员，没有显示指定可见性时，还是会是protected的。</li>
+<li>internal 会在相同的模块内随处可见(即一起编译的模块)</li>
+<li>public 这是默认的修饰符，任何客户端都可以使用。</li>
+</ul>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>通过扩展，我们可以避免重新继承一个类来重写或者添加新的功能，来达到我们的目的。比如我们需要给某一个类增加一个方法，我们就可以通过扩展，而不用继承。扩展可以扩展属性和扩展方法。</p>
+<h4 id="扩展方法"><a href="#扩展方法" class="headerlink" title="扩展方法"></a>扩展方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class A</div><div class="line">fun A.add(i: Int, j: Int): Int &#123;</div><div class="line">    return i + j</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val a = A()</div><div class="line">    println(a.add(1, 2))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在扩展函数的时候，函数的调用接口是由函数被扩展的类决定的，而不是表达式运行时求值决定的。如下面的例子输出的是c而不是d<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">open class C</div><div class="line">class D: C()</div><div class="line">fun C.foo() = &quot;c&quot;</div><div class="line">fun D.foo() = &quot;d&quot;</div><div class="line">fun printFoo(c: C) &#123;</div><div class="line">    println(c.foo())</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    printFoo(D())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可以看到printFoo()方法参数类型是C，所以他是有函数调用所在的表达式的类型决定，而不是由表达式运行时求值结果决定的。<br>当扩展的函数与类原来的函数有冲突的时候，即有相同的参数列表和函数名，这时候调用总是使用函数内部定义的而不是扩展的。</p>
+<h4 id="扩展属性"><a href="#扩展属性" class="headerlink" title="扩展属性"></a>扩展属性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">class A &#123;</div><div class="line">    var i = 1</div><div class="line">&#125;</div><div class="line">var A.foo: Int</div><div class="line">    get() &#123;</div><div class="line">        return this.i + 1</div><div class="line">    &#125;</div><div class="line">    set(value) &#123;</div><div class="line">        this.i = value</div><div class="line">    &#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val a = A()</div><div class="line">    //输出2</div><div class="line">    println(a.foo)</div><div class="line">    a.foo = 10</div><div class="line">    //输出10</div><div class="line">    println(a.i)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="伴生对象的扩展"><a href="#伴生对象的扩展" class="headerlink" title="伴生对象的扩展"></a>伴生对象的扩展</h4><p>当一个类中包含了伴生对象，那么可以对该对象进行扩展，跟普通的扩展类似，只是需要扩展的时候加上Companion既可，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class MyClass &#123;</div><div class="line">    companion object Companion&#123;&#125; // 将被称为 &quot;Companion&quot;</div><div class="line">&#125;</div><div class="line">fun MyClass.Companion.foo() &#123;</div><div class="line">    println(&quot;hello&quot;)</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    MyClass.Companion.foo()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>一个类当中，只会存在一个伴生对象。</p>
+<h4 id="扩展的作用域"><a href="#扩展的作用域" class="headerlink" title="扩展的作用域"></a>扩展的作用域</h4><p>一般定义或者会在文件的顶部进行编写，在别的文件中需要使用到这个扩展，则需要通过import的形式导入。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">package foo.bar</div><div class="line">fun Baz.goo() &#123; …… &#125;</div><div class="line"></div><div class="line">//别的包</div><div class="line">package com.example.usage</div><div class="line">import foo.bar.goo // 导入所有名为“goo”的扩展</div><div class="line">                   // 或者</div><div class="line">import foo.bar.* // 从“foo.bar”导入一切</div><div class="line">fun usage(baz: Baz) &#123;</div><div class="line">    baz.goo()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><p>Kotlin是没有类似java的通配符的，但是他有声明处型变和类型投影。<br>首先是协变和逆协变的概念。协变是指：类似java的泛型中extands关键字，? extands T 这种，是的参数类型有上界，他可以是本身类型或者是子类型作为参数，叫做协变。反之，在java中 ? super T这种有下界的情况是叫做逆协变。<br>在kotlin没有super或者extands这种写法，而是引入了生产者-消费者的概念(PECS)。那些只能从中读取的对象叫做生产者(返回值)，而那些只能写入的对象为消费者(参数或者变量)。</p>
+<h4 id="out和in"><a href="#out和in" class="headerlink" title="out和in"></a>out和in</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">open class A</div><div class="line">open class B : A()</div><div class="line">class C : B()</div><div class="line">//当改类的对象在List中存放的时候，该List可以赋值给改泛型的本身或泛型父类的list</div><div class="line">class Test&lt;out T&gt;(val t: T) &#123;</div><div class="line">    //错误</div><div class="line">// fun set(t: T) &#123;</div><div class="line">//</div><div class="line">// &#125;</div><div class="line">    fun get(): T &#123;</div><div class="line">        return t</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//当改类的对象在List中存放的时候，该List可以赋值给改泛型的本身或泛型子类的list</div><div class="line">class Test2&lt;in T&gt;(t: T) &#123;</div><div class="line">    //正确</div><div class="line">    fun set(t: T) &#123;</div><div class="line">    &#125;</div><div class="line">// //错误</div><div class="line">// fun get(): T &#123;</div><div class="line">// return t</div><div class="line">// &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val list = mutableListOf&lt;Test&lt;B&gt;&gt;()</div><div class="line">    //因为out，所以他是有部分的</div><div class="line">    val list2: List&lt;Test&lt;A&gt;&gt; = list</div><div class="line">    //错误，因为C是B的子类，他有可能新加方法写入不符合Out</div><div class="line">    // val list2: List&lt;Test&lt;C&gt;&gt; = list</div><div class="line">    //正确</div><div class="line">    list.add(Test(C()))</div><div class="line">    //取出时候可以这样子</div><div class="line">    val j: Test&lt;A&gt; = list[0]</div><div class="line">    val t1 = Test(B())</div><div class="line">    //正确</div><div class="line">    val t2: Test&lt;A&gt; = t1</div><div class="line">    val list3 = mutableListOf&lt;Test2&lt;B&gt;&gt;()</div><div class="line">    val list4: List&lt;Test2&lt;C&gt;&gt; = list3</div><div class="line">    val t3 = Test2(B())</div><div class="line">    val t4: Test2&lt;C&gt; = t3</div><div class="line">    //错误</div><div class="line">    //val list4 :List&lt;Test2&lt;&gt;&gt; = list3</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>out：一般原则，当一个类C的泛型参数类型是T，而且被声明为out的时候，他只能主线在C成员的输出位置中(不能作为参数，而是作为返回值或者其他不会被处理的情况)，这种情况下C<base>可以安全的作为C<derived>的超类。这也就是协变。<br>int:跟out作用相反，他的泛型参数只能作为参数形式或者其他值的形式在类中进行处理而不能是返回。同样的，可以有类似多态的功能，当一个对象的类型是C<base>的时候，他能够安全的转为子类型C<derived>。<br>函数的上下界之前的文章已经有所提及，这里不做重复。</derived></derived></p>
+<h3 id="对象表达式和对象声明"><a href="#对象表达式和对象声明" class="headerlink" title="对象表达式和对象声明"></a>对象表达式和对象声明</h3><h4 id="对象表达式"><a href="#对象表达式" class="headerlink" title="对象表达式"></a>对象表达式</h4><p>对象表达式类似匿名的内部类，使用object关键字，可以继承和实现接口。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">open class A(str: String) &#123;</div><div class="line">    val obj = object : B &#123;</div><div class="line">        override fun println() &#123;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">interface B &#123;</div><div class="line">    fun println()</div><div class="line">&#125;</div><div class="line">//需要显示声明参数类型</div><div class="line">val obj: A = object : A(&quot;java&quot;), B &#123;</div><div class="line">    override fun println() &#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//不需要，因为可以推断出来类型</div><div class="line">val obj2 = object : A(&quot;kotlin&quot;) &#123;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val i = object :B&#123;</div><div class="line">        override fun println() &#123;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这是在我们需要某一些类的方法功能的时候使用，假如我们只是需要一个临时的类(bean)存储一些东西，没有必要使用继承，而是直接使用object去生成一个临时的对象类既可。例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line"></div><div class="line">    val temp = object &#123;</div><div class="line">        val x = 1</div><div class="line">        fun println() &#123;</div><div class="line">            println(&quot;x=$x&quot;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    val t = temp</div><div class="line">    t.println()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="对象声明"><a href="#对象声明" class="headerlink" title="对象声明"></a>对象声明</h4><p>对象声明，是使用object关键字声明一个类似Util的类，可以直接调用他的方法。object关键字之后需要跟一个改类的名字，他可以使用继承和实现。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">open class A(val string: String)</div><div class="line">interface B &#123;</div><div class="line">    fun prln()</div><div class="line">&#125;</div><div class="line">object Imp : A(&quot;java&quot;), B &#123;</div><div class="line">    override fun prln() &#123;</div><div class="line">        println(string)</div><div class="line">    &#125;</div><div class="line">    fun pr(s: String) &#123;</div><div class="line">        print(s)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">object Imp1 &#123;</div><div class="line">    fun prln(string: String) &#123;</div><div class="line">        println(string)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    Imp.prln()</div><div class="line">    Imp.pr(&quot;java&quot;)</div><div class="line">    Imp1.prln(&quot;kotlin&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>他都是不需要声明处一个变量可以直接调用方法的，类似java的静态方法。对象声明不能再局部作用域，就是不可以在函数内部去声明。但是可以嵌套到其他对象声明或者非内部类中。</p>
+<h4 id="伴生对象"><a href="#伴生对象" class="headerlink" title="伴生对象"></a>伴生对象</h4><p>在kotlin中，一般使用伴生对象去实现单例模式。他使用companion object声明。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Single private constructor(private val name: String) &#123;</div><div class="line">    companion object SingleHolder &#123;</div><div class="line">        private var inn: Single? = null</div><div class="line">        fun getInstance(name: String): Single &#123;</div><div class="line">            if (inn == null) &#123;</div><div class="line">                synchronized(Single::class) &#123;</div><div class="line">                    if (inn == null) &#123;</div><div class="line">                        inn = Single(name)</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            return inn!!</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    fun println() &#123;</div><div class="line">        print(name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    Single.getInstance(&quot;java&quot;).println()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>需要注意的是inn单例对象是声明在companion object内部的，同时由于kotlin的安全性，需要assert判断返回。</p>
+<h4 id="三者之间的区别"><a href="#三者之间的区别" class="headerlink" title="三者之间的区别"></a>三者之间的区别</h4><ul>
+<li>对象表达式是在使用它们的地方立即执行</li>
+<li>对象声明是在第一次被访问到时延迟初始化的</li>
+<li>伴生对象的初始化是在相应的类被加载的时候，跟java的静态方法一样。</li>
+</ul>
+<h3 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h3><p>委托使用的是by关键字实现。他实现的一种功能是自己需要基础或者实现某一个类，但是自己却不实现它，由另外一个通用基础或者实现了相同接口的类去实现，然后通过by制定。例如下面的实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">interface Base &#123;</div><div class="line">    fun print()</div><div class="line">&#125;</div><div class="line">class BaseImp(val x: Int) : Base &#123;</div><div class="line">    override fun print() &#123;</div><div class="line">        println(x)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//通过by制定委托给谁来实现base</div><div class="line">class Derived(b: Base) : Base by b</div><div class="line">class Derived1(b: Base) : Base by b&#123;</div><div class="line">    override fun print() &#123;</div><div class="line">        println(&quot;hello&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val b = BaseImp(10)</div><div class="line">    Derived(b).print()</div><div class="line">    Derived1(b).print()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>打印的结果是10和hello。所以，在进行委托的时候，我们需要注意自己本身是否有实现父类的相关方法和属性，假如实现了将不会调用委托类的，而是调用本身的。在构造函数中，是需要传入一个委托类对象，才知道我们需要委托给谁。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/kotlin/" rel="tag">#kotlin</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/23/kotlin/Kotlin基础知识四(补缺)/" rel="next" title="Kotlin基础知识四(补缺)">
+                <i class="fa fa-chevron-left"></i> Kotlin基础知识四(补缺)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性修饰符"><span class="nav-number">1.</span> <span class="nav-text">可见性修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">2.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展方法"><span class="nav-number">2.1.</span> <span class="nav-text">扩展方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展属性"><span class="nav-number">2.2.</span> <span class="nav-text">扩展属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#伴生对象的扩展"><span class="nav-number">2.3.</span> <span class="nav-text">伴生对象的扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展的作用域"><span class="nav-number">2.4.</span> <span class="nav-text">扩展的作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型"><span class="nav-number">3.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#out和in"><span class="nav-number">3.1.</span> <span class="nav-text">out和in</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象表达式和对象声明"><span class="nav-number">4.</span> <span class="nav-text">对象表达式和对象声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对象表达式"><span class="nav-number">4.1.</span> <span class="nav-text">对象表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象声明"><span class="nav-number">4.2.</span> <span class="nav-text">对象声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#伴生对象"><span class="nav-number">4.3.</span> <span class="nav-text">伴生对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三者之间的区别"><span class="nav-number">4.4.</span> <span class="nav-text">三者之间的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#委托"><span class="nav-number">5.</span> <span class="nav-text">委托</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
