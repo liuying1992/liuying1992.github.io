@@ -1,0 +1,690 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="-Android混淆," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="Android 混淆的基本知识Android混淆的意思是在Android打包过程中，把代码进行压缩，去除一些没有使用到的代码，还可以对资源进行压缩优化。这样子做的目的在于一个是减少apk的体积大小，还有是可以加大别人反编译的难度，就算反编译成功，代码读起来也是晦涩。
+代码混淆的基本配置一般开发apk的应用，我们只是需要在app运行层面去配置混淆既可，对于一些开发sdk的项目，比如类型友盟，就需要在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android混淆">
+<meta property="og:url" content="http://yoursite.com/2017/11/12/Android/Android基础/Android混淆/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="Android 混淆的基本知识Android混淆的意思是在Android打包过程中，把代码进行压缩，去除一些没有使用到的代码，还可以对资源进行压缩优化。这样子做的目的在于一个是减少apk的体积大小，还有是可以加大别人反编译的难度，就算反编译成功，代码读起来也是晦涩。
+代码混淆的基本配置一般开发apk的应用，我们只是需要在app运行层面去配置混淆既可，对于一些开发sdk的项目，比如类型友盟，就需要在">
+<meta property="og:updated_time" content="2017-11-11T16:14:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android混淆">
+<meta name="twitter:description" content="Android 混淆的基本知识Android混淆的意思是在Android打包过程中，把代码进行压缩，去除一些没有使用到的代码，还可以对资源进行压缩优化。这样子做的目的在于一个是减少apk的体积大小，还有是可以加大别人反编译的难度，就算反编译成功，代码读起来也是晦涩。
+代码混淆的基本配置一般开发apk的应用，我们只是需要在app运行层面去配置混淆既可，对于一些开发sdk的项目，比如类型友盟，就需要在">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/12/Android/Android基础/Android混淆/"/>
+
+
+  <title> Android混淆 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android混淆
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-11-12T00:00:00+08:00" content="2017-11-12">
+              2017-11-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android基础知识/" itemprop="url" rel="index">
+                    <span itemprop="name">Android基础知识</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Android-混淆的基本知识"><a href="#Android-混淆的基本知识" class="headerlink" title="Android 混淆的基本知识"></a>Android 混淆的基本知识</h3><p>Android混淆的意思是在Android打包过程中，把代码进行压缩，去除一些没有使用到的代码，还可以对资源进行压缩优化。这样子做的目的在于一个是减少apk的体积大小，还有是可以加大别人反编译的难度，就算反编译成功，代码读起来也是晦涩。</p>
+<h4 id="代码混淆的基本配置"><a href="#代码混淆的基本配置" class="headerlink" title="代码混淆的基本配置"></a>代码混淆的基本配置</h4><p>一般开发apk的应用，我们只是需要在app运行层面去配置混淆既可，对于一些开发sdk的项目，比如类型友盟，就需要在lib中进行混淆处理。因为混淆的打包和debug都是比较不方便，所以我们一般会在release版本中进行混淆，debug状态下不混淆开发。使用Android Studio配置混淆只要是在module的builg.gradle中，android节点下面添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"> buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            debuggable false             </div><div class="line">            minifyEnabled true             </div><div class="line">            zipAlignEnabled true             </div><div class="line">            shrinkResources true             </div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;         </div><div class="line">        &#125;         </div><div class="line">        debug &#123;             </div><div class="line">            debuggable true            </div><div class="line">             minifyEnabled false             </div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules-debug-new.pro&apos;         </div><div class="line">        &#125;     </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其中minifyEnabled是开启代码混淆，shrinkResources资源优化，去除无用资源，zipAlignEnabled是开启Zipalign优化，proguardFiles是配置混淆列表，那些类，方法不需要被混淆的在proguard-rules.pro中配置。AndroidStudio中默认生成了proguard-rules.pro文件，我们一般在该文件配置就行了。proguard-android.tx是Android系统自带的混淆文件。</p>
+<h4 id="混淆代码的语法规则"><a href="#混淆代码的语法规则" class="headerlink" title="混淆代码的语法规则"></a>混淆代码的语法规则</h4><h5 id="基本的混淆配置"><a href="#基本的混淆配置" class="headerlink" title="基本的混淆配置"></a>基本的混淆配置</h5><p>下面是使用与一般项目的基本混淆配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"># 指定压缩的基本，5的话会压缩五次，就是打包过程中，代码压缩会有前后五次</div><div class="line">-optimizationpasses 5</div><div class="line">#不跳过非公共的库的类成员</div><div class="line">--dontskipnonpubliclibraryclassmembers</div><div class="line">#混淆时采用的算法</div><div class="line">-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*</div><div class="line">-useuniqueclassmembernames</div><div class="line">#优化时允许访问并修改有修饰符的类和类的成员</div><div class="line">-allowaccessmodification</div><div class="line">#将文件来源重命名为“SourceFile”字符串</div><div class="line">-renamesourcefileattribute SourceFile</div><div class="line">#不做预校验的操作</div><div class="line">-dontpreverify</div><div class="line">#生成原类名和混淆后的类名的映射文件</div><div class="line">-verbose</div><div class="line">#不混淆Annotation</div><div class="line">-keepattributes *Annotation*,InnerClasses</div><div class="line">#不混淆泛型</div><div class="line">-keepattributes Signature</div><div class="line">#抛出异常时保留代码行号</div><div class="line">-keepattributes SourceFile,LineNumberTable</div><div class="line">#混淆后类名都为小写</div><div class="line">-dontusemixedcaseclassnames</div><div class="line">#把混淆类中的方法名也混淆了</div><div class="line">-allowaccessmodification</div><div class="line">-renamesourcefileattribute SourceFile</div><div class="line">#保留行号</div><div class="line">-keepattributes SourceFile,LineNumberTable</div><div class="line">-printmapping proguardMapping.txt</div><div class="line"># 保持测试相关的代码</div><div class="line">-dontnote junit.framework.**</div><div class="line">-dontnote junit.runner.**</div><div class="line">-dontwarn android.test.**</div><div class="line">-dontwarn android.support.test.**</div><div class="line">-dontwarn org.junit.**</div></pre></td></tr></table></figure></p>
+<h5 id="自定义混淆"><a href="#自定义混淆" class="headerlink" title="自定义混淆"></a>自定义混淆</h5><p>常用的混淆命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-keep 防止类和成员被移除或者重命名</div><div class="line">-keepnames 防止类和成员被重命名</div><div class="line">-keepclassmembers 防止成员被移除或者重命名</div><div class="line">-keepmembers 防止成员被重命名</div><div class="line">-keepclasseswithmembers 防止拥有该成员的类和成员被移除或者重命名</div><div class="line">-keepclasseswithmembernames 防止拥有该成员的类和成员被重命名</div><div class="line">-dontwarn 忽略该类混淆的警告</div></pre></td></tr></table></figure></p>
+<p>语法规则是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[command] [class]&#123;</div><div class="line">    [member]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其中，class是带便的是限定条件，他最终会定位到符合该过滤条件的类。他可以是:</p>
+<ol>
+<li>具体的类</li>
+<li>方位修饰符</li>
+<li>通配符* 匹配任意长度字符，但是不包含包名分隔符(.)</li>
+<li>通配符 ** 匹配任意长度的字符，并且包括包名分割符(.)</li>
+<li>extends 可以指定类的基类</li>
+<li>implement 匹配实现了某接口的类</li>
+<li>$ 内部类</li>
+</ol>
+<p>member代表成员相关的限定条件，定位他类的内部，符合该过滤条件的成员，方法，他的内容可以使用</p>
+<ol>
+<li>匹配所有的构造器</li>
+<li>匹配所有的域</li>
+<li>匹配所有的方法</li>
+<li>通配符 * 匹配任意长度的字符，并且保航包名分割符(.)</li>
+<li>通配符 ** 匹配任意长度字符，并且包括包名分隔符(.)</li>
+<li>通配符 <em>*</em> 匹配任意的参数类型</li>
+<li>… 匹配任意长度的任意类型参数，比如void test(…) 就能匹配任意的void test(String a)或者void test(string a,int b)等之类的</li>
+<li>访问修饰符</li>
+</ol>
+<h5 id="自定义实践"><a href="#自定义实践" class="headerlink" title="自定义实践"></a>自定义实践</h5><ol>
+<li><p>比如，我们需要某个包下的所有的bean不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep class com.exampe.package.bean.** &#123;*;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>某个类不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep public class com.example.package.Test &#123;*;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不混淆某个类的子类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-kepp public class * extends com.example.package.Father &#123;*;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不混淆某个接口的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep class * implements com.example.package.IFather &#123;*;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不混淆类名中包含某个关键key的类和他的成员</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-keep **.*module*.** &#123;*;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不混淆某某个类的public构造方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keepclassmembers class com.example.package.Test &#123;</div><div class="line">public &lt;init&gt;();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不混淆某个类的特定的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keepclassmembers class com.example.package.Test &#123;</div><div class="line">public void test(java.lang.String);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>忽略警告，一般用于第三方</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn tencent.**</div></pre></td></tr></table></figure>
+</li>
+<li><p>保持native方法不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keepclasseswithmembernames class * &#123;</div><div class="line">  native &lt;method&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保持枚举类不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-keepclassesmembres enum * &#123;</div><div class="line">public static **[] values();</div><div class="line">public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保持自定义空间不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-keepclasseswithmembers class *&#123;</div><div class="line">public &lt;init&gt;(android.content.Context);</div><div class="line">public &lt;init&gt;(android.content.Context,android.util.Attributeset);</div><div class="line">public &lt;init&gt;(android.content.Context,android.util.Attributeset,int);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保持序列化不被混淆</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-keep class * implements android.os.Parcelable &#123; *;&#125;</div><div class="line">-keep class * implements android.os.Parcelable&#123;</div><div class="line">public static final android.os.Parcelable$Creator *;</div><div class="line">&#125;</div><div class="line">-keep class * implements android.os.Serializable &#123;*;&#125;</div><div class="line">-keep class * implements android.os.Serializable &#123;</div><div class="line">public static final android.os.Serializable$Creator *;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>保留R文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keepclassmembers class *.R$* &#123;</div><div class="line">public static * ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="资源的混淆问题"><a href="#资源的混淆问题" class="headerlink" title="资源的混淆问题"></a>资源的混淆问题</h4><h5 id="资源混淆处理和避免"><a href="#资源混淆处理和避免" class="headerlink" title="资源混淆处理和避免"></a>资源混淆处理和避免</h5><p>当我们打包的时候，开启了 shrinkResources = true，那么，打包的时候使用link检查，会把所有未使用到的资源移除，这里的未使用到资源，可能是我们在代码中通过一些其他方式使用到了，比如我们获取表情使用的getIdentifier()方法，这些图片就会被标记为未被使用，但是，我们不应该移除，所以我们需要keep住。</p>
+<p>我们需要在res/raw目录下面建立一个keep.xml文件。通过几个属性来确认那些不被移除，那些应该被移除</p>
+<ol>
+<li>tools:keep 定义那些资源需要被保留，资源之间使用”,”隔开，支持通配符*匹配</li>
+<li>tools:discard 定义那些资源需要被移除，资源之间使用”,”隔开</li>
+<li>tools:shrinkMode 开启严格模式。<br>例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;? xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</div><div class="line">&lt;resources xmlns:tools=&quot;http://schems.android.com/tools&quot;</div><div class="line">    tools:keep=&quot;@drawable/image,@layout/mylayout,@drawable/pic_*&quot;</div><div class="line">    tools:discard=&quot;@layout/unused&quot;</div><div class="line">    tools:shrinkMode=&quot;strict&quot;/&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="无用资源去除"><a href="#无用资源去除" class="headerlink" title="无用资源去除"></a>无用资源去除</h5><p>当我们的产品是针对某一个国家地区的特定语音的时候，可以把一些其他的语言去除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">android&#123;</div><div class="line">    defaultConfig &#123;</div><div class="line">        ..........</div><div class="line">        resConfigs &quot;en&quot;.&quot;zh_cn&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>将其他地区的去除，</p>
+<h4 id="通用的混淆文件："><a href="#通用的混淆文件：" class="headerlink" title="通用的混淆文件："></a>通用的混淆文件：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div></pre></td><td class="code"><pre><div class="line">-optimizationpasses 1          # 指定代码的压缩级别</div><div class="line">-dontusemixedcaseclassnames  # 是否使用大小写混合</div><div class="line">-dontpreverify          # 混淆时是否做预校验</div><div class="line">-verbose                # 混淆时是否记录日志</div><div class="line">-dontshrink        #不压缩输入的类文件</div><div class="line">-dontoptimize    #不优化输入的类文件</div><div class="line">-ignorewarning        #不用警告</div><div class="line"></div><div class="line">-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*  # 混淆时所采用的算法</div><div class="line"></div><div class="line">-keep public class * extends android.app.Activity      # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.app.Application  # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.app.Fragment      # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.app.Service      # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.content.BroadcastReceiver  # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.content.ContentProvider    # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.app.backup.BackupAgentHelper # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.preference.Preference        # 保持哪些类不被混淆</div><div class="line">-keep public class com.android.vending.licensing.ILicensingService    # 保持哪些类不被混淆</div><div class="line">-keep public class * extends android.support.annotation.**    # 保持哪些类不被混淆</div><div class="line"></div><div class="line">-keepclasseswithmembernames class * &#123;  # 保持 native 方法不被混淆</div><div class="line">    native &lt;methods&gt;;</div><div class="line">&#125;</div><div class="line">-keepclasseswithmembers class * &#123;  # 保持自定义控件类不被混淆</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);</div><div class="line">&#125;</div><div class="line">-keepclasseswithmembers class * &#123;# 保持自定义控件类不被混淆</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);</div><div class="line">&#125;</div><div class="line">-keepclassmembers class * extends android.app.Activity &#123; # 保持自定义控件类不被混淆</div><div class="line">    public void *(android.view.View);</div><div class="line">&#125;</div><div class="line">-keepclassmembers enum * &#123;    # 保持枚举 enum 类不被混淆</div><div class="line">    public static **[] values();</div><div class="line">    public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div><div class="line">-keep class * implements android.os.Parcelable &#123; *;&#125;# 保持 Parcelable 不被混淆</div><div class="line">-keep class * implements android.os.Parcelable &#123;</div><div class="line">public static final android.os.Parcelable$Creator *;</div><div class="line">&#125;</div><div class="line">-keep class * implements android.os.Serializable &#123;</div><div class="line">public static final android.os.Serializable$Creator *;</div><div class="line">&#125;</div><div class="line">-keep public class * implements java.io.Serializable &#123;*;&#125;</div><div class="line">-keepclassmembers class *.R$* &#123;</div><div class="line">public static *;</div><div class="line">&#125;</div><div class="line">-keepnames class * implements java.io.Serializable</div><div class="line">-keepclassmembers class * implements java.io.Serializable &#123;</div><div class="line">static final long serialVersionUID;</div><div class="line">private static final java.io.ObjectStreamField[] serialPersistentFields;</div><div class="line">!static !transient &lt;fields&gt;;</div><div class="line">private void writeObject(java.io.ObjectOutputStream);</div><div class="line">private void readObject(java.io.ObjectInputStream);</div><div class="line">java.lang.Object writeReplace();</div><div class="line">java.lang.Object readResolve();</div><div class="line">&#125;</div><div class="line">#------------------Gson--------------------#</div><div class="line">-keepattributes Signature</div><div class="line">-keepattributes *Annotation*</div><div class="line">-keep class sun.misc.Unsafe &#123; *; &#125;</div><div class="line">-keep class com.google.gson.stream.** &#123; *; &#125;</div><div class="line"># Application classes that will be serialized/deserialized over Gson 下面替换成自己的实体类</div><div class="line">-keep class com.example.bean.** &#123; *; &#125;</div><div class="line">#------------------Gson--------------------#</div><div class="line">#------------------OkHttp3--------------------#</div><div class="line">-dontwarn com.squareup.okhttp3.**</div><div class="line">-keep class com.squareup.okhttp3.** &#123; *;&#125;</div><div class="line">-dontwarn okio.**</div><div class="line">#------------------OkHttp3--------------------#</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#------------------Glide--------------------#</div><div class="line">-keep public class * implements com.bumptech.glide.module.GlideModule</div><div class="line">-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** &#123;</div><div class="line">  **[] $VALUES;</div><div class="line">  public *;</div><div class="line">&#125;</div><div class="line">#------------------Glide--------------------#</div><div class="line">#------------------EventBus--------------------#</div><div class="line">-keepattributes *Annotation*</div><div class="line">-keepclassmembers class ** &#123;</div><div class="line">    @org.greenrobot.eventbus.Subscribe &lt;methods&gt;;</div><div class="line">&#125;</div><div class="line">-keep enum org.greenrobot.eventbus.ThreadMode &#123; *; &#125;</div><div class="line"></div><div class="line"># Only required if you use AsyncExecutor</div><div class="line">-keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent &#123;</div><div class="line">    &lt;init&gt;(java.lang.Throwable);</div><div class="line">&#125;</div><div class="line">#------------------EventBus--------------------#</div><div class="line"></div><div class="line">#------------------Retrofit--------------------#</div><div class="line">-dontwarn retrofit2.**</div><div class="line">-keep class retrofit2.** &#123; *; &#125;</div><div class="line">-keepattributes Signature</div><div class="line">-keepattributes Exceptions</div><div class="line">#------------------Retrofit--------------------#</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#------------------RxJava RxAndroid--------------------#</div><div class="line">-dontwarn sun.misc.**</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* &#123;</div><div class="line">  long producerIndex;</div><div class="line">  long consumerIndex;</div><div class="line">&#125;</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef &#123;</div><div class="line">    rx.internal.util.atomic.LinkedQueueNode producerNode;</div><div class="line">&#125;</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef &#123;</div><div class="line">    rx.internal.util.atomic.LinkedQueueNode consumerNode;</div><div class="line">&#125;</div><div class="line">#------------------RxJava RxAndroid--------------------#</div><div class="line">#---------------------v4包---------------------------#</div><div class="line">-keep class android.support.v4.** &#123;*;&#125;</div><div class="line">#---------------------v4包---------------------------#</div><div class="line"></div><div class="line">#---------------------v7包---------------------------#</div><div class="line">-keep public class * extends android.support.v7.**</div><div class="line">#---------------------v7包---------------------------#</div><div class="line">#---------------------js混淆---------------------------#</div><div class="line">-keepclassmembers class cn.xx.xx.Activity$AppAndroid &#123;  </div><div class="line">  public *;  </div><div class="line">&#125;  </div><div class="line"></div><div class="line">-keepattributes *Annotation*  </div><div class="line">-keepattributes *JavascriptInterface*  </div><div class="line">#---------------------js混淆---------------------------#</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android混淆/" rel="tag">#-Android混淆</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/02/Android/Android基础/adb命令/" rel="next" title="Adb命令">
+                <i class="fa fa-chevron-left"></i> Adb命令
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-混淆的基本知识"><span class="nav-number">1.</span> <span class="nav-text">Android 混淆的基本知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码混淆的基本配置"><span class="nav-number">1.1.</span> <span class="nav-text">代码混淆的基本配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#混淆代码的语法规则"><span class="nav-number">1.2.</span> <span class="nav-text">混淆代码的语法规则</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本的混淆配置"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本的混淆配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义混淆"><span class="nav-number">1.2.2.</span> <span class="nav-text">自定义混淆</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义实践"><span class="nav-number">1.2.3.</span> <span class="nav-text">自定义实践</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源的混淆问题"><span class="nav-number">1.3.</span> <span class="nav-text">资源的混淆问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#资源混淆处理和避免"><span class="nav-number">1.3.1.</span> <span class="nav-text">资源混淆处理和避免</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无用资源去除"><span class="nav-number">1.3.2.</span> <span class="nav-text">无用资源去除</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通用的混淆文件："><span class="nav-number">1.4.</span> <span class="nav-text">通用的混淆文件：</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
