@@ -1,0 +1,761 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="JavaScript语法基础语法基础写入JavaScript
+插入js
+
+a. 在html代码文件中，可以添加script标签，可以在head也可以在body中添加。
+123456789&amp;lt;html&amp;gt;    &amp;lt;head&amp;gt;        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;        document.write(&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript语法基础">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/前端/js_learn/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="JavaScript语法基础语法基础写入JavaScript
+插入js
+
+a. 在html代码文件中，可以添加script标签，可以在head也可以在body中添加。
+123456789&amp;lt;html&amp;gt;    &amp;lt;head&amp;gt;        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;        document.write(&amp;">
+<meta property="og:updated_time" content="2018-02-27T16:29:45.611Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript语法基础">
+<meta name="twitter:description" content="JavaScript语法基础语法基础写入JavaScript
+插入js
+
+a. 在html代码文件中，可以添加script标签，可以在head也可以在body中添加。
+123456789&amp;lt;html&amp;gt;    &amp;lt;head&amp;gt;        &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;        document.write(&amp;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/28/前端/js_learn/"/>
+
+
+  <title> JavaScript语法基础 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JavaScript语法基础
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-02-28T00:00:00+08:00" content="2018-02-28">
+              2018-02-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JavaScript语法基础"><a href="#JavaScript语法基础" class="headerlink" title="JavaScript语法基础"></a>JavaScript语法基础</h2><h3 id="语法基础"><a href="#语法基础" class="headerlink" title="语法基础"></a>语法基础</h3><h3 id="写入JavaScript"><a href="#写入JavaScript" class="headerlink" title="写入JavaScript"></a>写入JavaScript</h3><ul>
+<li>插入js</li>
+</ul>
+<p>a. 在html代码文件中，可以添加script标签，可以在head也可以在body中添加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">        document.write(&quot;hello world!&quot;);</div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>b. 可以引入独立的js文件，也是通过script标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&lt;script src=&quot;xxx.js&quot;&gt;&lt;/script&gt;</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li><p>js的解析顺序<br>js的代码可以放在html中的任意位置，但是 由于html是按照先后顺序，从上而下执行的，所以前面的script会被先执行，后面的就后执行。所以，一些初始化的js需要放在head标签当中，非初始化的js可以放在body当中。</p>
+</li>
+<li><p>js分行<br>js的换行，即一条语句结束的时候，可以不写分号，建议还是写上。</p>
+</li>
+<li><p>js注释<br>有两种，一种是<code>//</code>单行注释，另外一种是<code>/**/</code>多行注释</p>
+</li>
+<li>js变量<br>变量一般要先声明再赋值，同时可以重复赋值。区分大小写，注意html是不区分大小写的。命名必须是字母下划线美元$符号开头。不能使用js关键字。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var name</div></pre></td></tr></table></figure>
+<ul>
+<li>判断语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">if&#123;&#125;else&#123;&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>函数<br>对于函数，他是不会主动执行的，需要被调用。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function methodName(params...)&#123;</div><div class="line">......</div><div class="line">block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>完整例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&lt;head&gt;</div><div class="line">...</div><div class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    function  contxt() //定义函数</div><div class="line">      &#123;</div><div class="line">        alert(&quot;哈哈，调用函数了!&quot;);</div><div class="line">      &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;form&gt;</div><div class="line">      &lt;input type=&quot;button&quot;  value=&quot;点击我&quot; onclick=&quot;contxt()&quot; /&gt;  </div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li>输出内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.write();</div></pre></td></tr></table></figure>
+<p>他可以直接输出html标签。同时，对于文档以及执行完成之后，再去输出html，会把整个html文档覆盖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;h1&gt;我的第一张网页&lt;/h1&gt;</div><div class="line"></div><div class="line">&lt;p&gt;我的第一个段落。&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点击这里&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function myFunction()</div><div class="line">&#123;</div><div class="line">document.write(&quot;糟糕！文档消失了。&quot;);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>警告</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(msg)</div></pre></td></tr></table></figure>
+</li>
+<li><p>确认<br>他是有结果返回的</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">confirm(msg)</div><div class="line">//sample</div><div class="line">...</div><div class="line">&lt;head&gt;</div><div class="line">...</div><div class="line">    &lt;script&gt;</div><div class="line">        function test()&#123;</div><div class="line">        var result= confirm(&quot;confirm msg&quot;);</div><div class="line">        if(true==result)&#123;</div><div class="line">            document.write(&quot;&lt;p&gt;true&lt;/p&gt;&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            document.write(&quot;&lt;p&gt;false&lt;/p&gt;&quot;);</div><div class="line">        &#125;</div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;input&gt;</div><div class="line">        &lt;input name=&quot;button&quot; type=&quot;button&quot; onClick=&quot;test()&quot; value=&quot;click me&quot;/&gt;</div><div class="line">    &lt;/input&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li>提问<br>他需要用户输入数据然后进行判断分类。也是具有结果返回的。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  function rec()&#123;</div><div class="line">    var score; //score变量，用来存储用户输入的成绩值。</div><div class="line">    score =  prompt(&quot;请输入你的成绩&quot;);              </div><div class="line">    document.write(score);</div><div class="line">    if(score&gt;=90)</div><div class="line">    &#123;</div><div class="line">      document.write(&quot;nice!&quot;);</div><div class="line">    &#125;</div><div class="line">    else if(score&gt;=75)</div><div class="line">    &#123;</div><div class="line">      document.write(&quot;good!&quot;);</div><div class="line">    &#125;</div><div class="line">    else if(score&gt;=60)</div><div class="line">    &#123;</div><div class="line">      document.write(&quot;bot bad&quot;);</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">      document.write(&quot;dame!&quot;);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;input name=&quot;button&quot; type=&quot;button&quot; onClick=&quot;rec()&quot; value=&quot;intput you grade&quot; /&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">...</div></pre></td></tr></table></figure>
+<ul>
+<li>打开新窗口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.open([URL],[窗口名称],[参数字符串])</div><div class="line">//sample</div><div class="line">window.open(&quot;www.baidu.com&quot;,&quot;_blank&quot;,&quot;width=600,height=600,top=100;left=0&quot;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>窗口名称值有：_top(网页中的上部窗口中显示目标网页)，_blank（新窗口显示目标网页）,_self(当前窗口显示目标网页)<br>参数值有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">top 距离顶部距离</div><div class="line">left 具有左侧距离</div><div class="line">width 宽度</div><div class="line">height 高度</div><div class="line">menubar 窗口有没有菜单</div><div class="line">toolbar 有没有工具条</div><div class="line">scrollbars 有没有滚动条</div><div class="line">status 有没有状态栏</div></pre></td></tr></table></figure>
+<ul>
+<li>关闭楚窗口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var win - window.open(&quot;www.baidu.com&quot;);</div><div class="line">win.close();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="变量，操作符"><a href="#变量，操作符" class="headerlink" title="变量，操作符"></a>变量，操作符</h3><p>省略</p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">//定义</div><div class="line">var arr = new Array();</div><div class="line">//可以设置长度，但是他仍然是不定长的</div><div class="line">var arr1 = new Array(10);</div><div class="line">//赋值</div><div class="line">var arr2 = new Array(1,2,3);</div><div class="line">var arr3 = [1,2,3,4];</div><div class="line">//元素赋值</div><div class="line">arr[0]=80;</div><div class="line">//可以超出长度添加新的数组元素</div><div class="line">arr1[10] = 20;</div><div class="line">//读取</div><div class="line">//当读取没有赋值的数组元素的时候，值是undefine</div><div class="line">document.write(arr[0);</div><div class="line">//获取长度,改长度可以直接赋值修改</div><div class="line">arr.length;</div><div class="line">arr.length=10;</div><div class="line">//二维数组定义</div><div class="line">var arr4 = [[],[]];//或者使用for循环</div><div class="line">//demo</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">//第一步把之前的数据写成一个数组的形式,定义变量为 infos</div><div class="line">var arr = [[&quot;小A&quot;,&quot;女&quot;,21,&quot;大一&quot;],[&quot;小B&quot;,&quot;男&quot;,23,&quot;大三&quot;],[&quot;小C&quot;,&quot;男&quot;,24,&quot;大四&quot;],[&quot;小D&quot;,&quot;女&quot;,21,&quot;大一&quot;],[&quot;小E&quot;,&quot;女&quot;,22,&quot;大四&quot;],[&quot;小F&quot;,&quot;男&quot;,21,&quot;大一&quot;],[&quot;小G&quot;,&quot;女&quot;,22,&quot;大二&quot;]];</div><div class="line"></div><div class="line">//第一次筛选，找出都是大一的信息</div><div class="line">var temp = new Array();</div><div class="line">var j = 0;</div><div class="line">for(var i=0;i&lt;arr.length;i++)&#123;</div><div class="line">    var item = arr[i];</div><div class="line">    if(&quot;大一&quot;==item[3])&#123;</div><div class="line">        temp[j++]=item;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">  var result = new Array();</div><div class="line">  j=0;</div><div class="line">//第二次筛选，找出都是女生的信息</div><div class="line">for(var i =0;i&lt;temp.length;i++)&#123;</div><div class="line">    var item = temp[i];</div><div class="line">    if(item[1]==&quot;女&quot;)&#123;</div><div class="line">        result[j++] = item;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">document.write(result.length);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>函数声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//需要注意参数是不带类型的</div><div class="line">function methodName(params...)&#123;</div><div class="line">block;</div><div class="line">return type;</div><div class="line">&#125;</div><div class="line">//sample</div><div class="line">function compare( x, y)&#123;</div><div class="line">    return x&gt;=y?x:y;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>常见的表单提交或者按钮点击可以产生的事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">onclick 鼠标单击事件</div><div class="line">onmouseover 鼠标经过</div><div class="line">onmouseout 鼠标移开</div><div class="line">onchange 文本框内容改变</div><div class="line">onselect 文本框内容选中事件</div><div class="line">onfocus 光标聚集</div><div class="line">onblur 关闭离开</div><div class="line">//页面加载完成之后立即大叔，同事执行被调用的程序。加载页面的时候，触发onload，事件写在body标签中。</div><div class="line">onload 网页导入</div><div class="line">//页面退出，页面刷新，不同浏览器不同支持</div><div class="line">onunload 关闭网页</div><div class="line">//sample</div><div class="line">...</div><div class="line">&lt;head&gt;</div><div class="line">......</div><div class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  function count()&#123;</div><div class="line">      var x = document.getElementById(&quot;txt1&quot;).value;</div><div class="line">      var y = document.getElementById(&quot;txt2&quot;).value;</div><div class="line">      var simbool = document.getElementById(&quot;select&quot;).value;</div><div class="line">      var result = document.getElementById(&quot;fruit&quot;);</div><div class="line">      if(simbool=&quot;+&quot;)&#123;</div><div class="line">          result.value=parseInt(x)+parseInt(y);</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;input type=&apos;text&apos; id=&apos;txt1&apos; /&gt;</div><div class="line">  &lt;select id=&apos;select&apos;&gt;</div><div class="line">        &lt;option value=&apos;+&apos;&gt;+&lt;/option&gt;</div><div class="line">        &lt;option value=&quot;-&quot;&gt;-&lt;/option&gt;</div><div class="line">        &lt;option value=&quot;*&quot;&gt;*&lt;/option&gt;</div><div class="line">        &lt;option value=&quot;/&quot;&gt;/&lt;/option&gt;</div><div class="line">  &lt;/select&gt;</div><div class="line">  &lt;input type=&apos;text&apos; id=&apos;txt2&apos; /&gt;</div><div class="line">  &lt;input type=&apos;button&apos; value=&apos; = &apos; onclick=&quot;count()&quot; /&gt; &lt;!--通过 = 按钮来调用创建的函数，得到结果--&gt;</div><div class="line">  &lt;input type=&apos;text&apos; id=&apos;fruit&apos; /&gt;  </div><div class="line">&lt;/body&gt;</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<h3 id="JavaScript对象"><a href="#JavaScript对象" class="headerlink" title="JavaScript对象"></a>JavaScript对象</h3><p>JavaScript当中，所有的事物都是对象，比如字符串，数值，函数等，每个对象都具有属性和方法。</p>
+<ul>
+<li><p>Date日期对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//定义</div><div class="line">var date = new Date();//当前时间</div><div class="line">var date1 = new Date(2018,2,27);//年月日</div><div class="line">var date2 = new Date(2018,2,27,10,30,10);//包含了时分秒</div><div class="line">//相关方法属性</div><div class="line">get/setDate() 获取/设置日期</div><div class="line">get/setFullYear() 获取/设置年份，使用四位数表示</div><div class="line">get/setYear() 获取/设置年份</div><div class="line">//还有时分秒</div><div class="line">set/getTime() 获取/设置时间(毫秒为单位)</div><div class="line">getDay() //返回星期0-6 0是星期天</div></pre></td></tr></table></figure>
+</li>
+<li><p>String字符串常见方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">str.length;</div><div class="line">str.toUpperCase();</div><div class="line">str.toLowerCase();</div><div class="line">str.chatAt(position)</div><div class="line">str.indexOf(char,start);//start是可选的，表示开始检索的位置，他的合法值是0到length-1</div><div class="line">str.lastIndexOf(char)</div><div class="line">str.split(separator,limit)//切割字符串，limit是可选参数，限制切割次数，最大可以切割limit个分组。之后的会不显示。</div><div class="line">str.substring(strrtPos,stopPos)//stopPos是可选的，获取开始到结束的字符串，如果start比stop大，那么提取子串会先交换这两个参数。</div><div class="line">str.substr(startPos,length);//获取字符串，假如startPos是负数，从字符串尾部开始算起的位置，也就是说，-1是最后一个字符，-2是最后两个字符。如果startPos是负数而且绝对值大于字符串长度，那么startPos为0</div></pre></td></tr></table></figure>
+</li>
+<li><p>Math</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//Math常见属性</div><div class="line">E 返回自然底数E</div><div class="line">LN2返回2的自然对数</div><div class="line">LN10返回10的自然对数</div><div class="line">LOG2E 返回以2位低的e的对数</div><div class="line">LOG10E 返回以10为低的e的对数</div><div class="line">PI 圆周率</div><div class="line">SQRT1_2 返回2的平方根的倒数</div><div class="line">SQRT2 返回2的平方根</div><div class="line">//常见方法</div><div class="line">asb();//绝对值</div><div class="line">acos(x)</div><div class="line">asin(x)</div><div class="line">atan(x)</div><div class="line">atan2(x)</div><div class="line">ceil(x) //向上取整，返回的是大于或等于x，并且与x最接近的整数</div><div class="line">cos(x)</div><div class="line">exp(x) x的指数</div><div class="line">floor(x) 进行下舍入</div><div class="line">log(x) 返回自然对数</div><div class="line">max(x,y) 返回最大值</div><div class="line">min(x,y) 返回最小值</div><div class="line">pow(x,y) 返回x的y次幂</div><div class="line">random() 返回0~1之间的随机数</div><div class="line">round(x) 四舍五入最接近的数</div><div class="line">sin(x)</div><div class="line">sqrt(x) 开根</div><div class="line">tan(x)</div><div class="line">toSource() 返回该对象的源码</div><div class="line">valuesOf() 返回Math对象的原始值</div></pre></td></tr></table></figure>
+</li>
+<li><p>Array对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//常见数组方法</div><div class="line">concat(arr...) 连接两个数组或者更多数据，返回结果</div><div class="line">join(key) 将数组所有元素放入一个字符串，元素通过指定的分割进行分割，如果省略则使用英文逗号作为分隔符</div><div class="line">pop() 删除并且返回数组最后一个元素</div><div class="line">push()向数组末尾添加一个或者多个元素，并且返回新长度</div><div class="line">reverse()颠倒数组</div><div class="line">shift() 删除并且返回第一个元素</div><div class="line">since(start,end) 从某个已有的数组返回选定元素,end可选，他并不会修改旧数组。包含从start开始到end(不含end)的新数组</div><div class="line">sort(fun) 排序，传入一个排序函数作为参数，该函数固定两个参数，不传入的时候以unicode作为标准</div><div class="line">splice() 删除元素，并且向数组添加新元素</div><div class="line">toString() 数组转化为字符串</div><div class="line">toLocaleString() 把数组转化为本地数组</div><div class="line">unshift() 向数组开头添加一个或者多个元素，并且返回新长度</div><div class="line">valuesOf() 返回数组原始值</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="浏览器对象"><a href="#浏览器对象" class="headerlink" title="浏览器对象"></a>浏览器对象</h3><ul>
+<li><p>window对象是指当前的浏览器窗口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//常见方法</div><div class="line">alert()  警告</div><div class="line">prompt(); 可输入的对话框</div><div class="line">confirm() 确认</div><div class="line">open() 打开新窗口</div><div class="line">close() 关闭窗口</div><div class="line">print() 打印当前窗口内容</div><div class="line">focus() 键盘聚焦于某一个窗口</div><div class="line">blur() 把键盘焦点从顶层窗口移除</div><div class="line">moveBy() 可相对窗口的当前坐标把她移动指定的像素</div><div class="line">moveTo() 把窗口的左上角移动到一个指定的坐标</div><div class="line">resizeBy() 按照指定像素调转窗口大小</div><div class="line">resizeTo() 把窗口大小调转到指定宽度和高度</div><div class="line">scrollBy() 按照指定像素值滚动内容</div><div class="line">scrollTo() 把内容滚动到指定坐标</div><div class="line">setInterval() 每隔指定的时间执行代码</div><div class="line">setTimeout() 在指定的延迟时间之后来执行代码</div><div class="line">clearInterval() 取消setInterval()设置</div><div class="line">clearTimeout()  取消setTimeout()设置</div></pre></td></tr></table></figure>
+</li>
+<li><p>setInterval(code,交互时间)<br>他的计时单位是毫秒，具有一个返回值，使用改返回值可以用在clearInterval()中停止重复执行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</div><div class="line">&lt;title&gt;计时器&lt;/title&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  function clock()&#123;</div><div class="line">      var time=new Date();                    </div><div class="line">      document.getElementById(&quot;clock&quot;).value = time;</div><div class="line">  &#125;</div><div class="line">    var i = setInterval(clock,1000);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;form&gt;</div><div class="line">    &lt;input type=&quot;text&quot; id=&quot;clock&quot; size=&quot;50&quot;  /&gt;</div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;Stop&quot; onclick=&quot;clearInterval(i)&quot;  /&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>setTimeout(code,delay)<br>延迟一段时间之后去执行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</div><div class="line">&lt;title&gt;计时器&lt;/title&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  var num=0;</div><div class="line">  var i;</div><div class="line">  function startCount()&#123;</div><div class="line">    document.getElementById(&apos;count&apos;).value=num;</div><div class="line">    num=num+1;</div><div class="line">    i=setTimeout(&quot;startCount()&quot;,1000);</div><div class="line">  &#125;</div><div class="line">  function stopCount()&#123;</div><div class="line">    chearTimeout(i);</div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;form&gt;</div><div class="line">    &lt;input type=&quot;text&quot; id=&quot;count&quot; /&gt;</div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;Start&quot; onclick=&quot;startCount()&quot; /&gt;</div><div class="line">    &lt;input type=&quot;button&quot; value=&quot;Stop&quot; onclick=&quot;stopCount()&quot;  /&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>History对象<br>他记录了用户曾经浏览过的页面，并且可以实现浏览器的前进和后退功能，通过history.[property|method]进行访问。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//属性</div><div class="line">lenght //历史数量</div><div class="line">//方法</div><div class="line">back() 返回上一个URL// 相当于go(-1)</div><div class="line">forward() 返回下一个URL //相当于go(1)</div><div class="line">go() 加载history列表中某一个具体的页面</div></pre></td></tr></table></figure>
+</li>
+<li><p>Location对象<br>用户获取窗体的URL，通过location.[property|method]访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//属性</div><div class="line">hash 设置或返回从#号开始的URL</div><div class="line">host 设置或返回主机名和当前URL的端口号</div><div class="line">hostname 设置或返回当前URL的主机名</div><div class="line">href 设置或返回当前完整的URL</div><div class="line">pathname 设置或者返回当前URL路径部分</div><div class="line">protocol 设置或返回当前URL的协议</div><div class="line">search 设置或者返回从问好开始的URK(查询部分)</div><div class="line">//方法</div><div class="line">assign() 加载新文档</div><div class="line">reload() 从新加载当前文档</div><div class="line">replace() 用新的文档替换当前文档</div></pre></td></tr></table></figure>
+</li>
+<li><p>Navigator对象<br>它包含浏览器的信息，通常用来检测浏览器与操作系统版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">appCodeName 浏览器代码名的字符串表示</div><div class="line">appName 浏览器名称</div><div class="line">appVersion 浏览器的平台和版本</div><div class="line">platform 操作系统平台</div><div class="line">userAgent 客户端发送服务器的user-agent字段值</div></pre></td></tr></table></figure>
+</li>
+<li><p>screen对象<br>用户获取屏幕信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">availHeight 窗口可以使用的屏幕高度，需要剪去一些比如任务栏之类的</div><div class="line">availWidth 窗口可以使用的宽度</div><div class="line">colorDepth 用户浏览器表示的颜色位数，通常32位</div><div class="line">pixelDepth 用户浏览器表示的颜色位数，通常32位</div><div class="line">height 屏幕高</div><div class="line">width 屏幕宽</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>DOM，文档对象模型，定义访问和处理HTML文档的标准方法。DOM将HTML文档呈现为带有元素，属性和文本的树结构。<br>DOM常见节点：</p>
+<ol>
+<li>元素节点，比如<html></html></li>
+<li>文本节点，就是元素节点开闭之间的内容</li>
+<li>属性节点，比如href等</li>
+</ol>
+<ul>
+<li>获取HTML元素节点<br>给节点赋予一个id，通过document.getElementById(id)可以获取得到，</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;p id=&quot;myid&quot;&gt;test&lt;/p&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        var test = document.getElementById(&quot;myid&quot;);</div><div class="line">        document.write(test.innerHTML);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>getElementsByName<br>返回带有指定名称的节点对象的集合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">function getnum()&#123;</div><div class="line">  var mynode=  document.getElementsByName(&quot;myt&quot;)      ;  </div><div class="line">  alert(mynode.length);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;input name=&quot;myt&quot; type=&quot;text&quot; value=&quot;1&quot;&gt;</div><div class="line">&lt;input name=&quot;myt&quot; type=&quot;text&quot; value=&quot;2&quot;&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;input type=&quot;button&quot; onclick=&quot;getnum()&quot; value=&quot;看看有几项？&quot; /&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>getElementsByTagName()<br>返回指定标签名的节点对象集合，按照他们在html文档出现的顺序。</p>
+</li>
+<li><p>getAttribute()<br>通过元素节点的属性名称获取属性的值。他可以获取某一个元素节点的所有属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;  </div><div class="line">&lt;p id=&quot;intro&quot;&gt;课程列表&lt;/p&gt;  </div><div class="line">    &lt;ul&gt;  </div><div class="line">        &lt;li title=&quot;第1个li&quot;&gt;HTML&lt;/li&gt;  </div><div class="line">        &lt;li&gt;CSS&lt;/li&gt;  </div><div class="line">        &lt;li title=&quot;第3个li&quot;&gt;JavaScript&lt;/li&gt;  </div><div class="line">        &lt;li title=&quot;第4个li&quot;&gt;Jquery&lt;/li&gt;  </div><div class="line">        &lt;li&gt;Html5&lt;/li&gt;  </div><div class="line">    &lt;/ul&gt;  </div><div class="line">&lt;p&gt;以下为获取的不为空的li标签title值:&lt;/p&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var con=document.getElementsByTagName(&quot;li&quot;);</div><div class="line">        for (var i=0; i&lt; con.length;i++)&#123;</div><div class="line">            var text = con[i].getAttribute(&quot;title&quot;)</div><div class="line">      if(text!=null)</div><div class="line">      &#123;</div><div class="line">        document.write(text+&quot;&lt;br&gt;&quot;);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>setAttribute<br>给某个元素节点添加属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">elementNode.setAttribute(name,value)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>常见的节点属性方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">nodeName 返回一个字符串，内容是给定的节点名称</div><div class="line">//他是只读的，对于不同的节点不同</div><div class="line">//1. 元素节点他与标签名字相同</div><div class="line">//2. 属性节点他与属性名称相同</div><div class="line">//3. 文本节点永远是#text</div><div class="line">//4. 文档节点永远是#document</div><div class="line"></div><div class="line">nodeType 返回一个整数，带便给定节点的类型</div><div class="line">他也是只读的属性</div><div class="line">元素为1 属性2 文本3 注释8文档9</div><div class="line"></div><div class="line">nodeValue 返回给定节点的当前值</div><div class="line">1. 元素节点的是undefined或者是null</div><div class="line">2. 文本节点是文本自身</div><div class="line">3. 属性节点是属性对应的value</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;ul&gt;</div><div class="line">    &lt;li&gt;javascript&lt;/li&gt;</div><div class="line">    &lt;li&gt;HTML/CSS&lt;/li&gt;</div><div class="line">    &lt;li&gt;jQuery&lt;/li&gt;    </div><div class="line">  &lt;/ul&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var arr = document.getElementsByTagName(&quot;li&quot;);</div><div class="line">    for(var i=0;i&lt;arr.length;i++)&#123;</div><div class="line">        document.write(arr[i].nodeName+&quot;&lt;br /&gt;&quot;);</div><div class="line">        document.write(arr[i].nodeValue +&quot;&lt;br /&gt;&quot;);</div><div class="line">        document.write(arr[i].nodeType +&quot;&lt;br /&gt;&quot;);</div><div class="line">    &#125;</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>遍历节点树<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">childNodes 返回一个数组，由给定的元素界定啊 子节点构成</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div&gt;</div><div class="line">  javascript  </div><div class="line">  &lt;p&gt;javascript&lt;/p&gt;</div><div class="line">  &lt;div&gt;jQuery&lt;/div&gt;</div><div class="line">  &lt;h5&gt;PHP&lt;/h5&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var ele1 = document.getElementByTagName(&quot;div&quot;);</div><div class="line">var childs = ele1[0].childNodes;</div><div class="line">for(var i=0;i&lt;childs.length;i++)&#123;</div><div class="line">    document.wirte(childs[i].value);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">firstChild 返回第一个子节点</div><div class="line">lastChild 返回最后一个子节点</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div  id=&quot;con&quot;&gt;&lt;p&gt;javascript&lt;/p&gt;&lt;div&gt;jQuery&lt;/div&gt;&lt;h5&gt;PHP&lt;/h5&gt;&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var  x = document.getElementsByTagName(&quot;div&quot;)[0];</div><div class="line">document.write(x.firstChild.innerHTML+&quot;&lt;br&gt;&quot;);</div><div class="line">  document.write(x.lastChild.innerHTML+&quot;&lt;br&gt;&quot;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">parentNode 返回一个给定的父节点，只有一个</div><div class="line"></div><div class="line">nextSibling 返回给定节点的下一个子节点，需要是同一个级别的</div><div class="line">previousSibling 返回给定节点的上一个子节点，需要是同一个级别的</div></pre></td></tr></table></figure></p>
+<p>DOM操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line">appendChild() 插入节点</div><div class="line">createElement(element) 创建一个新的元素节点</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">&lt;ul id=&quot;test&quot;&gt;</div><div class="line">  &lt;li&gt;JavaScript&lt;/li&gt;</div><div class="line">  &lt;li&gt;HTML&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  var otest = document.getElementById(&quot;test&quot;);  </div><div class="line">  var newNode = document.createElement(&quot;li&quot;);</div><div class="line">  newNode.innerHTML=&quot;PHP&quot;;</div><div class="line">  otest.appendChild(newNode);     </div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">createTextNode() 创建一个包含着特定文本的新文本节点</div><div class="line">//sample</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var node = document.createTextNode(&quot;I love JavaScript!&quot;);</div><div class="line">document.body.appendChild(node);</div><div class="line"></div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">insertBefore() 讲一个给定节点插入到一个给点元素节点的给定子节点前面</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">&lt;ul id=&quot;test&quot;&gt;&lt;li&gt;JavaScript&lt;/li&gt;&lt;li id=&quot;h&quot;&gt;HTML&lt;/li&gt;&lt;/ul&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">  var otest = document.getElementById(&quot;test&quot;);  </div><div class="line">    var h = document.getElementById(&quot;h&quot;);</div><div class="line">  var newNode = document.createElement(&quot;li&quot;);</div><div class="line">  newNode.innerHTML = &quot;PHP&quot;;</div><div class="line">  otest.insertBefore(newNode,h);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">removeChild() 从一个给点节点元素删除一个子节点</div><div class="line">//sample</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;content&quot;&gt;</div><div class="line">  &lt;h1&gt;html&lt;/h1&gt;</div><div class="line">  &lt;h1&gt;php&lt;/h1&gt;</div><div class="line">  &lt;h1&gt;javascript&lt;/h1&gt;</div><div class="line">  &lt;h1&gt;jquery&lt;/h1&gt;</div><div class="line">  &lt;h1&gt;java&lt;/h1&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">function clearText() &#123;</div><div class="line">  var content=document.getElementById(&quot;content&quot;);</div><div class="line">  // 在此完成该函数</div><div class="line">  for(var i=content.childNodes.length-1;i&gt;=0;i--)&#123;</div><div class="line">      content.removeChild(content.childNodes[i])</div><div class="line">  &#125;</div><div class="line">  &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button onclick=&quot;clearText()&quot;&gt;清除节点内容&lt;/button&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">replaceChild() 把一个给定父元素里面的一个子节点替换成另外一个子节点。</div><div class="line">//sample</div><div class="line">&lt;div&gt;&lt;b id=&quot;oldnode&quot;&gt;JavaScript&lt;/b&gt;是一个很常用的技术，为网页添加动态效果。&lt;/div&gt;</div><div class="line">  &lt;a href=&quot;javascript:replaceMessage()&quot;&gt; 将加粗改为斜体&lt;/a&gt;</div><div class="line"></div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">      function replaceMessage()&#123;</div><div class="line">        var v = document.getElementById(&quot;oldnode&quot;);</div><div class="line">        var newNode = document.createElement(&quot;i&quot;);</div><div class="line">        newNode.innerHTML=&quot;hi&quot;;</div><div class="line">        v.parentNode.replaceChild(newNode,v);</div><div class="line">            newNode.innerHTML=&quot;hi&quot;;</div><div class="line">      &#125;    </div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>innerHTML<br>用户获取或者是替换HTML元素的内容，语法是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//如上面例子</div><div class="line">objecti.innerHTML</div></pre></td></tr></table></figure>
+</li>
+<li><p>改变HTML的样式<br>语法是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">object.style.property=new style;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>启动object是html元素对象，property是对应的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    function change()&#123;</div><div class="line">        var ele = document.getElementById(&quot;myid&quot;);</div><div class="line">        ele.style.color=&quot;red&quot;;</div><div class="line">        ele.style.width=&quot;200px&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;input type=&quot;button&quot; value=&quot;click me&quot; onClick=&quot;change()&quot; id=&quot;myid&quot;/&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>基本dom样式属性表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">backgroundColor 背景色</div><div class="line">height 高度</div><div class="line">width 宽度</div><div class="line">color 文本颜色</div><div class="line">font 设置一行字体属性</div><div class="line">fontFamily 字体系列</div><div class="line">fontSize 字体大小</div><div class="line">display 显示或者隐藏，值为(none/block)，block为以块状元素显示。</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>className<br>可以通过className，直接使用定义好的css样式，更改HTML的样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">    &lt;style type=&quot;text/css&quot;&gt;</div><div class="line">         input&#123;font-size:10px;&#125;    </div><div class="line">        .one&#123;width:200px;background-color:#aaa;&#125;</div><div class="line">        .tow&#123;font-size:20px;color:#fff;&#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line">        &lt;p id=&quot;myid&quot;&gt; 段落内容&lt;/p&gt;</div><div class="line">        &lt;input type=&quot;button&quot;,value=&quot;click me&quot; onClick=&quot;change&quot;/&gt;</div><div class="line">        &lt;script&gt;</div><div class="line">            function change()&#123;</div><div class="line">                var ele = document.getElementById(&quot;myid&quot;);   </div><div class="line">                document.write(ele.className);</div><div class="line">                ele.className=&quot;one&quot;;</div><div class="line">            &#125;</div><div class="line">        &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>窗口大小问题<br>对于IE9+,Chrome,Firefox,Opera以及safari</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window.innerHeight 浏览器内部高度</div><div class="line">window.innerWidth 浏览器内部宽度</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/25/前端/css_learn/" rel="next" title="CSS基础">
+                <i class="fa fa-chevron-left"></i> CSS基础
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript语法基础"><span class="nav-number">1.</span> <span class="nav-text">JavaScript语法基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法基础"><span class="nav-number">1.1.</span> <span class="nav-text">语法基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写入JavaScript"><span class="nav-number">1.2.</span> <span class="nav-text">写入JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量，操作符"><span class="nav-number">1.3.</span> <span class="nav-text">变量，操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.4.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">1.5.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">1.6.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript对象"><span class="nav-number">1.7.</span> <span class="nav-text">JavaScript对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象"><span class="nav-number">1.8.</span> <span class="nav-text">浏览器对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.9.</span> <span class="nav-text">DOM</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
