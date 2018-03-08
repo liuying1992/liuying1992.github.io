@@ -1,0 +1,687 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="react-Native-ui," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="React Native UI学习StyleSheetStyleSheet类似于CSS样式表的抽象。内部定义多个样式对象，样式对象的属性使用逗号分隔，像素或者是字体大小不需要带符号(对于Android会自动转换为dp，对于ios会自动转换为pt)1234567891011121314const styles = StyleSheet.create(&amp;#123;  container: &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ReactNative UI">
+<meta property="og:url" content="http://yoursite.com/2018/03/08/react/react-native_UI_learn/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="React Native UI学习StyleSheetStyleSheet类似于CSS样式表的抽象。内部定义多个样式对象，样式对象的属性使用逗号分隔，像素或者是字体大小不需要带符号(对于Android会自动转换为dp，对于ios会自动转换为pt)1234567891011121314const styles = StyleSheet.create(&amp;#123;  container: &amp;#123;">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/flexdirection.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/justifyContent.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/flexwrap.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/aliginItems.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/alignSelf.png">
+<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/flex.png">
+<meta property="og:updated_time" content="2018-03-08T08:43:09.800Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ReactNative UI">
+<meta name="twitter:description" content="React Native UI学习StyleSheetStyleSheet类似于CSS样式表的抽象。内部定义多个样式对象，样式对象的属性使用逗号分隔，像素或者是字体大小不需要带符号(对于Android会自动转换为dp，对于ios会自动转换为pt)1234567891011121314const styles = StyleSheet.create(&amp;#123;  container: &amp;#123;">
+<meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/flexdirection.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/08/react/react-native_UI_learn/"/>
+
+
+  <title> ReactNative UI | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ReactNative UI
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-03-08T16:41:00+08:00" content="2018-03-08">
+              2018-03-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="React-Native-UI学习"><a href="#React-Native-UI学习" class="headerlink" title="React Native UI学习"></a>React Native UI学习</h2><h3 id="StyleSheet"><a href="#StyleSheet" class="headerlink" title="StyleSheet"></a>StyleSheet</h3><p>StyleSheet类似于CSS样式表的抽象。内部定义多个样式对象，样式对象的属性使用逗号分隔，像素或者是字体大小不需要带符号(对于Android会自动转换为dp，对于ios会自动转换为pt)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">  container: &#123;</div><div class="line">    borderRadius: 4,</div><div class="line">    borderWidth: 0.5,</div><div class="line">    borderColor: &apos;#d6d7da&apos;,</div><div class="line">  &#125;,</div><div class="line">  title: &#123;</div><div class="line">    fontSize: 19,</div><div class="line">    fontWeight: &apos;bold&apos;,</div><div class="line">  &#125;,</div><div class="line">  activeTitle: &#123;</div><div class="line">    color: &apos;red&apos;,</div><div class="line">  &#125;,</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">  &lt;Text style=&#123;[styles.title, this.props.isActive &amp;&amp; styles.activeTitle]&#125; /&gt;</div><div class="line">&lt;/View&gt;</div></pre></td></tr></table></figure></p>
+<p>注意点：</p>
+<ul>
+<li>stylesheet不要定义在render中，独立出来，使得代码清晰。</li>
+<li>需要对样式做到见名知意，style尽量与他所修饰的component有关</li>
+<li>创建的样式表通过id引用他，而不是每次都创建，对于样式表而言，他只会创建一次。<br>方法(都是static的)：</li>
+<li><code>create(obj)</code>: 创建一个样式，例如就像上面的</li>
+<li><code>flatten</code>:他的作用是把一个数组的样式变为一个独立的合并的样式，他可以用来查询id，该id是通过<code>StyleSheet.register</code>返回的。比如<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var styles = StyleSheet.create(&#123;</div><div class="line">  listItem: &#123;</div><div class="line">    flex: 1,</div><div class="line">    fontSize: 16,</div><div class="line">    color: &apos;white&apos;,</div><div class="line">  &#125;,</div><div class="line">  selectedListItem: &#123;</div><div class="line">    color: &apos;green&apos;,</div><div class="line">  &#125;,</div><div class="line">&#125;);</div><div class="line">StyleSheet.flatten([styles.listItem, styles.selectedListItem]);</div><div class="line">// returns &#123; flex: 1, fontSize: 16, color: &apos;green&apos; &#125;</div><div class="line">// Simply styles.listItem would return its ID (number)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>属性：</p>
+<ul>
+<li><p><code>hairlineWidth</code>: 定义平台上的细线的宽度，可以作为两个组件之间的边界划分。他始终是一个整数屏幕像素密度，并且符合当前平台最细的线的标准。但是我们不能把它视为常量，因为不同平台他的值是不一样的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    borderBottomWidth:StyleSheet.hairlineWidth,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>absoluteFil</code>:用于创建绝对定位和0定位的覆盖，可以用于方便和减少重复样式。</p>
+</li>
+<li><code>absoluteFillObject</code>:有时候我们可能使用absoluteFIll，但是absoluteFillObject可以在StyleSheet中用来创建一个定制入口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">    wrapper:&#123;</div><div class="line">        ...StyleSheet.absoluteFillObject,</div><div class="line">        top:10,</div><div class="line">        backgroundColor:&apos;transparent&apos;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="flexbox"><a href="#flexbox" class="headerlink" title="flexbox"></a>flexbox</h3><p>可以看这里：<a href="https://reactnative.cn/docs/0.51/layout-props.html" target="_blank" rel="external">布局样式属性</a><br>Flexbox 是一种布局模式，可以使用flexbox规则约束子组件布局。他可以达到在不同屏幕尺寸提供一致的布局结构。(跟Android LinearLayout有点类)。他的工作原理和CSS3的基本一样，只是少了一些属性。<br>属性：</p>
+<ul>
+<li>flexDirection：决定布局的主轴，从而决定子元素的方向排列方向。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">column(垂直，默认)，column-reverse(垂直反向,不是驼峰)，row(横向)，row-reverse(横向反向,不是驼峰)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>结果和图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row-reverse&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;column-reverse&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/flexdirection.png" alt=""></p>
+<ul>
+<li>JustifyContent：设置沿着主轴的排列方式。他不可以更改元素的排列顺序，只是在主轴上的排列坐标变化。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">flex-start:默认，从父布局的开头开始布局</div><div class="line">flex-end:从父布局的结尾开始布局</div><div class="line">center:主轴居中，每行第一个元素和最后一个元素到各自定点的距离相等</div><div class="line">space-between:每行均匀分配元素，相邻元素距离相同，每行第一个元素和最后一个元素跟顶部和底部对齐，没有边界。</div><div class="line">space-around：每行均匀分配元素，相邻元素距离相同，每行第一个元素和最后一个元素跟两边顶部相同</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>实例和解析和结果图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            // 尝试把`justifyContent`改为`center`看看</div><div class="line">            // 尝试把`flexDirection`改为`row`看看</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                    justifyContent: &apos;flex-start&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;/&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                    justifyContent: &apos;flex-end&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;/&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                    justifyContent: &apos;center&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;/&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                    justifyContent: &apos;space-between&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;/&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                    justifyContent: &apos;space-around&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;/&gt;</div><div class="line">                    &lt;View style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;/&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/justifyContent.png" alt=""></p>
+<ul>
+<li>flexWrap<br>他定义父组件是否允许子组件多行排列，默认是不行的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nowrap:默认</div><div class="line">wrap：可以换行</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>例子和图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexWrap:&apos;nowrap&apos;,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexWrap:&apos;wrap&apos;,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 200, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line"></div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/flexwrap.png" alt=""></p>
+<ul>
+<li>alignItems<br>他决定子元素在次轴的排列位置。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">flex-start:子元素向侧轴起点对齐</div><div class="line">flex-end:子元素向侧轴终点对齐</div><div class="line">center:子元素侧轴居中，如果子元素不能被父元素装下，那么两端移除距离相等</div><div class="line">stretch:默认值，被侧轴方向拉伸到容器相同的高度，要stretch生效，子元素在次轴不能有固定的尺寸。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>例子和图：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexWrap: &apos;nowrap&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                    alignItems: &apos;stretch&apos;</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignItems: &apos;flex-start&apos;,</div><div class="line">                    flexWrap: &apos;wrap&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignItems: &apos;flex-end&apos;,</div><div class="line">                    flexWrap: &apos;wrap&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignItems: &apos;center&apos;,</div><div class="line">                    flexWrap: &apos;wrap&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/aliginItems.png" alt=""></p>
+<ul>
+<li>alignSelf<br>他决定了子元素在父元素次轴上的排列方式，他会覆盖父元素的alignItems的值，他的默认值是auto<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">atom:他继承了父容器的aliginItems属性，如果没有父元素，则为stretch</div><div class="line">stretch：元素被拉伸以适应父容器</div><div class="line">center： 位于容器中心</div><div class="line">flex-start：位于容器开始</div><div class="line">flex-end：位于容器的尾部</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>例子和图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                    alignSelf: &apos;auto&apos;</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignSelf: &apos;flex-start&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignSelf: &apos;flex-end&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignSelf: &apos;center&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    alignSelf: &apos;stretch&apos;,</div><div class="line">                    flexDirection: &apos;column&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123; height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123; height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123; height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/alignSelf.png" alt=""></p>
+<ul>
+<li>flex<br>他类型与Android的weight，权重。他是一个整数，而且是一个正数。主要作用是均分主轴的长度。比如我们不定义主轴各个组件的宽度，而是直接标明每个组件的flex是多少,比如下面例子，上面一个view跟下面一个View占的比例是：2:1，上面的占据了2/3，下面1/3<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 2,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50,height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50,height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50,height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">                &lt;View style=&#123;&#123;</div><div class="line">                    flex: 1,</div><div class="line">                    flexDirection: &apos;row&apos;,</div><div class="line">                &#125;&#125;&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;blue&apos;&#125;&#125;&gt;1&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;green&apos;&#125;&#125;&gt;2&lt;/Text&gt;</div><div class="line">                    &lt;Text style=&#123;&#123;width: 50, height: 50, backgroundColor: &apos;yellow&apos;&#125;&#125;&gt;3&lt;/Text&gt;</div><div class="line">                &lt;/View&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        );</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://ocxgpwj6l.bkt.clouddn.com/flex.png" alt=""></p>
+<h3 id="普通属性"><a href="#普通属性" class="headerlink" title="普通属性"></a>普通属性</h3><ul>
+<li><code>width</code>:宽度</li>
+<li><code>height</code>:高度</li>
+<li><p><code>magin</code>:外边距，包括的属性有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">margin,</div><div class="line">marginBottom,</div><div class="line">marrginTop,</div><div class="line">marrginLeft,</div><div class="line">margginRight,</div><div class="line">marginHorizontal,</div><div class="line">marginVertival</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>maxWidth</code>:最大宽度</p>
+</li>
+<li><code>minWidth</code>:最小宽度</li>
+<li><code>maxHeight</code>:最大高度</li>
+<li><code>minHeight</code>:最小高度</li>
+<li><code>padding</code>:内边距<br>他跟margin属性一样，把margin换成padding既可。</li>
+<li><code>position</code>:他跟Css的position类型<br>值有：<code>relative(默认，相对定位)</code>和<code>absolute(相对于父容器的绝对定位)</code>。<br><code>absolute</code>可以使得子元素相对于父容器一定数量的像素位置。<br><code>reletive</code>是相对</li>
+<li><code>left</code>,<code>right</code>,<code>top</code>,<code>bottom</code>，这四个是设置子元素相对于父元素的距离，他跟position的值相关。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react-Native-ui/" rel="tag">#react-Native-ui</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/06/react/react-native_learn/" rel="next" title="ReactNative入门">
+                <i class="fa fa-chevron-left"></i> ReactNative入门
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Native-UI学习"><span class="nav-number">1.</span> <span class="nav-text">React Native UI学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#StyleSheet"><span class="nav-number">1.1.</span> <span class="nav-text">StyleSheet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flexbox"><span class="nav-number">1.2.</span> <span class="nav-text">flexbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通属性"><span class="nav-number">1.3.</span> <span class="nav-text">普通属性</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
