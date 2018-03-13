@@ -1,0 +1,723 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="react-native," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="ReactNative Component 基本使用包括Button，Text，TextInput,View，Img，Touchable系列组。价，他们都是位于react-native包下的
+ButtonButton组件是支持Android和ios平台的。官网地址他其实是对Text的一层封装，平时应该比较少用，不灵活，直接使用Text组件即可，他的源码是:Button，他的一些样式基本上是写死的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ReactNative Component 基本使用">
+<meta property="og:url" content="http://yoursite.com/2018/03/13/react/react_component/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="ReactNative Component 基本使用包括Button，Text，TextInput,View，Img，Touchable系列组。价，他们都是位于react-native包下的
+ButtonButton组件是支持Android和ios平台的。官网地址他其实是对Text的一层封装，平时应该比较少用，不灵活，直接使用Text组件即可，他的源码是:Button，他的一些样式基本上是写死的。">
+<meta property="og:updated_time" content="2018-03-13T09:31:31.562Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ReactNative Component 基本使用">
+<meta name="twitter:description" content="ReactNative Component 基本使用包括Button，Text，TextInput,View，Img，Touchable系列组。价，他们都是位于react-native包下的
+ButtonButton组件是支持Android和ios平台的。官网地址他其实是对Text的一层封装，平时应该比较少用，不灵活，直接使用Text组件即可，他的源码是:Button，他的一些样式基本上是写死的。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/13/react/react_component/"/>
+
+
+  <title> ReactNative Component 基本使用 | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ReactNative Component 基本使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-03-13T17:27:00+08:00" content="2018-03-13">
+              2018-03-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="ReactNative-Component-基本使用"><a href="#ReactNative-Component-基本使用" class="headerlink" title="ReactNative Component 基本使用"></a>ReactNative Component 基本使用</h2><p>包括Button，Text，TextInput,View，Img，Touchable系列组。价，他们都是位于<code>react-native</code>包下的</p>
+<h3 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h3><p>Button组件是支持Android和ios平台的。<a href="http://facebook.github.io/react-native/docs/button.html" target="_blank" rel="external">官网地址</a><br>他其实是对Text的一层封装，平时应该比较少用，不灵活，直接使用Text组件即可，他的源码是:<a href="https://github.com/facebook/react-native/blob/master/Libraries/Components/Button.js" target="_blank" rel="external">Button</a>，他的一些样式基本上是写死的。<br>基本使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">export default class ButtonComponent extends Component &#123;</div><div class="line">  static navigationOptions = &#123;</div><div class="line">    title: &apos;ButtomComponent&apos;,</div><div class="line">  &#125;;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;</div><div class="line">      text: &apos;Click Count:&apos;,</div><div class="line">      count: 0,</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      &lt;View&gt;</div><div class="line">        &lt;Button</div><div class="line">          onPress=&#123;() =&gt; &#123;</div><div class="line">            this.setState(&#123;</div><div class="line">              count: this.state.count + 1,</div><div class="line">            &#125;);</div><div class="line">          &#125;&#125;</div><div class="line">          title=&#123;this.state.text + this.state.count&#125;</div><div class="line">          color=&quot;red&quot;</div><div class="line">        /&gt;</div><div class="line">      &lt;/View&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>属性解析：</p>
+<ul>
+<li>onPress:按钮按下时候的事件响应，参数是一个function</li>
+<li>title：Button的内容。需要注意的是title不能写在Button标签之间。</li>
+<li>color:对于iOS 平台是字体颜色，对于Android平台是button 的背景颜色。</li>
+<li>accessibilityLabel：设置盲人是否可访问，就是方便盲人用的时候的提示，一般用不到。他的值是盲人使用的时候的提示。是辅助功能。</li>
+<li>disable:是否可用，boolean</li>
+<li>testId:用来定位在本Component的位置，可以用来查找该Button。</li>
+<li>需要注意button没有style属性，假如需要设置，我们需要通过外层包裹Button的View进行设置。</li>
+</ul>
+<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>View是ReactNative组件当中最基础的组件，它相当于Android的View，iOS的UIView，前端的<div>一般。可以用来包裹其他组件。它支持使用flex，可以相应事件以及访问性控制。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">const styles = &#123;</div><div class="line">  root: &#123;</div><div class="line">    flex:1,</div><div class="line">    flexDirection:&apos;row&apos;,</div><div class="line">    backgroundColor: &apos;red&apos;,</div><div class="line">    borderWidth: 10,</div><div class="line">    padding: 10,</div><div class="line">  &#125;,</div><div class="line">  view1: &#123;</div><div class="line">    backgroundColor: &apos;green&apos;,</div><div class="line">    padding: 5,</div><div class="line">  &#125;,</div><div class="line">  view2: &#123;</div><div class="line">    backgroundColor: &apos;yellow&apos;,</div><div class="line">    margin: 10,</div><div class="line">    padding: 10,</div><div class="line">  &#125;,</div><div class="line">&#125;;</div><div class="line">export default class ViewComponent extends Component &#123;</div><div class="line">  static nativationOptions = &#123;</div><div class="line">    titls: &apos;ViewComponent&apos;,</div><div class="line">  &#125;;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      &lt;View style=&#123;styles.root&#125;&gt;</div><div class="line">        &lt;View style=&#123;styles.view1&#125; /&gt;</div><div class="line">        &lt;View style=&#123;styles.view2&#125; /&gt;</div><div class="line">      &lt;/View&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></div></p>
+<p>View 没有onPress事件。但是它有比较多的事件触摸属性以及props，相关可以查看<a href="https://facebook.github.io/react-native/docs/view.html" target="_blank" rel="external">View</a>。</p>
+<h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><p>该组件是用来显示文本的。它支持嵌套，样式以及事件处理。<a href="http://facebook.github.io/react-native/docs/text.html#" target="_blank" rel="external">官网地址</a></p>
+<ul>
+<li>Text可以用来嵌套Text，这时候他是不换行的，他可以起到的作用是类似于Android的SpannableString和iOS的NSAttributedString的作用。但是，当Text嵌套在其他组件之中的时候，是使用flexbox布局的，他会占据一行或者是多行。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">    return &lt;View&gt;</div><div class="line">        &lt;Text&gt;</div><div class="line">            &lt;Text&gt;First part and &lt;/Text&gt;</div><div class="line">            &lt;Text&gt;second part&lt;/Text&gt;</div><div class="line">        &lt;/Text&gt;</div><div class="line">        &lt;Text&gt;First part and &lt;/Text&gt;</div><div class="line">        &lt;Text&gt;second part&lt;/Text&gt;</div><div class="line">    &lt;/View&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://ocxgpwj6l.bkt.clouddn.com/react-native-text1.png" target="_blank" rel="external"></a></p>
+<ul>
+<li><p>所有的文本节点，必须使用Text包裹，而不能直接使用View包裹。同时，我们不能像写html那样子，设置默认字体和颜色等，假如我们有这样子的需求，可以通过自定义Component实现。在RN中，继承样式的概念是可以出现在嵌套Text当中的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//自定义Component</div><div class="line">class CustomText extends Component &#123;</div><div class="line">    render() &#123;</div><div class="line">        return (&lt;View&gt;</div><div class="line">            &lt;Text style=&#123;&#123;color: &quot;red&quot;, fontSize: 20&#125;&#125;&gt;</div><div class="line">                parent</div><div class="line">                //color可以从parent继承的来</div><div class="line">                &lt;Text style=&#123;&#123;fontSize: 30&#125;&#125;&gt;</div><div class="line">                    child1</div><div class="line">                &lt;/Text&gt;</div><div class="line">                &lt;Text style=&#123;&#123;fontSize: 40&#125;&#125;&gt;</div><div class="line">                    child2</div><div class="line">                &lt;/Text&gt;</div><div class="line">            &lt;/Text&gt;</div><div class="line">        &lt;/View&gt;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>属性解析<br><code>selectable</code>：boolean类选，让用户是否可以使用本机的复制或者粘贴内容。<br><code>accessible</code>：可访问性控制，就是一些盲人提示<br><code>ellipsizeMode</code>：但设置了<code>numberOfLines</code> 属性的时候，他决定了如何截断文本，必须和<code>numberOfLines</code>配合使用，他的值由：<code>head</code>,<code>middle</code>,<code>tail</code>,<code>clip</code>组成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">head: 当超出numberOfLines限制之后，会在头部现实...以隐藏显示不下的内容。</div><div class="line">middle：中部</div><div class="line">tail：尾部，默认值</div><div class="line">clip：iOS独有</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>nativeID</code>:查询该View<br><code>numberOfLines</code>:设置最多可以显示多少行。当足够位置的时候，Text不会占据满numberOfLines这么多行，而是会wrap内容。<br><code>onLayout(x,y,width,height)</code>:：当挂载或者是布局发生变化的时候调用，是回调函数。<br><code>onPress</code>:点击<br>‘onLongPress’:长按<br><code>disabled</code>:禁用该组件<br><code>selectionColor</code>:选择文本hi和的高亮颜色<br><code>suppressHighlighting</code>:压制选择图片之后的文字状态，true的时候不会有视觉变化，默认情况下，灰色的椭圆形突出显示的文本。<br><code>style</code>:设置Text的样式，他可以定义在StyleSheet中，也可以直接定义在style大括号之内。内容比较多，自己可以常看。</p>
+<h3 id="TextInput"><a href="#TextInput" class="headerlink" title="TextInput"></a>TextInput</h3><p>输入文本的组件。Props提供了一些基本可配置性的一些属性，比如数字键盘，自动校正，自动大写等。<a href="http://facebook.github.io/react-native/docs/textinput.html" target="_blank" rel="external">官网地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//一边从InputText输入，再把他的内容输出到Text中的demo</div><div class="line">export default class InputTextComponent extends Component &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        this.state = &#123;</div><div class="line">            text: &quot;&quot;,</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        return &lt;View&gt;</div><div class="line">            &lt;TextInput</div><div class="line">                style=&#123;&#123;color: &quot;blue&quot;, fontSize: 20&#125;&#125;</div><div class="line">                onChangeText=&#123;(change) =&gt; &#123;</div><div class="line">                    this.setState(&#123;</div><div class="line">                        text: change,</div><div class="line">                    &#125;)</div><div class="line">                &#125;&#125;</div><div class="line">            /&gt;</div><div class="line">            &lt;Text style=&#123;&#123;fontSize: 20, color: &quot;blue&quot;&#125;&#125;&gt;&#123;this.state.text&#125;&lt;/Text&gt;</div><div class="line">        &lt;/View&gt;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>Text Input他会有包含一个默认的有背景颜色和padding的底部线，不需要可以通过不设置InputText的高度，这样子就可以通过系统去给bottom line设置正确的位置，或者是设置固定的高度，通过修改<code>underlineColorAndroid</code>为透明<code>transparent</code>。<br>同时，文本的选择，输入可以改变程序的活动窗口，对于Android来说，Activity的<code>windowSoftInputMode</code>的参数<code>adjustResize</code>将会影响到组件的布局，所以，我们一般需要设置特点的<code>windowSoftInputMode</code>值。</p>
+<p>属性：</p>
+<ul>
+<li><code>placeholderTextColor</code> 提示hint的字体颜色</li>
+<li><code>allowFontScaling</code> 字体是否应该放缩来适应访问性控制。默认是true的</li>
+<li><code>autoCorrect</code>  自动校正，默认true</li>
+<li><code>autoFocus</code> 自动聚焦，如果是true，将会集中在<code>componentDidMount()</code>方法中，默认是false。</li>
+<li><code>defaultValue</code> 默认值</li>
+<li><code>blurOnSubmit</code> 对于当行，提交的时候模糊，默认是true，对于多行则为false。注意，对于多行，将模糊提交改为true意味着返回将模糊的字符并且触发<code>onsubmitEditing</code>事件。</li>
+<li><code>contextMenuHidden</code> true则隐藏上下文菜单，默认false</li>
+<li><code>editable</code>:是否可编辑，默认true</li>
+<li><code>keyboardType</code> 弹起键盘的默认类型，比如<code>numeric</code>，这几种是跨平台的值：<code>default</code>，<code>numeric</code>,<code>email-adress</code>,<code>phone-pad</code>。而另外iOS和Android另外有部分。</li>
+<li><code>maxHeight</code> 假如autogrow是true的，那么当Text输入的高度到达maxHeight之后，将会以滚动条的形式上下滚动显示。</li>
+<li><code>multiline</code> 如果是true，可以输入多行，默认是false</li>
+<li><code>onBlur</code> 当Text input模糊的时候被调用</li>
+<li><code>onChange</code>当输入发生改变的时候回调</li>
+<li><code>onChangeText</code> 当文本发生变化的时候回调，同时会把新的内容文本回调回来。</li>
+<li><code>onContentSizeChange</code> 当输入内容的大小发生变化的时候会回调，他将会回调原生的事件：<code>{ contentSize:{width,height}}</code></li>
+<li><code>onEndEditing</code> 输入结束的时候调用</li>
+<li><code>onFocus</code> 文本聚焦的时候调用</li>
+<li><code>onLayout</code> 挂载或者是布局发生变化的时候调用，回传参数是<code>(x,t,width,height)</code></li>
+<li><code>onScroll</code> 挂载或者滚动时调用<code>contentOffset:{x,y}</code>，但是android不提供contentSize属性。</li>
+<li><code>onSelectionChange</code> 选择文本选择改变的时候回调。</li>
+<li><code>clear()</code> 清除内容</li>
+<li><code>isFocused</code>是否聚焦<br>还有其他的一些属性不一一列举，自己慢慢尝试。</li>
+</ul>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p>用来显示不同类型的图像，包括网络图片，本地图片，原生图片，手机本地图片<br>对于Android平台，还支持GIF和WebP图片，但是需要添加以下依赖到对应的gradle中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">  // If your app supports Android versions before Ice Cream Sandwich (API level 14)</div><div class="line">  compile &apos;com.facebook.fresco:animated-base-support:1.3.0&apos;</div><div class="line"></div><div class="line">  // For animated GIF support</div><div class="line">  compile &apos;com.facebook.fresco:animated-gif:1.3.0&apos;</div><div class="line"></div><div class="line">  // For WebP support, including animated WebP</div><div class="line">  compile &apos;com.facebook.fresco:animated-webp:1.3.0&apos;</div><div class="line">  compile &apos;com.facebook.fresco:webpsupport:1.3.0&apos;</div><div class="line"></div><div class="line">  // For WebP support, without animations</div><div class="line">  compile &apos;com.facebook.fresco:webpsupport:1.3.0&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对于GIF图，还需要添加混淆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep class com.facebook.imagepipeline.animated.factory.AnimatedFactoryImpl &#123;</div><div class="line">  public AnimatedFactoryImpl(com.facebook.imagepipeline.bitmaps.PlatformBitmapFactory, com.facebook.imagepipeline.core.ExecutorSupplier);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>加载静态资源，也即是本身ReactNative目录下的图片(非Android或者iOS目录)下的本地照片。我们可以指定大小，也可以不指定(这时候显示图片原本大小)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;Image</div><div class="line">     // （./）表示当前目录 (../)表示父级目录</div><div class="line">       source=&#123;require(&apos;../../img/cute.jpeg&apos;)&#125;</div><div class="line">       style=&#123;&#123;</div><div class="line">         width: 200,</div><div class="line">         height: 200,</div><div class="line">       &#125;&#125;</div><div class="line">     /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>加载网络图片<br>必须指定高度和宽度，否则无法显示出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;Image</div><div class="line">        source=&#123;&#123; uri: &apos;https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1520906790&amp;di=10b2165c04ef226319400250906fa4c7&amp;src=http://tvax1.sinaimg.cn/crop.0.0.996.996.1024/006BOv8Jly8fivw3kmctqj30ro0rowi8.jpg&apos; &#125;&#125;</div><div class="line">        style=&#123;&#123;</div><div class="line">          width: 200,</div><div class="line">          height: 200,</div><div class="line">        &#125;&#125;</div><div class="line">      /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>加载原生图片，比如Android目录下的资源的drawable文件以及ios目录下的对应的文件。<br>需要注意新加图片假如是加到原生目录下面，需要重新运行才可以。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//加载drawable目录下的图片，注意图片是没有后缀的</div><div class="line"> &lt;Image</div><div class="line">          source=&#123;&#123; uri: &apos;ic_launcher&apos; &#125;&#125;</div><div class="line">          style=&#123;&#123;</div><div class="line">            width: 38,</div><div class="line">            height: 38,</div><div class="line">          &#125;&#125;</div><div class="line">        /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>加载手机本机图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;Image</div><div class="line">         source=&#123;&#123; uri: &apos;file:///storage/emulated/0/DCIM/Camera/IMG_20180313_064056.jpg&apos; &#125;&#125;</div><div class="line">         style=&#123;&#123;</div><div class="line">           width: 38,</div><div class="line">           height: 38,</div><div class="line">         &#125;&#125;</div><div class="line">       /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用Image组件时候的需要注意的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 加载静态资源不能在require()中使用字符串拼接，因为静态资源是编译期间的，字符串拼接是运行期间。</div><div class="line">2. 适配不同屏幕像素密度，可以通过给同一张照片的不同大小命名为sample.png，sample@2x.png,sample@3x.png。</div><div class="line">3. 当我们需要为不同平台不同图片的时候，可以是sample.android.png和sample.ios.png这样子进行区分</div></pre></td></tr></table></figure>
+</li>
+<li><p>Image常见的属性<br>1 <code>style</code> 属性，它包括<br>a. Layout Props<br>b. Shadow Props<br>c. Transforms<br>d.borderRadius 边框半径，还可以设置独立的上下左右四种不同的边框半径<br>e. borderColor<br>f. opacity:透明度，1不透明，0完全透明<br>g. overflow：<br>h. tintColor 给图片着色<br>i. overlayColor</p>
+</li>
+</ul>
+<p>2 <code>resizeMode</code><br> 图片的缩放模式，默认cover，就是保持图片宽高比，且都大于等于容器的宽和高。contain:保持图片宽和高的前提下缩放图片，知道宽和高都小于容器的宽和高。center:居中不拉伸，repeat:重复平铺知道填满容器，仅ios可用。stretch:拉伸且不维持图片宽高比，知道宽和高都填满容器。</p>
+<p>3 相关回调<br>a. onLoad 加载完成时候调用<br>b. onLoadStart 图片开始加载时候调用<br>c. onError 加载失败时候调用<br>d. onLoadEnd 加载结束调用<br>e. 对于iOS还有一个onProgress回调。</p>
+<p>4 <code>defaultSource</code> 占位图，iOS才有效，他的使用跟source一样。</p>
+<p>5 <code>source</code> 资源位置，本地照片使用require(path)，远程照片使用uri:xxx.jpg</p>
+<h3 id="Touchable系列组件"><a href="#Touchable系列组件" class="headerlink" title="Touchable系列组件"></a>Touchable系列组件</h3><p>Touchable系列组件包括:</p>
+<ol>
+<li>TouchableWithouFeedback 响应用户事件，没有任何视觉反馈</li>
+<li>TouchableHighlight 在TouchableWithouFeedback基础上添加，当按下时，包裹视图的不透明度降低，使视图变暗或者着色。<br>3.TouchableOpacity 他会降低背景透明度，但是不会改变背景颜色</li>
+<li>TouchableNativeFeedback 这是Android平台的水波纹效果。<br>对于Touchable系列组件，他最多只能包裹一个子组件，去设置onPress，onLongPress等方法。</li>
+</ol>
+<h4 id="TouchableWithouFeedback使用"><a href="#TouchableWithouFeedback使用" class="headerlink" title="TouchableWithouFeedback使用"></a>TouchableWithouFeedback使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;TouchableWithoutFeedback</div><div class="line">          onPress=&#123;() =&gt; &#123;</div><div class="line">            this._onPress1();</div><div class="line">          &#125;&#125;</div><div class="line">        &gt;</div><div class="line">          &lt;Text style=&#123;styles.text&#125;&gt;</div><div class="line">            Click me:&#123;this.state.p1&#125;</div><div class="line">          &lt;/Text&gt;</div><div class="line">        &lt;/TouchableWithoutFeedback&gt;</div><div class="line">      &lt;/View&gt;</div></pre></td></tr></table></figure>
+<p>属性：</p>
+<ul>
+<li><code>delayLongPress</code> 延迟多少毫秒响应onLongPress事件</li>
+<li><code>delayPressIn</code> 延迟多少ms，之后响应onPressIn</li>
+<li><code>delayPressOut</code> 延迟多少ms，之后响应onPressOut</li>
+<li><code>disabled</code>是否激活可用</li>
+<li><code>onLongPress</code> 长按</li>
+<li><code>onPress</code> 点击</li>
+<li><code>onPressIn</code> 按下时的事件</li>
+<li><code>onPressOut</code> 触摸提起时的事件<h4 id="TouchableHighlight"><a href="#TouchableHighlight" class="headerlink" title="TouchableHighlight"></a>TouchableHighlight</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;TouchableHighlight</div><div class="line">         activeOpacity=&#123;0.5&#125;</div><div class="line">         underlayColor=&quot;blue&quot;</div><div class="line">         onPress=&#123;() =&gt; &#123;</div><div class="line">           this._onPress1();</div><div class="line">         &#125;&#125;</div><div class="line">       &gt;</div><div class="line">         &lt;Text style=&#123;styles.text&#125;&gt;</div><div class="line">            TouchableHighlight:&#123;this.state.p1&#125;</div><div class="line">         &lt;/Text&gt;</div><div class="line">       &lt;/TouchableHighlight&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>属性：<br>它具有TouchableWithoutFeedback的所有属性，另外还有部分自己的属性</p>
+<ul>
+<li><code>activityOpacity</code>:激活的透明度</li>
+<li><code>underlayColor</code> 按下时候的颜色</li>
+<li><code>onHideUnderlay()</code> 底色不见的时候回调，也就是手机抬起的时候</li>
+<li><code>onShowUnderlay</code> 显示底色的时候回调，就是手指按下的时候。</li>
+</ul>
+<h4 id="TouchableOpacity"><a href="#TouchableOpacity" class="headerlink" title="TouchableOpacity"></a>TouchableOpacity</h4><p>他只是具有一个透明度的变化，没有一个背景颜色的改变<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;TouchableOpacity</div><div class="line">         activeOpacity=&#123;0.5&#125;</div><div class="line">         onPress=&#123;() =&gt; &#123;</div><div class="line">           this._onPress1();</div><div class="line">         &#125;&#125;</div><div class="line">       &gt;</div><div class="line">         &lt;Text style=&#123;styles.text&#125;&gt;</div><div class="line">           TouchableOpacity:&#123;this.state.p1&#125;</div><div class="line">         &lt;/Text&gt;</div><div class="line">       &lt;/TouchableOpacity&gt;</div></pre></td></tr></table></figure></p>
+<p>他具有TouchableWithouFeedback的所有属性，并且还有一个属性：</p>
+<ul>
+<li><code>activityOpacity</code> 透明度，1位不透明，0全透明</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react-native/" rel="tag">#react-native</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/08/react/react-native_UI_learn/" rel="next" title="ReactNative UI">
+                <i class="fa fa-chevron-left"></i> ReactNative UI
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">34</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ReactNative-Component-基本使用"><span class="nav-number">1.</span> <span class="nav-text">ReactNative Component 基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Button"><span class="nav-number">1.1.</span> <span class="nav-text">Button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View"><span class="nav-number">1.2.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text"><span class="nav-number">1.3.</span> <span class="nav-text">Text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextInput"><span class="nav-number">1.4.</span> <span class="nav-text">TextInput</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Image"><span class="nav-number">1.5.</span> <span class="nav-text">Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Touchable系列组件"><span class="nav-number">1.6.</span> <span class="nav-text">Touchable系列组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TouchableWithouFeedback使用"><span class="nav-number">1.6.1.</span> <span class="nav-text">TouchableWithouFeedback使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TouchableHighlight"><span class="nav-number">1.6.2.</span> <span class="nav-text">TouchableHighlight</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TouchableOpacity"><span class="nav-number">1.6.3.</span> <span class="nav-text">TouchableOpacity</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
