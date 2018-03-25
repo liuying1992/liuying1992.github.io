@@ -84,7 +84,7 @@
 
 
 
-<meta name="description" content="JavaScript基础二基础数据
+<meta name="description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -93,12 +93,12 @@
 
 
 对于严格等于，使用===表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照==去比较
-对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对">
+对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础二">
 <meta property="og:url" content="http://yoursite.com/2018/03/19/前端/js_learn_2/index.html">
 <meta property="og:site_name" content="黎伟杰">
-<meta property="og:description" content="JavaScript基础二基础数据
+<meta property="og:description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -107,11 +107,11 @@
 
 
 对于严格等于，使用===表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照==去比较
-对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对">
-<meta property="og:updated_time" content="2018-03-19T15:21:09.593Z">
+对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
+<meta property="og:updated_time" content="2018-03-25T10:00:42.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础二">
-<meta name="twitter:description" content="JavaScript基础二基础数据
+<meta name="twitter:description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -120,7 +120,7 @@
 
 
 对于严格等于，使用===表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照==去比较
-对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对">
+对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
 
 
 
@@ -343,7 +343,7 @@
       
 
       
-        <h2 id="JavaScript基础二"><a href="#JavaScript基础二" class="headerlink" title="JavaScript基础二"></a>JavaScript基础二</h2><h3 id="基础数据"><a href="#基础数据" class="headerlink" title="基础数据"></a>基础数据</h3><ul>
+        <h3 id="基础数据"><a href="#基础数据" class="headerlink" title="基础数据"></a>基础数据</h3><ul>
 <li><p>基本类型</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">objection:比如function，Array，Date</div><div class="line">string</div><div class="line">number</div><div class="line">null</div><div class="line">boolean</div><div class="line">undefined</div></pre></td></tr></table></figure>
 </li>
@@ -402,12 +402,12 @@
 <li><p>with：不建议使用，他可以直接在定义的内部直接方法属性，在严格模式下禁用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">with(&#123;x:1&#125;)</div><div class="line">&#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line">//等同于</div><div class="line">var x = &#123;x:1&#125;;</div><div class="line">console.log(x);</div></pre></td></tr></table></figure>
 </li>
-<li><p>严格模式</p>
+<li><p>严格模式<br>他修复了语言上的不足，提供更强的错误检查，并且增强了安全性。需要某一段代码或者某一个js文件使用严格模式，只需要在他的开头添加<code>use strict</code>既可。当一些浏览器不支持一些语法的时候，他可以当做普通字符串忽掉。严格模式下的特点如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1. 严格模式不支持with</div><div class="line">2. 严格模式不支持使用未声明的变量，一般模式可以直接给变量赋值而不需要声明(直接在webStrom下虽然可以，但是运行浏览器上是不可以的)。</div><div class="line">3. argument变为参数副本，在function中传递参数的时候，一般模式下，修改argument的值，会修改对应的参数值(除非没有传入参数，undefined)。但是严格模式下，argument的值会有一个副本。假如参数不是一个对象，他修改了不会影响原来参数,argument会一直保持一直开始传入的值。但是假如参数传入的是一个对象，那么在argument中修改该对象的属性值，也会影响到原对象。</div><div class="line">4. 严格模式下无法使用delete删除参数或者是函数名，一般模式下虽然不会删除，但是不会报错，只是delete返回false。</div><div class="line">5. 严格模式下，delete属性为configurable的属性为false的时候会报错。</div><div class="line">6. 严格模式下，不可以声明重复属性名。</div><div class="line">7. 严格模式禁止使用八进制字面量。</div><div class="line">8. 严格模式eval，argument变为关键字，不能作为函数名。</div><div class="line">9. 严格模式下，eval具有独立作用域</div></pre></td></tr></table></figure>
 </li>
 <li><p>定义变量<br>var:全局，非严格模式前后<br>const：常量，定义赋值<br>let：局部变量，可修改。括号内向下有效。</p>
 </li>
 </ul>
-<p>未完待续…</p>
 
       
     </div>
@@ -563,7 +563,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript基础二"><span class="nav-number">1.</span> <span class="nav-text">JavaScript基础二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础数据"><span class="nav-number">1.1.</span> <span class="nav-text">基础数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">1.2.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span class="nav-number">1.3.</span> <span class="nav-text">语句</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础数据"><span class="nav-number">1.</span> <span class="nav-text">基础数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">2.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span class="nav-number">3.</span> <span class="nav-text">语句</span></a></li></ol></div>
             
           </div>
         </section>
