@@ -1,0 +1,757 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="sass,css处理器," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="SCSSSass是一门高于CSS的元语法，他有着比CSS更加强大的功能，能够提供更简洁，更优雅的语法，同时提供多种功能来创建可维护和管理的样式表。目前有的css预处理器有：
+
+Sass(SCSS)
+Less
+Stylus
+Turbine
+Swithch CSS
+CSS Cacheer
+DT CSS
+
+主流是Sass和Less以及Stylus
+SCSS的基本概念与安装SCSS其实是跟Sass是同一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sass">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/前端/sass/index.html">
+<meta property="og:site_name" content="黎伟杰">
+<meta property="og:description" content="SCSSSass是一门高于CSS的元语法，他有着比CSS更加强大的功能，能够提供更简洁，更优雅的语法，同时提供多种功能来创建可维护和管理的样式表。目前有的css预处理器有：
+
+Sass(SCSS)
+Less
+Stylus
+Turbine
+Swithch CSS
+CSS Cacheer
+DT CSS
+
+主流是Sass和Less以及Stylus
+SCSS的基本概念与安装SCSS其实是跟Sass是同一个">
+<meta property="og:updated_time" content="2018-05-18T08:30:51.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sass">
+<meta name="twitter:description" content="SCSSSass是一门高于CSS的元语法，他有着比CSS更加强大的功能，能够提供更简洁，更优雅的语法，同时提供多种功能来创建可维护和管理的样式表。目前有的css预处理器有：
+
+Sass(SCSS)
+Less
+Stylus
+Turbine
+Swithch CSS
+CSS Cacheer
+DT CSS
+
+主流是Sass和Less以及Stylus
+SCSS的基本概念与安装SCSS其实是跟Sass是同一个">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/前端/sass/"/>
+
+
+  <title> Sass | 黎伟杰 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">黎伟杰</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">个人技术博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Sass
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2018-05-18T16:29:00+08:00" content="2018-05-18">
+              2018-05-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="SCSS"><a href="#SCSS" class="headerlink" title="SCSS"></a>SCSS</h2><p>Sass是一门高于CSS的元语法，他有着比CSS更加强大的功能，能够提供更简洁，更优雅的语法，同时提供多种功能来创建可维护和管理的样式表。<br>目前有的css预处理器有：</p>
+<ol>
+<li>Sass(SCSS)</li>
+<li>Less</li>
+<li>Stylus</li>
+<li>Turbine</li>
+<li>Swithch CSS</li>
+<li>CSS Cacheer</li>
+<li>DT CSS</li>
+</ol>
+<p>主流是Sass和Less以及Stylus</p>
+<h3 id="SCSS的基本概念与安装"><a href="#SCSS的基本概念与安装" class="headerlink" title="SCSS的基本概念与安装"></a>SCSS的基本概念与安装</h3><p>SCSS其实是跟Sass是同一个东西，都称之为Sass，他们有两点不同</p>
+<ol>
+<li>文件扩展名不同。Sass以.sass结尾，SCSS以.scss结尾</li>
+<li>语法书写方式不同，Sass是以严格缩进式的语法规则，不带大括号。而SCSS的语法书写跟我们平常的CSS很相似。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//sample</div><div class="line">//Sass</div><div class="line">$font-stack: Helvetica, sans-serif  //定义变量</div><div class="line">$primary-color: #333 //定义变量</div><div class="line"></div><div class="line">body</div><div class="line">  font: 100% $font-stack</div><div class="line">  color: $primary-color</div><div class="line"></div><div class="line">//SCSS</div><div class="line">$font-stack: Helvetica, sans-serif;</div><div class="line">$primary-color: #333;</div><div class="line"></div><div class="line">body &#123;</div><div class="line">  font: 100% $font-stack;</div><div class="line">  color: $primary-color;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//编译得出的css文件</div><div class="line">body &#123;</div><div class="line">  font: 100% Helvetica, sans-serif;</div><div class="line">  color: #333;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="http://blog.csdn.net/u014182411/article/details/77319639" target="_blank" rel="external">Sass的安装</a><br>对于Mac：<code>sudo gem install sass</code> ，对于Windows，需要先安装ruby，然后在安装sass：<code>gem install sass</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//Sass常用命令</div><div class="line">//版本</div><div class="line">sass -v</div><div class="line"> //更新版本</div><div class="line">gem update sass</div><div class="line">//删除sass</div><div class="line">gem uninstall sass</div><div class="line">//编译单个文件</div><div class="line">sass target.scss:target.css</div><div class="line">// 编译多个文件，就是编译某一个文件夹下的所有scss文件</div><div class="line">sass --watch scss_files/:css_files/</div><div class="line">其中scss_files是需要编译的scss目录，css_files是输出目录</div><div class="line">//开始watch，实时监测scss是否改变，自动编译</div><div class="line">sass --watch command //比如上面的例子就可以实时jianze</div><div class="line">//输出格式</div><div class="line">--style nested[嵌套]/expanded[展开]/compact[紧凑输出]/compressed[压缩输出]</div></pre></td></tr></table></figure></p>
+<h3 id="Sass的语法"><a href="#Sass的语法" class="headerlink" title="Sass的语法"></a>Sass的语法</h3><p>我们安装了Sass之后，可以编写Sass文件了，编写的时候，可以编写.sass或者.scss。其中.sass是严格缩进的，.scss是跟CSS类似的。所以我们一般使用.scss的就好。</p>
+<h4 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h4><ul>
+<li><p>在sass中，他的变量声明是使用<code>$</code>符号的，分号结尾。比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$width:200px; //width是变量名，200px是变量值</div></pre></td></tr></table></figure>
+</li>
+<li><p>普通变量和默认变量<br>对于普通变量，定义之后可以全局范围使用，对于默认值，只需要在值的后面添加!default即可，对于默认值的作用，是提供默认实现，对于不使用默认值的变量，只需要在默认值之前重新声明并且赋值既可，默认值的作用在组件化的时候体现出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$color: red;</div><div class="line">$width:200px !default;</div><div class="line">body&#123;</div><div class="line">color:$color;</div><div class="line">width: $width;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h4><p>我们在声明赋值变量之后，可以在样式之中，通过<code>$</code>符号进行引用变量。</p>
+<h4 id="局部变量和全局变量"><a href="#局部变量和全局变量" class="headerlink" title="局部变量和全局变量"></a>局部变量和全局变量</h4><p>简单来说，局部变量是定义在元素呢的，全局变量是定义元素外的，假如他们名字相同，局部变量会覆盖在声明他元素范围内的全局变量，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//scss</div><div class="line">$color:red;</div><div class="line">body&#123;</div><div class="line">    $color:white;</div><div class="line">    color:$color;//white</div><div class="line">    a&#123;</div><div class="line">        color:$color;//white</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">hi&#123;</div><div class="line">    color:$color;//red</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对于声明变量是时机：</p>
+<ol>
+<li>改值是动态的</li>
+<li>该值最少出现两次</li>
+<li>该值会被更新</li>
+</ol>
+<h4 id="Sass嵌套"><a href="#Sass嵌套" class="headerlink" title="Sass嵌套"></a>Sass嵌套</h4><ul>
+<li>选择器嵌套<br>对于html<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;h1&gt;</div><div class="line">    &lt;div&gt;text</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;hi&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>需要制定div样式的时候，可以<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//scss</div><div class="line">h1&#123;</div><div class="line">    div&#123;</div><div class="line">        color:red;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>嵌套选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//css</div><div class="line">.box &#123;</div><div class="line">    border-top: 1px solid red;</div><div class="line">    border-bottom: 1px solid green;</div><div class="line">&#125;</div><div class="line">//可以写成</div><div class="line">//scss</div><div class="line">.box &#123;</div><div class="line">  border: &#123;</div><div class="line">   top: 1px solid red;</div><div class="line">   bottom: 1px solid green;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>伪类选择器<br>他跟嵌套选择器类似，只是使用&amp;替换。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//css</div><div class="line">.box:before&#123;</div><div class="line">    content:&quot;伪元素嵌套&quot;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//scss</div><div class="line">.box&#123;</div><div class="line">  &amp;:before &#123;</div><div class="line">    content:&quot;伪元素嵌套&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h4><p>类似C语言的宏定义，可以定义css的整体风格，颜色，字体大小等。</p>
+<ul>
+<li>声明不带参数的混合宏<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@mixin border-radius&#123;</div><div class="line">    -webkit-border-radius:5px;</div><div class="line">    border-radius:5px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>@mixin是声明一个混合宏，他后面是混合宏的名词。</p>
+<ul>
+<li><p>带参数的宏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@mixin border-radius($radius:5px)&#123;</div><div class="line">    -webkit-border-radius:$radius;</div><div class="line">    border-radius:$radius;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>调用混合宏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">button&#123;</div><div class="line">    @include border-radius;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>不带参数值的宏参数传值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@minxin sample($x)&#123;</div><div class="line">    border-radius:@x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">    @include sample(3px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当然，假如我们给sample的参数一个值，那个值就会作为默认值。不传<br>参数的时候起作用。</p>
+<ul>
+<li>宏定义多个参数<br>多个参数的时候，可以使用<code>...</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//scss</div><div class="line">@mixin box-shadow($shadows...)&#123;</div><div class="line">  @if length($shadows) &gt;= 1 &#123;</div><div class="line">    -webkit-box-shadow: $shadows;</div><div class="line">    box-shadow: $shadows;</div><div class="line">  &#125; @else &#123;</div><div class="line">    $shadows: 0 0 2px rgba(#000,.25);</div><div class="line">    -webkit-box-shadow: $shadow;</div><div class="line">    box-shadow: $shadow;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">//调用</div><div class="line">.box &#123;</div><div class="line">  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));</div><div class="line">&#125;</div><div class="line">//得到的css</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>对于混合宏，他最大的短板是不会自动合并相同样式的代码块。</p>
+<h4 id="Sass继承"><a href="#Sass继承" class="headerlink" title="Sass继承"></a>Sass继承</h4><ul>
+<li><p>Sass可以通过@extends实现样式继承。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.btn&#123;</div><div class="line">  border: 1px solid #ccc;</div><div class="line">  padding: 6px 10px;</div><div class="line">  font-size: 14px;</div><div class="line">&#125;</div><div class="line">.btn-primary&#123;</div><div class="line">  background-color: orange;</div><div class="line">  color: #fff;</div><div class="line">  @extend .btn;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>占位符<br>占位符<code>%</code>，他只有在被@extend引用的时候才会起效，否则不会被编译到css文件中。而且，当被引用的时候，他会产生代码，同时将相同的代码合并一起。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//scss</div><div class="line">.btn1&#123;</div><div class="line">  @extend %mt5;</div><div class="line">  @extend $pt5;</div><div class="line">&#125;</div><div class="line">.block&#123;</div><div class="line">  @extend %mt5;</div><div class="line">&#125;</div><div class="line">//得到的css</div><div class="line">.btn1, .block &#123;</div><div class="line">  margin-top: 5px; &#125;</div><div class="line">.btn1 &#123;</div><div class="line">  padding-top: 5px; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>对于混合宏，继承，占位符的对比：</p>
+<ol>
+<li>混合宏不会合并参数，但是能传值。当需要传值的时候使用。</li>
+<li>继承，会合并，不能传值，当该值已经定义的时候使用这种。</li>
+<li>占位符，会合并，当代码没有基类存在，可以使用</li>
+</ol>
+<h4 id="Sass数据类型"><a href="#Sass数据类型" class="headerlink" title="Sass数据类型"></a>Sass数据类型</h4><p>数字，字符串，颜色，布尔值，空值，值列表(1 em 50% 之类的)。SassScript也支持其他CSS属性，但是他不会特殊对待，只是一律视为无引用号字符串。</p>
+<ul>
+<li>字符串</li>
+</ul>
+<ol>
+<li>有引用号 “hi”</li>
+<li>无引用号 bold</li>
+</ol>
+<p>需要注意，使用#{}插值的时候，一律把有引用号变为无引用号字符串。</p>
+<ul>
+<li>值列表<br>比如设置一个margin<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">margin:10px 15px 0 0</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其实对于独立的值，也是值列表，只不过只有一个而已。</p>
+<h4 id="Sass的运算"><a href="#Sass的运算" class="headerlink" title="Sass的运算"></a>Sass的运算</h4><ul>
+<li><p>加法<br>在变量和属性中都可以做加法运算，但是对于不同类型的单位一起时，在Sass中会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$sidebar-width: 220px;</div><div class="line">$content-width: 720px;</div><div class="line">$gap-width: 20px;</div><div class="line">.container &#123;</div><div class="line">    width: $gap-width+$content-width+$sidebar-width;</div><div class="line">    margin: 0 auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>减法<br>与加法类类似</p>
+</li>
+<li><p>乘法<br>他只能其中一个值由数值单位，不能两个同时有，而且需要类型相同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  width: 10px * 2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>除法运算<br>他与乘法类似，但是他需要在两边的除数和被除数中添加一个括号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  width: (100px / 2);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>颜色运算<br>对于颜色计算，也支持上面几种，但是注意颜色他是按照argb分段计算的，也就是一段一段结果计算完成再去拼接。<br>p{<br>color:#010203 * 2;//#020406;<br>}</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sass/" rel="tag">#sass</a>
+          
+            <a href="/tags/css处理器/" rel="tag">#css处理器</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/15/微信小程序/miniprogram/" rel="next" title="微信小程序开发总结">
+                <i class="fa fa-chevron-left"></i> 微信小程序开发总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/images/avatar.jpg"
+               alt="rabbit" />
+          <p class="site-author-name" itemprop="name">rabbit</p>
+          <p class="site-description motion-element" itemprop="description">Android</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SCSS"><span class="nav-number">1.</span> <span class="nav-text">SCSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SCSS的基本概念与安装"><span class="nav-number">1.1.</span> <span class="nav-text">SCSS的基本概念与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sass的语法"><span class="nav-number">1.2.</span> <span class="nav-text">Sass的语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的使用"><span class="nav-number">1.2.2.</span> <span class="nav-text">变量的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部变量和全局变量"><span class="nav-number">1.2.3.</span> <span class="nav-text">局部变量和全局变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sass嵌套"><span class="nav-number">1.2.4.</span> <span class="nav-text">Sass嵌套</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#宏"><span class="nav-number">1.2.5.</span> <span class="nav-text">宏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sass继承"><span class="nav-number">1.2.6.</span> <span class="nav-text">Sass继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sass数据类型"><span class="nav-number">1.2.7.</span> <span class="nav-text">Sass数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sass的运算"><span class="nav-number">1.2.8.</span> <span class="nav-text">Sass的运算</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rabbit</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
