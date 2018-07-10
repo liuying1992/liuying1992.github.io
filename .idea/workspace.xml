@@ -2,131 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/2016/10/14/Android/自定义View/DynamicProgress/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/10/14/Android/自定义View/DynamicProgress/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/10/15/Android/自定义View/TransitionSwitchView/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/10/15/Android/自定义View/TransitionSwitchView/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/10/16/Android/自定义View/AnimSwitchView/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/10/16/Android/自定义View/AnimSwitchView/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/04/Android/开源项目学习/RxJavacmd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/04/Android/开源项目学习/RxJavacmd/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/04/Android/开源项目学习/RxRecomment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/04/Android/开源项目学习/RxRecomment/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/04/资源学习/gitrerecommend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/04/资源学习/gitrerecommend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/04/资源学习/git命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/04/资源学习/git命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/07/gradle/gradle-java1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/07/gradle/gradle-java1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/16/gradle/androidGraleFirst/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/16/gradle/androidGraleFirst/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/23/gradle/GroovyLan/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/23/gradle/GroovyLan/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016/11/28/gradle/gradleskill/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2016/11/28/gradle/gradleskill/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/01/05/java/JavaAnnotation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/01/05/java/JavaAnnotation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/02/06/java/JavaPoetLearn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/02/06/java/JavaPoetLearn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/02/13/资源学习/GsonLearn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/02/13/资源学习/GsonLearn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/03/16/Android/自定义View/viewevent/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/03/16/Android/自定义View/viewevent/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/04/20/Android/开源项目学习/modulesample/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/04/20/Android/开源项目学习/modulesample/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/06/05/Android/自定义View/CustomRatingView/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/06/05/Android/自定义View/CustomRatingView/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/07/05/Android/Android基础/Activity的生命周期介绍/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/07/05/Android/Android基础/Activity的生命周期介绍/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/07/10/Android/Android基础/Activity的LaunchMode/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/07/10/Android/Android基础/Activity的LaunchMode/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/07/21/kotlin/Kotlin基本知识一/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/07/21/kotlin/Kotlin基本知识一/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/08/02/kotlin/Kotlin基本知识二/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/08/02/kotlin/Kotlin基本知识二/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/08/16/kotlin/Kotlin基本知识三/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/08/16/kotlin/Kotlin基本知识三/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/08/23/kotlin/Kotlin基础知识四(补缺)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/08/23/kotlin/Kotlin基础知识四(补缺)/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/08/29/kotlin/Kotlin基础知识五(补缺)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/08/29/kotlin/Kotlin基础知识五(补缺)/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/11/02/Android/Android基础/adb命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/11/02/Android/Android基础/adb命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/11/12/Android/Android基础/Android混淆/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2017/11/12/Android/Android基础/Android混淆/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/02/14/前端/html_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/02/14/前端/html_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/02/14/前端/html_learn_2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/02/14/前端/html_learn_2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/02/25/前端/css_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/02/25/前端/css_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/02/28/前端/js_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/02/28/前端/js_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/06/react/react-native_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/06/react/react-native_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/06/react/react_leanr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/06/react/react_leanr/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/08/react/react-native_UI_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/08/react/react-native_UI_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/13/react/react_component/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/13/react/react_component/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/19/Android/支付/pay/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/19/Android/支付/pay/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/19/前端/js_learn_2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/19/前端/js_learn_2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/03/21/前端/promise_learn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/03/21/前端/promise_learn/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/05/15/react/flstlist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/05/15/react/flstlist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/05/15/react/rn_summary/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/05/15/react/rn_summary/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/05/15/微信小程序/miniprogram/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/05/15/微信小程序/miniprogram/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/05/18/前端/sass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/05/18/前端/sass/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/06/14/react/react_view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/06/14/react/react_view/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/06/14/react/redux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/06/14/react/redux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/07/10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/07/10/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2016/10/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2016/10/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2016/11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2016/11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2016/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2016/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/01/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/01/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/02/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/02/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/03/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/03/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/04/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/04/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/06/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/06/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/07/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/08/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2017/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2017/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/02/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/02/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/03/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/03/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/05/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/05/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/06/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/06/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/2018/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/page/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/page/4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/page/5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/page/5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android/开源项目学习/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android/开源项目学习/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android/自定义View/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android/自定义View/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android基础/Activity启动模式/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android基础/Activity启动模式/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android基础/Activity生命周期/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android基础/Activity生命周期/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android基础/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android基础/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Android基础知识/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/Android基础知识/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/adb命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/adb命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/gradle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/gradle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/java/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/java/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/kotlin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/kotlin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/mini-program/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/mini-program/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/react/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/前端/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/前端/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/支付/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/支付/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/组件化/Arouter/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/组件化/Arouter/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/组件化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/组件化/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/资源/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/资源/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Activity生命周期/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Activity生命周期/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Android混淆/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Android混淆/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Android组件化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Android组件化/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Groovy语言/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Groovy语言/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Gson的使用/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Gson的使用/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Redux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/Redux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/RxJava推荐/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/RxJava推荐/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/RxJava操作符/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/RxJava操作符/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/adb命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/adb命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/css处理器/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/css处理器/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/git命令/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/git命令/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/git学习资源/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/git学习资源/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/gradle使用技巧/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/gradle使用技巧/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/gradle构建/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/gradle构建/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/javaAnnotation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/javaAnnotation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/kotlin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/kotlin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/mini-program/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/mini-program/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/react-Native-ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/react-Native-ui/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/react-Native/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/react-Native/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/react-原生组件/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/react-原生组件/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/react/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/sass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/sass/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/view事件传递机制/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/view事件传递机制/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/前端基础/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/前端基础/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/带有move-up-down-动画的View/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/带有move-up-down-动画的View/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/带有move动画的View/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/带有move动画的View/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/支付/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/支付/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/自定义View/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/自定义View/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/进度和透明度变化的ProgressBar/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/进度和透明度变化的ProgressBar/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+            <state relative-caret-position="219">
+              <caret line="190" selection-start-line="190" selection-end-line="190" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -155,65 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tags/view事件传递机制/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="281" column="9" lean-forward="true" selection-start-line="281" selection-start-column="9" selection-end-line="281" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/3/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17113">
-              <caret line="1151" column="71" selection-start-line="1151" selection-start-column="65" selection-end-line="1151" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018/02/14/前端/html_learn/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="431" column="43" selection-start-line="431" selection-start-column="43" selection-end-line="431" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="291" lean-forward="true" selection-start-line="291" selection-end-line="291" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018/07/10/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/categories/前言/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/react/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5048">
-              <caret line="321" column="37" lean-forward="true" selection-start-line="321" selection-start-column="37" selection-end-line="321" selection-end-column="37" />
+            <state relative-caret-position="126">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -238,8 +60,8 @@
       <find>Blog</find>
       <find>&lt;span class=&quot;site-title&quot;&gt;Blog&lt;/span&gt;</find>
       <find>&lt;p class=&quot;site-subtitle&quot;&gt;个人技术博客&lt;/p&gt;</find>
-      <find>阅读</find>
       <find>page/2</find>
+      <find>阅读</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;liuying&quot;</replace>
@@ -542,6 +364,17 @@
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="前言" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -751,22 +584,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="4363000" />
+      <workItem from="1531189525418" duration="4672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4363000" />
+    <option name="totallyTimeSpent" value="4672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
+      <window_info active="true" content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -963,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/categories/前言/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2018/02/14/前端/html_learn/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -1006,19 +832,6 @@
         <state relative-caret-position="-1651" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#36234#36240#0" expanded="true" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/3/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17113">
@@ -1028,8 +841,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tags/view事件传递机制/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="281" column="9" lean-forward="true" selection-start-line="281" selection-start-column="9" selection-end-line="281" selection-end-column="9" />
+        <state relative-caret-position="217">
+          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/前言/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#36234#36240#0" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
