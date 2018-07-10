@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/2018/07/10/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/categories/前言/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,14 +19,23 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="179" column="75" selection-start-line="179" selection-start-column="75" selection-end-line="179" selection-end-column="75" />
+            <state relative-caret-position="90">
+              <caret line="1073" column="11" selection-start-line="1073" selection-start-column="11" selection-end-line="1088" selection-end-column="30" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#36234#36240#0" expanded="true" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/3/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17113">
+              <caret line="1151" column="71" selection-start-line="1151" selection-start-column="65" selection-end-line="1151" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -95,8 +101,9 @@
       <find>liweijieok</find>
       <find>liweijie</find>
       <find>avata</find>
-      <find>阅读</find>
       <find>more</find>
+      <find>阅读</find>
+      <find>page/2</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;liuying&quot;</replace>
@@ -391,87 +398,30 @@
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-              <item name="前端" type="462c0819:PsiDirectoryNode" />
-              <item name="html_learn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="react_view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="14" type="462c0819:PsiDirectoryNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2018" type="462c0819:PsiDirectoryNode" />
-              <item name="07" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="about" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -662,12 +612,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="3737000" />
+      <workItem from="1531189525418" duration="4111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3737000" />
+    <option name="totallyTimeSpent" value="4111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
@@ -909,10 +859,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/2/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1651" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17113">
+          <caret line="1151" column="71" selection-start-line="1151" selection-start-column="65" selection-end-line="1151" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="179" column="75" selection-start-line="179" selection-start-column="75" selection-end-line="179" selection-end-column="75" />
+        <state relative-caret-position="90">
+          <caret line="1073" column="11" selection-start-line="1073" selection-start-column="11" selection-end-line="1088" selection-end-column="30" />
           <folding>
             <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
