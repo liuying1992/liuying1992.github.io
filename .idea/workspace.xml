@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="导入错误的文件">
       <change beforePath="$PROJECT_DIR$/2018/07/10/react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/07/10/react/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,15 +17,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="243" column="71" selection-start-line="243" selection-start-column="71" selection-end-line="243" selection-end-column="71" />
+            <state relative-caret-position="256">
+              <caret line="266" selection-start-line="266" selection-end-line="266" />
               <folding>
-                <element signature="e#8904#8910#0" expanded="true" />
-                <element signature="e#8913#8919#0" expanded="true" />
-                <element signature="e#10191#10198#0" expanded="true" />
+                <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#5956#5962#0" expanded="true" />
+                <element signature="e#5965#5971#0" expanded="true" />
+                <element signature="e#6971#6978#0" expanded="true" />
+                <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -33,11 +36,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2018/07/10/react/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="268" selection-start-line="268" selection-end-line="268" />
+            <state relative-caret-position="1199">
+              <caret line="223" column="19" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+              <folding>
+                <element signature="e#6382#6388#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="601" column="4" lean-forward="true" selection-start-line="601" selection-start-column="4" selection-end-line="601" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2018/06/14/react/react_view/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="268" column="64" lean-forward="true" selection-start-line="268" selection-start-column="31" selection-end-line="268" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -72,6 +96,7 @@
       <find>43</find>
       <find>归档</find>
       <find>&lt;div</find>
+      <find>文章</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;liuying&quot;</replace>
@@ -116,9 +141,9 @@
         <option value="$PROJECT_DIR$/archives/index.html" />
         <option value="$PROJECT_DIR$/categories/index.html" />
         <option value="$PROJECT_DIR$/tags/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/2018/07/10/index.html" />
         <option value="$PROJECT_DIR$/2018/07/10/react/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -627,12 +652,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
       <workItem from="1531189525418" duration="9567000" />
-      <workItem from="1531205459306" duration="1781000" />
+      <workItem from="1531205459306" duration="2279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11348000" />
+    <option name="totallyTimeSpent" value="11846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
@@ -706,9 +731,11 @@
         <state relative-caret-position="1494">
           <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
           <folding>
-            <element signature="e#8904#8910#0" expanded="true" />
-            <element signature="e#8913#8919#0" expanded="true" />
-            <element signature="e#10191#10198#0" expanded="true" />
+            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#5956#5962#0" expanded="true" />
+            <element signature="e#5965#5971#0" expanded="true" />
+            <element signature="e#6971#6978#0" expanded="true" />
+            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -958,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018/06/14/react/react_view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="75" column="21" lean-forward="true" selection-end-line="767" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/about/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -979,25 +999,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/2018/06/14/react/react_view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="243" column="71" selection-start-line="243" selection-start-column="71" selection-end-line="243" selection-end-column="71" />
-          <folding>
-            <element signature="e#8904#8910#0" expanded="true" />
-            <element signature="e#8913#8919#0" expanded="true" />
-            <element signature="e#10191#10198#0" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="214">
+          <caret line="268" column="64" lean-forward="true" selection-start-line="268" selection-start-column="31" selection-end-line="268" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="601" column="4" lean-forward="true" selection-start-line="601" selection-start-column="4" selection-end-line="601" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/07/10/react/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="268" selection-start-line="268" selection-end-line="268" />
+        <state relative-caret-position="1199">
+          <caret line="223" column="19" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+          <folding>
+            <element signature="e#6382#6388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+          <folding>
+            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#5956#5962#0" expanded="true" />
+            <element signature="e#5965#5971#0" expanded="true" />
+            <element signature="e#6971#6978#0" expanded="true" />
+            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
