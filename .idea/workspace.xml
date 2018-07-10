@@ -34,8 +34,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/about/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="208" column="30" selection-start-line="208" selection-start-column="30" selection-end-line="208" selection-end-column="30" />
+            <state relative-caret-position="169">
+              <caret line="175" column="80" lean-forward="true" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -71,6 +71,7 @@
       <find>&lt;p class=&quot;site-subtitle&quot;&gt;个人技术博客&lt;/p&gt;</find>
       <find>page/2</find>
       <find>阅读</find>
+      <find>liuying1992@qq.com</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;liuying&quot;</replace>
@@ -79,6 +80,7 @@
       <replace>&lt;span class=&quot;site-title&quot;&gt;刘颖的Blog&lt;/span&gt;</replace>
       <replace>&lt;p class=&quot;site-subtitle&quot;&gt;拾一枚思念放逐流年&lt;/p&gt;</replace>
       <replace>liuying</replace>
+      <replace>ly1203575492@163.com</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -565,12 +567,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="6471000" />
+      <workItem from="1531189525418" duration="6941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6471000" />
+    <option name="totallyTimeSpent" value="6941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
@@ -842,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="208" column="30" selection-start-line="208" selection-start-column="30" selection-end-line="208" selection-end-column="30" />
+        <state relative-caret-position="169">
+          <caret line="175" column="80" lean-forward="true" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="80" />
         </state>
       </provider>
     </entry>
