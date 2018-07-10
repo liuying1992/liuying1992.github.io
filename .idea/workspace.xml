@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/uploads/images/avatar_wechat.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="1132" column="34" selection-start-line="1132" selection-start-column="34" selection-end-line="1132" selection-end-column="34" />
+            <state relative-caret-position="168">
+              <caret line="1054" column="72" lean-forward="true" selection-start-line="1054" selection-start-column="72" selection-end-line="1054" selection-end-column="72" />
               <folding>
                 <element signature="e#36234#36240#0" expanded="true" />
               </folding>
@@ -32,9 +33,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>&quot;liweijie&quot;</find>
       <find>liweijie</find>
+      <find>img</find>
     </findStrings>
     <replaceStrings>
+      <replace>&quot;liuying&quot;</replace>
       <replace>liuying</replace>
     </replaceStrings>
   </component>
@@ -63,6 +67,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/categories/adb命令/index.html" />
+        <option value="$PROJECT_DIR$/2016/10/14/Android/自定义View/DynamicProgress/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -79,11 +84,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-52" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1440" />
+    <option name="height" value="826" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -321,6 +325,17 @@
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -348,6 +363,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uploads/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -492,22 +512,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="1365000" />
+      <workItem from="1531189525418" duration="2183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1365000" />
+    <option name="totallyTimeSpent" value="2183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="826" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
+      <window_info active="true" content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -575,10 +595,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2016/10/14/Android/自定义View/DynamicProgress/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="908" lean-forward="true" selection-start-line="908" selection-end-line="908" />
+          <folding>
+            <element signature="e#32273#32277#0" expanded="true" />
+            <element signature="e#43167#43171#0" expanded="true" />
+            <element signature="e#43184#43190#0" expanded="true" />
+            <element signature="e#43193#43199#0" expanded="true" />
+            <element signature="e#43209#43215#0" expanded="true" />
+            <element signature="e#43220#43226#0" expanded="true" />
+            <element signature="e#43227#43231#0" expanded="true" />
+            <element signature="e#43311#43315#0" expanded="true" />
+            <element signature="e#43342#43348#0" expanded="true" />
+            <element signature="e#43390#43396#0" expanded="true" />
+            <element signature="e#43490#43496#0" expanded="true" />
+            <element signature="e#43535#43541#0" expanded="true" />
+            <element signature="e#43637#43643#0" expanded="true" />
+            <element signature="e#43675#43681#0" expanded="true" />
+            <element signature="e#43776#43782#0" expanded="true" />
+            <element signature="e#43800#43806#0" expanded="true" />
+            <element signature="e#43911#43917#0" expanded="true" />
+            <element signature="e#43929#43935#0" expanded="true" />
+            <element signature="e#44041#44047#0" expanded="true" />
+            <element signature="e#44059#44065#0" expanded="true" />
+            <element signature="e#44165#44171#0" expanded="true" />
+            <element signature="e#44177#44183#0" expanded="true" />
+            <element signature="e#44286#44292#0" expanded="true" />
+            <element signature="e#44299#44305#0" expanded="true" />
+            <element signature="e#44409#44415#0" expanded="true" />
+            <element signature="e#44423#44429#0" expanded="true" />
+            <element signature="e#44527#44533#0" expanded="true" />
+            <element signature="e#44586#44592#0" expanded="true" />
+            <element signature="e#44592#44596#0" expanded="true" />
+            <element signature="e#44705#44709#0" expanded="true" />
+            <element signature="e#44862#44868#0" expanded="true" />
+            <element signature="e#44873#44879#0" expanded="true" />
+            <element signature="e#44989#44995#0" expanded="true" />
+            <element signature="e#44999#45005#0" expanded="true" />
+            <element signature="e#45110#45116#0" expanded="true" />
+            <element signature="e#45123#45129#0" expanded="true" />
+            <element signature="e#45232#45238#0" expanded="true" />
+            <element signature="e#45241#45247#0" expanded="true" />
+            <element signature="e#45355#45361#0" expanded="true" />
+            <element signature="e#45363#45369#0" expanded="true" />
+            <element signature="e#45473#45479#0" expanded="true" />
+            <element signature="e#45481#45487#0" expanded="true" />
+            <element signature="e#45591#45597#0" expanded="true" />
+            <element signature="e#45601#45607#0" expanded="true" />
+            <element signature="e#45711#45717#0" expanded="true" />
+            <element signature="e#45718#45724#0" expanded="true" />
+            <element signature="e#45832#45838#0" expanded="true" />
+            <element signature="e#45842#45848#0" expanded="true" />
+            <element signature="e#45850#45854#0" expanded="true" />
+            <element signature="e#45938#45942#0" expanded="true" />
+            <element signature="e#46085#46091#0" expanded="true" />
+            <element signature="e#46107#46113#0" expanded="true" />
+            <element signature="e#46222#46228#0" expanded="true" />
+            <element signature="e#46233#46239#0" expanded="true" />
+            <element signature="e#46349#46355#0" expanded="true" />
+            <element signature="e#46359#46365#0" expanded="true" />
+            <element signature="e#46470#46476#0" expanded="true" />
+            <element signature="e#46483#46489#0" expanded="true" />
+            <element signature="e#46592#46598#0" expanded="true" />
+            <element signature="e#46601#46607#0" expanded="true" />
+            <element signature="e#46715#46721#0" expanded="true" />
+            <element signature="e#46722#46728#0" expanded="true" />
+            <element signature="e#46832#46838#0" expanded="true" />
+            <element signature="e#46840#46846#0" expanded="true" />
+            <element signature="e#46950#46956#0" expanded="true" />
+            <element signature="e#46960#46966#0" expanded="true" />
+            <element signature="e#47070#47076#0" expanded="true" />
+            <element signature="e#47077#47083#0" expanded="true" />
+            <element signature="e#47191#47197#0" expanded="true" />
+            <element signature="e#47201#47207#0" expanded="true" />
+            <element signature="e#47209#47213#0" expanded="true" />
+            <element signature="e#47318#47322#0" expanded="true" />
+            <element signature="e#47335#47339#0" expanded="true" />
+            <element signature="e#55379#55385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/images/avatar.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="1132" column="34" selection-start-line="1132" selection-start-column="34" selection-end-line="1132" selection-end-column="34" />
+        <state relative-caret-position="168">
+          <caret line="1054" column="72" lean-forward="true" selection-start-line="1054" selection-start-column="72" selection-end-line="1054" selection-end-column="72" />
           <folding>
             <element signature="e#36234#36240#0" expanded="true" />
           </folding>
