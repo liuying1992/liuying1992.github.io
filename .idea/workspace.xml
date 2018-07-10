@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="导入错误的文件">
-      <change beforePath="$PROJECT_DIR$/2018/07/10/react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/2018/07/10/react/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="导入错误的文件" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,14 +17,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="266" selection-start-line="266" selection-end-line="266" />
+            <state relative-caret-position="368">
+              <caret line="242" column="76" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="76" />
               <folding>
                 <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="e#5956#5962#0" expanded="true" />
                 <element signature="e#5965#5971#0" expanded="true" />
                 <element signature="e#6971#6978#0" expanded="true" />
-                <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -39,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2018/07/10/react/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1199">
-              <caret line="223" column="19" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+            <state relative-caret-position="1082">
+              <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
               <folding>
                 <element signature="e#6382#6388#0" expanded="true" />
               </folding>
@@ -53,15 +49,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
               <caret line="601" column="4" lean-forward="true" selection-start-line="601" selection-start-column="4" selection-end-line="601" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2018/06/14/react/react_view/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="268" column="64" lean-forward="true" selection-start-line="268" selection-start-column="31" selection-end-line="268" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -652,12 +639,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
       <workItem from="1531189525418" duration="9567000" />
-      <workItem from="1531205459306" duration="2279000" />
+      <workItem from="1531205459306" duration="3182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11846000" />
+    <option name="totallyTimeSpent" value="12749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
@@ -735,7 +722,6 @@
             <element signature="e#5956#5962#0" expanded="true" />
             <element signature="e#5965#5971#0" expanded="true" />
             <element signature="e#6971#6978#0" expanded="true" />
-            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -1015,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/07/10/react/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1199">
-          <caret line="223" column="19" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+        <state relative-caret-position="1082">
+          <caret line="463" lean-forward="true" selection-start-line="463" selection-end-line="463" />
           <folding>
             <element signature="e#6382#6388#0" expanded="true" />
           </folding>
@@ -1025,14 +1011,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        <state relative-caret-position="368">
+          <caret line="242" column="76" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="76" />
           <folding>
             <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="e#5956#5962#0" expanded="true" />
             <element signature="e#5965#5971#0" expanded="true" />
             <element signature="e#6971#6978#0" expanded="true" />
-            <element signature="n#article#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
