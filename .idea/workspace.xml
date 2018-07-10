@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archives/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/archives/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +21,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="160" column="70" selection-start-line="160" selection-start-column="70" selection-end-line="160" selection-end-column="70" />
+            <state relative-caret-position="93">
+              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -31,20 +33,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/about/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/archives/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="175" column="80" lean-forward="true" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="80" />
+            <state relative-caret-position="457">
+              <caret line="458" lean-forward="true" selection-start-line="162" selection-end-line="458" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/前言/index.html">
+        <entry file="file://$PROJECT_DIR$/categories/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="-3729">
+              <caret line="163" column="2" selection-start-line="163" selection-start-column="2" selection-end-line="325" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tags/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="297" column="15" lean-forward="true" selection-start-line="163" selection-start-column="2" selection-end-line="297" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -72,6 +83,12 @@
       <find>page/2</find>
       <find>阅读</find>
       <find>liuying1992@qq.com</find>
+      <find>日志</find>
+      <find>&lt;span class=&quot;site-state-item-count&quot;&gt;43&lt;/span&gt;</find>
+      <find>&lt;span class=&quot;site-state-item-count&quot;&gt;19&lt;/span&gt;</find>
+      <find>&lt;span class=&quot;site-state-item-count&quot;&gt;31&lt;/span&gt;</find>
+      <find>43</find>
+      <find>归档</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;liuying&quot;</replace>
@@ -79,8 +96,9 @@
       <replace>刘颖的Blog</replace>
       <replace>&lt;span class=&quot;site-title&quot;&gt;刘颖的Blog&lt;/span&gt;</replace>
       <replace>&lt;p class=&quot;site-subtitle&quot;&gt;拾一枚思念放逐流年&lt;/p&gt;</replace>
-      <replace>liuying</replace>
+      <replace>&lt;span class=&quot;site-state-item-count&quot;&gt;--&lt;/span&gt;</replace>
       <replace>ly1203575492@163.com</replace>
+      <replace>liuying</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -112,6 +130,10 @@
         <option value="$PROJECT_DIR$/categories/前言/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/about/index.html" />
+        <option value="$PROJECT_DIR$/archives/2016/page/2/index.html" />
+        <option value="$PROJECT_DIR$/archives/index.html" />
+        <option value="$PROJECT_DIR$/categories/index.html" />
+        <option value="$PROJECT_DIR$/tags/index.html" />
       </list>
     </option>
   </component>
@@ -371,12 +393,12 @@
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
+              <item name="tags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -567,12 +589,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="6941000" />
+      <workItem from="1531189525418" duration="7284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6941000" />
+    <option name="totallyTimeSpent" value="7284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
@@ -829,10 +851,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/about/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="180" column="29" lean-forward="true" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archives/2016/page/2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
-          <caret line="160" column="70" selection-start-line="160" selection-start-column="70" selection-end-line="160" selection-end-column="70" />
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
           <folding>
             <element signature="n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -842,10 +878,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about/index.html">
+    <entry file="file://$PROJECT_DIR$/archives/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="175" column="80" lean-forward="true" selection-start-line="175" selection-start-column="80" selection-end-line="175" selection-end-column="80" />
+        <state relative-caret-position="457">
+          <caret line="458" lean-forward="true" selection-start-line="162" selection-end-line="458" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3729">
+          <caret line="163" column="2" selection-start-line="163" selection-start-column="2" selection-end-line="325" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tags/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="297" column="15" lean-forward="true" selection-start-line="163" selection-start-column="2" selection-end-line="297" selection-end-column="15" />
         </state>
       </provider>
     </entry>
