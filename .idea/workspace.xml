@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="" />
+    <list default="true" id="e1a5dfe5-404a-4dec-b73a-a4470b4b5a3b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,56 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="1167" column="31" lean-forward="true" selection-start-line="1167" selection-start-column="31" selection-end-line="1167" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2017/02/13/资源学习/GsonLearn/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/adb命令/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4287">
-              <caret line="282" column="72" selection-start-line="282" selection-start-column="64" selection-end-line="282" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/kotlin/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4645">
-              <caret line="270" column="64" lean-forward="true" selection-start-line="270" selection-start-column="64" selection-end-line="270" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/Android基础/Activity生命周期/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="180" column="80" selection-start-line="180" selection-start-column="80" selection-end-line="180" selection-end-column="80" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2017/01/05/java/JavaAnnotation/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-631">
-              <caret line="205" column="55" selection-start-line="205" selection-start-column="55" selection-end-line="205" selection-end-column="55" />
+            <state relative-caret-position="219">
+              <caret line="1132" column="34" selection-start-line="1132" selection-start-column="34" selection-end-line="1132" selection-end-column="34" />
+              <folding>
+                <element signature="e#36234#36240#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +34,9 @@
     <findStrings>
       <find>liweijie</find>
     </findStrings>
+    <replaceStrings>
+      <replace>liuying</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -358,132 +321,6 @@
               <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="05" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="01" type="462c0819:PsiDirectoryNode" />
-              <item name="05" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAnnotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="06" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaPoetLearn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="13" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="13" type="462c0819:PsiDirectoryNode" />
-              <item name="资源学习" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="02" type="462c0819:PsiDirectoryNode" />
-              <item name="13" type="462c0819:PsiDirectoryNode" />
-              <item name="资源学习" type="462c0819:PsiDirectoryNode" />
-              <item name="GsonLearn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-              <item name="adb命令" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-              <item name="Android基础" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-              <item name="Android基础" type="462c0819:PsiDirectoryNode" />
-              <item name="Activity启动模式" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-              <item name="Android基础" type="462c0819:PsiDirectoryNode" />
-              <item name="Activity生命周期" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="liuying1992.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="liuying1992.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -508,8 +345,9 @@
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -654,22 +492,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531189522668</updated>
-      <workItem from="1531189525418" duration="980000" />
+      <workItem from="1531189525418" duration="1365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="980000" />
+    <option name="totallyTimeSpent" value="1365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
+      <window_info content_ui="combo" x="2153" y="265" width="266" height="729" id="Project" internal_type="SLIDING" order="0" visible="true" weight="0.18745595" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3292683" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -730,17 +568,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/2017/02/13/资源学习/GsonLearn/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="1167" column="31" lean-forward="true" selection-start-line="1167" selection-start-column="31" selection-end-line="1167" selection-end-column="31" />
+        <state relative-caret-position="-9420">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2017/02/13/资源学习/GsonLearn/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        <state relative-caret-position="219">
+          <caret line="1132" column="34" selection-start-line="1132" selection-start-column="34" selection-end-line="1132" selection-end-column="34" />
+          <folding>
+            <element signature="e#36234#36240#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -373,10 +373,10 @@
                                                             class="line">     */</div><div
                                                             class="line">    public DynamicProgressBar(Context context, int progress) &#123;</div><div
                                                             class="line">        super(context);</div><div
-                                                            class="line">        this.textSize = LiWeiJieUtil.getDimen(R.dimen.default_dynamic_text_size, getContext());</div><div
+                                                            class="line">        this.textSize = liuyingUtil.getDimen(R.dimen.default_dynamic_text_size, getContext());</div><div
                                                             class="line">        setRGB(DEFAULT_COLOR);</div><div
                                                             class="line">        rateProgress = DEFAULT_RATE;</div><div
-                                                            class="line">        specProgress = LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div
+                                                            class="line">        specProgress = liuyingUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div
                                                             class="line">        progressColor = DEFAULT_COLOR;</div><div
                                                             class="line">        perProgress = (float) (progress*1.0 / 100);</div><div
                                                             class="line">        init(progress);</div><div
@@ -418,13 +418,13 @@
                                                             class="line">   private void init(Context context, AttributeSet attrs, int defStyleAttr) &#123;</div><div
                                                             class="line">       TypedArray array = context.getTheme().obtainStyledAttributes(attrs, R.styleable.DynamicProgressBarStyle, defStyleAttr, 0);</div><div
                                                             class="line">       progress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicProgress, MAX_PROGRESS);</div><div
-                                                            class="line">       textSize = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicTextSize, LiWeiJieUtil.getDimen(R.dimen.default_dynamic_text_size, context));</div><div
+                                                            class="line">       textSize = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicTextSize, liuyingUtil.getDimen(R.dimen.default_dynamic_text_size, context));</div><div
                                                             class="line">       progressColor = array.getColor(R.styleable.DynamicProgressBarStyle_dynamicColor, DEFAULT_COLOR);</div><div
                                                             class="line">       setRGB(progressColor);</div><div
                                                             class="line">       rateProgress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicRate, DEFAULT_RATE);</div><div
                                                             class="line">       int maxProgress = array.getInteger(R.styleable.DynamicProgressBarStyle_dynamicMax, DEFAULT_RATE);</div><div
                                                             class="line">       perProgress = (float) (maxProgress*1.0 / 100);</div><div
-                                                            class="line">       specProgress = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicSpec, LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, context));</div><div
+                                                            class="line">       specProgress = array.getDimension(R.styleable.DynamicProgressBarStyle_dynamicSpec, liuyingUtil.getDimen(R.dimen.default_dynamic_spec, context));</div><div
                                                             class="line">       textProgress = array.getString(R.styleable.DynamicProgressBarStyle_dynamicText);</div><div
                                                             class="line">       array.recycle();</div><div
                                                             class="line">       init(progress);</div><div
@@ -558,7 +558,7 @@
                                                             class="line">        rectF.right = (getMeasuredWidth() - specProgress) * currentProgress * proportion / progress;</div><div
                                                             class="line">        rectF.bottom = getMeasuredHeight();</div><div
                                                             class="line">        canvas.drawRoundRect(rectF, 4, 4, mPaint);</div><div
-                                                            class="line">        float textX = rectF.right + LiWeiJieUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div
+                                                            class="line">        float textX = rectF.right + liuyingUtil.getDimen(R.dimen.default_dynamic_spec, getContext());</div><div
                                                             class="line">        float textY = rectF.bottom;</div><div
                                                             class="line">        mPaint.setTextAlign(Paint.Align.CENTER);</div><div
                                                             class="line">        Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();</div><div
@@ -628,8 +628,8 @@
                                                         class="line">    android:gravity=&quot;center&quot;</div><div
                                                         class="line">    android:background=&quot;#ffffff&quot;</div><div
                                                         class="line">    android:orientation=&quot;vertical&quot;</div><div
-                                                        class="line">    tools:context=&quot;com.liweijie.view.silmpleswitchbtn.sample.MainActivity&quot;&gt;</div><div
-                                                        class="line"> </div><div class="line">    &lt;com.liweijie.view.progress.DynamicProgressBar</div><div
+                                                        class="line">    tools:context=&quot;com.liuying.view.silmpleswitchbtn.sample.MainActivity&quot;&gt;</div><div
+                                                        class="line"> </div><div class="line">    &lt;com.liuying.view.progress.DynamicProgressBar</div><div
                                                         class="line">        android:layout_width=&quot;120dp&quot;</div><div
                                                         class="line">        android:layout_height=&quot;20dp&quot;</div><div
                                                         class="line">        app:dynamicColor=&quot;#ff0000&quot;</div><div
@@ -639,7 +639,7 @@
                                                         class="line">        app:dynamicSpec=&quot;20dp&quot;</div><div
                                                         class="line">        app:dynamicText=&quot;%&quot;</div><div
                                                         class="line">        app:dynamicTextSize=&quot;14sp&quot; /&gt;</div><div
-                                                        class="line">    &lt;com.liweijie.view.progress.DynamicProgressBar</div><div
+                                                        class="line">    &lt;com.liuying.view.progress.DynamicProgressBar</div><div
                                                         class="line">        android:id=&quot;@+id/progressbar&quot;</div><div
                                                         class="line">        android:layout_width=&quot;120dp&quot;</div><div
                                                         class="line">        android:layout_height=&quot;20dp&quot;</div><div
@@ -666,7 +666,7 @@
 </code></pre>
                                 <p>结果截图：<br> <img src="http://ocxgpwj6l.bkt.clouddn.com/test.gif"
                                                   alt=""><br>好了，这样子就可以完成一个具有透明度变化，进度条前进的进度条了，biubiubiu~。<br><a
-                                        href="https://github.com/liweijieok/SilmpleView"
+                                        href="https://github.com/liuyingok/SilmpleView"
                                         target="_blank" rel="external">源码下载</a></p>
 
 
@@ -758,8 +758,8 @@
                              itemtype="//schema.org/Person">
                             <img class="site-author-image" itemprop="image"
                                  src="/uploads/images/avatar.jpg"
-                                 alt="liweijie"/>
-                            <p class="site-author-name" itemprop="name">liweijie</p>
+                                 alt="liuying"/>
+                            <p class="site-author-name" itemprop="name">liuying</p>
                             <p class="site-description motion-element" itemprop="description">
                                 Android</p>
                         </div>
@@ -851,7 +851,7 @@
                 <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-                <span class="author" itemprop="copyrightHolder">liweijie</span>
+                <span class="author" itemprop="copyrightHolder">liuying</span>
             </div>
 
             <div class="powered-by">
