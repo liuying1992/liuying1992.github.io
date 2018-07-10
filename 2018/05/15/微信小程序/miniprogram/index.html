@@ -1,269 +1,190 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="mini program,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
+    <meta name="description"
+          content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="微信小程序开发总结">
+    <meta property="og:url" content="http://yoursite.com/2018/05/15/微信小程序/miniprogram/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description"
+          content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
+    <meta property="og:updated_time" content="2018-05-15T14:34:45.716Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="微信小程序开发总结">
+    <meta name="twitter:description"
+          content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/05/15/微信小程序/miniprogram/"/>
 
 
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="mini program," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
-<meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序开发总结">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/微信小程序/miniprogram/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
-<meta property="og:updated_time" content="2018-05-15T14:34:45.716Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序开发总结">
-<meta name="twitter:description" content="微信小程序开发总结对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。本文也是">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
-
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/微信小程序/miniprogram/"/>
-
-
-  <title> 微信小程序开发总结 | Blog </title>
+    <title> 微信小程序开发总结 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                微信小程序开发总结
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    微信小程序开发总结
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -274,8 +195,8 @@
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -293,262 +214,850 @@
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="微信小程序开发总结"><a href="#微信小程序开发总结" class="headerlink" title="微信小程序开发总结"></a>微信小程序开发总结</h1><p>对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。<br>写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。<br>感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。<br>本文也是从这几个方向去总结自己的小程序开发经验。</p>
-<h2 id="小程序的入门"><a href="#小程序的入门" class="headerlink" title="小程序的入门"></a>小程序的入门</h2><p>其实小程序的开发过程一直都是查看文档，按照文档去操作就可以了。<br>一般流程是先看<a href="https://developers.weixin.qq.com/miniprogram/dev/" target="_blank" rel="external">简易教程</a>。看完之后，再去看<a href="https://developers.weixin.qq.com/miniprogram/dev/component/" target="_blank" rel="external">组件</a>。之后可以开始尝试写需求，这个过程中，开始不断的去查<a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="external">API</a>和<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html" target="_blank" rel="external">框架</a>即可。</p>
-<h2 id="多列列表"><a href="#多列列表" class="headerlink" title="多列列表"></a>多列列表</h2><p>在开发中，有一个需求是需要实现类似Android的GridView网格列表的。但是微信中并没有提供这样子的组件，但是小程序是跟html/css前端很类似的，他可以通过指定<code>display:flex</code>，然后去设置<code>flex-wrap:wrap</code>就可以。例如，有一个数组<code>data:[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;]</code>需要显示为一个三列的列表，可以如下处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">//GridPage.wxml</div><div class="line">&lt;view class=&apos;grid-container&apos;&gt;</div><div class="line">  &lt;view wx:for=&quot;&#123;&#123;data&#125;&#125;&quot; wx:key=&quot;&#123;&#123;item&#125;&#125;&quot; class=&quot;grid-list&quot;&gt;</div><div class="line">  &lt;view class=&apos;grid-item&apos;&gt;</div><div class="line">  &lt;text class=&apos;grid-item-text&apos;&gt;&#123;&#123;item&#125;&#125;&lt;/text&gt;</div><div class="line">  &lt;/view&gt;</div><div class="line">  &lt;/view&gt;</div><div class="line">&lt;/view&gt;</div><div class="line"></div><div class="line">//GridPage.wxss</div><div class="line">Page &#123;</div><div class="line">  min-height: 100%;</div><div class="line">  background-color: #fff;</div><div class="line">&#125;</div><div class="line">.grid-container &#123;</div><div class="line">  margin-left: 4rpx;</div><div class="line">  margin-right: 4rpx;</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line">  flex-direction: row;</div><div class="line">&#125;</div><div class="line">.grid-list &#123;</div><div class="line">  width: 33.33%;</div><div class="line">&#125;</div><div class="line">.grid-item &#123;</div><div class="line">  margin: 2rpx;</div><div class="line">  background: #999;</div><div class="line">  display: flex;</div><div class="line">  justify-content: center;</div><div class="line">  align-items: center;</div><div class="line">&#125;</div><div class="line">.grid-item-text &#123;</div><div class="line">  color: black;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这里的重点就是<code>grid-container</code>中的<code>flex-wrap</code>为<code>wrap</code>，方向是<code>row</code>了。然后他的每一个item宽度都是<code>33.33%</code>。需要注意的是一定是去设置外部的contanier而不是内部的list。</p>
-<h2 id="层级布局"><a href="#层级布局" class="headerlink" title="层级布局"></a>层级布局</h2><p>在CSS中，需要使用层级布局，就是类似Android的FrameLayout效果，可以使用z-index，也可以使用一个绝对定位。比如，我们有一个需求是：下面是一个图片，上面是文字。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//PositionPage.wxml</div><div class="line">&lt;view class=&apos;root&apos;&gt;</div><div class="line">&lt;image src=&apos;https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3756982450,995202616&amp;fm=27&amp;gp=0.jpg&apos; class=&apos;image&apos;&gt;&lt;/image&gt;</div><div class="line">&lt;text class=&apos;text&apos;&gt;我是权律二啊&lt;/text&gt;</div><div class="line">&lt;/view&gt;</div><div class="line">//PositionPage.wcss</div><div class="line">.root&#123;</div><div class="line">  align-items: center;</div><div class="line">  display: flex;</div><div class="line">  flex-direction: column;</div><div class="line">  position: relative;</div><div class="line">&#125;</div><div class="line">.image&#123;</div><div class="line">  width: 300rpx;</div><div class="line">  height: 300rpx;</div><div class="line">&#125;</div><div class="line">.text&#123;</div><div class="line">  background-color: #999;</div><div class="line">  position: absolute;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>主要是两点：父布局的<code>position</code>必须是<code>relative</code>，它本身<code>position</code>必须是<code>absolute</code>。</p>
-<h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><p>小程序的网络请求是使用wx.request()方法，但是该方法太臃肿，并没有使用Promise那样子简洁。幸运的是小程序支持Promise，所以我们可以把http封装一下，变成有条理。说到这里，大家做的时候需要注意去微信后台配置各种request域名，upload域名，downloadFIle域名。<br>下面封装的例子的数据返回格式都是json格式post请求方式发出的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">//真正发起请求</div><div class="line">function _request(url, param) &#123;</div><div class="line">    if (isDebug) &#123;</div><div class="line">        Log.i(&quot;http==&gt; params-&gt;&quot; + JSON.stringify(param));</div><div class="line">        Log.i(&quot;http==&gt; url-&gt;&quot; + url);</div><div class="line">    &#125;</div><div class="line">    return new Promise((resolve, reject) =&gt; &#123;</div><div class="line">        wx.request(&#123;</div><div class="line">            url: url,</div><div class="line">            data: param,</div><div class="line">            header: &#123;</div><div class="line">                &apos;content-type&apos;: &apos;application/json&apos;,</div><div class="line">                &quot;Accept&quot;: &quot;application/json&quot;</div><div class="line">            &#125;,</div><div class="line">            method: &quot;POST&quot;,</div><div class="line">            success: function (response) &#123;</div><div class="line">                if (isDebug) &#123;</div><div class="line">                    const jsonResponse = JSON.stringify(response);</div><div class="line">                    Log.i(&quot;http==&gt; response-&gt;&quot; + jsonResponse);</div><div class="line">                &#125;</div><div class="line">                const &#123;data, statusCode, ok = false&#125; = response;</div><div class="line">                //只有ok为true的是时候才返回成功，data不一定是包含数据的</div><div class="line">                if (statusCode === 200 &amp;&amp; data &amp;&amp; data.ok) &#123;</div><div class="line">                    resolve(data, ok);</div><div class="line">                &#125; else &#123;</div><div class="line">                    if (statusCode != 404 &amp;&amp; statusCode &lt; 500 &amp;&amp; statusCode &gt; 300) &#123;</div><div class="line">                        ToastUtil.showError();</div><div class="line">                    &#125;</div><div class="line">                    reject(data);</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            fail: reject</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function getInfo(fid) &#123;</div><div class="line">    const params = &#123;&#125;;</div><div class="line">    params.token = user.token;</div><div class="line">    params.uid = user.uid;</div><div class="line">    return _request(&quot;INFO_URL&quot;, params);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后需要发起请求就调用该方法即可，处理Promise。</p>
-<h2 id="上传图片到阿里云"><a href="#上传图片到阿里云" class="headerlink" title="上传图片到阿里云"></a>上传图片到阿里云</h2><p>可以参考博客：<a href="https://www.jianshu.com/p/4372ad69c861" target="_blank" rel="external">小程序图片上传阿里OSS使用方法</a>，获取签名阿里云Demo地址：<a href="https://help.aliyun.com/document_detail/31925.html?spm=5176.doc31923.6.628.JYYHox" target="_blank" rel="external">JavaScript客户端签名直传</a>，通过打log获得policy和signature（签名时间可以稍微设置久一点）之后，就开始封装upload方法了。<br>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">    /**</div><div class="line">    * 真实上传代码</div><div class="line">    */</div><div class="line">    function _upload(file, success, fail) &#123;</div><div class="line">        const suffix = file.substring(file.lastIndexOf(&quot;.&quot;));</div><div class="line">        //做一下md5处理</div><div class="line">        const fileName = hex_md5(file);</div><div class="line">        Log.i(&quot;fileName=&quot; + (fileName + suffix));</div><div class="line">        wx.uploadFile(&#123;</div><div class="line">            url: ALIYUNPHOTOADDRESS,</div><div class="line">            formData: &#123;</div><div class="line">                &quot;OSSAccessKeyId&quot;: &quot;你的阿里云accessKey&quot;,</div><div class="line">                &quot;key&quot;: DIR+ (fileName + suffix),</div><div class="line">                &quot;policy&quot;: &quot;你的policy&quot;,</div><div class="line">                &quot;success_action_status&quot;: &apos;200&apos;,</div><div class="line">                &quot;signature&quot;: &quot;你的signature&quot;</div><div class="line">            &#125;,</div><div class="line">            filePath: file,</div><div class="line">            name: &apos;file&apos;,</div><div class="line">            success: function (res) &#123;</div><div class="line">                const &#123;statusCode&#125; = res;</div><div class="line">                if (statusCode === 200) &#123;</div><div class="line">                    console.log(JSON.stringify(res));</div><div class="line">                    success(&quot;&quot; + fileName + suffix);</div><div class="line">                &#125; else &#123;</div><div class="line">                    console.log(&quot;上传失败&quot;);</div><div class="line">                    fail(res);</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            fail: function (e) &#123;</div><div class="line">                fail(e);</div><div class="line">                console.log(&quot;上传失败&quot;);</div><div class="line">                console.log(&quot;e=&quot; + JSON.stringify(e));</div><div class="line">            &#125;, complete: function () &#123;</div><div class="line">                console.log(&quot;上传过程结束&quot;);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中<code>url</code>是上传OOS的地址，key是需要上传的文件夹+上传之后的文件名。这里的fileName我们通过一个md5去计算得来，保证唯一性又没有什么特殊字符。md5的算法来自<a href="https://www.cnblogs.com/xinyueBlog/p/6179172.html" target="_blank" rel="external">JS-MD5加密</a>。</p>
-<p>我们可以顺带封装一个上传多张图片的方法,而且使用Promise返回：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/**</div><div class="line">* files需要上传的文件，是一个数组,里面是文件的绝对路径</div><div class="line">*/</div><div class="line">function uploadFiles(files) &#123;</div><div class="line">  if (!files || files.length &lt;= 0) &#123;</div><div class="line">    wx.showModal(&#123;</div><div class="line">      title: &apos;图片错误&apos;,</div><div class="line">      content: &apos;请重试&apos;,</div><div class="line">      showCancel: false,</div><div class="line">    &#125;);</div><div class="line">    return Promise.reject();</div><div class="line">  &#125;</div><div class="line">  Log.i(&quot;开始上传&quot; + files);</div><div class="line"></div><div class="line">  return new Promise((resolve, reject) =&gt; &#123;</div><div class="line">    //上传成功的文件名称</div><div class="line">    let uploadPaths = [];</div><div class="line">    for (let i = 0; i &lt; files.length; i++) &#123;</div><div class="line">      _upload(files[i], (path) =&gt; &#123;</div><div class="line">        //成功的文件名</div><div class="line">        uploadPaths[uploadPaths.length] = path;</div><div class="line">        if (uploadPaths.length &gt;= files.length) &#123;</div><div class="line">          //把url+name返回</div><div class="line">          resolve([ALIYUNPHOTOADDRESS + &quot;/&quot; +DIR, uploadPaths]);</div><div class="line">        &#125;</div><div class="line">      &#125;, () =&gt; &#123;</div><div class="line">        //error</div><div class="line">        reject(res);</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;);</div></pre></td></tr></table></figure></p>
-<h2 id="Canvas使用"><a href="#Canvas使用" class="headerlink" title="Canvas使用"></a>Canvas使用</h2><p>*. 由于需要使用Canvas画一棵树，所以还是在这里走了比较多的坑的。我的需求是Canvas全屏，除了画一个树之外还需要画别的一些独立Button。<br>首先，设置Canvas全屏和不可滑动，可以通过以下方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;canvas  disable-scroll=&apos;true&apos; style=&quot;width: &#123;&#123;width&#125;&#125;px; height: &#123;&#123;height&#125;&#125;px;background-color:#efeff4;flex:1;&quot; canvas-id=&quot;canvas&quot; bindtouchstart=&quot;touchStart&quot; bindtouchmove=&quot;touchMove&quot; bindtouchend=&quot;touchEnd&quot;&gt;&lt;/canvas&gt;</div></pre></td></tr></table></figure></p>
-<p><em>. 其中，在设置了disable-scroll设置为true，同时需要绑定三个touch事件，才能响应画布的触摸event。其中这里的width+height是通过wx.getSystemInfo()获得。
-</em>. 其次，canvas没有类似View的catchtap事件，只有一些touch事件，详情可以看<a href="https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html#canvas" target="_blank" rel="external">Canvas</a></p>
-<ul>
-<li>然后在微信小程序中Canvas是层级最高的，无法通过设置z-index去调，所以假如你的Canvas全屏，还需要一些其他的Button，那么只能通过最后canvas去draw了。</li>
-<li><p>在canvas中，假如通过moveTo+lineTo去画线，一般需要先调用canvas.beginPath()画完成之后，先调用canvas.stoke()，然后在调用canvas.closePath();</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">c.beginPath();</div><div class="line">c.setLineWidth(this.arrowPaint.width);</div><div class="line">c.setStrokeStyle(this.arrowPaint.color);</div><div class="line">c.setLineCap(&quot;square&quot;);</div><div class="line"></div><div class="line">c.moveTo(this.arrowStartPointF.x, this.arrowStartPointF.y);</div><div class="line">c.lineTo(this.arrowCenterPointF.x, this.arrowCenterPointF.y);</div><div class="line">c.moveTo(this.arrowCenterPointF.x, this.arrowCenterPointF.y);</div><div class="line">c.lineTo(this.arrowEndPointF.x, this.arrowEndPointF.y);</div><div class="line">c.stroke();</div><div class="line">c.closePath();</div></pre></td></tr></table></figure>
-</li>
-<li><p>在连续画多种图片/线条的时候，不要连续多次调用draw(true)方法， 消耗性能，一般最后调用fill()/stoke()方法即可。比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//绘制点</div><div class="line">  c.beginPath();</div><div class="line">  let y = node.noteView.pointFrameCenter.y + Constant.FRAME_HEIGHT / 2 + Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT;</div><div class="line"></div><div class="line">  c.setFillStyle(Constant.LINE_COLOR_RED);</div><div class="line">  c.setLineWidth(Constant.LINE_WIDTH);</div><div class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div class="line"></div><div class="line">  //</div><div class="line">  y += (Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT);</div><div class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div class="line">  //</div><div class="line">  //</div><div class="line">  y += (Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT);</div><div class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div class="line"></div><div class="line">  c.fill();</div><div class="line">  c.closePath();</div></pre></td></tr></table></figure>
-</li>
-<li><p>对于draw方法，建议只是调用draw()就好，不要调用draw(true)方法，draw(true)是在原画布之上再去画，不会清空旧画布，draw()会清空。一般，我们会在所有的image，rectangle，line,circle去fill/stoke完之后，再调用draw()方法，这样子就可以避免draw(true)多次，性能耗损。而且再次去reDraw的时候也不用先去清空画布。</p>
-</li>
-<li>Canvas的跟随手势拖动<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">//index.wxml</div><div class="line">  &lt;canvas disable-scroll=&apos;true&apos; style=&quot;width: &#123;&#123;width&#125;&#125;px; height: &#123;&#123;height&#125;&#125;px;background-color:#efeff4;&quot; canvas-id=&quot;canvas&quot; bindtouchstart=&quot;touchStart&quot; bindtouchmove=&quot;touchMove&quot; bindtouchend=&quot;touchEnd&quot;&gt;&lt;/canvas&gt;</div><div class="line">//index.wcss</div><div class="line">Page &#123;</div><div class="line">  overflow: hidden;</div><div class="line">  display: flex;</div><div class="line">&#125;</div><div class="line">//index.js</div><div class="line">const app = getApp()</div><div class="line"></div><div class="line">Page(&#123;</div><div class="line">  data: &#123;</div><div class="line">    width: 0,</div><div class="line">    height: 0,</div><div class="line">  &#125;,</div><div class="line">  onLoad: function (e) &#123;</div><div class="line">    this.time = (new Date()).valueOf();</div><div class="line">    this.x = 0;</div><div class="line">    this.y = 0;</div><div class="line">    this.moveX = 0;</div><div class="line">    this.moveY = 0;</div><div class="line"></div><div class="line">    const that = this;</div><div class="line">    wx.getSystemInfo(&#123;</div><div class="line">      success: function (res) &#123;</div><div class="line">        that.setData(&#123; width: res.screenWidth, height: res.screenHeight &#125;)</div><div class="line">      &#125;,</div><div class="line">    &#125;)</div><div class="line">    const ctx = wx.createCanvasContext(&quot;canvas&quot;, this)</div><div class="line">    this.canvas = ctx;</div><div class="line">  &#125;,</div><div class="line">  onReady: function () &#123;</div><div class="line">    this.draw();</div><div class="line">  &#125;,</div><div class="line">  draw: function () &#123;</div><div class="line">    this.canvas.fillRect(10, 10, 150, 100)</div><div class="line">    this.canvas.fill();</div><div class="line">    this.canvas.draw()</div><div class="line">  &#125;,</div><div class="line">  touchMove: function (e) &#123;</div><div class="line">    console.log(&quot;touchMove&quot;)</div><div class="line">    let xOffset = e.touches[0].x - this.x;</div><div class="line">    let yOffset = e.touches[0].y - this.y;</div><div class="line">    this.x = e.touches[0].x;</div><div class="line">    this.y = e.touches[0].y;</div><div class="line">    this.moveX = this.moveX + xOffset;</div><div class="line">    this.moveY = this.moveY + yOffset;</div><div class="line">    this.canvas.translate(this.moveX, this.moveY);</div><div class="line">    this.draw();</div><div class="line">  &#125;,</div><div class="line">  touchStart: function (e) &#123;</div><div class="line">    this.x = e.touches[0].x;</div><div class="line">    this.y = e.touches[0].y;</div><div class="line">  &#125;,</div><div class="line">  touchEnd: function (e) &#123;</div><div class="line">    console.log(&quot;touchEnd&quot;)</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>其他的scale等方法类似。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/mini-program/" rel="tag">#mini program</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/15/react/rn_summary/" rel="next" title="ReactNative开发经验总结">
-                <i class="fa fa-chevron-left"></i> ReactNative开发经验总结
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/18/前端/sass/" rel="prev" title="Sass">
-                Sass <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h1 id="微信小程序开发总结"><a href="#微信小程序开发总结" class="headerlink"
+                                                      title="微信小程序开发总结"></a>微信小程序开发总结</h1>
+                                <p>对于微信小程序开发入门，还是比较简单的，只需要具备基本的css+js知识就可以了，成本比较低。<br>写了小程序和RN之后，有一种原生很笨重的感觉，就是小程序或者是RN等这些新的开发方式在效率上面真的有比较大的优势，唯一不足就是运行速度了(使用Canvas就会有这样子的感觉)。<br>感觉目前所接触的种类前端开发(包括移动端)，都是基本一个套路：UI，网络，数据保存，富文本，图片/视频。<br>本文也是从这几个方向去总结自己的小程序开发经验。
+                                </p>
+                                <h2 id="小程序的入门"><a href="#小程序的入门" class="headerlink"
+                                                   title="小程序的入门"></a>小程序的入门</h2>
+                                <p>其实小程序的开发过程一直都是查看文档，按照文档去操作就可以了。<br>一般流程是先看<a
+                                        href="https://developers.weixin.qq.com/miniprogram/dev/"
+                                        target="_blank" rel="external">简易教程</a>。看完之后，再去看<a
+                                        href="https://developers.weixin.qq.com/miniprogram/dev/component/"
+                                        target="_blank" rel="external">组件</a>。之后可以开始尝试写需求，这个过程中，开始不断的去查<a
+                                        href="https://developers.weixin.qq.com/miniprogram/dev/api/"
+                                        target="_blank" rel="external">API</a>和<a
+                                        href="https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html"
+                                        target="_blank" rel="external">框架</a>即可。</p>
+                                <h2 id="多列列表"><a href="#多列列表" class="headerlink" title="多列列表"></a>多列列表
+                                </h2>
+                                <p>
+                                    在开发中，有一个需求是需要实现类似Android的GridView网格列表的。但是微信中并没有提供这样子的组件，但是小程序是跟html/css前端很类似的，他可以通过指定<code>display:flex</code>，然后去设置<code>flex-wrap:wrap</code>就可以。例如，有一个数组<code>data:[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;]</code>需要显示为一个三列的列表，可以如下处理：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//GridPage.wxml</div><div
+                                                            class="line">&lt;view class=&apos;grid-container&apos;&gt;</div><div
+                                                            class="line">  &lt;view wx:for=&quot;&#123;&#123;data&#125;&#125;&quot; wx:key=&quot;&#123;&#123;item&#125;&#125;&quot; class=&quot;grid-list&quot;&gt;</div><div
+                                                            class="line">  &lt;view class=&apos;grid-item&apos;&gt;</div><div
+                                                            class="line">  &lt;text class=&apos;grid-item-text&apos;&gt;&#123;&#123;item&#125;&#125;&lt;/text&gt;</div><div
+                                                            class="line">  &lt;/view&gt;</div><div
+                                                            class="line">  &lt;/view&gt;</div><div
+                                                            class="line">&lt;/view&gt;</div><div
+                                                            class="line"></div><div class="line">//GridPage.wxss</div><div
+                                                            class="line">Page &#123;</div><div
+                                                            class="line">  min-height: 100%;</div><div
+                                                            class="line">  background-color: #fff;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.grid-container &#123;</div><div
+                                                            class="line">  margin-left: 4rpx;</div><div
+                                                            class="line">  margin-right: 4rpx;</div><div
+                                                            class="line">  display: flex;</div><div
+                                                            class="line">  flex-wrap: wrap;</div><div
+                                                            class="line">  flex-direction: row;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.grid-list &#123;</div><div
+                                                            class="line">  width: 33.33%;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.grid-item &#123;</div><div
+                                                            class="line">  margin: 2rpx;</div><div
+                                                            class="line">  background: #999;</div><div
+                                                            class="line">  display: flex;</div><div
+                                                            class="line">  justify-content: center;</div><div
+                                                            class="line">  align-items: center;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.grid-item-text &#123;</div><div
+                                                            class="line">  color: black;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这里的重点就是<code>grid-container</code>中的<code>flex-wrap</code>为<code>wrap</code>，方向是<code>row</code>了。然后他的每一个item宽度都是<code>33.33%</code>。需要注意的是一定是去设置外部的contanier而不是内部的list。
+                                </p>
+                                <h2 id="层级布局"><a href="#层级布局" class="headerlink" title="层级布局"></a>层级布局
+                                </h2>
+                                <p>
+                                    在CSS中，需要使用层级布局，就是类似Android的FrameLayout效果，可以使用z-index，也可以使用一个绝对定位。比如，我们有一个需求是：下面是一个图片，上面是文字。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//PositionPage.wxml</div><div
+                                                            class="line">&lt;view class=&apos;root&apos;&gt;</div><div
+                                                            class="line">&lt;image src=&apos;https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3756982450,995202616&amp;fm=27&amp;gp=0.jpg&apos; class=&apos;image&apos;&gt;&lt;/image&gt;</div><div
+                                                            class="line">&lt;text class=&apos;text&apos;&gt;我是权律二啊&lt;/text&gt;</div><div
+                                                            class="line">&lt;/view&gt;</div><div
+                                                            class="line">//PositionPage.wcss</div><div
+                                                            class="line">.root&#123;</div><div
+                                                            class="line">  align-items: center;</div><div
+                                                            class="line">  display: flex;</div><div
+                                                            class="line">  flex-direction: column;</div><div
+                                                            class="line">  position: relative;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.image&#123;</div><div
+                                                            class="line">  width: 300rpx;</div><div
+                                                            class="line">  height: 300rpx;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">.text&#123;</div><div
+                                                            class="line">  background-color: #999;</div><div
+                                                            class="line">  position: absolute;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>主要是两点：父布局的<code>position</code>必须是<code>relative</code>，它本身<code>position</code>必须是<code>absolute</code>。
+                                </p>
+                                <h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求
+                                </h2>
+                                <p>
+                                    小程序的网络请求是使用wx.request()方法，但是该方法太臃肿，并没有使用Promise那样子简洁。幸运的是小程序支持Promise，所以我们可以把http封装一下，变成有条理。说到这里，大家做的时候需要注意去微信后台配置各种request域名，upload域名，downloadFIle域名。<br>下面封装的例子的数据返回格式都是json格式post请求方式发出的:<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//真正发起请求</div><div
+                                                            class="line">function _request(url, param) &#123;</div><div
+                                                            class="line">    if (isDebug) &#123;</div><div
+                                                            class="line">        Log.i(&quot;http==&gt; params-&gt;&quot; + JSON.stringify(param));</div><div
+                                                            class="line">        Log.i(&quot;http==&gt; url-&gt;&quot; + url);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    return new Promise((resolve, reject) =&gt; &#123;</div><div
+                                                            class="line">        wx.request(&#123;</div><div
+                                                            class="line">            url: url,</div><div
+                                                            class="line">            data: param,</div><div
+                                                            class="line">            header: &#123;</div><div
+                                                            class="line">                &apos;content-type&apos;: &apos;application/json&apos;,</div><div
+                                                            class="line">                &quot;Accept&quot;: &quot;application/json&quot;</div><div
+                                                            class="line">            &#125;,</div><div
+                                                            class="line">            method: &quot;POST&quot;,</div><div
+                                                            class="line">            success: function (response) &#123;</div><div
+                                                            class="line">                if (isDebug) &#123;</div><div
+                                                            class="line">                    const jsonResponse = JSON.stringify(response);</div><div
+                                                            class="line">                    Log.i(&quot;http==&gt; response-&gt;&quot; + jsonResponse);</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">                const &#123;data, statusCode, ok = false&#125; = response;</div><div
+                                                            class="line">                //只有ok为true的是时候才返回成功，data不一定是包含数据的</div><div
+                                                            class="line">                if (statusCode === 200 &amp;&amp; data &amp;&amp; data.ok) &#123;</div><div
+                                                            class="line">                    resolve(data, ok);</div><div
+                                                            class="line">                &#125; else &#123;</div><div
+                                                            class="line">                    if (statusCode != 404 &amp;&amp; statusCode &lt; 500 &amp;&amp; statusCode &gt; 300) &#123;</div><div
+                                                            class="line">                        ToastUtil.showError();</div><div
+                                                            class="line">                    &#125;</div><div
+                                                            class="line">                    reject(data);</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">            &#125;,</div><div
+                                                            class="line">            fail: reject</div><div
+                                                            class="line">        &#125;);</div><div
+                                                            class="line">    &#125;);</div><div
+                                                            class="line"></div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>使用：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function getInfo(fid) &#123;</div><div
+                                                            class="line">    const params = &#123;&#125;;</div><div
+                                                            class="line">    params.token = user.token;</div><div
+                                                            class="line">    params.uid = user.uid;</div><div
+                                                            class="line">    return _request(&quot;INFO_URL&quot;, params);</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>然后需要发起请求就调用该方法即可，处理Promise。</p>
+                                <h2 id="上传图片到阿里云"><a href="#上传图片到阿里云" class="headerlink"
+                                                     title="上传图片到阿里云"></a>上传图片到阿里云</h2>
+                                <p>可以参考博客：<a href="https://www.jianshu.com/p/4372ad69c861"
+                                             target="_blank" rel="external">小程序图片上传阿里OSS使用方法</a>，获取签名阿里云Demo地址：<a
+                                        href="https://help.aliyun.com/document_detail/31925.html?spm=5176.doc31923.6.628.JYYHox"
+                                        target="_blank" rel="external">JavaScript客户端签名直传</a>，通过打log获得policy和signature（签名时间可以稍微设置久一点）之后，就开始封装upload方法了。<br>如下：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div><div class="line">39</div><div
+                                                            class="line">40</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">    /**</div><div
+                                                            class="line">    * 真实上传代码</div><div
+                                                            class="line">    */</div><div
+                                                            class="line">    function _upload(file, success, fail) &#123;</div><div
+                                                            class="line">        const suffix = file.substring(file.lastIndexOf(&quot;.&quot;));</div><div
+                                                            class="line">        //做一下md5处理</div><div
+                                                            class="line">        const fileName = hex_md5(file);</div><div
+                                                            class="line">        Log.i(&quot;fileName=&quot; + (fileName + suffix));</div><div
+                                                            class="line">        wx.uploadFile(&#123;</div><div
+                                                            class="line">            url: ALIYUNPHOTOADDRESS,</div><div
+                                                            class="line">            formData: &#123;</div><div
+                                                            class="line">                &quot;OSSAccessKeyId&quot;: &quot;你的阿里云accessKey&quot;,</div><div
+                                                            class="line">                &quot;key&quot;: DIR+ (fileName + suffix),</div><div
+                                                            class="line">                &quot;policy&quot;: &quot;你的policy&quot;,</div><div
+                                                            class="line">                &quot;success_action_status&quot;: &apos;200&apos;,</div><div
+                                                            class="line">                &quot;signature&quot;: &quot;你的signature&quot;</div><div
+                                                            class="line">            &#125;,</div><div
+                                                            class="line">            filePath: file,</div><div
+                                                            class="line">            name: &apos;file&apos;,</div><div
+                                                            class="line">            success: function (res) &#123;</div><div
+                                                            class="line">                const &#123;statusCode&#125; = res;</div><div
+                                                            class="line">                if (statusCode === 200) &#123;</div><div
+                                                            class="line">                    console.log(JSON.stringify(res));</div><div
+                                                            class="line">                    success(&quot;&quot; + fileName + suffix);</div><div
+                                                            class="line">                &#125; else &#123;</div><div
+                                                            class="line">                    console.log(&quot;上传失败&quot;);</div><div
+                                                            class="line">                    fail(res);</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">            &#125;,</div><div
+                                                            class="line">            fail: function (e) &#123;</div><div
+                                                            class="line">                fail(e);</div><div
+                                                            class="line">                console.log(&quot;上传失败&quot;);</div><div
+                                                            class="line">                console.log(&quot;e=&quot; + JSON.stringify(e));</div><div
+                                                            class="line">            &#125;, complete: function () &#123;</div><div
+                                                            class="line">                console.log(&quot;上传过程结束&quot;);</div><div
+                                                            class="line">            &#125;</div><div
+                                                            class="line">        &#125;)</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>其中<code>url</code>是上传OOS的地址，key是需要上传的文件夹+上传之后的文件名。这里的fileName我们通过一个md5去计算得来，保证唯一性又没有什么特殊字符。md5的算法来自<a
+                                        href="https://www.cnblogs.com/xinyueBlog/p/6179172.html"
+                                        target="_blank" rel="external">JS-MD5加密</a>。</p>
+                                <p>我们可以顺带封装一个上传多张图片的方法,而且使用Promise返回：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"></div><div class="line">/**</div><div
+                                                            class="line">* files需要上传的文件，是一个数组,里面是文件的绝对路径</div><div
+                                                            class="line">*/</div><div class="line">function uploadFiles(files) &#123;</div><div
+                                                            class="line">  if (!files || files.length &lt;= 0) &#123;</div><div
+                                                            class="line">    wx.showModal(&#123;</div><div
+                                                            class="line">      title: &apos;图片错误&apos;,</div><div
+                                                            class="line">      content: &apos;请重试&apos;,</div><div
+                                                            class="line">      showCancel: false,</div><div
+                                                            class="line">    &#125;);</div><div
+                                                            class="line">    return Promise.reject();</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  Log.i(&quot;开始上传&quot; + files);</div><div
+                                                            class="line"></div><div class="line">  return new Promise((resolve, reject) =&gt; &#123;</div><div
+                                                            class="line">    //上传成功的文件名称</div><div
+                                                            class="line">    let uploadPaths = [];</div><div
+                                                            class="line">    for (let i = 0; i &lt; files.length; i++) &#123;</div><div
+                                                            class="line">      _upload(files[i], (path) =&gt; &#123;</div><div
+                                                            class="line">        //成功的文件名</div><div
+                                                            class="line">        uploadPaths[uploadPaths.length] = path;</div><div
+                                                            class="line">        if (uploadPaths.length &gt;= files.length) &#123;</div><div
+                                                            class="line">          //把url+name返回</div><div
+                                                            class="line">          resolve([ALIYUNPHOTOADDRESS + &quot;/&quot; +DIR, uploadPaths]);</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">      &#125;, () =&gt; &#123;</div><div
+                                                            class="line">        //error</div><div
+                                                            class="line">        reject(res);</div><div
+                                                            class="line">      &#125;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">  &#125;);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="Canvas使用"><a href="#Canvas使用" class="headerlink"
+                                                     title="Canvas使用"></a>Canvas使用</h2>
+                                <p>*.
+                                    由于需要使用Canvas画一棵树，所以还是在这里走了比较多的坑的。我的需求是Canvas全屏，除了画一个树之外还需要画别的一些独立Button。<br>首先，设置Canvas全屏和不可滑动，可以通过以下方式：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&lt;canvas  disable-scroll=&apos;true&apos; style=&quot;width: &#123;&#123;width&#125;&#125;px; height: &#123;&#123;height&#125;&#125;px;background-color:#efeff4;flex:1;&quot; canvas-id=&quot;canvas&quot; bindtouchstart=&quot;touchStart&quot; bindtouchmove=&quot;touchMove&quot; bindtouchend=&quot;touchEnd&quot;&gt;&lt;/canvas&gt;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p><em>.
+                                    其中，在设置了disable-scroll设置为true，同时需要绑定三个touch事件，才能响应画布的触摸event。其中这里的width+height是通过wx.getSystemInfo()获得。
+                                </em>. 其次，canvas没有类似View的catchtap事件，只有一些touch事件，详情可以看<a
+                                        href="https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html#canvas"
+                                        target="_blank" rel="external">Canvas</a></p>
+                                <ul>
+                                    <li>
+                                        然后在微信小程序中Canvas是层级最高的，无法通过设置z-index去调，所以假如你的Canvas全屏，还需要一些其他的Button，那么只能通过最后canvas去draw了。
+                                    </li>
+                                    <li><p>
+                                        在canvas中，假如通过moveTo+lineTo去画线，一般需要先调用canvas.beginPath()画完成之后，先调用canvas.stoke()，然后在调用canvas.closePath();</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">c.beginPath();</div><div
+                                                                class="line">c.setLineWidth(this.arrowPaint.width);</div><div
+                                                                class="line">c.setStrokeStyle(this.arrowPaint.color);</div><div
+                                                                class="line">c.setLineCap(&quot;square&quot;);</div><div
+                                                                class="line"></div><div
+                                                                class="line">c.moveTo(this.arrowStartPointF.x, this.arrowStartPointF.y);</div><div
+                                                                class="line">c.lineTo(this.arrowCenterPointF.x, this.arrowCenterPointF.y);</div><div
+                                                                class="line">c.moveTo(this.arrowCenterPointF.x, this.arrowCenterPointF.y);</div><div
+                                                                class="line">c.lineTo(this.arrowEndPointF.x, this.arrowEndPointF.y);</div><div
+                                                                class="line">c.stroke();</div><div
+                                                                class="line">c.closePath();</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>在连续画多种图片/线条的时候，不要连续多次调用draw(true)方法，
+                                        消耗性能，一般最后调用fill()/stoke()方法即可。比如</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//绘制点</div><div
+                                                                class="line">  c.beginPath();</div><div
+                                                                class="line">  let y = node.noteView.pointFrameCenter.y + Constant.FRAME_HEIGHT / 2 + Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT;</div><div
+                                                                class="line"></div><div
+                                                                class="line">  c.setFillStyle(Constant.LINE_COLOR_RED);</div><div
+                                                                class="line">  c.setLineWidth(Constant.LINE_WIDTH);</div><div
+                                                                class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div
+                                                                class="line"></div><div
+                                                                class="line">  //</div><div
+                                                                class="line">  y += (Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT);</div><div
+                                                                class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div
+                                                                class="line">  //</div><div
+                                                                class="line">  //</div><div
+                                                                class="line">  y += (Constant.GAP_BETWEEN_DOT + Constant.RADIUS_DOT);</div><div
+                                                                class="line">  c.arc(node.noteView.pointFrameCenter.x, y, Constant.RADIUS_DOT, 0, 2 * Math.PI);</div><div
+                                                                class="line"></div><div
+                                                                class="line">  c.fill();</div><div
+                                                                class="line">  c.closePath();</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>
+                                        对于draw方法，建议只是调用draw()就好，不要调用draw(true)方法，draw(true)是在原画布之上再去画，不会清空旧画布，draw()会清空。一般，我们会在所有的image，rectangle，line,circle去fill/stoke完之后，再调用draw()方法，这样子就可以避免draw(true)多次，性能耗损。而且再次去reDraw的时候也不用先去清空画布。</p>
+                                    </li>
+                                    <li>Canvas的跟随手势拖动
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div><div
+                                                                class="line">45</div><div
+                                                                class="line">46</div><div
+                                                                class="line">47</div><div
+                                                                class="line">48</div><div
+                                                                class="line">49</div><div
+                                                                class="line">50</div><div
+                                                                class="line">51</div><div
+                                                                class="line">52</div><div
+                                                                class="line">53</div><div
+                                                                class="line">54</div><div
+                                                                class="line">55</div><div
+                                                                class="line">56</div><div
+                                                                class="line">57</div><div
+                                                                class="line">58</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//index.wxml</div><div
+                                                                class="line">  &lt;canvas disable-scroll=&apos;true&apos; style=&quot;width: &#123;&#123;width&#125;&#125;px; height: &#123;&#123;height&#125;&#125;px;background-color:#efeff4;&quot; canvas-id=&quot;canvas&quot; bindtouchstart=&quot;touchStart&quot; bindtouchmove=&quot;touchMove&quot; bindtouchend=&quot;touchEnd&quot;&gt;&lt;/canvas&gt;</div><div
+                                                                class="line">//index.wcss</div><div
+                                                                class="line">Page &#123;</div><div
+                                                                class="line">  overflow: hidden;</div><div
+                                                                class="line">  display: flex;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//index.js</div><div
+                                                                class="line">const app = getApp()</div><div
+                                                                class="line"></div><div
+                                                                class="line">Page(&#123;</div><div
+                                                                class="line">  data: &#123;</div><div
+                                                                class="line">    width: 0,</div><div
+                                                                class="line">    height: 0,</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  onLoad: function (e) &#123;</div><div
+                                                                class="line">    this.time = (new Date()).valueOf();</div><div
+                                                                class="line">    this.x = 0;</div><div
+                                                                class="line">    this.y = 0;</div><div
+                                                                class="line">    this.moveX = 0;</div><div
+                                                                class="line">    this.moveY = 0;</div><div
+                                                                class="line"></div><div
+                                                                class="line">    const that = this;</div><div
+                                                                class="line">    wx.getSystemInfo(&#123;</div><div
+                                                                class="line">      success: function (res) &#123;</div><div
+                                                                class="line">        that.setData(&#123; width: res.screenWidth, height: res.screenHeight &#125;)</div><div
+                                                                class="line">      &#125;,</div><div
+                                                                class="line">    &#125;)</div><div
+                                                                class="line">    const ctx = wx.createCanvasContext(&quot;canvas&quot;, this)</div><div
+                                                                class="line">    this.canvas = ctx;</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  onReady: function () &#123;</div><div
+                                                                class="line">    this.draw();</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  draw: function () &#123;</div><div
+                                                                class="line">    this.canvas.fillRect(10, 10, 150, 100)</div><div
+                                                                class="line">    this.canvas.fill();</div><div
+                                                                class="line">    this.canvas.draw()</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  touchMove: function (e) &#123;</div><div
+                                                                class="line">    console.log(&quot;touchMove&quot;)</div><div
+                                                                class="line">    let xOffset = e.touches[0].x - this.x;</div><div
+                                                                class="line">    let yOffset = e.touches[0].y - this.y;</div><div
+                                                                class="line">    this.x = e.touches[0].x;</div><div
+                                                                class="line">    this.y = e.touches[0].y;</div><div
+                                                                class="line">    this.moveX = this.moveX + xOffset;</div><div
+                                                                class="line">    this.moveY = this.moveY + yOffset;</div><div
+                                                                class="line">    this.canvas.translate(this.moveX, this.moveY);</div><div
+                                                                class="line">    this.draw();</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  touchStart: function (e) &#123;</div><div
+                                                                class="line">    this.x = e.touches[0].x;</div><div
+                                                                class="line">    this.y = e.touches[0].y;</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  touchEnd: function (e) &#123;</div><div
+                                                                class="line">    console.log(&quot;touchEnd&quot;)</div><div
+                                                                class="line">  &#125;</div><div
+                                                                class="line">&#125;)</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>其他的scale等方法类似。</p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/mini-program/" rel="tag">#mini program</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/05/15/react/rn_summary/" rel="next"
+                                           title="ReactNative开发经验总结">
+                                            <i class="fa fa-chevron-left"></i> ReactNative开发经验总结
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/05/18/前端/sass/" rel="prev" title="Sass">
+                                            Sass <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-1"><a class="nav-link"
+                                                                        href="#微信小程序开发总结"><span
+                                            class="nav-number">1.</span> <span class="nav-text">微信小程序开发总结</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#小程序的入门"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">小程序的入门</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#多列列表"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">多列列表</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#层级布局"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">层级布局</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#网络请求"><span
+                                                    class="nav-number">1.4.</span> <span
+                                                    class="nav-text">网络请求</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#上传图片到阿里云"><span
+                                                    class="nav-number">1.5.</span> <span
+                                                    class="nav-text">上传图片到阿里云</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#Canvas使用"><span
+                                                    class="nav-number">1.6.</span> <span
+                                                    class="nav-text">Canvas使用</span></a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信小程序开发总结"><span class="nav-number">1.</span> <span class="nav-text">微信小程序开发总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序的入门"><span class="nav-number">1.1.</span> <span class="nav-text">小程序的入门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多列列表"><span class="nav-number">1.2.</span> <span class="nav-text">多列列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层级布局"><span class="nav-number">1.3.</span> <span class="nav-text">层级布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络请求"><span class="nav-number">1.4.</span> <span class="nav-text">网络请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传图片到阿里云"><span class="nav-number">1.5.</span> <span class="nav-text">上传图片到阿里云</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Canvas使用"><span class="nav-number">1.6.</span> <span class="nav-text">Canvas使用</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -557,85 +1066,40 @@
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

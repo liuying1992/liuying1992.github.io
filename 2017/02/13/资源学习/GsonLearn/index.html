@@ -1,272 +1,193 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="Gson的使用,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Gson的使用," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
+    <meta name="description"
+          content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
 Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重载的方法。toJson():就是把一个对象装换为json格式的数据。fromJson：就是把一段json格式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Gson的完全使用">
-<meta property="og:url" content="http://yoursite.com/2017/02/13/资源学习/GsonLearn/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gson的完全使用">
+    <meta property="og:url" content="http://yoursite.com/2017/02/13/资源学习/GsonLearn/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description"
+          content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
 Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重载的方法。toJson():就是把一个对象装换为json格式的数据。fromJson：就是把一段json格式">
-<meta property="og:updated_time" content="2017-02-13T06:21:51.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gson的完全使用">
-<meta name="twitter:description" content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
+    <meta property="og:updated_time" content="2017-02-13T06:21:51.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gson的完全使用">
+    <meta name="twitter:description"
+          content="Gson介绍Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：1compile &amp;apos;com.google.code.gson:gson:x.y.z&amp;apos;
 Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重载的方法。toJson():就是把一个对象装换为json格式的数据。fromJson：就是把一段json格式">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2017/02/13/资源学习/GsonLearn/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/13/资源学习/GsonLearn/"/>
-
-
-  <title> Gson的完全使用 | Blog </title>
+    <title> Gson的完全使用 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Gson的完全使用
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    Gson的完全使用
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -277,8 +198,8 @@ Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重�
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -296,269 +217,938 @@ Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重�
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="Gson介绍"><a href="#Gson介绍" class="headerlink" title="Gson介绍"></a>Gson介绍</h2><p>Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.google.code.gson:gson:x.y.z&apos;</div></pre></td></tr></table></figure></p>
-<h2 id="Gson的使用"><a href="#Gson的使用" class="headerlink" title="Gson的使用"></a>Gson的使用</h2><p>Gson本身提供了toJson和fromJson两个方法，各有多个重载的方法。<br>toJson():就是把一个对象装换为json格式的数据。<br>fromJson：就是把一段json格式的数据转换成为一个对象</p>
-<h3 id="基本使用："><a href="#基本使用：" class="headerlink" title="基本使用："></a>基本使用：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Gson gson = new Gson();</div><div class="line">User user = new User(22,&quot;张三&quot;);</div><div class="line">//两种方式都可以，大同小异</div><div class="line">String json = gson.toJson(user, User.class);</div><div class="line">String json2 = gson.toJson(user);</div><div class="line">System.out.println(json);</div><div class="line">System.out.println(json2);</div><div class="line">System.out.println(gson.fromJson(json,User.class));</div><div class="line">System.out.println(gson.fromJson(json2,User.class));</div></pre></td></tr></table></figure>
-<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;age&quot;:22,&quot;name&quot;:&quot;张三&quot;&#125;</div><div class="line">&#123;&quot;age&quot;:22,&quot;name&quot;:&quot;张三&quot;&#125;</div><div class="line">User&#123;name=&apos;张三&apos;, age=22&#125;</div><div class="line">User&#123;name=&apos;张三&apos;, age=22&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="SerializedName"><a href="#SerializedName" class="headerlink" title="@SerializedName"></a>@SerializedName</h3><p>他的定义是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">@Target(&#123;ElementType.FIELD, ElementType.METHOD&#125;)</div><div class="line">public @interface SerializedName &#123;</div><div class="line">  String value();</div><div class="line">  String[] alternate() default &#123;&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>他的作用是用于变量中，指定变量在和json互转的时候对应的关系。<br>比如：我的json数据是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;userName&quot;: &quot;张三&quot;,</div><div class="line">    &quot;userAge&quot;: 12</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这时候我需要把这个json数据装换成为一个User对象，我的User类定义是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public class User &#123;</div><div class="line">    private int age;</div><div class="line">    private String name;</div><div class="line">    public User(int age, String name) &#123;</div><div class="line">        this.age = age;</div><div class="line">        this.name = name;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">        return &quot;User&#123;&quot; +</div><div class="line">                &quot;name=&apos;&quot; + name + &apos;\&apos;&apos; +</div><div class="line">                &quot;, age=&quot; + age +</div><div class="line">                &apos;&#125;&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这时候，假如我们直接使用gson.fromJson()就会出错。当我们的变量名与对应的Json数据无法对应的时候，我们需要指定他们的对应关系，这就是SerializedName的作用。<br>将User对象改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@SerializedName(&quot;userName&quot;)</div><div class="line">  private int age;</div><div class="line">  @SerializedName(&quot;userAge&quot;)</div><div class="line">  private String name;</div></pre></td></tr></table></figure></p>
-<p>这样子就可以转换了。假如，这时候，你还有别的数据的json的keyName，比如是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;user_name&quot;: &quot;张三&quot;,</div><div class="line">    &quot;user_age&quot;: 12</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这时候我们就可以用得上他的第二个属性alternate了，他是一个数组，接受String类型。当多个的时候，以最后一个为准，包括value，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> //User.java的name定义</div><div class="line">@SerializedName(value = &quot;user_name&quot;,alternate = &#123;&quot;userName&quot;,&quot;username&quot;&#125;)</div><div class="line"> private String name;</div><div class="line"> //测试</div><div class="line">     String a = &quot;&#123;\n&quot; +</div><div class="line">             &quot; \&quot;user_name\&quot;: \&quot;张三\&quot;,\n&quot; +</div><div class="line">             &quot; \&quot;user_age\&quot;: 12,\n&quot; +</div><div class="line">             &quot; \&quot;userName\&quot;: \&quot;李四\&quot;,\n&quot; +</div><div class="line">             &quot; \&quot;username\&quot;: \&quot;王五\&quot;\n&quot; +</div><div class="line">             &quot;&#125;&quot;;</div><div class="line">     System.out.println(gson.fromJson(a, User.class));</div></pre></td></tr></table></figure></p>
-<p>结果就是输出了王五。</p>
-<h3 id="泛型解析"><a href="#泛型解析" class="headerlink" title="泛型解析"></a>泛型解析</h3><p>使用TypeToken进行泛型支持：比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">    &#123;</div><div class="line">        &quot;userName&quot;: &quot;张三&quot;,</div><div class="line">        &quot;userAge&quot;: 44</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">        &quot;userName&quot;: &quot;李四&quot;,</div><div class="line">        &quot;userAge&quot;: 45</div><div class="line">    &#125;</div><div class="line">]</div></pre></td></tr></table></figure></p>
-<p>我们需要把这一个json数组转换成为一个List而不是一个User[]，那就应该使用TypeToken，我们可以如下去解析：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> //第一种方式</div><div class="line">List&lt;User&gt; userList = gson.fromJson(b, new TypeToken&lt;List&lt;User&gt;&gt;() &#123;</div><div class="line"> &#125;.getType());</div><div class="line">//第二种方式</div><div class="line"> User[] users = gson.fromJson(b, User[].class);</div></pre></td></tr></table></figure></p>
-<p>一般我们使用的是第一种，因为操作List方便。因为TypeToken的构造方法是protected的，所以我们需要{}。</p>
-<h3 id="GsonBuilder用法"><a href="#GsonBuilder用法" class="headerlink" title="GsonBuilder用法"></a>GsonBuilder用法</h3><ul>
-<li>导出null值，例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//属性</div><div class="line">private int age;</div><div class="line">private String name;</div><div class="line">private String email;</div><div class="line">//测试</div><div class="line"> User user = new User(&quot;张三&quot;, 44);</div><div class="line"> System.out.println(gson.toJson(user));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可以看到得到的gson中没有格式化email这个值为null的，我们就可以通过GsonBuilder设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Gson gson = new GsonBuilder().serializeNulls().create();</div></pre></td></tr></table></figure></p>
-<p>这样子就可以了。再去序列化就可以输出email的值。<br>他还可以做的序列化预定义有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> Gson gson = new GsonBuilder()</div><div class="line">// 设置日期时间格式，另有2个重载方法</div><div class="line">// 在序列化和反序化时均生效</div><div class="line">.setDateFormat(&quot;yyyy-MM-dd&quot;)</div><div class="line">// 禁此序列化内部类</div><div class="line">.disableInnerClassSerialization()</div><div class="line">//在生成的json前面加入了)]&#125;&apos;</div><div class="line">.generateNonExecutableJson()</div><div class="line">//禁止转义html标签</div><div class="line">.disableHtmlEscaping()</div><div class="line">//格式化输出</div><div class="line">.setPrettyPrinting()</div><div class="line">.create();</div></pre></td></tr></table></figure></p>
-<p>setDateFormat方法是会对Date属性生效。比如：<br>User对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">private int age;</div><div class="line">private String name;</div><div class="line">private String email;</div><div class="line">private Date date;</div></pre></td></tr></table></figure></p>
-<p>测试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Gson gson = new GsonBuilder().setDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;) .</div><div class="line">        generateNonExecutableJson().serializeNulls().create();</div><div class="line">User user = new User(44,&quot;张三&quot;,new Date());</div><div class="line">System.out.println(gson.toJson(user));</div></pre></td></tr></table></figure></p>
-<h3 id="Expose"><a href="#Expose" class="headerlink" title="@Expose"></a>@Expose</h3><p>可以序列化或者是反序列化的时候使用。<br>他的定义是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">@Target(ElementType.FIELD)</div><div class="line">public @interface Expose &#123;</div><div class="line">  public boolean serialize() default true;</div><div class="line">  public boolean deserialize() default true;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>serialize为true的时候会被序列化，deserialize为true的时候，才会被反序列化。<br>例如：<br>我们声明一个类的属性是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Expose(deserialize = false)</div><div class="line"> @SerializedName(value =&quot;age&quot; )</div><div class="line"> private int age;</div><div class="line"> @Expose(serialize = false)</div><div class="line"> @SerializedName(value =&quot;name&quot; )</div><div class="line"> private String name;</div><div class="line"> @Expose</div><div class="line"> @SerializedName(value =&quot;email&quot; )</div><div class="line"> private String email;</div></pre></td></tr></table></figure></p>
-<p>构建Gson：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;) .</div><div class="line">               serializeNulls().create();</div><div class="line">       User user = new User(44, &quot;张三&quot;,&quot;liweijieok@qq.com&quot;);</div><div class="line">       System.out.println(gson.toJson(user));</div><div class="line">       String json = &quot;&#123;\&quot;age\&quot;:33,\&quot;name\&quot;:\&quot;李四\&quot;,\&quot;email\&quot;:\&quot;liweijieok@qq.com\&quot;&#125;&quot;;</div><div class="line">       User user1 = gson.fromJson(json,User.class);</div><div class="line">       System.out.println(user1);</div></pre></td></tr></table></figure></p>
-<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;age&quot;:44,&quot;email&quot;:&quot;liweijieok@qq.com&quot;&#125;</div><div class="line">User&#123;age=0, name=&apos;李四&apos;, email=&apos;liweijieok@qq.com&apos;&#125;</div></pre></td></tr></table></figure></p>
-<p>这样子可以看到age没有被反序列化，name没有被序列化。使用Gson的时候需要注意不能直接new了，需要使用GsonBuilder，加上excludeFieldsWithoutExposeAnnotation()方法。</p>
-<h3 id="TypeAdapter"><a href="#TypeAdapter" class="headerlink" title="TypeAdapter"></a>TypeAdapter</h3><p>使用TypeAdapter的时候，他的优先级是最高的，这时候可以不用任何的注解，任何的注解都会失效。定义adapter：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">private static class UserTypeAdapter extends TypeAdapter&lt;User&gt; &#123;</div><div class="line">        @Override</div><div class="line">        public void write(JsonWriter out, User value) throws IOException &#123;</div><div class="line">            out.beginObject();</div><div class="line">            out.name(&quot;age&quot;).value(value.age);</div><div class="line">            out.name(&quot;name&quot;).value(value.name);</div><div class="line">            out.name(&quot;email&quot;).value(value.email);</div><div class="line">            out.endObject();</div><div class="line">        &#125;</div><div class="line">        @Override</div><div class="line">        public User read(JsonReader in) throws IOException &#123;</div><div class="line">            User user = new User();</div><div class="line">            in.beginObject();</div><div class="line">            while (in.hasNext()) &#123;</div><div class="line">                switch (in.nextName()) &#123;</div><div class="line">                    case &quot;name&quot;:</div><div class="line">                        user.name = in.nextString();</div><div class="line">                        break;</div><div class="line">                    case &quot;age&quot;:</div><div class="line">                        user.age = in.nextInt();</div><div class="line">                        break;</div><div class="line">                    case &quot;email&quot;:</div><div class="line">                        user.email = in.nextString();</div><div class="line">                        break;</div><div class="line">                    default:</div><div class="line">                        break;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            in.endObject();</div><div class="line">            return user;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>他有两个方法，一个是write(JsonWriter out, User value)，用于格式化成json的时候，另一个是 read(JsonReader in) ，用于解析Json的时候。如何格式化和如何解析都是我们自己定义的。</p>
-<h3 id="JsonSerializer与JsonDeserializer"><a href="#JsonSerializer与JsonDeserializer" class="headerlink" title="JsonSerializer与JsonDeserializer"></a>JsonSerializer与JsonDeserializer</h3><p>当我恩只是关系序列化或者是反序列化中的其中一种的时候，我们就可以使用JsonSerializer和JsonDeserializer进行类型TypeAdapter的作用。比如我们从服务器获取数据，只是担心在转变为一个Int的时候是一个字符串或者是null。但是不担心我们自己本地的对象转化json，就可以使用了JsonSerializer。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">new GsonBuilder()</div><div class="line">             .registerTypeAdapter(Integer.class, new JsonDeserializer&lt;Integer&gt;() &#123;</div><div class="line">                 @Override</div><div class="line">                 public Integer deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException &#123;</div><div class="line">                     try &#123;</div><div class="line">                         return json.getAsInt();</div><div class="line">                     &#125; catch (NumberFormatException e) &#123;</div><div class="line">                         e.printStackTrace();</div><div class="line">                     &#125;</div><div class="line">                 &#125;</div><div class="line">             &#125;)</div></pre></td></tr></table></figure></p>
-<p>关于注册的继承：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">JsonSerializer&lt;Number&gt; numberJsonSerializer = new JsonSerializer&lt;Number&gt;() &#123;</div><div class="line">    @Override</div><div class="line">    public JsonElement serialize(Number src, Type typeOfSrc, JsonSerializationContext context) &#123;</div><div class="line">        return new JsonPrimitive(String.valueOf(src));</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">Gson gson = new GsonBuilder()</div><div class="line">        .registerTypeAdapter(Integer.class, numberJsonSerializer)</div><div class="line">        .registerTypeAdapter(Long.class, numberJsonSerializer)</div><div class="line">        .registerTypeAdapter(Float.class, numberJsonSerializer)</div><div class="line">        .registerTypeAdapter(Double.class, numberJsonSerializer)</div><div class="line">        .create();</div><div class="line">System.out.println(gson.toJson(100.0f));//结果：&quot;100.0&quot;</div></pre></td></tr></table></figure></p>
-<p>registerTypeAdapter必须使用包装类型，所以int.class,long.class,float.class和double.class是行不通的。同时不能使用父类来替上面的子类型，这也是为什么要分别注册而不直接使用Number.class的原因。换成registerTypeHierarchyAdapter 就可以使用Number.class而不用一个一个的当独注册啦！<br>registerTypeAdapter与registerTypeHierarchyAdapter的区别：</p>
-<p>registerTypeAdapter<br>registerTypeHierarchyAdapter<br>支持泛型<br>是<br>否<br>支持继承<br>否<br>是<br>对于List出错：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> Gson gson = new GsonBuilder().registerTypeHierarchyAdapter(List.class, new JsonDeserializer&lt;List&lt;?&gt;&gt;() &#123;</div><div class="line">    @Override</div><div class="line">    public List&lt;?&gt; deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException &#123;</div><div class="line">        if (json.isJsonArray()) &#123;</div><div class="line">            JsonArray array = json.getAsJsonArray();</div><div class="line">            Type itemType = ((ParameterizedType) typeOfT).getActualTypeArguments()[0];</div><div class="line">            List list = new ArrayList&lt;&gt;();</div><div class="line">            for (int i = 0; i &lt; array.size(); i++) &#123;</div><div class="line">                JsonElement element = array.get(i);</div><div class="line">                Object item = context.deserialize(element, itemType);</div><div class="line">                list.add(item);</div><div class="line">            &#125;</div><div class="line">            return list;</div><div class="line">        &#125; else &#123;</div><div class="line">            //和接口类型不符，返回空List</div><div class="line">            return Collections.EMPTY_LIST;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;).create();</div></pre></td></tr></table></figure>
-<p>需要使用registerTypeHierarchyAdapter进行注册，这样子我们Gson序列化或者是反序列化的时候能够不用注册多个集合，同时可以使用List以及他的子类作为接受数据。</p>
-<h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h2><p><a href="http://www.jianshu.com/p/e740196225a4" target="_blank" rel="external">你真的会用Gson吗?Gson使用指南</a></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Gson的使用/" rel="tag">#Gson的使用</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/06/java/JavaPoetLearn/" rel="next" title="JavaPoet开源项目使用">
-                <i class="fa fa-chevron-left"></i> JavaPoet开源项目使用
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/16/Android/自定义View/viewevent/" rel="prev" title="View的事件传递深入理解">
-                View的事件传递深入理解 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h2 id="Gson介绍"><a href="#Gson介绍" class="headerlink"
+                                                   title="Gson介绍"></a>Gson介绍</h2>
+                                <p>Gson就是谷歌提供解析Json格式的一个jar包，他的速度快，包体积小，使用方便。引入是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">compile &apos;com.google.code.gson:gson:x.y.z&apos;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="Gson的使用"><a href="#Gson的使用" class="headerlink"
+                                                    title="Gson的使用"></a>Gson的使用</h2>
+                                <p>Gson本身提供了toJson和fromJson两个方法，各有多个重载的方法。<br>toJson():就是把一个对象装换为json格式的数据。<br>fromJson：就是把一段json格式的数据转换成为一个对象
+                                </p>
+                                <h3 id="基本使用："><a href="#基本使用：" class="headerlink"
+                                                  title="基本使用："></a>基本使用：</h3>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">Gson gson = new Gson();</div><div
+                                                        class="line">User user = new User(22,&quot;张三&quot;);</div><div
+                                                        class="line">//两种方式都可以，大同小异</div><div
+                                                        class="line">String json = gson.toJson(user, User.class);</div><div
+                                                        class="line">String json2 = gson.toJson(user);</div><div
+                                                        class="line">System.out.println(json);</div><div
+                                                        class="line">System.out.println(json2);</div><div
+                                                        class="line">System.out.println(gson.fromJson(json,User.class));</div><div
+                                                        class="line">System.out.println(gson.fromJson(json2,User.class));</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>输出：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&#123;&quot;age&quot;:22,&quot;name&quot;:&quot;张三&quot;&#125;</div><div
+                                                            class="line">&#123;&quot;age&quot;:22,&quot;name&quot;:&quot;张三&quot;&#125;</div><div
+                                                            class="line">User&#123;name=&apos;张三&apos;, age=22&#125;</div><div
+                                                            class="line">User&#123;name=&apos;张三&apos;, age=22&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="SerializedName"><a href="#SerializedName" class="headerlink"
+                                                           title="@SerializedName"></a>@SerializedName
+                                </h3>
+                                <p>他的定义是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div
+                                                            class="line">@Target(&#123;ElementType.FIELD, ElementType.METHOD&#125;)</div><div
+                                                            class="line">public @interface SerializedName &#123;</div><div
+                                                            class="line">  String value();</div><div
+                                                            class="line">  String[] alternate() default &#123;&#125;;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>他的作用是用于变量中，指定变量在和json互转的时候对应的关系。<br>比如：我的json数据是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&#123;</div><div
+                                                            class="line">    &quot;userName&quot;: &quot;张三&quot;,</div><div
+                                                            class="line">    &quot;userAge&quot;: 12</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这时候我需要把这个json数据装换成为一个User对象，我的User类定义是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">public class User &#123;</div><div
+                                                            class="line">    private int age;</div><div
+                                                            class="line">    private String name;</div><div
+                                                            class="line">    public User(int age, String name) &#123;</div><div
+                                                            class="line">        this.age = age;</div><div
+                                                            class="line">        this.name = name;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    @Override</div><div
+                                                            class="line">    public String toString() &#123;</div><div
+                                                            class="line">        return &quot;User&#123;&quot; +</div><div
+                                                            class="line">                &quot;name=&apos;&quot; + name + &apos;\&apos;&apos; +</div><div
+                                                            class="line">                &quot;, age=&quot; + age +</div><div
+                                                            class="line">                &apos;&#125;&apos;;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这时候，假如我们直接使用gson.fromJson()就会出错。当我们的变量名与对应的Json数据无法对应的时候，我们需要指定他们的对应关系，这就是SerializedName的作用。<br>将User对象改为：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">@SerializedName(&quot;userName&quot;)</div><div
+                                                            class="line">  private int age;</div><div
+                                                            class="line">  @SerializedName(&quot;userAge&quot;)</div><div
+                                                            class="line">  private String name;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子就可以转换了。假如，这时候，你还有别的数据的json的keyName，比如是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&#123;</div><div
+                                                            class="line">    &quot;user_name&quot;: &quot;张三&quot;,</div><div
+                                                            class="line">    &quot;user_age&quot;: 12</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这时候我们就可以用得上他的第二个属性alternate了，他是一个数组，接受String类型。当多个的时候，以最后一个为准，包括value，比如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"> //User.java的name定义</div><div
+                                                            class="line">@SerializedName(value = &quot;user_name&quot;,alternate = &#123;&quot;userName&quot;,&quot;username&quot;&#125;)</div><div
+                                                            class="line"> private String name;</div><div
+                                                            class="line"> //测试</div><div
+                                                            class="line">     String a = &quot;&#123;\n&quot; +</div><div
+                                                            class="line">             &quot; \&quot;user_name\&quot;: \&quot;张三\&quot;,\n&quot; +</div><div
+                                                            class="line">             &quot; \&quot;user_age\&quot;: 12,\n&quot; +</div><div
+                                                            class="line">             &quot; \&quot;userName\&quot;: \&quot;李四\&quot;,\n&quot; +</div><div
+                                                            class="line">             &quot; \&quot;username\&quot;: \&quot;王五\&quot;\n&quot; +</div><div
+                                                            class="line">             &quot;&#125;&quot;;</div><div
+                                                            class="line">     System.out.println(gson.fromJson(a, User.class));</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>结果就是输出了王五。</p>
+                                <h3 id="泛型解析"><a href="#泛型解析" class="headerlink" title="泛型解析"></a>泛型解析
+                                </h3>
+                                <p>使用TypeToken进行泛型支持：比如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">[</div><div class="line">    &#123;</div><div
+                                                            class="line">        &quot;userName&quot;: &quot;张三&quot;,</div><div
+                                                            class="line">        &quot;userAge&quot;: 44</div><div
+                                                            class="line">    &#125;,</div><div
+                                                            class="line">    &#123;</div><div
+                                                            class="line">        &quot;userName&quot;: &quot;李四&quot;,</div><div
+                                                            class="line">        &quot;userAge&quot;: 45</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">]</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    我们需要把这一个json数组转换成为一个List而不是一个User[]，那就应该使用TypeToken，我们可以如下去解析：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"> //第一种方式</div><div
+                                                            class="line">List&lt;User&gt; userList = gson.fromJson(b, new TypeToken&lt;List&lt;User&gt;&gt;() &#123;</div><div
+                                                            class="line"> &#125;.getType());</div><div
+                                                            class="line">//第二种方式</div><div
+                                                            class="line"> User[] users = gson.fromJson(b, User[].class);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>一般我们使用的是第一种，因为操作List方便。因为TypeToken的构造方法是protected的，所以我们需要{}。</p>
+                                <h3 id="GsonBuilder用法"><a href="#GsonBuilder用法" class="headerlink"
+                                                          title="GsonBuilder用法"></a>GsonBuilder用法
+                                </h3>
+                                <ul>
+                                    <li>导出null值，例如：
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//属性</div><div
+                                                                class="line">private int age;</div><div
+                                                                class="line">private String name;</div><div
+                                                                class="line">private String email;</div><div
+                                                                class="line">//测试</div><div
+                                                                class="line"> User user = new User(&quot;张三&quot;, 44);</div><div
+                                                                class="line"> System.out.println(gson.toJson(user));</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>可以看到得到的gson中没有格式化email这个值为null的，我们就可以通过GsonBuilder设置<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">Gson gson = new GsonBuilder().serializeNulls().create();</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子就可以了。再去序列化就可以输出email的值。<br>他还可以做的序列化预定义有：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"> Gson gson = new GsonBuilder()</div><div
+                                                            class="line">// 设置日期时间格式，另有2个重载方法</div><div
+                                                            class="line">// 在序列化和反序化时均生效</div><div
+                                                            class="line">.setDateFormat(&quot;yyyy-MM-dd&quot;)</div><div
+                                                            class="line">// 禁此序列化内部类</div><div
+                                                            class="line">.disableInnerClassSerialization()</div><div
+                                                            class="line">//在生成的json前面加入了)]&#125;&apos;</div><div
+                                                            class="line">.generateNonExecutableJson()</div><div
+                                                            class="line">//禁止转义html标签</div><div
+                                                            class="line">.disableHtmlEscaping()</div><div
+                                                            class="line">//格式化输出</div><div
+                                                            class="line">.setPrettyPrinting()</div><div
+                                                            class="line">.create();</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>setDateFormat方法是会对Date属性生效。比如：<br>User对象：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">private int age;</div><div
+                                                            class="line">private String name;</div><div
+                                                            class="line">private String email;</div><div
+                                                            class="line">private Date date;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>测试：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">Gson gson = new GsonBuilder().setDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;) .</div><div
+                                                            class="line">        generateNonExecutableJson().serializeNulls().create();</div><div
+                                                            class="line">User user = new User(44,&quot;张三&quot;,new Date());</div><div
+                                                            class="line">System.out.println(gson.toJson(user));</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="Expose"><a href="#Expose" class="headerlink"
+                                                   title="@Expose"></a>@Expose</h3>
+                                <p>可以序列化或者是反序列化的时候使用。<br>他的定义是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div
+                                                            class="line">@Target(ElementType.FIELD)</div><div
+                                                            class="line">public @interface Expose &#123;</div><div
+                                                            class="line">  public boolean serialize() default true;</div><div
+                                                            class="line">  public boolean deserialize() default true;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>serialize为true的时候会被序列化，deserialize为true的时候，才会被反序列化。<br>例如：<br>我们声明一个类的属性是：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">@Expose(deserialize = false)</div><div
+                                                            class="line"> @SerializedName(value =&quot;age&quot; )</div><div
+                                                            class="line"> private int age;</div><div
+                                                            class="line"> @Expose(serialize = false)</div><div
+                                                            class="line"> @SerializedName(value =&quot;name&quot; )</div><div
+                                                            class="line"> private String name;</div><div
+                                                            class="line"> @Expose</div><div
+                                                            class="line"> @SerializedName(value =&quot;email&quot; )</div><div
+                                                            class="line"> private String email;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>构建Gson：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;) .</div><div
+                                                            class="line">               serializeNulls().create();</div><div
+                                                            class="line">       User user = new User(44, &quot;张三&quot;,&quot;liweijieok@qq.com&quot;);</div><div
+                                                            class="line">       System.out.println(gson.toJson(user));</div><div
+                                                            class="line">       String json = &quot;&#123;\&quot;age\&quot;:33,\&quot;name\&quot;:\&quot;李四\&quot;,\&quot;email\&quot;:\&quot;liweijieok@qq.com\&quot;&#125;&quot;;</div><div
+                                                            class="line">       User user1 = gson.fromJson(json,User.class);</div><div
+                                                            class="line">       System.out.println(user1);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>输出：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&#123;&quot;age&quot;:44,&quot;email&quot;:&quot;liweijieok@qq.com&quot;&#125;</div><div
+                                                            class="line">User&#123;age=0, name=&apos;李四&apos;, email=&apos;liweijieok@qq.com&apos;&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这样子可以看到age没有被反序列化，name没有被序列化。使用Gson的时候需要注意不能直接new了，需要使用GsonBuilder，加上excludeFieldsWithoutExposeAnnotation()方法。</p>
+                                <h3 id="TypeAdapter"><a href="#TypeAdapter" class="headerlink"
+                                                        title="TypeAdapter"></a>TypeAdapter</h3>
+                                <p>使用TypeAdapter的时候，他的优先级是最高的，这时候可以不用任何的注解，任何的注解都会失效。定义adapter：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">private static class UserTypeAdapter extends TypeAdapter&lt;User&gt; &#123;</div><div
+                                                            class="line">        @Override</div><div
+                                                            class="line">        public void write(JsonWriter out, User value) throws IOException &#123;</div><div
+                                                            class="line">            out.beginObject();</div><div
+                                                            class="line">            out.name(&quot;age&quot;).value(value.age);</div><div
+                                                            class="line">            out.name(&quot;name&quot;).value(value.name);</div><div
+                                                            class="line">            out.name(&quot;email&quot;).value(value.email);</div><div
+                                                            class="line">            out.endObject();</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        @Override</div><div
+                                                            class="line">        public User read(JsonReader in) throws IOException &#123;</div><div
+                                                            class="line">            User user = new User();</div><div
+                                                            class="line">            in.beginObject();</div><div
+                                                            class="line">            while (in.hasNext()) &#123;</div><div
+                                                            class="line">                switch (in.nextName()) &#123;</div><div
+                                                            class="line">                    case &quot;name&quot;:</div><div
+                                                            class="line">                        user.name = in.nextString();</div><div
+                                                            class="line">                        break;</div><div
+                                                            class="line">                    case &quot;age&quot;:</div><div
+                                                            class="line">                        user.age = in.nextInt();</div><div
+                                                            class="line">                        break;</div><div
+                                                            class="line">                    case &quot;email&quot;:</div><div
+                                                            class="line">                        user.email = in.nextString();</div><div
+                                                            class="line">                        break;</div><div
+                                                            class="line">                    default:</div><div
+                                                            class="line">                        break;</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">            &#125;</div><div
+                                                            class="line">            in.endObject();</div><div
+                                                            class="line">            return user;</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>他有两个方法，一个是write(JsonWriter out, User value)，用于格式化成json的时候，另一个是
+                                    read(JsonReader in) ，用于解析Json的时候。如何格式化和如何解析都是我们自己定义的。</p>
+                                <h3 id="JsonSerializer与JsonDeserializer"><a
+                                        href="#JsonSerializer与JsonDeserializer" class="headerlink"
+                                        title="JsonSerializer与JsonDeserializer"></a>JsonSerializer与JsonDeserializer
+                                </h3>
+                                <p>
+                                    当我恩只是关系序列化或者是反序列化中的其中一种的时候，我们就可以使用JsonSerializer和JsonDeserializer进行类型TypeAdapter的作用。比如我们从服务器获取数据，只是担心在转变为一个Int的时候是一个字符串或者是null。但是不担心我们自己本地的对象转化json，就可以使用了JsonSerializer。例如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">new GsonBuilder()</div><div
+                                                            class="line">             .registerTypeAdapter(Integer.class, new JsonDeserializer&lt;Integer&gt;() &#123;</div><div
+                                                            class="line">                 @Override</div><div
+                                                            class="line">                 public Integer deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException &#123;</div><div
+                                                            class="line">                     try &#123;</div><div
+                                                            class="line">                         return json.getAsInt();</div><div
+                                                            class="line">                     &#125; catch (NumberFormatException e) &#123;</div><div
+                                                            class="line">                         e.printStackTrace();</div><div
+                                                            class="line">                     &#125;</div><div
+                                                            class="line">                 &#125;</div><div
+                                                            class="line">             &#125;)</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>关于注册的继承：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">JsonSerializer&lt;Number&gt; numberJsonSerializer = new JsonSerializer&lt;Number&gt;() &#123;</div><div
+                                                            class="line">    @Override</div><div
+                                                            class="line">    public JsonElement serialize(Number src, Type typeOfSrc, JsonSerializationContext context) &#123;</div><div
+                                                            class="line">        return new JsonPrimitive(String.valueOf(src));</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;;</div><div
+                                                            class="line">Gson gson = new GsonBuilder()</div><div
+                                                            class="line">        .registerTypeAdapter(Integer.class, numberJsonSerializer)</div><div
+                                                            class="line">        .registerTypeAdapter(Long.class, numberJsonSerializer)</div><div
+                                                            class="line">        .registerTypeAdapter(Float.class, numberJsonSerializer)</div><div
+                                                            class="line">        .registerTypeAdapter(Double.class, numberJsonSerializer)</div><div
+                                                            class="line">        .create();</div><div
+                                                            class="line">System.out.println(gson.toJson(100.0f));//结果：&quot;100.0&quot;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    registerTypeAdapter必须使用包装类型，所以int.class,long.class,float.class和double.class是行不通的。同时不能使用父类来替上面的子类型，这也是为什么要分别注册而不直接使用Number.class的原因。换成registerTypeHierarchyAdapter
+                                    就可以使用Number.class而不用一个一个的当独注册啦！<br>registerTypeAdapter与registerTypeHierarchyAdapter的区别：
+                                </p>
+                                <p>
+                                    registerTypeAdapter<br>registerTypeHierarchyAdapter<br>支持泛型<br>是<br>否<br>支持继承<br>否<br>是<br>对于List出错：
+                                </p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div><div
+                                                        class="line">14</div><div
+                                                        class="line">15</div><div
+                                                        class="line">16</div><div
+                                                        class="line">17</div><div
+                                                        class="line">18</div><div
+                                                        class="line">19</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line"> Gson gson = new GsonBuilder().registerTypeHierarchyAdapter(List.class, new JsonDeserializer&lt;List&lt;?&gt;&gt;() &#123;</div><div
+                                                        class="line">    @Override</div><div
+                                                        class="line">    public List&lt;?&gt; deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException &#123;</div><div
+                                                        class="line">        if (json.isJsonArray()) &#123;</div><div
+                                                        class="line">            JsonArray array = json.getAsJsonArray();</div><div
+                                                        class="line">            Type itemType = ((ParameterizedType) typeOfT).getActualTypeArguments()[0];</div><div
+                                                        class="line">            List list = new ArrayList&lt;&gt;();</div><div
+                                                        class="line">            for (int i = 0; i &lt; array.size(); i++) &#123;</div><div
+                                                        class="line">                JsonElement element = array.get(i);</div><div
+                                                        class="line">                Object item = context.deserialize(element, itemType);</div><div
+                                                        class="line">                list.add(item);</div><div
+                                                        class="line">            &#125;</div><div
+                                                        class="line">            return list;</div><div
+                                                        class="line">        &#125; else &#123;</div><div
+                                                        class="line">            //和接口类型不符，返回空List</div><div
+                                                        class="line">            return Collections.EMPTY_LIST;</div><div
+                                                        class="line">        &#125;</div><div
+                                                        class="line">    &#125;</div><div
+                                                        class="line">&#125;).create();</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>
+                                    需要使用registerTypeHierarchyAdapter进行注册，这样子我们Gson序列化或者是反序列化的时候能够不用注册多个集合，同时可以使用List以及他的子类作为接受数据。</p>
+                                <h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h2>
+                                <p><a href="http://www.jianshu.com/p/e740196225a4" target="_blank"
+                                      rel="external">你真的会用Gson吗?Gson使用指南</a></p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/Gson的使用/" rel="tag">#Gson的使用</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2017/02/06/java/JavaPoetLearn/" rel="next"
+                                           title="JavaPoet开源项目使用">
+                                            <i class="fa fa-chevron-left"></i> JavaPoet开源项目使用
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2017/03/16/Android/自定义View/viewevent/" rel="prev"
+                                           title="View的事件传递深入理解">
+                                            View的事件传递深入理解 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#Gson介绍"><span
+                                            class="nav-number">1.</span> <span class="nav-text">Gson介绍</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#Gson的使用"><span
+                                            class="nav-number">2.</span> <span class="nav-text">Gson的使用</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#基本使用："><span
+                                                    class="nav-number">2.1.</span> <span
+                                                    class="nav-text">基本使用：</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#SerializedName"><span
+                                                    class="nav-number">2.2.</span> <span
+                                                    class="nav-text">@SerializedName</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#泛型解析"><span
+                                                    class="nav-number">2.3.</span> <span
+                                                    class="nav-text">泛型解析</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#GsonBuilder用法"><span
+                                                    class="nav-number">2.4.</span> <span
+                                                    class="nav-text">GsonBuilder用法</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#Expose"><span
+                                                    class="nav-number">2.5.</span> <span
+                                                    class="nav-text">@Expose</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#TypeAdapter"><span
+                                                    class="nav-number">2.6.</span> <span
+                                                    class="nav-text">TypeAdapter</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#JsonSerializer与JsonDeserializer"><span
+                                                    class="nav-number">2.7.</span> <span
+                                                    class="nav-text">JsonSerializer与JsonDeserializer</span></a>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link" href="#推荐"><span
+                                            class="nav-number">3.</span> <span
+                                            class="nav-text">推荐</span></a></li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gson介绍"><span class="nav-number">1.</span> <span class="nav-text">Gson介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gson的使用"><span class="nav-number">2.</span> <span class="nav-text">Gson的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本使用："><span class="nav-number">2.1.</span> <span class="nav-text">基本使用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SerializedName"><span class="nav-number">2.2.</span> <span class="nav-text">@SerializedName</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型解析"><span class="nav-number">2.3.</span> <span class="nav-text">泛型解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GsonBuilder用法"><span class="nav-number">2.4.</span> <span class="nav-text">GsonBuilder用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Expose"><span class="nav-number">2.5.</span> <span class="nav-text">@Expose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeAdapter"><span class="nav-number">2.6.</span> <span class="nav-text">TypeAdapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JsonSerializer与JsonDeserializer"><span class="nav-number">2.7.</span> <span class="nav-text">JsonSerializer与JsonDeserializer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐"><span class="nav-number">3.</span> <span class="nav-text">推荐</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -567,85 +1157,40 @@ Gson的使用Gson本身提供了toJson和fromJson两个方法，各有多个重�
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

@@ -35,8 +35,7 @@ NexT.utils = NexT.$u = {
 
   lazyLoadPostsImages: function () {
     $('#posts').find('img').lazyload({
-      placeholder: '/images/loading.gif',
-      effect: 'fadeIn'
+      placeholder: '/images/loading.gif', effect: 'fadeIn'
     });
   },
 
@@ -61,14 +60,9 @@ NexT.utils = NexT.$u = {
     var $iframes = $('iframe');
 
     // Supported Players. Extend this if you need more players.
-    var SUPPORTED_PLAYERS = [
-      'www.youtube.com',
-      'player.vimeo.com',
-      'player.youku.com',
-      'music.163.com',
-      'www.tudou.com'
-    ];
-    var pattern = new RegExp( SUPPORTED_PLAYERS.join('|') );
+    var SUPPORTED_PLAYERS = ['www.youtube.com', 'player.vimeo.com', 'player.youku.com',
+      'music.163.com', 'www.tudou.com'];
+    var pattern = new RegExp(SUPPORTED_PLAYERS.join('|'));
 
     $iframes.each(function () {
       var iframe = this;
@@ -84,12 +78,9 @@ NexT.utils = NexT.$u = {
         // Replace the iframe's dimensions and position the iframe absolute
         // This is the trick to emulate the video ratio
         $iframe.width('100%').height('100%')
-          .css({
-            position: 'absolute',
-            top: '0',
-            left: '0'
-          });
-
+            .css({
+              position: 'absolute', top: '0', left: '0'
+            });
 
         // Wrap the iframe in a new <div> which uses a dynamically fetched padding-top property
         // based on the video's w/h dimensions
@@ -108,8 +99,10 @@ NexT.utils = NexT.$u = {
         // Additional adjustments for 163 Music
         if (this.src.search('music.163.com') > 0) {
           newDimension = getDimension($iframe);
-          var shouldRecalculateAspect = newDimension.width > oldDimension.width ||
-                                        newDimension.height < oldDimension.height;
+          var shouldRecalculateAspect = newDimension.width
+              > oldDimension.width
+              || newDimension.height
+              < oldDimension.height;
 
           // 163 Music Player has a fixed height, so we need to reset the aspect radio
           if (shouldRecalculateAspect) {
@@ -121,8 +114,7 @@ NexT.utils = NexT.$u = {
 
     function getDimension($element) {
       return {
-        width: $element.width(),
-        height: $element.height()
+        width: $element.width(), height: $element.height()
       };
     }
 

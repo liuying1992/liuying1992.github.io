@@ -6,47 +6,46 @@ $(document).ready(function () {
   NexT.utils.needAffix() && initAffix();
   initTOCDimension();
 
-  function initScrollSpy () {
+  function initScrollSpy() {
     var tocSelector = '.post-toc';
     var $tocElement = $(tocSelector);
     var activeCurrentSelector = '.active-current';
 
     $tocElement
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
+        .on('activate.bs.scrollspy', function () {
+          var $currentActiveElement = $(tocSelector + ' .active').last();
 
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-      })
-      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+          removeCurrentActiveClass();
+          $currentActiveElement.addClass('active-current');
+        })
+        .on('clear.bs.scrollspy', removeCurrentActiveClass);
 
-    $('body').scrollspy({ target: tocSelector });
+    $('body').scrollspy({target: tocSelector});
 
-    function removeCurrentActiveClass () {
+    function removeCurrentActiveClass() {
       $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
+          .removeClass(activeCurrentSelector.substring(1));
     }
   }
 
-  function initAffix () {
+  function initAffix() {
     var headerHeight = $('.header-inner').height();
     var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
     var sidebarTop = headerHeight + 10;
 
     $('.sidebar-inner').affix({
       offset: {
-        top: sidebarTop,
-        bottom: footerOffset
+        top: sidebarTop, bottom: footerOffset
       }
     });
 
     $(document)
-      .on('affixed.bs.affix', function () {
-        updateTOCHeight(document.body.clientHeight - 100);
-      });
+        .on('affixed.bs.affix', function () {
+          updateTOCHeight(document.body.clientHeight - 100);
+        });
   }
 
-  function initTOCDimension () {
+  function initTOCDimension() {
     var updateTOCHeightTimer;
 
     $(window).on('resize', function () {
@@ -67,7 +66,7 @@ $(document).ready(function () {
     $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
   }
 
-  function updateTOCHeight (height) {
+  function updateTOCHeight(height) {
     height = height || 'auto';
     $('.post-toc').css('max-height', height);
   }
@@ -90,23 +89,22 @@ $(document).ready(function () {
     var currentTarget = $('.' + activePanelClassName);
     var target = $('.' + item.data('target'));
 
-    hasVelocity ?
-      currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-        target
-          .velocity('stop')
-          .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-          .addClass(activePanelClassName);
-      }) :
-      currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-        currentTarget.hide();
-        target
+    hasVelocity ? currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION,
+        function () {
+          target
+              .velocity('stop')
+              .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+              .addClass(activePanelClassName);
+        }) : currentTarget.animate({opacity: 0}, TAB_ANIMATE_DURATION, function () {
+      currentTarget.hide();
+      target
           .stop()
           .css({'opacity': 0, 'display': 'block'})
-          .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+          .animate({opacity: 1}, TAB_ANIMATE_DURATION, function () {
             currentTarget.removeClass(activePanelClassName);
             target.addClass(activePanelClassName);
           });
-      });
+    });
 
     item.siblings().removeClass(activeTabClassName);
     item.addClass(activeTabClassName);
@@ -117,14 +115,11 @@ $(document).ready(function () {
     var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
     var offset = $(targetSelector).offset().top;
 
-    hasVelocity ?
-      html.velocity('stop').velocity('scroll', {
-        offset: offset  + 'px',
-        mobileHA: false
-      }) :
-      $('html, body').stop().animate({
-        scrollTop: offset
-      }, 500);
+    hasVelocity ? html.velocity('stop').velocity('scroll', {
+      offset: offset + 'px', mobileHA: false
+    }) : $('html, body').stop().animate({
+      scrollTop: offset
+    }, 500);
   });
 
   // Expand sidebar on post detail page by default, when post has a toc.

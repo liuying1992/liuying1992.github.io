@@ -1,90 +1,37 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="react,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="react," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="React基础他的特点是：
+    <meta name="description" content="React基础他的特点是：
 
 作为UI，在MVC中作为View层的存在。
 虚拟DOM，实现了优化视图的渲染和刷新。react不直接操作DOM，而是通过构造一个虚拟的DOM，跟上一次的DOM树进行对比，得到差异将需要变化的部分进行刷新。
@@ -92,11 +39,11 @@
 他实现了单向的数据流，相对于传统的数据绑定，React更加灵活，便捷。他是单向绑定的。
 
 R">
-<meta property="og:type" content="article">
-<meta property="og:title" content="React基础">
-<meta property="og:url" content="http://yoursite.com/2018/03/06/react/react_leanr/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="React基础他的特点是：
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="React基础">
+    <meta property="og:url" content="http://yoursite.com/2018/03/06/react/react_leanr/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="React基础他的特点是：
 
 作为UI，在MVC中作为View层的存在。
 虚拟DOM，实现了优化视图的渲染和刷新。react不直接操作DOM，而是通过构造一个虚拟的DOM，跟上一次的DOM树进行对比，得到差异将需要变化的部分进行刷新。
@@ -104,10 +51,10 @@ R">
 他实现了单向的数据流，相对于传统的数据绑定，React更加灵活，便捷。他是单向绑定的。
 
 R">
-<meta property="og:updated_time" content="2018-03-06T14:45:58.047Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React基础">
-<meta name="twitter:description" content="React基础他的特点是：
+    <meta property="og:updated_time" content="2018-03-06T14:45:58.047Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="React基础">
+    <meta name="twitter:description" content="React基础他的特点是：
 
 作为UI，在MVC中作为View层的存在。
 虚拟DOM，实现了优化视图的渲染和刷新。react不直接操作DOM，而是通过构造一个虚拟的DOM，跟上一次的DOM树进行对比，得到差异将需要变化的部分进行刷新。
@@ -117,174 +64,145 @@ R">
 R">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/03/06/react/react_leanr/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/06/react/react_leanr/"/>
-
-
-  <title> React基础 | Blog </title>
+    <title> React基础 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                React基础
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    React基础
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -295,8 +213,8 @@ R">
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -314,301 +232,1169 @@ R">
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h2><p>他的特点是：</p>
-<ol>
-<li>作为UI，在MVC中作为View层的存在。</li>
-<li>虚拟DOM，实现了优化视图的渲染和刷新。react不直接操作DOM，而是通过构造一个虚拟的DOM，跟上一次的DOM树进行对比，得到差异将需要变化的部分进行刷新。</li>
-<li>组件化，可以封装起来作为有独立功能的UI部件存在，实现复用高效率开发。</li>
-<li>他实现了单向的数据流，相对于传统的数据绑定，React更加灵活，便捷。他是单向绑定的。</li>
-</ol>
-<p>React的前置知识</p>
-<ol>
-<li>html，css，JavaScript</li>
-<li>JSX语法知识</li>
-<li>ES6相关知识</li>
-</ol>
-<h2 id="React-环境"><a href="#React-环境" class="headerlink" title="React 环境"></a>React 环境</h2><p>首先他需要三个依赖JS(最版本)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script src=&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>这样子就引入了React的开发环境，可以使用相关React相关的语法，包括JSX<br>完整Demo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</div><div class="line">    &lt;title&gt;Hello World&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</div><div class="line">     &lt;!-- 这里必须是 text/babel，babel是一个编译器，可以吧ES6转化为浏览器可执行的代码--&gt;</div><div class="line">    &lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">      ReactDOM.render(</div><div class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;,</div><div class="line">        document.getElementById(&apos;root&apos;)</div><div class="line">      );</div><div class="line">    &lt;/script&gt;</div><div class="line"></div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="JSX语法"><a href="#JSX语法" class="headerlink" title="JSX语法"></a>JSX语法</h2><p>JAX其实是一门语法糖，JS的语法糖，非新的语言，他是JavaScript的语法扩展，用来描述UI，生成虚拟DOM，它具有JavaScript的所有功能。他必须借助React的运行环境，JSX的标签其实是HTML标签，只不过不用书写引号括起来。JSX其实是JavaScript+XML的结果。例如下面是声明一个虚拟的h1标签。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</div></pre></td></tr></table></figure></p>
-<p>JSX是用来生成React Element,可以在JSX中插入表达式，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function formatName(user) &#123;</div><div class="line">  return user.firstName + &apos; &apos; + user.lastName;</div><div class="line">&#125;</div><div class="line">const user = &#123;</div><div class="line">  firstName: &apos;Harper&apos;,</div><div class="line">  lastName: &apos;Perez&apos;</div><div class="line">&#125;;</div><div class="line">const element = (</div><div class="line">  &lt;h1&gt;</div><div class="line">    Hello, &#123;formatName(user)&#125;!</div><div class="line">  &lt;/h1&gt;</div><div class="line">);</div><div class="line">ReactDOM.render(</div><div class="line">  element,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
-<p>给JSX的元素赋值，可以通过引号或者是<code>{}</code>包裹值，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const element=&lt;div tabIndex=&quot;0&quot;&gt; &lt;/div&gt;;</div><div class="line">const element1 = &lt;img src=&#123;user.avatarUrl&#125;&gt;&lt;/img&gt;;</div></pre></td></tr></table></figure></p>
-<p>当一个属性嵌入JS表达式的时候，不需要再<code>{}</code>外面加上引号，直接使用即可，比如上上个例子调用JS方法。<br>创建JSX对象使用React.createElement()，但是他其实可以省略的，他可以帮助开发者检测一些无心的bug。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//新版不需要括号</div><div class="line">const element = (</div><div class="line">  &lt;h1 className=&quot;greeting&quot;&gt;</div><div class="line">    Hello, world!</div><div class="line">  &lt;/h1&gt;</div><div class="line">);</div><div class="line">//与上面是等值(新版已经废弃)</div><div class="line">const element = React.createElement(</div><div class="line">  &apos;h1&apos;,</div><div class="line">  &#123;className: &apos;greeting&apos;&#125;,</div><div class="line">  &apos;Hello, world!&apos;</div><div class="line">);</div></pre></td></tr></table></figure></p>
-<h2 id="渲染Element"><a href="#渲染Element" class="headerlink" title="渲染Element"></a>渲染Element</h2><p>我们使用JSX创建出React Element之后，通过React DOM来渲染，更新DOM。主要是通过ReactDom.render()函数进行渲染。<br>对于React Element对象来说，他是不可变的，一旦创建，就不能改变他的子节点或者是他的属性。更新UI的唯一方式是创建一个新Element，然后传递给ReactDOM.render()，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function tick()&#123;</div><div class="line">    const element =(</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;hello World!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It is &#123;new Date().getTime()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">    ReactDOM.render(element,document.getElementById(&apos;root&apos;))</div><div class="line">  &#125;</div><div class="line">  setTimeout(tick,2000);</div></pre></td></tr></table></figure></p>
-<p>对于React DOM渲染，他只会去更新那些需要更新的Element。只有内容发生了改变的文本节点才会通过响应DOM更新。</p>
-<h2 id="Components-Props-State"><a href="#Components-Props-State" class="headerlink" title="Components, Props,State"></a>Components, Props,State</h2><p>Components能够将我们的UI独立成为可重用的组件，专注于组件的开发。组件的开发就像JS的函数，可以接收任意的输入，这个输入就是Props，他返回一个需要在屏幕上显示的React Element。</p>
-<h3 id="定义组件Components"><a href="#定义组件Components" class="headerlink" title="定义组件Components"></a>定义组件Components</h3><p>有两种方式，一种是类似写JS的function，一种是使用ES6的Class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// 第一种</div><div class="line">function WelCome(props)&#123;</div><div class="line">    return &lt;h1&gt;Hello，&#123;props.name&#125;&lt;/h1&gt;;</div><div class="line">&#125;</div><div class="line">//第二个例子</div><div class="line">class WelCome extends React.Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return &lt;h1&gt;Hello,&#123;this.props.name&#125;&lt;/h1&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>渲染组件，我们把上面的第一个或者是第二个Component渲染出来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">const element = &lt;WelCome name=&quot;World&quot; /&gt;</div><div class="line">ReactDom.render(element,document.getElementById(&apos;root&apos;));</div></pre></td></tr></table></figure>
-<p>Caveat：<code>对于组件的名称，我们一般使用大写字母开头，对于html标签，我们一般使用小写开头</code><br>组合组件：我们可以把我们定义好的组件，组合在一起，形成新的Component。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function App()&#123;</div><div class="line">  return &lt;div&gt;</div><div class="line">    &lt;WelCome name=&quot;hi&quot;/&gt;</div><div class="line">    &lt;WelCome name=&quot;man&quot;/&gt;</div><div class="line">    &lt;WelCome name=&quot;!&quot;/&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&#125;;</div><div class="line">ReactDOM.render(&lt;App/&gt;,document.getElementById(&apos;root&apos;));</div></pre></td></tr></table></figure></p>
-<p>抽取组件：<br>比如我们有这样子一个组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function Common(props)&#123;</div><div class="line">      return (</div><div class="line">        &lt;div className=&quot;Common&quot;&gt;</div><div class="line">          &lt;div className=&quot;UserInfo&quot;&gt;</div><div class="line">            &lt;img className=&quot;Avatar&quot;</div><div class="line">            src=&#123;props.author.avatarUrl&#125;</div><div class="line">            alt=&#123;props.author.name&#125;</div><div class="line">          &lt;/div&gt;</div><div class="line">          &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div class="line">            &#123;props.author.name&#125;</div><div class="line">          &lt;/div&gt;</div><div class="line">          &lt;div className=&quot;Comment-text&quot;&gt;</div><div class="line">            &#123;props.text&#125;</div><div class="line">          &lt;/div&gt;</div><div class="line">          &lt;div className=&quot;Comment-date&quot;&gt;</div><div class="line">            &#123;formatDate(props.date)&#125;</div><div class="line">          &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      );</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>我们需要对他进行简化抽取，首先，我们抽取Avatar部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">function Avatar(props) &#123;</div><div class="line">  return (</div><div class="line">    &lt;img className=&quot;Avatar&quot;</div><div class="line">      src=&#123;props.user.avatarUrl&#125;</div><div class="line">      alt=&#123;props.user.name&#125;</div><div class="line">    /&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line">//得到的优化结果</div><div class="line">function Comment(props) &#123;</div><div class="line">  return (</div><div class="line">    &lt;div className=&quot;Comment&quot;&gt;</div><div class="line">      &lt;div className=&quot;UserInfo&quot;&gt;</div><div class="line">        &lt;Avatar user=&#123;props.author&#125; /&gt;</div><div class="line">        &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div class="line">          &#123;props.author.name&#125;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div className=&quot;Comment-text&quot;&gt;</div><div class="line">        &#123;props.text&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div className=&quot;Comment-date&quot;&gt;</div><div class="line">        &#123;formatDate(props.date)&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>之后再抽取UserInfo部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function UserInfo(props) &#123;</div><div class="line">  return (</div><div class="line">    &lt;div className=&quot;UserInfo&quot;&gt;</div><div class="line">      &lt;Avatar user=&#123;props.user&#125; /&gt;</div><div class="line">      &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div class="line">        &#123;props.user.name&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line">//得到优化结果</div><div class="line">function Comment(props) &#123;</div><div class="line">  return (</div><div class="line">    &lt;div className=&quot;Comment&quot;&gt;</div><div class="line">      &lt;UserInfo user=&#123;props.author&#125; /&gt;</div><div class="line">      &lt;div className=&quot;Comment-text&quot;&gt;</div><div class="line">        &#123;props.text&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div className=&quot;Comment-date&quot;&gt;</div><div class="line">        &#123;formatDate(props.date)&#125;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;。</div></pre></td></tr></table></figure></p>
-<p>对于组件，总结来说，形式有三种：一般直接写JSX样式进行render，自定义组件，它包括使用function或者是ES6这两种方式。</p>
-<h3 id="设置组件样式"><a href="#设置组件样式" class="headerlink" title="设置组件样式"></a>设置组件样式</h3><p>常见有三种：</p>
-<ol>
-<li>内联样式</li>
-<li>对象样式</li>
-<li>选择器样式<br>React与Html中设置样式的书写有格式区别：</li>
-<li>Html以分号结尾<code>;</code>，React以逗号结尾<code>,</code></li>
-<li>Html中key-value都不加引号，React中，输入JS对象，key的名字不能出现<code>-</code>，需要 以驼峰命名法，如果value为字符串，需要加引号。</li>
-<li>Html中，如果value是数字，需要带单位，React不需要带单位。</li>
-<li>html中的<code>class</code>为指定选择器，在React中使用<code>className</code>替换。同样，html样式的for在React中使用htmlFor表示。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    .pStyle&#123;</div><div class="line">      font-size: 40px;</div><div class="line">      background-color: &quot;black&quot;;</div><div class="line">      color: &quot;white&quot;;</div><div class="line">    &#125;</div><div class="line">  &lt;/style&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- 这里必须是 text/babel，babel是一个编译器，可以吧ES6转化为浏览器可执行的代码--&gt;</div><div class="line">    &lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">  var dStyle=&#123;</div><div class="line">    backgroundColor: &quot;red&quot;,</div><div class="line">    boderWidth: 5,</div><div class="line">    boderStyle:&quot;solid&quot;</div><div class="line">  &#125;;</div><div class="line">    function ShowMessage()&#123;</div><div class="line">         return (&lt;div style=&#123;dStyle&#125;&gt;</div><div class="line">           &lt;h1 style=&#123;&#123;color:&quot;black&quot;,fontSize:30&#125;&#125;&gt;hi how&lt;/h1&gt;</div><div class="line">          &lt;p className=&quot;pStyle&quot;&gt;</div><div class="line">          hi man!</div><div class="line">          &lt;/p&gt;</div><div class="line">           &lt;/div&gt;);</div><div class="line">    &#125;</div><div class="line">    ReactDOM.render(&lt;ShowMessage /&gt;,document.getElementById(&apos;root&apos;));</div><div class="line">    &lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>上面例子使用到了三种方式去设置组件的样式。</p>
-<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><p>对于Props，他是只读的，纯净的，对于所有的React Component来说，他们必须是纯净的function，不可以对Props做出修改。<br>props是组件本身的属性，一般用于嵌套内外层的组件中，负责传递信息(通常是由父组件向子组件传递)在最新版本中，是通过参数添加的形式写入，props对象中的属性和组件的属性是一一对应的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function WebName(props)&#123;</div><div class="line">    return &lt;h1&gt;&#123;props.webname&#125;&lt;/h1&gt;;</div><div class="line">  &#125;</div><div class="line">  function WebLink(props)&#123;</div><div class="line">    return &lt;a href=&#123;props.weblink&#125;&gt;&#123;props.weblink&#125;&lt;/a&gt;;</div><div class="line">  &#125;</div><div class="line">  function WebShow(props)&#123;</div><div class="line">    return &lt;div&gt;</div><div class="line">      &lt;WebName webname=&#123;props.wname&#125;/&gt;</div><div class="line">      &lt;WebLink weblink=&#123;props.wlink&#125;/&gt;</div><div class="line">    &lt;/div&gt;;</div><div class="line">  &#125;</div><div class="line">  ReactDOM.render(</div><div class="line">    &lt;WebShow wname=&quot;baidu&quot; wlink=&quot;www.baidu.com&quot;/&gt;,</div><div class="line">    document.getElementById(&quot;root&quot;)</div><div class="line">  );</div></pre></td></tr></table></figure></p>
-<p>props还有一个比较特殊的属性，Children，他是父组件的所有子节点元素。这个可以用在我们需要显示不定长列表当中，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>对于Props，我们一般是用来设置一些不变参数，对于一些DOM变化需要反应到外部的，我们通过State实现，这样子我们才能更好的封装组件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Clock()&#123;</div><div class="line">      return &lt;div&gt;</div><div class="line">      &lt;p&gt;</div><div class="line">        it now time is &#123;new Date().getSeconds()&#125;.</div><div class="line">      &lt;/p&gt;</div><div class="line">      &lt;/div&gt;;</div><div class="line">    &#125;</div><div class="line">    function notify()&#123;</div><div class="line">      ReactDOM.render(&lt;Clock /&gt;,document.getElementById(&apos;root&apos;));</div><div class="line">    &#125;</div><div class="line">    setInterval(notify,1000);</div></pre></td></tr></table></figure></p>
-<p>对于上面的例子，我们想要吧Clock封装起来，使用的时候只需要<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(&lt;Clock /&gt;,document.getElementById(&apos;root&apos;));</div></pre></td></tr></table></figure></p>
-<p>这样子一句就行了，不需要外包一个function。这时候就需要使用State。<br>State和Props很类似，但是State是私有的，他完全由组件控制，不能被外部控制。<br>使用State，我们需要把function转化为一个类，使用ES6方式，步骤如下：</p>
-<ol>
-<li>创建ES6 class，继承<code>React.Component</code></li>
-<li>添加一个method body为空的<code>render()</code>方法；</li>
-<li>把之前使用function定义好的Component的body移动到上面的<code>render()</code>函数中</li>
-<li>把<code>render()</code>函数中的<code>props</code>替换成<code>this.props</code></li>
-<li>删除之前定义的function。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class Clock extends React.Comment&#123;</div><div class="line">      function render()&#123;</div><div class="line">        return &lt;div&gt;</div><div class="line">        &lt;p&gt;</div><div class="line">          it now time is &#123;new Date().getSeconds()&#125;.</div><div class="line">        &lt;/p&gt;</div><div class="line">        &lt;/div&gt;;</div><div class="line">      &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>通过这样子，我们就可以使用其他一些features，比如state和lifecycle hooks。<br>对于一些默认样式，数据的初始化，我们是在该组件的构造函数当中进行。需要传递一个props进来，例如上面例子加上构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class Clock extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;date: new Date()&#125;;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
-<p>这样子完成了date的初始化，因为date是变化的，所以不能再标签中写死，抽取出来作为state的属性之一，State是一个对象。我们可以通过setState方法改变组件的状态，这时候他回去调用render()函数，对于需要重新渲染的组件进行渲染。一般setState是与事件，生命周期相关联的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">class Clock extends React.Component &#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;date: new Date()&#125;;</div><div class="line">  &#125;</div><div class="line">  componentDidMount() &#123;</div><div class="line">//component已经渲染</div><div class="line">    this.timerID = setInterval(</div><div class="line">      () =&gt; this.tick(),</div><div class="line">      1000</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">  componentWillUnmount() &#123;</div><div class="line">//Component将要移除</div><div class="line">    clearInterval(this.timerID);</div><div class="line">  &#125;</div><div class="line">  tick() &#123;</div><div class="line">    this.setState(&#123;</div><div class="line">      date: new Date()</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;It is &#123;this.state.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Clock /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
-<p>这样子，当date发生变化的之后，标签也可以跟着变化。<br>对于state，他是一个对象，我们给他赋值的时候需要注意一些细节<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//wrong</div><div class="line">this.state.comment=&quot;hello&quot;;</div><div class="line">//correct</div><div class="line">this.setState(&#123;comment:&quot;hello&#125;);</div><div class="line">//对于this.state，只能怪在构造函数当中才能这样子调用。</div></pre></td></tr></table></figure></p>
-<p>state的更新：他可能是异步的，react为了性能，可能把对个State进行批量处理setState，所以对于下面代码就不一定是安全的了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">handleChange()&#123;</div><div class="line">this.setState(&#123;counter:this,counter+this.props.increment&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>因为他可能是异步的，导致新的counter不能及时更新。我们使用一个function替换，setState接收一个function<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">handleChange()&#123;</div><div class="line">this.setState(prevState,props=&gt;&#123;</div><div class="line">    counter:prevState.counter+props.increment,</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中prevState是前一个state。</p>
-<h2 id="组件生命周期以及事件处理"><a href="#组件生命周期以及事件处理" class="headerlink" title="组件生命周期以及事件处理"></a>组件生命周期以及事件处理</h2><p>对于一个Component，他有三个状态和四个阶段。<br>状态：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">1. mounting: 挂载</div><div class="line">    回调方法</div><div class="line">        componentWillMount();//将要挂载，render之前，执行一次</div><div class="line">        componentDidMount();//以及挂载，渲染完成，render之后，执行一次</div><div class="line">2. updateing: 更新，组件挂载之后，组件的状态变更</div><div class="line">    componentWiireceiveProps(object nextProps)</div><div class="line">        已加载组件收到信的Props之前调用，注意主键初始化渲染则不执行</div><div class="line">    shouldComponentUpdate(object nextProps,objection nextState)</div><div class="line">        组件判断是否需要重新渲染时调用，该接口实际是在组件接收到了新的Props或者是新的state的时候，会被调用，返回一个boolean决定是否更新组件。</div><div class="line">    componentWillUpdate(object nextProps,objection nextState)</div><div class="line">        组件将要更新， shouldComponentUpdate为true会调用        </div><div class="line">    componentDidUpdate(object nextProps,objection nextState)</div><div class="line">        组件以及更新，shouldComponentUpdate为true会调用</div><div class="line">3. unmounting:移除</div><div class="line">    componentWillUnmount</div><div class="line">        组件将要移除之前调用</div><div class="line">4. 声明周期</div><div class="line">    声明周期有：创建，渲染，更新，销毁</div><div class="line">     相关的方法有：</div><div class="line">        getDefaultProps() 设置props属性默认值</div><div class="line">        getInitialState 设置state属性初始值。</div></pre></td></tr></table></figure></p>
-<p>对应的方法会在对应的时候被hook，给我们对应的事件处理。<br>对于一些响应事件，比如点击，onChange等，React跟DOM处理是很类似的，他只不过有两点不同</p>
-<ol>
-<li>他的Event的名词是cameCase(驼峰)的，而不是小写的</li>
-<li>它使用JSX的语法进行事件方法处理制定，而不是字符串<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//HTML</div><div class="line">&lt;button onclick=&quot;handleClick&quot;&gt;Click Me&lt;/button&gt;</div><div class="line">//React</div><div class="line">&lt;button onClick=&#123;handleClick&#125;&gt;Click me&lt;/button&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/react/" rel="tag">#react</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/28/前端/js_learn/" rel="next" title="JavaScript语法基础">
-                <i class="fa fa-chevron-left"></i> JavaScript语法基础
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/06/react/react-native_learn/" rel="prev" title="ReactNative入门">
-                ReactNative入门 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h2 id="React基础"><a href="#React基础" class="headerlink"
+                                                    title="React基础"></a>React基础</h2>
+                                <p>他的特点是：</p>
+                                <ol>
+                                    <li>作为UI，在MVC中作为View层的存在。</li>
+                                    <li>
+                                        虚拟DOM，实现了优化视图的渲染和刷新。react不直接操作DOM，而是通过构造一个虚拟的DOM，跟上一次的DOM树进行对比，得到差异将需要变化的部分进行刷新。
+                                    </li>
+                                    <li>组件化，可以封装起来作为有独立功能的UI部件存在，实现复用高效率开发。</li>
+                                    <li>他实现了单向的数据流，相对于传统的数据绑定，React更加灵活，便捷。他是单向绑定的。</li>
+                                </ol>
+                                <p>React的前置知识</p>
+                                <ol>
+                                    <li>html，css，JavaScript</li>
+                                    <li>JSX语法知识</li>
+                                    <li>ES6相关知识</li>
+                                </ol>
+                                <h2 id="React-环境"><a href="#React-环境" class="headerlink"
+                                                     title="React 环境"></a>React 环境</h2>
+                                <p>首先他需要三个依赖JS(最版本)<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;</div><div
+                                                            class="line">  &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;</div><div
+                                                            class="line">  &lt;script src=&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;&gt;&lt;/script&gt;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子就引入了React的开发环境，可以使用相关React相关的语法，包括JSX<br>完整Demo<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">&lt;!DOCTYPE html&gt;</div><div
+                                                            class="line">&lt;html&gt;</div><div
+                                                            class="line">  &lt;head&gt;</div><div
+                                                            class="line">    &lt;meta charset=&quot;UTF-8&quot; /&gt;</div><div
+                                                            class="line">    &lt;title&gt;Hello World&lt;/title&gt;</div><div
+                                                            class="line">    &lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot;&gt;&lt;/script&gt;</div><div
+                                                            class="line">    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;</div><div
+                                                            class="line">    &lt;script src=&quot;https://unpkg.com/babel-standalone@6.15.0/babel.min.js&quot;&gt;&lt;/script&gt;</div><div
+                                                            class="line">  &lt;/head&gt;</div><div
+                                                            class="line">  &lt;body&gt;</div><div
+                                                            class="line">    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</div><div
+                                                            class="line">     &lt;!-- 这里必须是 text/babel，babel是一个编译器，可以吧ES6转化为浏览器可执行的代码--&gt;</div><div
+                                                            class="line">    &lt;script type=&quot;text/babel&quot;&gt;</div><div
+                                                            class="line">      ReactDOM.render(</div><div
+                                                            class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;,</div><div
+                                                            class="line">        document.getElementById(&apos;root&apos;)</div><div
+                                                            class="line">      );</div><div
+                                                            class="line">    &lt;/script&gt;</div><div
+                                                            class="line"></div><div class="line">  &lt;/body&gt;</div><div
+                                                            class="line">&lt;/html&gt;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="JSX语法"><a href="#JSX语法" class="headerlink"
+                                                  title="JSX语法"></a>JSX语法</h2>
+                                <p>
+                                    JAX其实是一门语法糖，JS的语法糖，非新的语言，他是JavaScript的语法扩展，用来描述UI，生成虚拟DOM，它具有JavaScript的所有功能。他必须借助React的运行环境，JSX的标签其实是HTML标签，只不过不用书写引号括起来。JSX其实是JavaScript+XML的结果。例如下面是声明一个虚拟的h1标签。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>JSX是用来生成React Element,可以在JSX中插入表达式，比如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function formatName(user) &#123;</div><div
+                                                            class="line">  return user.firstName + &apos; &apos; + user.lastName;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">const user = &#123;</div><div
+                                                            class="line">  firstName: &apos;Harper&apos;,</div><div
+                                                            class="line">  lastName: &apos;Perez&apos;</div><div
+                                                            class="line">&#125;;</div><div
+                                                            class="line">const element = (</div><div
+                                                            class="line">  &lt;h1&gt;</div><div
+                                                            class="line">    Hello, &#123;formatName(user)&#125;!</div><div
+                                                            class="line">  &lt;/h1&gt;</div><div
+                                                            class="line">);</div><div class="line">ReactDOM.render(</div><div
+                                                            class="line">  element,</div><div
+                                                            class="line">  document.getElementById(&apos;root&apos;)</div><div
+                                                            class="line">);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>给JSX的元素赋值，可以通过引号或者是<code>{}</code>包裹值，例如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">const element=&lt;div tabIndex=&quot;0&quot;&gt; &lt;/div&gt;;</div><div
+                                                            class="line">const element1 = &lt;img src=&#123;user.avatarUrl&#125;&gt;&lt;/img&gt;;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    当一个属性嵌入JS表达式的时候，不需要再<code>{}</code>外面加上引号，直接使用即可，比如上上个例子调用JS方法。<br>创建JSX对象使用React.createElement()，但是他其实可以省略的，他可以帮助开发者检测一些无心的bug。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//新版不需要括号</div><div
+                                                            class="line">const element = (</div><div
+                                                            class="line">  &lt;h1 className=&quot;greeting&quot;&gt;</div><div
+                                                            class="line">    Hello, world!</div><div
+                                                            class="line">  &lt;/h1&gt;</div><div
+                                                            class="line">);</div><div class="line">//与上面是等值(新版已经废弃)</div><div
+                                                            class="line">const element = React.createElement(</div><div
+                                                            class="line">  &apos;h1&apos;,</div><div
+                                                            class="line">  &#123;className: &apos;greeting&apos;&#125;,</div><div
+                                                            class="line">  &apos;Hello, world!&apos;</div><div
+                                                            class="line">);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="渲染Element"><a href="#渲染Element" class="headerlink"
+                                                      title="渲染Element"></a>渲染Element</h2>
+                                <p>我们使用JSX创建出React Element之后，通过React
+                                    DOM来渲染，更新DOM。主要是通过ReactDom.render()函数进行渲染。<br>对于React
+                                    Element对象来说，他是不可变的，一旦创建，就不能改变他的子节点或者是他的属性。更新UI的唯一方式是创建一个新Element，然后传递给ReactDOM.render()，例如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">function tick()&#123;</div><div
+                                                            class="line">    const element =(</div><div
+                                                            class="line">      &lt;div&gt;</div><div
+                                                            class="line">        &lt;h1&gt;hello World!&lt;/h1&gt;</div><div
+                                                            class="line">        &lt;h2&gt;It is &#123;new Date().getTime()&#125;.&lt;/h2&gt;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">    ReactDOM.render(element,document.getElementById(&apos;root&apos;))</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  setTimeout(tick,2000);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>对于React DOM渲染，他只会去更新那些需要更新的Element。只有内容发生了改变的文本节点才会通过响应DOM更新。</p>
+                                <h2 id="Components-Props-State"><a href="#Components-Props-State"
+                                                                   class="headerlink"
+                                                                   title="Components, Props,State"></a>Components,
+                                    Props,State</h2>
+                                <p>
+                                    Components能够将我们的UI独立成为可重用的组件，专注于组件的开发。组件的开发就像JS的函数，可以接收任意的输入，这个输入就是Props，他返回一个需要在屏幕上显示的React
+                                    Element。</p>
+                                <h3 id="定义组件Components"><a href="#定义组件Components" class="headerlink"
+                                                           title="定义组件Components"></a>定义组件Components
+                                </h3>
+                                <p>有两种方式，一种是类似写JS的function，一种是使用ES6的Class<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">// 第一种</div><div
+                                                            class="line">function WelCome(props)&#123;</div><div
+                                                            class="line">    return &lt;h1&gt;Hello，&#123;props.name&#125;&lt;/h1&gt;;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//第二个例子</div><div
+                                                            class="line">class WelCome extends React.Component&#123;</div><div
+                                                            class="line">    render()&#123;</div><div
+                                                            class="line">        return &lt;h1&gt;Hello,&#123;this.props.name&#125;&lt;/h1&gt;;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>渲染组件，我们把上面的第一个或者是第二个Component渲染出来</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">const element = &lt;WelCome name=&quot;World&quot; /&gt;</div><div
+                                                        class="line">ReactDom.render(element,document.getElementById(&apos;root&apos;));</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>Caveat：<code>对于组件的名称，我们一般使用大写字母开头，对于html标签，我们一般使用小写开头</code><br>组合组件：我们可以把我们定义好的组件，组合在一起，形成新的Component。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">function App()&#123;</div><div
+                                                            class="line">  return &lt;div&gt;</div><div
+                                                            class="line">    &lt;WelCome name=&quot;hi&quot;/&gt;</div><div
+                                                            class="line">    &lt;WelCome name=&quot;man&quot;/&gt;</div><div
+                                                            class="line">    &lt;WelCome name=&quot;!&quot;/&gt;</div><div
+                                                            class="line">  &lt;/div&gt;</div><div
+                                                            class="line">&#125;;</div><div
+                                                            class="line">ReactDOM.render(&lt;App/&gt;,document.getElementById(&apos;root&apos;));</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>抽取组件：<br>比如我们有这样子一个组件<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function Common(props)&#123;</div><div
+                                                            class="line">      return (</div><div
+                                                            class="line">        &lt;div className=&quot;Common&quot;&gt;</div><div
+                                                            class="line">          &lt;div className=&quot;UserInfo&quot;&gt;</div><div
+                                                            class="line">            &lt;img className=&quot;Avatar&quot;</div><div
+                                                            class="line">            src=&#123;props.author.avatarUrl&#125;</div><div
+                                                            class="line">            alt=&#123;props.author.name&#125;</div><div
+                                                            class="line">          &lt;/div&gt;</div><div
+                                                            class="line">          &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div
+                                                            class="line">            &#123;props.author.name&#125;</div><div
+                                                            class="line">          &lt;/div&gt;</div><div
+                                                            class="line">          &lt;div className=&quot;Comment-text&quot;&gt;</div><div
+                                                            class="line">            &#123;props.text&#125;</div><div
+                                                            class="line">          &lt;/div&gt;</div><div
+                                                            class="line">          &lt;div className=&quot;Comment-date&quot;&gt;</div><div
+                                                            class="line">            &#123;formatDate(props.date)&#125;</div><div
+                                                            class="line">          &lt;/div&gt;</div><div
+                                                            class="line">        &lt;/div&gt;</div><div
+                                                            class="line">      );</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>我们需要对他进行简化抽取，首先，我们抽取Avatar部分<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function Avatar(props) &#123;</div><div
+                                                            class="line">  return (</div><div
+                                                            class="line">    &lt;img className=&quot;Avatar&quot;</div><div
+                                                            class="line">      src=&#123;props.user.avatarUrl&#125;</div><div
+                                                            class="line">      alt=&#123;props.user.name&#125;</div><div
+                                                            class="line">    /&gt;</div><div
+                                                            class="line">  );</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//得到的优化结果</div><div
+                                                            class="line">function Comment(props) &#123;</div><div
+                                                            class="line">  return (</div><div
+                                                            class="line">    &lt;div className=&quot;Comment&quot;&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;UserInfo&quot;&gt;</div><div
+                                                            class="line">        &lt;Avatar user=&#123;props.author&#125; /&gt;</div><div
+                                                            class="line">        &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div
+                                                            class="line">          &#123;props.author.name&#125;</div><div
+                                                            class="line">        &lt;/div&gt;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;Comment-text&quot;&gt;</div><div
+                                                            class="line">        &#123;props.text&#125;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;Comment-date&quot;&gt;</div><div
+                                                            class="line">        &#123;formatDate(props.date)&#125;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">    &lt;/div&gt;</div><div
+                                                            class="line">  );</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>之后再抽取UserInfo部分<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function UserInfo(props) &#123;</div><div
+                                                            class="line">  return (</div><div
+                                                            class="line">    &lt;div className=&quot;UserInfo&quot;&gt;</div><div
+                                                            class="line">      &lt;Avatar user=&#123;props.user&#125; /&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;UserInfo-name&quot;&gt;</div><div
+                                                            class="line">        &#123;props.user.name&#125;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">    &lt;/div&gt;</div><div
+                                                            class="line">  );</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//得到优化结果</div><div
+                                                            class="line">function Comment(props) &#123;</div><div
+                                                            class="line">  return (</div><div
+                                                            class="line">    &lt;div className=&quot;Comment&quot;&gt;</div><div
+                                                            class="line">      &lt;UserInfo user=&#123;props.author&#125; /&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;Comment-text&quot;&gt;</div><div
+                                                            class="line">        &#123;props.text&#125;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">      &lt;div className=&quot;Comment-date&quot;&gt;</div><div
+                                                            class="line">        &#123;formatDate(props.date)&#125;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">    &lt;/div&gt;</div><div
+                                                            class="line">  );</div><div
+                                                            class="line">&#125;。</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    对于组件，总结来说，形式有三种：一般直接写JSX样式进行render，自定义组件，它包括使用function或者是ES6这两种方式。</p>
+                                <h3 id="设置组件样式"><a href="#设置组件样式" class="headerlink"
+                                                   title="设置组件样式"></a>设置组件样式</h3>
+                                <p>常见有三种：</p>
+                                <ol>
+                                    <li>内联样式</li>
+                                    <li>对象样式</li>
+                                    <li>选择器样式<br>React与Html中设置样式的书写有格式区别：</li>
+                                    <li>Html以分号结尾<code>;</code>，React以逗号结尾<code>,</code></li>
+                                    <li>Html中key-value都不加引号，React中，输入JS对象，key的名字不能出现<code>-</code>，需要
+                                        以驼峰命名法，如果value为字符串，需要加引号。
+                                    </li>
+                                    <li>Html中，如果value是数字，需要带单位，React不需要带单位。</li>
+                                    <li>
+                                        html中的<code>class</code>为指定选择器，在React中使用<code>className</code>替换。同样，html样式的for在React中使用htmlFor表示。
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">&lt;head&gt;</div><div
+                                                                class="line">&lt;style&gt;</div><div
+                                                                class="line">    .pStyle&#123;</div><div
+                                                                class="line">      font-size: 40px;</div><div
+                                                                class="line">      background-color: &quot;black&quot;;</div><div
+                                                                class="line">      color: &quot;white&quot;;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">  &lt;/style&gt;</div><div
+                                                                class="line">  &lt;/head&gt;</div><div
+                                                                class="line">  &lt;body&gt;</div><div
+                                                                class="line">    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;</div><div
+                                                                class="line">    &lt;!-- 这里必须是 text/babel，babel是一个编译器，可以吧ES6转化为浏览器可执行的代码--&gt;</div><div
+                                                                class="line">    &lt;script type=&quot;text/babel&quot;&gt;</div><div
+                                                                class="line">  var dStyle=&#123;</div><div
+                                                                class="line">    backgroundColor: &quot;red&quot;,</div><div
+                                                                class="line">    boderWidth: 5,</div><div
+                                                                class="line">    boderStyle:&quot;solid&quot;</div><div
+                                                                class="line">  &#125;;</div><div
+                                                                class="line">    function ShowMessage()&#123;</div><div
+                                                                class="line">         return (&lt;div style=&#123;dStyle&#125;&gt;</div><div
+                                                                class="line">           &lt;h1 style=&#123;&#123;color:&quot;black&quot;,fontSize:30&#125;&#125;&gt;hi how&lt;/h1&gt;</div><div
+                                                                class="line">          &lt;p className=&quot;pStyle&quot;&gt;</div><div
+                                                                class="line">          hi man!</div><div
+                                                                class="line">          &lt;/p&gt;</div><div
+                                                                class="line">           &lt;/div&gt;);</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    ReactDOM.render(&lt;ShowMessage /&gt;,document.getElementById(&apos;root&apos;));</div><div
+                                                                class="line">    &lt;/script&gt;</div><div
+                                                                class="line">  &lt;/body&gt;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>上面例子使用到了三种方式去设置组件的样式。</p>
+                                <h3 id="Props"><a href="#Props" class="headerlink"
+                                                  title="Props"></a>Props</h3>
+                                <p>对于Props，他是只读的，纯净的，对于所有的React
+                                    Component来说，他们必须是纯净的function，不可以对Props做出修改。<br>props是组件本身的属性，一般用于嵌套内外层的组件中，负责传递信息(通常是由父组件向子组件传递)在最新版本中，是通过参数添加的形式写入，props对象中的属性和组件的属性是一一对应的。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">function WebName(props)&#123;</div><div
+                                                            class="line">    return &lt;h1&gt;&#123;props.webname&#125;&lt;/h1&gt;;</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  function WebLink(props)&#123;</div><div
+                                                            class="line">    return &lt;a href=&#123;props.weblink&#125;&gt;&#123;props.weblink&#125;&lt;/a&gt;;</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  function WebShow(props)&#123;</div><div
+                                                            class="line">    return &lt;div&gt;</div><div
+                                                            class="line">      &lt;WebName webname=&#123;props.wname&#125;/&gt;</div><div
+                                                            class="line">      &lt;WebLink weblink=&#123;props.wlink&#125;/&gt;</div><div
+                                                            class="line">    &lt;/div&gt;;</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  ReactDOM.render(</div><div
+                                                            class="line">    &lt;WebShow wname=&quot;baidu&quot; wlink=&quot;www.baidu.com&quot;/&gt;,</div><div
+                                                            class="line">    document.getElementById(&quot;root&quot;)</div><div
+                                                            class="line">  );</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    props还有一个比较特殊的属性，Children，他是父组件的所有子节点元素。这个可以用在我们需要显示不定长列表当中，比如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"></div><div
+                                                            class="line"></div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="State"><a href="#State" class="headerlink"
+                                                  title="State"></a>State</h3>
+                                <p>
+                                    对于Props，我们一般是用来设置一些不变参数，对于一些DOM变化需要反应到外部的，我们通过State实现，这样子我们才能更好的封装组件。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">function Clock()&#123;</div><div
+                                                            class="line">      return &lt;div&gt;</div><div
+                                                            class="line">      &lt;p&gt;</div><div
+                                                            class="line">        it now time is &#123;new Date().getSeconds()&#125;.</div><div
+                                                            class="line">      &lt;/p&gt;</div><div
+                                                            class="line">      &lt;/div&gt;;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    function notify()&#123;</div><div
+                                                            class="line">      ReactDOM.render(&lt;Clock /&gt;,document.getElementById(&apos;root&apos;));</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    setInterval(notify,1000);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>对于上面的例子，我们想要吧Clock封装起来，使用的时候只需要<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">ReactDOM.render(&lt;Clock /&gt;,document.getElementById(&apos;root&apos;));</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子一句就行了，不需要外包一个function。这时候就需要使用State。<br>State和Props很类似，但是State是私有的，他完全由组件控制，不能被外部控制。<br>使用State，我们需要把function转化为一个类，使用ES6方式，步骤如下：
+                                </p>
+                                <ol>
+                                    <li>创建ES6 class，继承<code>React.Component</code></li>
+                                    <li>添加一个method body为空的<code>render()</code>方法；</li>
+                                    <li>把之前使用function定义好的Component的body移动到上面的<code>render()</code>函数中
+                                    </li>
+                                    <li>把<code>render()</code>函数中的<code>props</code>替换成<code>this.props</code>
+                                    </li>
+                                    <li>删除之前定义的function。
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">class Clock extends React.Comment&#123;</div><div
+                                                                class="line">      function render()&#123;</div><div
+                                                                class="line">        return &lt;div&gt;</div><div
+                                                                class="line">        &lt;p&gt;</div><div
+                                                                class="line">          it now time is &#123;new Date().getSeconds()&#125;.</div><div
+                                                                class="line">        &lt;/p&gt;</div><div
+                                                                class="line">        &lt;/div&gt;;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">    &#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>通过这样子，我们就可以使用其他一些features，比如state和lifecycle hooks。<br>对于一些默认样式，数据的初始化，我们是在该组件的构造函数当中进行。需要传递一个props进来，例如上面例子加上构造函数<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">class Clock extends React.Component &#123;</div><div
+                                                            class="line">  constructor(props) &#123;</div><div
+                                                            class="line">    super(props);</div><div
+                                                            class="line">    this.state = &#123;date: new Date()&#125;;</div><div
+                                                            class="line">  &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这样子完成了date的初始化，因为date是变化的，所以不能再标签中写死，抽取出来作为state的属性之一，State是一个对象。我们可以通过setState方法改变组件的状态，这时候他回去调用render()函数，对于需要重新渲染的组件进行渲染。一般setState是与事件，生命周期相关联的。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">class Clock extends React.Component &#123;</div><div
+                                                            class="line">  constructor(props) &#123;</div><div
+                                                            class="line">    super(props);</div><div
+                                                            class="line">    this.state = &#123;date: new Date()&#125;;</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  componentDidMount() &#123;</div><div
+                                                            class="line">//component已经渲染</div><div
+                                                            class="line">    this.timerID = setInterval(</div><div
+                                                            class="line">      () =&gt; this.tick(),</div><div
+                                                            class="line">      1000</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  componentWillUnmount() &#123;</div><div
+                                                            class="line">//Component将要移除</div><div
+                                                            class="line">    clearInterval(this.timerID);</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  tick() &#123;</div><div
+                                                            class="line">    this.setState(&#123;</div><div
+                                                            class="line">      date: new Date()</div><div
+                                                            class="line">    &#125;);</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  render() &#123;</div><div
+                                                            class="line">    return (</div><div
+                                                            class="line">      &lt;div&gt;</div><div
+                                                            class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;</div><div
+                                                            class="line">        &lt;h2&gt;It is &#123;this.state.date.toLocaleTimeString()&#125;.&lt;/h2&gt;</div><div
+                                                            class="line">      &lt;/div&gt;</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">ReactDOM.render(</div><div
+                                                            class="line">  &lt;Clock /&gt;,</div><div
+                                                            class="line">  document.getElementById(&apos;root&apos;)</div><div
+                                                            class="line">);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这样子，当date发生变化的之后，标签也可以跟着变化。<br>对于state，他是一个对象，我们给他赋值的时候需要注意一些细节<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//wrong</div><div
+                                                            class="line">this.state.comment=&quot;hello&quot;;</div><div
+                                                            class="line">//correct</div><div
+                                                            class="line">this.setState(&#123;comment:&quot;hello&#125;);</div><div
+                                                            class="line">//对于this.state，只能怪在构造函数当中才能这样子调用。</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    state的更新：他可能是异步的，react为了性能，可能把对个State进行批量处理setState，所以对于下面代码就不一定是安全的了。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">handleChange()&#123;</div><div
+                                                            class="line">this.setState(&#123;counter:this,counter+this.props.increment&#125;);</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>因为他可能是异步的，导致新的counter不能及时更新。我们使用一个function替换，setState接收一个function<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">handleChange()&#123;</div><div
+                                                            class="line">this.setState(prevState,props=&gt;&#123;</div><div
+                                                            class="line">    counter:prevState.counter+props.increment,</div><div
+                                                            class="line">    &#125;)</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>其中prevState是前一个state。</p>
+                                <h2 id="组件生命周期以及事件处理"><a href="#组件生命周期以及事件处理" class="headerlink"
+                                                         title="组件生命周期以及事件处理"></a>组件生命周期以及事件处理</h2>
+                                <p>对于一个Component，他有三个状态和四个阶段。<br>状态：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">1. mounting: 挂载</div><div
+                                                            class="line">    回调方法</div><div
+                                                            class="line">        componentWillMount();//将要挂载，render之前，执行一次</div><div
+                                                            class="line">        componentDidMount();//以及挂载，渲染完成，render之后，执行一次</div><div
+                                                            class="line">2. updateing: 更新，组件挂载之后，组件的状态变更</div><div
+                                                            class="line">    componentWiireceiveProps(object nextProps)</div><div
+                                                            class="line">        已加载组件收到信的Props之前调用，注意主键初始化渲染则不执行</div><div
+                                                            class="line">    shouldComponentUpdate(object nextProps,objection nextState)</div><div
+                                                            class="line">        组件判断是否需要重新渲染时调用，该接口实际是在组件接收到了新的Props或者是新的state的时候，会被调用，返回一个boolean决定是否更新组件。</div><div
+                                                            class="line">    componentWillUpdate(object nextProps,objection nextState)</div><div
+                                                            class="line">        组件将要更新， shouldComponentUpdate为true会调用        </div><div
+                                                            class="line">    componentDidUpdate(object nextProps,objection nextState)</div><div
+                                                            class="line">        组件以及更新，shouldComponentUpdate为true会调用</div><div
+                                                            class="line">3. unmounting:移除</div><div
+                                                            class="line">    componentWillUnmount</div><div
+                                                            class="line">        组件将要移除之前调用</div><div
+                                                            class="line">4. 声明周期</div><div
+                                                            class="line">    声明周期有：创建，渲染，更新，销毁</div><div
+                                                            class="line">     相关的方法有：</div><div
+                                                            class="line">        getDefaultProps() 设置props属性默认值</div><div
+                                                            class="line">        getInitialState 设置state属性初始值。</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>对应的方法会在对应的时候被hook，给我们对应的事件处理。<br>对于一些响应事件，比如点击，onChange等，React跟DOM处理是很类似的，他只不过有两点不同
+                                </p>
+                                <ol>
+                                    <li>他的Event的名词是cameCase(驼峰)的，而不是小写的</li>
+                                    <li>它使用JSX的语法进行事件方法处理制定，而不是字符串
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//HTML</div><div
+                                                                class="line">&lt;button onclick=&quot;handleClick&quot;&gt;Click Me&lt;/button&gt;</div><div
+                                                                class="line">//React</div><div
+                                                                class="line">&lt;button onClick=&#123;handleClick&#125;&gt;Click me&lt;/button&gt;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/react/" rel="tag">#react</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/02/28/前端/js_learn/" rel="next"
+                                           title="JavaScript语法基础">
+                                            <i class="fa fa-chevron-left"></i> JavaScript语法基础
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/03/06/react/react-native_learn/" rel="prev"
+                                           title="ReactNative入门">
+                                            ReactNative入门 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#React基础"><span
+                                            class="nav-number">1.</span> <span class="nav-text">React基础</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#React-环境"><span
+                                            class="nav-number">2.</span> <span class="nav-text">React 环境</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#JSX语法"><span
+                                            class="nav-number">3.</span> <span class="nav-text">JSX语法</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#渲染Element"><span
+                                            class="nav-number">4.</span> <span class="nav-text">渲染Element</span></a>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#Components-Props-State"><span
+                                            class="nav-number">5.</span> <span class="nav-text">Components, Props,State</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#定义组件Components"><span
+                                                    class="nav-number">5.1.</span> <span
+                                                    class="nav-text">定义组件Components</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#设置组件样式"><span
+                                                    class="nav-number">5.2.</span> <span
+                                                    class="nav-text">设置组件样式</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#Props"><span
+                                                    class="nav-number">5.3.</span> <span
+                                                    class="nav-text">Props</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#State"><span
+                                                    class="nav-number">5.4.</span> <span
+                                                    class="nav-text">State</span></a></li>
+                                        </ol>
+                                    </li>
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#组件生命周期以及事件处理"><span
+                                            class="nav-number">6.</span> <span class="nav-text">组件生命周期以及事件处理</span></a>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React基础"><span class="nav-number">1.</span> <span class="nav-text">React基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-环境"><span class="nav-number">2.</span> <span class="nav-text">React 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX语法"><span class="nav-number">3.</span> <span class="nav-text">JSX语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渲染Element"><span class="nav-number">4.</span> <span class="nav-text">渲染Element</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Components-Props-State"><span class="nav-number">5.</span> <span class="nav-text">Components, Props,State</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义组件Components"><span class="nav-number">5.1.</span> <span class="nav-text">定义组件Components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置组件样式"><span class="nav-number">5.2.</span> <span class="nav-text">设置组件样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Props"><span class="nav-number">5.3.</span> <span class="nav-text">Props</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#State"><span class="nav-number">5.4.</span> <span class="nav-text">State</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件生命周期以及事件处理"><span class="nav-number">6.</span> <span class="nav-text">组件生命周期以及事件处理</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -617,85 +1403,40 @@ R">
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

@@ -1,109 +1,56 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="前端基础,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="前端基础," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
+    <meta name="description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
 1&amp;lt;from method=&amp;quot;请求方式&amp;quot; action=&amp;quot;服务器URL&amp;quot;/&amp;gt;
 
 from标签是成对出现的
 action是指请求地址，对应服务器的一个接口
 method也请求的方式，比如post/get/put等from标签包裹着用户的一">
-<meta property="og:type" content="article">
-<meta property="og:title" content="前端基础-form">
-<meta property="og:url" content="http://yoursite.com/2018/02/14/前端/html_learn_2/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="前端基础-form">
+    <meta property="og:url" content="http://yoursite.com/2018/02/14/前端/html_learn_2/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
 1&amp;lt;from method=&amp;quot;请求方式&amp;quot; action=&amp;quot;服务器URL&amp;quot;/&amp;gt;
 
 from标签是成对出现的
 action是指请求地址，对应服务器的一个接口
 method也请求的方式，比如post/get/put等from标签包裹着用户的一">
-<meta property="og:updated_time" content="2018-02-14T09:18:54.413Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端基础-form">
-<meta name="twitter:description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
+    <meta property="og:updated_time" content="2018-02-14T09:18:54.413Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="前端基础-form">
+    <meta name="twitter:description" content="前端基础-form表单表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是
 1&amp;lt;from method=&amp;quot;请求方式&amp;quot; action=&amp;quot;服务器URL&amp;quot;/&amp;gt;
 
 from标签是成对出现的
@@ -111,174 +58,145 @@ action是指请求地址，对应服务器的一个接口
 method也请求的方式，比如post/get/put等from标签包裹着用户的一">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/02/14/前端/html_learn_2/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/14/前端/html_learn_2/"/>
-
-
-  <title> 前端基础-form | Blog </title>
+    <title> 前端基础-form | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                前端基础-form
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    前端基础-form
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -289,8 +207,8 @@ method也请求的方式，比如post/get/put等from标签包裹着用户的一"
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -308,268 +226,443 @@ method也请求的方式，比如post/get/put等from标签包裹着用户的一"
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="前端基础-form"><a href="#前端基础-form" class="headerlink" title="前端基础-form"></a>前端基础-form</h2><h4 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h4><p>表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;from method=&quot;请求方式&quot; action=&quot;服务器URL&quot;/&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>from标签是成对出现的</li>
-<li>action是指请求地址，对应服务器的一个接口</li>
-<li>method也请求的方式，比如post/get/put等<br>from标签包裹着用户的一种输入，或者是一个接口需要的用户输入数据，比如</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;form method=&quot;get&quot; action=&quot;https://www.baidu.api.get..&quot;&gt;</div><div class="line">    &lt;label for=&quot;username&quot;&gt;用户名&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;text&quot; name=&quot;usename&quot; value=&quot;&quot;/&gt;</div><div class="line">    &lt;label for=&quot;pass&quot;&gt;密码:&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;password&quot; name=&quot;pass&quot; value=&quot;&quot;/&gt;</div><div class="line">    &lt;input type=&quot;sumbit&quot; value=&quot;确定&quot; name=&quot;submit/&gt;</div><div class="line">    &lt;input type=&quot;reset&quot; value=&quot;重置&quot; name=&quot;reset&quot;/&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-<h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><ul>
-<li>对于input标签，他是与用户进行交互的，给用户输入信息的一个控件。type属性是表明可以输入的类型，text为文本类型，passwor为密码，输入的时候无法看见的，sumbit为提交，相当于提交该表单，reset为重置该表单的input。name是标识改input的，一般跟后台对应需要的字段名称一样，value是默认的输入</li>
-</ul>
-<h4 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h4><ul>
-<li>input是单行输入的，需要使用多行输入，则需要使用textarea，在textarea的标签之间可以输入多行。比如</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form method=&quot;get&quot; action=&quot;xxx&quot;&gt;</div><div class="line">    &lt;label&gt;请在下方输入多行文字&lt;/label&gt;</div><div class="line">    &lt;textarea cols=&quot;100&quot; row=&quot;10&quot;&gt;xx &lt;/textarea&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">其中 cols表示一行最多有多少个字符，row表示最多显示多少行(不是最多输入多上行)</div></pre></td></tr></table></figure>
-<h4 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h4><p>他们也是使用input来表示，只是通过type区分</p>
-<ul>
-<li>radio是单选</li>
-<li><p>checkbox是多选</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;form&gt;</div><div class="line">    &lt;label&gt; label1&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;radio&quot; name=&quot;single&quot; checked=&quot;true&quot; value=&quot;1&quot;/&gt;</div><div class="line">    &lt;label&gt; label2 &lt;/label&gt;</div><div class="line">      &lt;input type=&quot;radio&quot; name=&quot;single框&quot; checked=&quot;true&quot; value=&quot;2&quot;/&gt;</div><div class="line">    &lt;label&gt; label3&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart&quot; check=&quot;false&quot; value=&quot;3&quot;/&gt;</div><div class="line">    &lt;label&gt; label4&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart框&quot; check=&quot;false&quot; value=&quot;4&quot;/&gt;</div><div class="line">    &lt;label&gt; label5&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart框&quot; check=&quot;false&quot; value=&quot;5&quot;/&gt;</div><div class="line">&lt;form&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>value是该input所代表的值</p>
-</li>
-<li>name是表示，跟后台接收该字段的名称对应</li>
-<li>checked表示默认是否选中，对于radio，假如多个，每一个都是true，则只有最后一个生效。</li>
-<li>对于同一组的单选box，name需要一致。</li>
-</ul>
-<h4 id="下拉列表"><a href="#下拉列表" class="headerlink" title="下拉列表"></a>下拉列表</h4><p>就是下拉显示选项的空间，使用select控件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;form ...&gt;</div><div class="line">    &lt;label&gt;label1&lt;/label&gt;</div><div class="line">    &lt;select&gt;</div><div class="line">    &lt;option value=&quot;option1&quot;&gt;option1&lt;/option&gt;</div><div class="line">    &lt;option value=&quot;option2&quot;&gt;option2&lt;/option&gt;</div><div class="line">    &lt;option value=&quot;option3&quot; selected=&quot;selected&quot;&gt;option3&lt;/option&gt;</div><div class="line">    &lt;/select&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>value是提交给后台的值</li>
-<li>selected=”selected”的时候，是默认显示。<br>对于select空间，可以使用multiple属性，改为多选框，比如<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;form ...&gt;</div><div class="line">    &lt;label&gt;label1&lt;/label&gt;</div><div class="line">    &lt;select multiple=&quot;multiple&quot;&gt;</div><div class="line">    &lt;option value=&quot;option1&quot;&gt;option1&lt;/option&gt;</div><div class="line">    &lt;option value=&quot;option2&quot;&gt;option2&lt;/option&gt;</div><div class="line">    &lt;option value=&quot;option3&quot; selected=&quot;selected&quot;&gt;option3&lt;/option&gt;</div><div class="line">    &lt;/select&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="label"><a href="#label" class="headerlink" title="label"></a>label</h4><p>label标签，他的作用是为鼠标用户改进了可用性，用来当用户点击了改Label，他将会自动将该行为转发到对应他绑定的input中，所以，使用的时候，label的for属性必须与他绑定的input的id相同。比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;form&gt;</div><div class="line">    &lt;label for=&quot;label_id&gt;labelText&lt;/label&gt;</div><div class="line">    &lt;input type=&quot;radio&quot; checked=&quot;true&quot; id=&quot;label_id&quot; name=&quot;my_check&quot;/&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure></p>
-<p>当点击label的时候，也会相应inptut。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/前端基础/" rel="tag">#前端基础</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/14/前端/html_learn/" rel="next" title="前端基础标签">
-                <i class="fa fa-chevron-left"></i> 前端基础标签
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/25/前端/css_learn/" rel="prev" title="CSS基础">
-                CSS基础 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h2 id="前端基础-form"><a href="#前端基础-form" class="headerlink"
+                                                      title="前端基础-form"></a>前端基础-form</h2><h4
+                                    id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h4>
+                                <p>表单可以把浏览器用户输入的数据传递到服务器端，相当于Android的一些输入。他的语法是</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">&lt;from method=&quot;请求方式&quot; action=&quot;服务器URL&quot;/&gt;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <ul>
+                                    <li>from标签是成对出现的</li>
+                                    <li>action是指请求地址，对应服务器的一个接口</li>
+                                    <li>method也请求的方式，比如post/get/put等<br>from标签包裹着用户的一种输入，或者是一个接口需要的用户输入数据，比如
+                                    </li>
+                                </ul>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">&lt;form method=&quot;get&quot; action=&quot;https://www.baidu.api.get..&quot;&gt;</div><div
+                                                        class="line">    &lt;label for=&quot;username&quot;&gt;用户名&lt;/label&gt;</div><div
+                                                        class="line">    &lt;input type=&quot;text&quot; name=&quot;usename&quot; value=&quot;&quot;/&gt;</div><div
+                                                        class="line">    &lt;label for=&quot;pass&quot;&gt;密码:&lt;/label&gt;</div><div
+                                                        class="line">    &lt;input type=&quot;password&quot; name=&quot;pass&quot; value=&quot;&quot;/&gt;</div><div
+                                                        class="line">    &lt;input type=&quot;sumbit&quot; value=&quot;确定&quot; name=&quot;submit/&gt;</div><div
+                                                        class="line">    &lt;input type=&quot;reset&quot; value=&quot;重置&quot; name=&quot;reset&quot;/&gt;</div><div
+                                                        class="line">&lt;/form&gt;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="input"><a href="#input" class="headerlink"
+                                                  title="input"></a>input</h4>
+                                <ul>
+                                    <li>
+                                        对于input标签，他是与用户进行交互的，给用户输入信息的一个控件。type属性是表明可以输入的类型，text为文本类型，passwor为密码，输入的时候无法看见的，sumbit为提交，相当于提交该表单，reset为重置该表单的input。name是标识改input的，一般跟后台对应需要的字段名称一样，value是默认的输入
+                                    </li>
+                                </ul>
+                                <h4 id="textarea"><a href="#textarea" class="headerlink"
+                                                     title="textarea"></a>textarea</h4>
+                                <ul>
+                                    <li>input是单行输入的，需要使用多行输入，则需要使用textarea，在textarea的标签之间可以输入多行。比如
+                                    </li>
+                                </ul>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">&lt;form method=&quot;get&quot; action=&quot;xxx&quot;&gt;</div><div
+                                                        class="line">    &lt;label&gt;请在下方输入多行文字&lt;/label&gt;</div><div
+                                                        class="line">    &lt;textarea cols=&quot;100&quot; row=&quot;10&quot;&gt;xx &lt;/textarea&gt;</div><div
+                                                        class="line">&lt;/form&gt;</div><div
+                                                        class="line">其中 cols表示一行最多有多少个字符，row表示最多显示多少行(不是最多输入多上行)</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="checkbox"><a href="#checkbox" class="headerlink"
+                                                     title="checkbox"></a>checkbox</h4>
+                                <p>他们也是使用input来表示，只是通过type区分</p>
+                                <ul>
+                                    <li>radio是单选</li>
+                                    <li><p>checkbox是多选</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">&lt;form&gt;</div><div
+                                                                class="line">    &lt;label&gt; label1&lt;/label&gt;</div><div
+                                                                class="line">    &lt;input type=&quot;radio&quot; name=&quot;single&quot; checked=&quot;true&quot; value=&quot;1&quot;/&gt;</div><div
+                                                                class="line">    &lt;label&gt; label2 &lt;/label&gt;</div><div
+                                                                class="line">      &lt;input type=&quot;radio&quot; name=&quot;single框&quot; checked=&quot;true&quot; value=&quot;2&quot;/&gt;</div><div
+                                                                class="line">    &lt;label&gt; label3&lt;/label&gt;</div><div
+                                                                class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart&quot; check=&quot;false&quot; value=&quot;3&quot;/&gt;</div><div
+                                                                class="line">    &lt;label&gt; label4&lt;/label&gt;</div><div
+                                                                class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart框&quot; check=&quot;false&quot; value=&quot;4&quot;/&gt;</div><div
+                                                                class="line">    &lt;label&gt; label5&lt;/label&gt;</div><div
+                                                                class="line">    &lt;input type=&quot;checkbox&quot; name=&quot;multpart框&quot; check=&quot;false&quot; value=&quot;5&quot;/&gt;</div><div
+                                                                class="line">&lt;form&gt;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>value是该input所代表的值</p>
+                                    </li>
+                                    <li>name是表示，跟后台接收该字段的名称对应</li>
+                                    <li>checked表示默认是否选中，对于radio，假如多个，每一个都是true，则只有最后一个生效。</li>
+                                    <li>对于同一组的单选box，name需要一致。</li>
+                                </ul>
+                                <h4 id="下拉列表"><a href="#下拉列表" class="headerlink" title="下拉列表"></a>下拉列表
+                                </h4>
+                                <p>就是下拉显示选项的空间，使用select控件。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&lt;form ...&gt;</div><div
+                                                            class="line">    &lt;label&gt;label1&lt;/label&gt;</div><div
+                                                            class="line">    &lt;select&gt;</div><div
+                                                            class="line">    &lt;option value=&quot;option1&quot;&gt;option1&lt;/option&gt;</div><div
+                                                            class="line">    &lt;option value=&quot;option2&quot;&gt;option2&lt;/option&gt;</div><div
+                                                            class="line">    &lt;option value=&quot;option3&quot; selected=&quot;selected&quot;&gt;option3&lt;/option&gt;</div><div
+                                                            class="line">    &lt;/select&gt;</div><div
+                                                            class="line">&lt;/form&gt;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <ul>
+                                    <li>value是提交给后台的值</li>
+                                    <li>selected=”selected”的时候，是默认显示。<br>对于select空间，可以使用multiple属性，改为多选框，比如
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div
+                                                                class="line">&lt;form ...&gt;</div><div
+                                                                class="line">    &lt;label&gt;label1&lt;/label&gt;</div><div
+                                                                class="line">    &lt;select multiple=&quot;multiple&quot;&gt;</div><div
+                                                                class="line">    &lt;option value=&quot;option1&quot;&gt;option1&lt;/option&gt;</div><div
+                                                                class="line">    &lt;option value=&quot;option2&quot;&gt;option2&lt;/option&gt;</div><div
+                                                                class="line">    &lt;option value=&quot;option3&quot; selected=&quot;selected&quot;&gt;option3&lt;/option&gt;</div><div
+                                                                class="line">    &lt;/select&gt;</div><div
+                                                                class="line">&lt;/form&gt;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <h4 id="label"><a href="#label" class="headerlink"
+                                                  title="label"></a>label</h4>
+                                <p>
+                                    label标签，他的作用是为鼠标用户改进了可用性，用来当用户点击了改Label，他将会自动将该行为转发到对应他绑定的input中，所以，使用的时候，label的for属性必须与他绑定的input的id相同。比如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&lt;form&gt;</div><div
+                                                            class="line">    &lt;label for=&quot;label_id&gt;labelText&lt;/label&gt;</div><div
+                                                            class="line">    &lt;input type=&quot;radio&quot; checked=&quot;true&quot; id=&quot;label_id&quot; name=&quot;my_check&quot;/&gt;</div><div
+                                                            class="line">&lt;/form&gt;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>当点击label的时候，也会相应inptut。</p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/前端基础/" rel="tag">#前端基础</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/02/14/前端/html_learn/" rel="next"
+                                           title="前端基础标签">
+                                            <i class="fa fa-chevron-left"></i> 前端基础标签
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/02/25/前端/css_learn/" rel="prev"
+                                           title="CSS基础">
+                                            CSS基础 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#前端基础-form"><span
+                                            class="nav-number">1.</span> <span class="nav-text">前端基础-form</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#表单"><span
+                                                    class="nav-number">1.0.1.</span> <span
+                                                    class="nav-text">表单</span></a></li>
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#input"><span
+                                                    class="nav-number">1.0.2.</span> <span
+                                                    class="nav-text">input</span></a></li>
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#textarea"><span
+                                                    class="nav-number">1.0.3.</span> <span
+                                                    class="nav-text">textarea</span></a></li>
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#checkbox"><span
+                                                    class="nav-number">1.0.4.</span> <span
+                                                    class="nav-text">checkbox</span></a></li>
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#下拉列表"><span
+                                                    class="nav-number">1.0.5.</span> <span
+                                                    class="nav-text">下拉列表</span></a></li>
+                                            <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                href="#label"><span
+                                                    class="nav-number">1.0.6.</span> <span
+                                                    class="nav-text">label</span></a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                                </li></ol></div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端基础-form"><span class="nav-number">1.</span> <span class="nav-text">前端基础-form</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#表单"><span class="nav-number">1.0.1.</span> <span class="nav-text">表单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#input"><span class="nav-number">1.0.2.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textarea"><span class="nav-number">1.0.3.</span> <span class="nav-text">textarea</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#checkbox"><span class="nav-number">1.0.4.</span> <span class="nav-text">checkbox</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下拉列表"><span class="nav-number">1.0.5.</span> <span class="nav-text">下拉列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#label"><span class="nav-number">1.0.6.</span> <span class="nav-text">label</span></a></li></ol></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -578,85 +671,40 @@ method也请求的方式，比如post/get/put等from标签包裹着用户的一"
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

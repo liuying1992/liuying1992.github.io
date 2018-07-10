@@ -1,271 +1,195 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="react-Native,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
+    <meta name="description"
+          content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ReactNative入门">
+    <meta property="og:url"
+          content="http://yoursite.com/2018/03/06/react/react-native_learn/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description"
+          content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg">
+    <meta property="og:updated_time" content="2018-03-06T14:49:44.058Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ReactNative入门">
+    <meta name="twitter:description"
+          content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
+    <meta name="twitter:image"
+          content="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg">
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/03/06/react/react-native_learn/"/>
 
 
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="react-Native," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ReactNative入门">
-<meta property="og:url" content="http://yoursite.com/2018/03/06/react/react-native_learn/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
-<meta property="og:image" content="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg">
-<meta property="og:updated_time" content="2018-03-06T14:49:44.058Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactNative入门">
-<meta name="twitter:description" content="React Native基础学习创建创建组件三种方式：ES6:主流，目前使用123456//es6export default class First extends Component &amp;#123;    render() &amp;#123;        return &amp;lt;Text style=&amp;#123;myStyle.Text&amp;#125;&amp;gt;Hello&amp;lt;/Text&amp;gt;    &amp;">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
-
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2018/03/06/react/react-native_learn/"/>
-
-
-  <title> ReactNative入门 | Blog </title>
+    <title> ReactNative入门 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                ReactNative入门
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    ReactNative入门
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -276,8 +200,8 @@
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -295,257 +219,946 @@
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="React-Native基础学习"><a href="#React-Native基础学习" class="headerlink" title="React Native基础学习"></a>React Native基础学习</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>创建组件三种方式：<br>ES6:主流，目前使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//es6</div><div class="line">export default class First extends Component &#123;</div><div class="line">    render() &#123;</div><div class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>ES5：已经不支持<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// ES5不可用</div><div class="line">// var First = React.createClass(&#123;</div><div class="line">// render()&#123;</div><div class="line">// return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;;</div><div class="line">// &#125;</div><div class="line">// &#125;);</div><div class="line">// module.exports=First;</div></pre></td></tr></table></figure></p>
-<p>函数式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//函数式无state，无法使用this</div><div class="line">// function First() &#123;</div><div class="line">// return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;;</div><div class="line">// &#125;</div><div class="line">// module.exports=First;</div></pre></td></tr></table></figure></p>
-<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>图片来自<a href="http://www.devio.org/2016/08/10/React-Native之React速学教程-(中" target="_blank" rel="external">贾鹏辉的技术博客</a>/)<br><img src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">import React, &#123;Component&#125; from &quot;react&quot;;</div><div class="line">import &#123;StyleSheet, View, Text, Platform&#125; from &quot;react-native&quot;;</div><div class="line">export default class LifeComponent extends Component &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        this.state = &#123;</div><div class="line">            count: 0</div><div class="line">        &#125;;</div><div class="line">        //最先执行1</div><div class="line">        console.log(&quot;-----constructor-----&quot;);</div><div class="line">    &#125;</div><div class="line">    componentWillMount() &#123;</div><div class="line">        //将要加载渲染，2</div><div class="line">        console.log(&quot;-----componentWillMount-----&quot;);</div><div class="line">    &#125;</div><div class="line">    componentDidMount() &#123;</div><div class="line">        //完成首次渲染3</div><div class="line">        console.log(&quot;-----componentDidMount-----&quot;);</div><div class="line">    &#125;</div><div class="line">    componentWillReceiveProps(nextProps) &#123;</div><div class="line">        //正在运行着，收到props属性更新，之后调用shouldComponentUpdate</div><div class="line">        console.log(&quot;-----componentWillReceiveProps-----&quot;);</div><div class="line">    &#125;</div><div class="line">    shouldComponentUpdate(nextProps, nextState) &#123;</div><div class="line">        //state发生变化，或者props发生变化，只有返回true才会继续执行componentWillUpdate和</div><div class="line">        console.log(&quot;-----shouldComponentUpdate-----&quot;);</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">    componentWillUpdate(nextProps, nextState) &#123;</div><div class="line">        //运行着将要更新，之后运行render()</div><div class="line">        console.log(&quot;-----componentWillUpdate-----&quot;);</div><div class="line">    &#125;</div><div class="line">    componentDidUpdate(prevPros, prevState) &#123;</div><div class="line">        //运行着已经更新,运行完上面的render()之后调用</div><div class="line">        console.log(&quot;-----componentDidUpdate-----&quot;);</div><div class="line">    &#125;</div><div class="line">    componentWillUnmount() &#123;</div><div class="line">        //将要移除该组件</div><div class="line">        console.log(&quot;-----componentWillUnmount-----&quot;);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        //进行渲染3</div><div class="line">        console.log(&quot;-----render-----&quot;);</div><div class="line">        return &lt;View&gt;&lt;Text style=&#123;Life.TEXT&#125; onPress=&#123;() =&gt; &#123;</div><div class="line">            this.setState(&#123;</div><div class="line">                count: this.state.count + 1,</div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">        &#125;&gt;&#123;this.props.name&#125;,World,click Time&#123;this.state.count&#125;&lt;/Text&gt;</div><div class="line">        &lt;/View&gt;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">const Life = StyleSheet.create(&#123;</div><div class="line">    TEXT: &#123;</div><div class="line">        fontSize: 30,</div><div class="line">        color: &quot;blue&quot;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>测试componentWillUnmount生命周期：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props)</div><div class="line">        this.state = &#123;</div><div class="line">            isRemove: false,</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        var tips = this.state.isRemove ? &quot;添加&quot; : &quot;移除&quot;;</div><div class="line">        var component = this.state.isRemove?null:&lt;LifeComponent name=&quot;hi&quot;/&gt; ;</div><div class="line">        return (</div><div class="line">        &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">            &lt;Text style=&#123;styles.welcome&#125;</div><div class="line">            onPress=&#123;()=&gt;&#123;</div><div class="line">                this.setState(&#123;</div><div class="line">                    isRemove:!this.state.isRemove</div><div class="line">                &#125;);</div><div class="line">            &#125;&#125;&gt; &#123;tips&#125;&lt;/Text&gt;</div><div class="line">            &#123;component&#125;</div><div class="line">        &lt;/View&gt;</div><div class="line">    )</div><div class="line">        ;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="导入和导出"><a href="#导入和导出" class="headerlink" title="导入和导出"></a>导入和导出</h3><p>包括组件，变量，函数的导出，<br>默认组件导出直接使用<code>export default</code>既可，变量的导出可以是单个导出或者是批量导出，也是使用<code>export</code>关键字，函数导出在function之前添加’export’既可。<br>他们的导入是在<code>import</code>的时候，组件是独立引入，函数和变量使用<code>{}</code>括起来，函数只需要写名字既可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    Text,</div><div class="line">    StyleSheet</div><div class="line">&#125; from &apos;react-native&apos;</div><div class="line">var x = 1;</div><div class="line">const y = &quot;hello&quot;;</div><div class="line">export var k=&quot;hi&quot;;</div><div class="line">export &#123;x, y&#125;;</div><div class="line">export function sum(x, y) &#123;</div><div class="line">    return x + y;</div><div class="line">&#125;</div><div class="line">export default class ExportComponent extends Component &#123;</div><div class="line">    render() &#123;</div><div class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt; hi&lt;/Text&gt;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">const myStyle = StyleSheet.create(&#123;</div><div class="line">    Text: &#123;</div><div class="line">        fontSize: 30,</div><div class="line">        color: &quot;red&quot;,</div><div class="line">        backgroundColor: &quot;blue&quot;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">//App.js</div><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">    StyleSheet,</div><div class="line">    Text,</div><div class="line">    View</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">import ExportComponent, &#123;x, y,k, sum&#125; from &apos;./ExportComponent&apos;</div><div class="line">type Props = &#123;&#125;;</div><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props)</div><div class="line">        this.state = &#123;</div><div class="line">            total: 0</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;ExportComponent/&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;x&#125;&lt;/Text&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;y&#125;&lt;/Text&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;k&#125;&lt;/Text&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125; onPress=&#123;() =&gt; &#123;</div><div class="line">                    var result = sum(1,2);</div><div class="line">                    this.setState(&#123;</div><div class="line">                     total:result,</div><div class="line">                    &#125;)</div><div class="line">                &#125;&#125;&gt;1+2=&#123;this.state.total&#125;&lt;/Text&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><ul>
-<li>对于Props，他是一个对象，他是只读的，纯净的，对于所有的React Component来说，他们必须是纯净的function，不可以对Props做出修改。<br>props是组件本身的属性，一般用于嵌套内外层的组件中，负责传递信息(通常是由父组件向子组件传递)在最新版本中，是通过参数添加的形式写入，props对象中的属性和组件的属性是一一对应的。</li>
-<li><p>使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//通过this.props引用props</div><div class="line">export default class PropsComponent extends Component&#123;</div><div class="line">    constructor(props)&#123;</div><div class="line">        super(props)</div><div class="line">    &#125;</div><div class="line">    render()&#123;</div><div class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.name&#125;&lt;/Text&gt;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//使用时候给name赋值</div><div class="line">  &lt;PropsComponent name=&#123;&quot;Hello,World&quot;&#125;/&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>props的合法验证：我们可以给props设置默认值，可以设置props的属性的类型，这样子对于外部输入进行合法性校验。<br>目前新版本的react(16以后)已经去除了PropTypes，独立出来另外一个js文件，所以，我们进行props的类型检测需要另外npm(<a href="https://www.npmjs.com/package/prop-types" target="_blank" rel="external">prop-types</a>)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">export default class PropsComponent extends Component &#123;</div><div class="line">    static defaultProps = &#123;</div><div class="line">        //默认值</div><div class="line">        age: 20,</div><div class="line">        name:&quot;nick&quot;</div><div class="line">    &#125;;</div><div class="line">    static propTypes=&#123;</div><div class="line">        name:PropTypes.string,</div><div class="line">        //类型是number</div><div class="line">        age:PropTypes.number,</div><div class="line">        //必须传入</div><div class="line">        sex:PropTypes.string.isRequired,</div><div class="line">    &#125;;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props)</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        return &lt;View&gt;&lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.name&#125;&lt;/Text&gt;</div><div class="line">            &lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.age&#125;&lt;/Text&gt;&lt;/View&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>一些操作属性技巧<br>延展操作符<code>...</code>：在传入给子组件props的时候，假如是多个，可以组成一个对象，通过<code>...</code>传入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div class="line">    render() &#123;</div><div class="line">        var params = &#123;name:&quot;mike&quot;,age:20,sex:&quot;男&quot;&#125;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;PropsComponent &#123;...params&#125;/&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>解构赋值操作符：可以只是取对象中的某一部分属性，然后进行读取赋值给别人</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div class="line">    render() &#123;</div><div class="line">        var params = &#123;name:&quot;ij&quot;,age:20,sex:&quot;男&quot;&#125;;</div><div class="line">        var &#123;name,sex&#125;=params;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">            //直接读取，不需要通过params引用</div><div class="line">                &lt;PropsComponent name=&#123;name&#125; sex=&#123;sex&#125;/&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>对于Props，我们一般是用来设置一些不变参数，对于一些DOM变化需要反应到外部的，我们通过State实现，这样子我们才能更好的封装组件。<br>State和Props很类似，但是State是私有的，他完全由组件控制，不能被外部控制。<br>State的初始化，可以是在构造器中(建议是)，可以在外部，直接编写。关于state的使用，我们上面有提到。state他类似与一个状态机，当他的状态发生了改变的时候，就会去render()。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">export default class StateComponent extends Component&#123;</div><div class="line">    //可以这样子初始化，但是不建议</div><div class="line">    // state:&#123;</div><div class="line">    // count:0,</div><div class="line">    // &#125;;</div><div class="line">    constructor(props)&#123;</div><div class="line">        super(props);</div><div class="line">        this.state=&#123;</div><div class="line">            count:0,</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    render()&#123;</div><div class="line">        return &lt;View&gt;</div><div class="line">            &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div class="line">                this.setState(&#123;</div><div class="line">                    count:this.state.count+1,</div><div class="line">                &#125;)</div><div class="line">            &#125;&#125;&gt;增加&lt;/Text&gt;</div><div class="line">            &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div class="line">                this.setState(&#123;</div><div class="line">                    count:this.state.count-1,</div><div class="line">                &#125;)</div><div class="line">            &#125;&#125;&gt;减少&lt;/Text&gt;</div><div class="line">            &lt;Text&gt;&#123;this.state.count&#125;&lt;/Text&gt;</div><div class="line">        &lt;/View&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h3><p>ref是用来会去真实DOM节点的，有些时候我们需要直接操作DOM节点才可以，比如说给某一个input获取焦点。<br>ref的使用有两种<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">//定义一个组件，对外提供一个getCount()方法给外部测试</div><div class="line">export default class RefComponent extends Component&#123;</div><div class="line">    constructor(props)&#123;</div><div class="line">        super(props);</div><div class="line">        this.state=&#123;</div><div class="line">            count:0</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    getCount()&#123;</div><div class="line">        return this.state.count;</div><div class="line">    &#125;</div><div class="line">    render()&#123;</div><div class="line">        return &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div class="line">                this.setState(&#123;</div><div class="line">                    count:this.state.count+1</div><div class="line">                &#125;)</div><div class="line">            &#125;</div><div class="line">        &#125;&gt;Hello:&#123;this.state.count&#125;&lt;/Text&gt;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//通过ref获得真实dom，然后获取getCount()</div><div class="line"> render() &#123;</div><div class="line">        // var value = this.refs.refId;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;</div><div class="line">                onPress=&#123;()=&gt;&#123;</div><div class="line">                    // let size= this.refs.refId;//可以这样子写，获取下面那样子写法都可以</div><div class="line">                    let size = this.refs[&apos;refId&apos;].getCount();</div><div class="line">                    this.setState(&#123;</div><div class="line">                        result:size</div><div class="line">                    &#125;);</div><div class="line">                &#125;&#125;&gt;ref获得的值是:&#123;this.state.result&#125;&lt;/Text&gt;</div><div class="line">                &lt;RefComponent ref=&#123;&quot;refId&quot;&#125;/&gt;，直接赋值，或者通过下面的函数赋值都可以</div><div class="line">                // &lt;RefComponent ref=&#123;refId=&gt;this.refId=refId;&#125;，通过这种方式，获取refId的时候，直接是this.refId，不需要通过refs。</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>对于类，跟Java是十分相似的。他使用constructor标识构造器而非文件名称，然后内容属性可以不用声明，直接使用this进行设置便会生成。被继承的时候，可以对方法进行重写。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">export default class Man&#123;</div><div class="line">    constructor(name,age)&#123;</div><div class="line">        this.name = name;</div><div class="line">        this.age = age;</div><div class="line">    &#125;</div><div class="line">    toString()&#123;</div><div class="line">        return &quot;name=&quot;+this.name+&quot;,age=&quot;+this.age;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//继承</div><div class="line">export default class Boy extends Man&#123;</div><div class="line">    constructor(name,age)&#123;</div><div class="line">        super(name, age);</div><div class="line">        this.sex=&quot;name&quot;</div><div class="line">    &#125;</div><div class="line">    toString()&#123;</div><div class="line">        return &quot;性别=&quot;+this.sex+&quot;,&quot;+super.toString();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//使用</div><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div class="line">    constructor(props)&#123;</div><div class="line">        super(props);</div><div class="line">        this.man = new Man(&quot;hehe&quot;, 20);</div><div class="line">        this.boy = new Boy(&quot;boy&quot;, 20);</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        return (</div><div class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;this.man.toString()&#125;&lt;/Text&gt;</div><div class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;this.boy.toString()&#125;&lt;/Text&gt;</div><div class="line">            &lt;/View&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/react-Native/" rel="tag">#react-Native</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/06/react/react_leanr/" rel="next" title="React基础">
-                <i class="fa fa-chevron-left"></i> React基础
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/08/react/react-native_UI_learn/" rel="prev" title="ReactNative UI">
-                ReactNative UI <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h2 id="React-Native基础学习"><a href="#React-Native基础学习"
+                                                             class="headerlink"
+                                                             title="React Native基础学习"></a>React
+                                    Native基础学习</h2>
+                                <h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3>
+                                <p>创建组件三种方式：<br>ES6:主流，目前使用<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//es6</div><div
+                                                            class="line">export default class First extends Component &#123;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>ES5：已经不支持<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">// ES5不可用</div><div
+                                                            class="line">// var First = React.createClass(&#123;</div><div
+                                                            class="line">// render()&#123;</div><div
+                                                            class="line">// return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;;</div><div
+                                                            class="line">// &#125;</div><div
+                                                            class="line">// &#125;);</div><div
+                                                            class="line">// module.exports=First;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>函数式：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">//函数式无state，无法使用this</div><div
+                                                            class="line">// function First() &#123;</div><div
+                                                            class="line">// return &lt;Text style=&#123;myStyle.Text&#125;&gt;Hello&lt;/Text&gt;;</div><div
+                                                            class="line">// &#125;</div><div
+                                                            class="line">// module.exports=First;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期
+                                </h3>
+                                <p>图片来自<a
+                                        href="http://www.devio.org/2016/08/10/React-Native之React速学教程-(中"
+                                        target="_blank" rel="external">贾鹏辉的技术博客</a>/)<br><img
+                                        src="https://raw.githubusercontent.com/crazycodeboy/RNStudyNotes/master/React%20Native之React速学教程/images/component-lifecycle.jpg"
+                                        alt=""><br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div><div class="line">39</div><div
+                                                            class="line">40</div><div class="line">41</div><div
+                                                            class="line">42</div><div class="line">43</div><div
+                                                            class="line">44</div><div class="line">45</div><div
+                                                            class="line">46</div><div class="line">47</div><div
+                                                            class="line">48</div><div class="line">49</div><div
+                                                            class="line">50</div><div class="line">51</div><div
+                                                            class="line">52</div><div class="line">53</div><div
+                                                            class="line">54</div><div class="line">55</div><div
+                                                            class="line">56</div><div class="line">57</div><div
+                                                            class="line">58</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">import React, &#123;Component&#125; from &quot;react&quot;;</div><div
+                                                            class="line">import &#123;StyleSheet, View, Text, Platform&#125; from &quot;react-native&quot;;</div><div
+                                                            class="line">export default class LifeComponent extends Component &#123;</div><div
+                                                            class="line">    constructor(props) &#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        this.state = &#123;</div><div
+                                                            class="line">            count: 0</div><div
+                                                            class="line">        &#125;;</div><div
+                                                            class="line">        //最先执行1</div><div
+                                                            class="line">        console.log(&quot;-----constructor-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentWillMount() &#123;</div><div
+                                                            class="line">        //将要加载渲染，2</div><div
+                                                            class="line">        console.log(&quot;-----componentWillMount-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentDidMount() &#123;</div><div
+                                                            class="line">        //完成首次渲染3</div><div
+                                                            class="line">        console.log(&quot;-----componentDidMount-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentWillReceiveProps(nextProps) &#123;</div><div
+                                                            class="line">        //正在运行着，收到props属性更新，之后调用shouldComponentUpdate</div><div
+                                                            class="line">        console.log(&quot;-----componentWillReceiveProps-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    shouldComponentUpdate(nextProps, nextState) &#123;</div><div
+                                                            class="line">        //state发生变化，或者props发生变化，只有返回true才会继续执行componentWillUpdate和</div><div
+                                                            class="line">        console.log(&quot;-----shouldComponentUpdate-----&quot;);</div><div
+                                                            class="line">        return true;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentWillUpdate(nextProps, nextState) &#123;</div><div
+                                                            class="line">        //运行着将要更新，之后运行render()</div><div
+                                                            class="line">        console.log(&quot;-----componentWillUpdate-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentDidUpdate(prevPros, prevState) &#123;</div><div
+                                                            class="line">        //运行着已经更新,运行完上面的render()之后调用</div><div
+                                                            class="line">        console.log(&quot;-----componentDidUpdate-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    componentWillUnmount() &#123;</div><div
+                                                            class="line">        //将要移除该组件</div><div
+                                                            class="line">        console.log(&quot;-----componentWillUnmount-----&quot;);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        //进行渲染3</div><div
+                                                            class="line">        console.log(&quot;-----render-----&quot;);</div><div
+                                                            class="line">        return &lt;View&gt;&lt;Text style=&#123;Life.TEXT&#125; onPress=&#123;() =&gt; &#123;</div><div
+                                                            class="line">            this.setState(&#123;</div><div
+                                                            class="line">                count: this.state.count + 1,</div><div
+                                                            class="line">            &#125;)</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        &#125;&gt;&#123;this.props.name&#125;,World,click Time&#123;this.state.count&#125;&lt;/Text&gt;</div><div
+                                                            class="line">        &lt;/View&gt;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">const Life = StyleSheet.create(&#123;</div><div
+                                                            class="line">    TEXT: &#123;</div><div
+                                                            class="line">        fontSize: 30,</div><div
+                                                            class="line">        color: &quot;blue&quot;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;);</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>测试componentWillUnmount生命周期：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div
+                                                            class="line">    constructor(props) &#123;</div><div
+                                                            class="line">        super(props)</div><div
+                                                            class="line">        this.state = &#123;</div><div
+                                                            class="line">            isRemove: false,</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        var tips = this.state.isRemove ? &quot;添加&quot; : &quot;移除&quot;;</div><div
+                                                            class="line">        var component = this.state.isRemove?null:&lt;LifeComponent name=&quot;hi&quot;/&gt; ;</div><div
+                                                            class="line">        return (</div><div
+                                                            class="line">        &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                            class="line">            &lt;Text style=&#123;styles.welcome&#125;</div><div
+                                                            class="line">            onPress=&#123;()=&gt;&#123;</div><div
+                                                            class="line">                this.setState(&#123;</div><div
+                                                            class="line">                    isRemove:!this.state.isRemove</div><div
+                                                            class="line">                &#125;);</div><div
+                                                            class="line">            &#125;&#125;&gt; &#123;tips&#125;&lt;/Text&gt;</div><div
+                                                            class="line">            &#123;component&#125;</div><div
+                                                            class="line">        &lt;/View&gt;</div><div
+                                                            class="line">    )</div><div
+                                                            class="line">        ;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="导入和导出"><a href="#导入和导出" class="headerlink"
+                                                  title="导入和导出"></a>导入和导出</h3>
+                                <p>包括组件，变量，函数的导出，<br>默认组件导出直接使用<code>export default</code>既可，变量的导出可以是单个导出或者是批量导出，也是使用<code>export</code>关键字，函数导出在function之前添加’export’既可。<br>他们的导入是在<code>import</code>的时候，组件是独立引入，函数和变量使用<code>{}</code>括起来，函数只需要写名字既可。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div><div class="line">39</div><div
+                                                            class="line">40</div><div class="line">41</div><div
+                                                            class="line">42</div><div class="line">43</div><div
+                                                            class="line">44</div><div class="line">45</div><div
+                                                            class="line">46</div><div class="line">47</div><div
+                                                            class="line">48</div><div class="line">49</div><div
+                                                            class="line">50</div><div class="line">51</div><div
+                                                            class="line">52</div><div class="line">53</div><div
+                                                            class="line">54</div><div class="line">55</div><div
+                                                            class="line">56</div><div class="line">57</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div
+                                                            class="line">import &#123;</div><div
+                                                            class="line">    Text,</div><div
+                                                            class="line">    StyleSheet</div><div
+                                                            class="line">&#125; from &apos;react-native&apos;</div><div
+                                                            class="line">var x = 1;</div><div
+                                                            class="line">const y = &quot;hello&quot;;</div><div
+                                                            class="line">export var k=&quot;hi&quot;;</div><div
+                                                            class="line">export &#123;x, y&#125;;</div><div
+                                                            class="line">export function sum(x, y) &#123;</div><div
+                                                            class="line">    return x + y;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">export default class ExportComponent extends Component &#123;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt; hi&lt;/Text&gt;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">const myStyle = StyleSheet.create(&#123;</div><div
+                                                            class="line">    Text: &#123;</div><div
+                                                            class="line">        fontSize: 30,</div><div
+                                                            class="line">        color: &quot;red&quot;,</div><div
+                                                            class="line">        backgroundColor: &quot;blue&quot;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;);</div><div
+                                                            class="line">//App.js</div><div
+                                                            class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div
+                                                            class="line">import &#123;</div><div
+                                                            class="line">    StyleSheet,</div><div
+                                                            class="line">    Text,</div><div
+                                                            class="line">    View</div><div
+                                                            class="line">&#125; from &apos;react-native&apos;;</div><div
+                                                            class="line">import ExportComponent, &#123;x, y,k, sum&#125; from &apos;./ExportComponent&apos;</div><div
+                                                            class="line">type Props = &#123;&#125;;</div><div
+                                                            class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div
+                                                            class="line">    constructor(props) &#123;</div><div
+                                                            class="line">        super(props)</div><div
+                                                            class="line">        this.state = &#123;</div><div
+                                                            class="line">            total: 0</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        return (</div><div
+                                                            class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                            class="line">                &lt;ExportComponent/&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;x&#125;&lt;/Text&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;y&#125;&lt;/Text&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;k&#125;&lt;/Text&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125; onPress=&#123;() =&gt; &#123;</div><div
+                                                            class="line">                    var result = sum(1,2);</div><div
+                                                            class="line">                    this.setState(&#123;</div><div
+                                                            class="line">                     total:result,</div><div
+                                                            class="line">                    &#125;)</div><div
+                                                            class="line">                &#125;&#125;&gt;1+2=&#123;this.state.total&#125;&lt;/Text&gt;</div><div
+                                                            class="line">            &lt;/View&gt;</div><div
+                                                            class="line">        )</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="Props"><a href="#Props" class="headerlink"
+                                                  title="Props"></a>Props</h3>
+                                <ul>
+                                    <li>对于Props，他是一个对象，他是只读的，纯净的，对于所有的React
+                                        Component来说，他们必须是纯净的function，不可以对Props做出修改。<br>props是组件本身的属性，一般用于嵌套内外层的组件中，负责传递信息(通常是由父组件向子组件传递)在最新版本中，是通过参数添加的形式写入，props对象中的属性和组件的属性是一一对应的。
+                                    </li>
+                                    <li><p>使用</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div
+                                                                class="line">//通过this.props引用props</div><div
+                                                                class="line">export default class PropsComponent extends Component&#123;</div><div
+                                                                class="line">    constructor(props)&#123;</div><div
+                                                                class="line">        super(props)</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    render()&#123;</div><div
+                                                                class="line">        return &lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.name&#125;&lt;/Text&gt;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//使用时候给name赋值</div><div
+                                                                class="line">  &lt;PropsComponent name=&#123;&quot;Hello,World&quot;&#125;/&gt;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>
+                                        props的合法验证：我们可以给props设置默认值，可以设置props的属性的类型，这样子对于外部输入进行合法性校验。<br>目前新版本的react(16以后)已经去除了PropTypes，独立出来另外一个js文件，所以，我们进行props的类型检测需要另外npm(<a
+                                            href="https://www.npmjs.com/package/prop-types"
+                                            target="_blank" rel="external">prop-types</a>)</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">export default class PropsComponent extends Component &#123;</div><div
+                                                                class="line">    static defaultProps = &#123;</div><div
+                                                                class="line">        //默认值</div><div
+                                                                class="line">        age: 20,</div><div
+                                                                class="line">        name:&quot;nick&quot;</div><div
+                                                                class="line">    &#125;;</div><div
+                                                                class="line">    static propTypes=&#123;</div><div
+                                                                class="line">        name:PropTypes.string,</div><div
+                                                                class="line">        //类型是number</div><div
+                                                                class="line">        age:PropTypes.number,</div><div
+                                                                class="line">        //必须传入</div><div
+                                                                class="line">        sex:PropTypes.string.isRequired,</div><div
+                                                                class="line">    &#125;;</div><div
+                                                                class="line">    constructor(props) &#123;</div><div
+                                                                class="line">        super(props)</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    render() &#123;</div><div
+                                                                class="line">        return &lt;View&gt;&lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.name&#125;&lt;/Text&gt;</div><div
+                                                                class="line">            &lt;Text style=&#123;myStyle.Text&#125;&gt; &#123;this.props.age&#125;&lt;/Text&gt;&lt;/View&gt;;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>一些操作属性技巧<br>延展操作符<code>...</code>：在传入给子组件props的时候，假如是多个，可以组成一个对象，通过<code>...</code>传入
+                                    </p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div
+                                                                class="line">    render() &#123;</div><div
+                                                                class="line">        var params = &#123;name:&quot;mike&quot;,age:20,sex:&quot;男&quot;&#125;</div><div
+                                                                class="line">        return (</div><div
+                                                                class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                                class="line">                &lt;PropsComponent &#123;...params&#125;/&gt;</div><div
+                                                                class="line">            &lt;/View&gt;</div><div
+                                                                class="line">        )</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>解构赋值操作符：可以只是取对象中的某一部分属性，然后进行读取赋值给别人</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div
+                                                                class="line">    render() &#123;</div><div
+                                                                class="line">        var params = &#123;name:&quot;ij&quot;,age:20,sex:&quot;男&quot;&#125;;</div><div
+                                                                class="line">        var &#123;name,sex&#125;=params;</div><div
+                                                                class="line">        return (</div><div
+                                                                class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                                class="line">            //直接读取，不需要通过params引用</div><div
+                                                                class="line">                &lt;PropsComponent name=&#123;name&#125; sex=&#123;sex&#125;/&gt;</div><div
+                                                                class="line">            &lt;/View&gt;</div><div
+                                                                class="line">        )</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <h3 id="State"><a href="#State" class="headerlink"
+                                                  title="State"></a>State</h3>
+                                <p>
+                                    对于Props，我们一般是用来设置一些不变参数，对于一些DOM变化需要反应到外部的，我们通过State实现，这样子我们才能更好的封装组件。<br>State和Props很类似，但是State是私有的，他完全由组件控制，不能被外部控制。<br>State的初始化，可以是在构造器中(建议是)，可以在外部，直接编写。关于state的使用，我们上面有提到。state他类似与一个状态机，当他的状态发生了改变的时候，就会去render()。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">export default class StateComponent extends Component&#123;</div><div
+                                                            class="line">    //可以这样子初始化，但是不建议</div><div
+                                                            class="line">    // state:&#123;</div><div
+                                                            class="line">    // count:0,</div><div
+                                                            class="line">    // &#125;;</div><div
+                                                            class="line">    constructor(props)&#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        this.state=&#123;</div><div
+                                                            class="line">            count:0,</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render()&#123;</div><div
+                                                            class="line">        return &lt;View&gt;</div><div
+                                                            class="line">            &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div
+                                                            class="line">                this.setState(&#123;</div><div
+                                                            class="line">                    count:this.state.count+1,</div><div
+                                                            class="line">                &#125;)</div><div
+                                                            class="line">            &#125;&#125;&gt;增加&lt;/Text&gt;</div><div
+                                                            class="line">            &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div
+                                                            class="line">                this.setState(&#123;</div><div
+                                                            class="line">                    count:this.state.count-1,</div><div
+                                                            class="line">                &#125;)</div><div
+                                                            class="line">            &#125;&#125;&gt;减少&lt;/Text&gt;</div><div
+                                                            class="line">            &lt;Text&gt;&#123;this.state.count&#125;&lt;/Text&gt;</div><div
+                                                            class="line">        &lt;/View&gt;;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref
+                                </h3>
+                                <p>ref是用来会去真实DOM节点的，有些时候我们需要直接操作DOM节点才可以，比如说给某一个input获取焦点。<br>ref的使用有两种<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//定义一个组件，对外提供一个getCount()方法给外部测试</div><div
+                                                            class="line">export default class RefComponent extends Component&#123;</div><div
+                                                            class="line">    constructor(props)&#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        this.state=&#123;</div><div
+                                                            class="line">            count:0</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    getCount()&#123;</div><div
+                                                            class="line">        return this.state.count;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render()&#123;</div><div
+                                                            class="line">        return &lt;Text style=&#123;myStyle.Text&#125; onPress=&#123;()=&gt;&#123;</div><div
+                                                            class="line">                this.setState(&#123;</div><div
+                                                            class="line">                    count:this.state.count+1</div><div
+                                                            class="line">                &#125;)</div><div
+                                                            class="line">            &#125;</div><div
+                                                            class="line">        &#125;&gt;Hello:&#123;this.state.count&#125;&lt;/Text&gt;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//通过ref获得真实dom，然后获取getCount()</div><div
+                                                            class="line"> render() &#123;</div><div
+                                                            class="line">        // var value = this.refs.refId;</div><div
+                                                            class="line">        return (</div><div
+                                                            class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;</div><div
+                                                            class="line">                onPress=&#123;()=&gt;&#123;</div><div
+                                                            class="line">                    // let size= this.refs.refId;//可以这样子写，获取下面那样子写法都可以</div><div
+                                                            class="line">                    let size = this.refs[&apos;refId&apos;].getCount();</div><div
+                                                            class="line">                    this.setState(&#123;</div><div
+                                                            class="line">                        result:size</div><div
+                                                            class="line">                    &#125;);</div><div
+                                                            class="line">                &#125;&#125;&gt;ref获得的值是:&#123;this.state.result&#125;&lt;/Text&gt;</div><div
+                                                            class="line">                &lt;RefComponent ref=&#123;&quot;refId&quot;&#125;/&gt;，直接赋值，或者通过下面的函数赋值都可以</div><div
+                                                            class="line">                // &lt;RefComponent ref=&#123;refId=&gt;this.refId=refId;&#125;，通过这种方式，获取refId的时候，直接是this.refId，不需要通过refs。</div><div
+                                                            class="line">            &lt;/View&gt;</div><div
+                                                            class="line">        )</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3>
+                                <p>
+                                    对于类，跟Java是十分相似的。他使用constructor标识构造器而非文件名称，然后内容属性可以不用声明，直接使用this进行设置便会生成。被继承的时候，可以对方法进行重写。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">export default class Man&#123;</div><div
+                                                            class="line">    constructor(name,age)&#123;</div><div
+                                                            class="line">        this.name = name;</div><div
+                                                            class="line">        this.age = age;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    toString()&#123;</div><div
+                                                            class="line">        return &quot;name=&quot;+this.name+&quot;,age=&quot;+this.age;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//继承</div><div
+                                                            class="line">export default class Boy extends Man&#123;</div><div
+                                                            class="line">    constructor(name,age)&#123;</div><div
+                                                            class="line">        super(name, age);</div><div
+                                                            class="line">        this.sex=&quot;name&quot;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    toString()&#123;</div><div
+                                                            class="line">        return &quot;性别=&quot;+this.sex+&quot;,&quot;+super.toString();</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">//使用</div><div
+                                                            class="line">export default class App extends Component&lt;Props&gt; &#123;</div><div
+                                                            class="line">    constructor(props)&#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        this.man = new Man(&quot;hehe&quot;, 20);</div><div
+                                                            class="line">        this.boy = new Boy(&quot;boy&quot;, 20);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    render() &#123;</div><div
+                                                            class="line">        return (</div><div
+                                                            class="line">            &lt;View style=&#123;styles.container&#125;&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;this.man.toString()&#125;&lt;/Text&gt;</div><div
+                                                            class="line">                &lt;Text style=&#123;styles.welcome&#125;&gt;&#123;this.boy.toString()&#125;&lt;/Text&gt;</div><div
+                                                            class="line">            &lt;/View&gt;</div><div
+                                                            class="line">        )</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/react-Native/" rel="tag">#react-Native</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/03/06/react/react_leanr/" rel="next"
+                                           title="React基础">
+                                            <i class="fa fa-chevron-left"></i> React基础
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/03/08/react/react-native_UI_learn/"
+                                           rel="prev" title="ReactNative UI">
+                                            ReactNative UI <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#React-Native基础学习"><span
+                                            class="nav-number">1.</span> <span class="nav-text">React Native基础学习</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#创建"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">创建</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#生命周期"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">生命周期</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#导入和导出"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">导入和导出</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#Props"><span
+                                                    class="nav-number">1.4.</span> <span
+                                                    class="nav-text">Props</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#State"><span
+                                                    class="nav-number">1.5.</span> <span
+                                                    class="nav-text">State</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#ref"><span
+                                                    class="nav-number">1.6.</span> <span
+                                                    class="nav-text">ref</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#类"><span
+                                                    class="nav-number">1.7.</span> <span
+                                                    class="nav-text">类</span></a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Native基础学习"><span class="nav-number">1.</span> <span class="nav-text">React Native基础学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建"><span class="nav-number">1.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期"><span class="nav-number">1.2.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入和导出"><span class="nav-number">1.3.</span> <span class="nav-text">导入和导出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Props"><span class="nav-number">1.4.</span> <span class="nav-text">Props</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#State"><span class="nav-number">1.5.</span> <span class="nav-text">State</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ref"><span class="nav-number">1.6.</span> <span class="nav-text">ref</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类"><span class="nav-number">1.7.</span> <span class="nav-text">类</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -554,85 +1167,40 @@
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

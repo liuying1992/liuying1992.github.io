@@ -1,285 +1,204 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="gradle构建,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="gradle构建," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
+    <meta name="description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
 Gradle的目录结构Gradle遵循约定优先于配置的概念，在尽可能的情况下提供默认的配置参数。最基本的项目有两个”source set”组件，他们是：
 
 src/main
 src/androidTest在里面，每个存在的文件夹对应相对应的源组件，比如对应java plugin">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android Gradle使用基础">
-<meta property="og:url" content="http://yoursite.com/2016/11/16/gradle/androidGraleFirst/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Android Gradle使用基础">
+    <meta property="og:url"
+          content="http://yoursite.com/2016/11/16/gradle/androidGraleFirst/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
 Gradle的目录结构Gradle遵循约定优先于配置的概念，在尽可能的情况下提供默认的配置参数。最基本的项目有两个”source set”组件，他们是：
 
 src/main
 src/androidTest在里面，每个存在的文件夹对应相对应的源组件，比如对应java plugin">
-<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png">
-<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/dabao.png">
-<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/dabao2.png">
-<meta property="og:updated_time" content="2016-11-16T15:23:26.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Gradle使用基础">
-<meta name="twitter:description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
+    <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png">
+    <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/dabao.png">
+    <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/dabao2.png">
+    <meta property="og:updated_time" content="2016-11-16T15:23:26.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Android Gradle使用基础">
+    <meta name="twitter:description" content="Gradle在Android的使用本文是基于Gradle Android Plugin中文手册总结，以及自己本人测试所写
 Gradle的目录结构Gradle遵循约定优先于配置的概念，在尽可能的情况下提供默认的配置参数。最基本的项目有两个”source set”组件，他们是：
 
 src/main
 src/androidTest在里面，每个存在的文件夹对应相对应的源组件，比如对应java plugin">
-<meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png">
+    <meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2016/11/16/gradle/androidGraleFirst/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/16/gradle/androidGraleFirst/"/>
-
-
-  <title> Android Gradle使用基础 | Blog </title>
+    <title> Android Gradle使用基础 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Android Gradle使用基础
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    Android Gradle使用基础
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -290,8 +209,8 @@ src/androidTest在里面，每个存在的文件夹对应相对应的源组件�
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -309,321 +228,1333 @@ src/androidTest在里面，每个存在的文件夹对应相对应的源组件�
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="Gradle在Android的使用"><a href="#Gradle在Android的使用" class="headerlink" title="Gradle在Android的使用"></a>Gradle在Android的使用</h1><p>本文是基于<a href="https://www.gitbook.com/book/chaosleong/gradle-for-android/details" target="_blank" rel="external">Gradle Android Plugin中文手册总结</a>，以及自己本人测试所写</p>
-<h2 id="Gradle的目录结构"><a href="#Gradle的目录结构" class="headerlink" title="Gradle的目录结构"></a>Gradle的目录结构</h2><p>Gradle遵循约定优先于配置的概念，在尽可能的情况下提供默认的配置参数。最基本的项目有两个”source set”组件，他们是：</p>
-<ol>
-<li>src/main</li>
-<li>src/androidTest<br>在里面，每个存在的文件夹对应相对应的源组件，比如对应java plugin和Android plugin来说，他们的java代码和资源路径如下：<br>java/<br>resources/</li>
-</ol>
-<p>但是对于Android plugin来说，它还拥有一下特有的文件夹结构：</p>
-<ol>
-<li>AndroidManifest.xml</li>
-<li>res/</li>
-<li>assets/</li>
-<li>aild</li>
-<li>rs</li>
-<li>jni</li>
-<li>jniLibs</li>
-</ol>
-<p>这就意味着在Android plugin下，*.java的文件的目录是src/main/java，对于AndroidManifest.xml的目录是src/main/AndroidManifest.xml</p>
-<h2 id="配置目录结构"><a href="#配置目录结构" class="headerlink" title="配置目录结构"></a>配置目录结构</h2><p>有一些时候我们使用一些别的项目的代码，或者是把一些不属于Android项目的资源之类的引入进来，可以通过如下配置，在build.gradle中引入即可，可以引入的资源和方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">android&#123;</div><div class="line">    main&#123;</div><div class="line">           manifest.srcFile &apos;AndroidManifest.xml&apos;</div><div class="line">            java.srcDirs = [&apos;src&apos;]</div><div class="line">            resorces.sreDirs = [&apos;src&apos;]</div><div class="line">            aidl.srcDirs=[&apos;src&apos;]</div><div class="line">            renderscript.srcDirs=[&apos;src]</div><div class="line">            res.srcDirs=[&apos;res&apos;]</div><div class="line">            assets.srcDirs=[assets] </div><div class="line">   &#125;</div><div class="line"></div><div class="line"> androidTest.setRoot(&apos;tests&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中，在Android特有的sourceSets在Java sourceSets中不起作用。假如是多个，比如java.srcDirs包含多个，可以使用”,”分割开来，比如  java.srcDirs=[‘src-gen’,’src-test’]。setRoot的作用就是把另外一个可以是作为独立的测试的代码资源的文件夹安装main的格式合并进来，作为某一个builtType特有的资源。可以用作是测试，或者是dev或者是release等，在builtType中再去详细介绍。<br>例子：比如我们现在有一个使用greendao产生的src-gen的java代码，根目录就是src-gen，里面包好了greendao帮助我们产生的关于数据库的代码，我们再不适用copy进入项目而是可以直接使用的方式是：把src-gen目录拷贝到跟build.gradle同级目录，然后在build.gradle中的android节点下面，加入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sourceSets&#123;</div><div class="line">    main&#123;</div><div class="line">        java.srcDirs=[&apos;src-gen&apos;]</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样子之后，我们就可以在我们的项目中引入和使用这些代码了。</p>
-<h2 id="配通用task"><a href="#配通用task" class="headerlink" title="配通用task"></a>配通用task</h2><p>在添加了java或者的Android插件之后，gradle会自动的带有以下task</p>
-<ol>
-<li>assemble 组合项目的所有输出</li>
-<li>check 执行所有的检查任务</li>
-<li>build 执行assemble和check两个task的所有工作</li>
-<li>clean 清空项目的输出，也就是build文件夹会被删除<br>实际上，assemble，Check，build这三个task不做任何事情，他只是一个Task的标志，用来告诉plugin添加实际需要执行的task去完成这些工作。<br>task的依赖关系：当一个task依赖于另外一个task的时候，当task被调用的时候，被依赖的task会先调用，比如check task依赖于一个新task，那么当check运行的时候，新的task会先运行。<br>获取更改级别的task<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle tasks</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>查看所有的task列表以及他们之间的依赖关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle tasks --all</div></pre></td></tr></table></figure></p>
-<h3 id="java的task"><a href="#java的task" class="headerlink" title="java的task"></a>java的task</h3><ol>
-<li>assemble  jar，输出jar</li>
-<li>check test 运行测试</li>
-</ol>
-<p>常用的task有assemble<br>build<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">buildDependents</div><div class="line">buildNeeded</div><div class="line">classes</div><div class="line">clean</div><div class="line">jar</div><div class="line">testClasses</div></pre></td></tr></table></figure></p>
-<p>documentation<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javadoc</div></pre></td></tr></table></figure></p>
-<p>help<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">buildEnvironment</div><div class="line">components</div><div class="line">dependencies</div><div class="line">dependencyInsight</div><div class="line">help</div><div class="line">model</div><div class="line">projects</div><div class="line">properties</div><div class="line">tasks</div></pre></td></tr></table></figure></p>
-<p>other<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">compileJava</div><div class="line">compileTestJava</div><div class="line">processResources</div><div class="line">processTestResources</div></pre></td></tr></table></figure></p>
-<p>verification<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">check</div><div class="line">test</div></pre></td></tr></table></figure></p>
-<p>可以看到，assemble需要jar task，jar需要classes task，classes 是用于编译java生成clazz文件的task。可以使用jar或者是assemble或者是build命令去生成jar。<br>check依赖于test，task，test task依赖于classes和testClasses，也就是需要运行java获取字节码，同时运行测试</p>
-<h3 id="android的task"><a href="#android的task" class="headerlink" title="android的task"></a>android的task</h3><ol>
-<li>assemble 输出apk文件</li>
-<li>check 执行所有的检查</li>
-<li>connectedCheck 在一个连接的设备或者是模拟器上面执行检查，他们可以在所有连接的设备上面并行的执行检查</li>
-<li>deviceCheck 通过APIs连接远程设备来执行检查，主要用于CI(持续集成)服务上</li>
-<li>build 执行assemble和check的所有工作</li>
-<li>clean 情况项目的输出<br>这些标志性的的task是必须的，以保证能够在没有设备连接的情况下执行定期检查，注意build task不依赖于device Check<br>一个Android项目至少拥有两个输出：debug和release，他们有各自的标志构建<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">assembbleDebug</div><div class="line">assembleRerlease</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>其中，单独的assemble会依赖于上面的两个task，会构建出两个apk文件。<br>注意：Gradle在命令行上支持驼峰命名的task简称，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle aR</div></pre></td></tr></table></figure></p>
-<p>等同于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle assembleRelease</div></pre></td></tr></table></figure></p>
-<p>aD等同于assembleDebug</p>
-<p>check task的依赖：<br>check 依赖 lint<br>connectedCheck 依赖connectedAndroidTest<br>deviceCheck 进行测试时才会触发。<br>只要可被安装，也就是使用了”com.android.application”gradle插件的项目，就可以被安装。使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">installDebug //安装debug版本</div><div class="line">installRelease//安装release版本</div><div class="line">uninstallAll //卸载</div><div class="line">uninstallDebug //卸载debug版本</div><div class="line">uninstallRelease  //卸载正式版本</div><div class="line">uninstallDebugAndroidTest // 卸载测试</div></pre></td></tr></table></figure></p>
-<p>Android的常用task有：<br>android task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">androidDependencies</div><div class="line">signingReport</div><div class="line">sourceSets</div></pre></td></tr></table></figure></p>
-<p>build task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">assemble</div><div class="line">assembleAndroidTest</div><div class="line">assembleDebug</div><div class="line">assembleRelease</div><div class="line">build</div><div class="line">buildDependents</div><div class="line">buildNeeded</div><div class="line">classes</div><div class="line">compileDebugAndroidTestSources</div><div class="line">compileDebugSources</div><div class="line">compileDebugUnitTestSources</div><div class="line">compileReleaseSources</div><div class="line">compileReleaseUnitTestSources</div><div class="line">compileRetrolambda</div><div class="line">extractDebugAnnotations</div><div class="line">extractReleaseAnnotations</div><div class="line">jar</div><div class="line">mockableAndroidJar</div><div class="line">testClasses</div></pre></td></tr></table></figure></p>
-<p>build setup task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">init</div><div class="line">wrapper</div></pre></td></tr></table></figure></p>
-<p>documentation task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javadoc</div></pre></td></tr></table></figure></p>
-<p>help task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">buildEnvironment</div><div class="line">components</div><div class="line">dependencies</div><div class="line">dependencyInsight</div><div class="line">help</div><div class="line">model</div><div class="line">projects</div><div class="line">properties</div><div class="line">tasks</div></pre></td></tr></table></figure></p>
-<p>install task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">installDebug</div><div class="line">installDebugAndroidTest</div><div class="line">uninstallAll</div><div class="line">uninstallDebug</div><div class="line">uninstallDebugAndroidTest</div><div class="line">uninstallRelease</div></pre></td></tr></table></figure></p>
-<p>other task，这个比较多，可以在AS的gradle视图查看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">assembleDebugAndroidTest</div><div class="line">assembleDebugUnitTest</div><div class="line">assembleDefault</div><div class="line">assembleReleaseUnitTest</div><div class="line">bundleDebug</div><div class="line">bundleRelease</div><div class="line">.....</div></pre></td></tr></table></figure></p>
-<p>verification task<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">check</div><div class="line">connectedAndroidTest</div><div class="line">connectedCheck</div><div class="line">connectedDebugAndroidTest</div><div class="line">deviceAndroidTest</div><div class="line">deviceCheck</div><div class="line">lint</div><div class="line">lintDebug</div><div class="line">lintRelease</div><div class="line">test</div><div class="line">testDebugUnitTest</div><div class="line">testReleaseUnitTest</div></pre></td></tr></table></figure></p>
-<h2 id="DSL定义Manifest属性"><a href="#DSL定义Manifest属性" class="headerlink" title="DSL定义Manifest属性"></a>DSL定义Manifest属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">minSdkVersion //app运行的最多版本</div><div class="line">tagetSdkVersion  //使用的sdk版本</div><div class="line">versionCode    //app版本code</div><div class="line">versionName    //app版本name</div><div class="line">applicationId    //包名</div><div class="line">testApplicationId    //测试包名</div><div class="line">testInstrumentationRunner</div></pre></td></tr></table></figure>
-<p>这些属性都是使用AS的android的gradle插件提供的，需要使用插件的某一个，然后在android节点下面定义。比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">android&#123;</div><div class="line">    compileSdkVersion 23</div><div class="line">    buildToolsVersion &quot;23.0.1&quot;&apos; </div><div class="line">    </div><div class="line">    defaultConfig&#123;</div><div class="line">        versionCode 100</div><div class="line">        versionName &quot;1.0.0&quot;</div><div class="line">        minSdkVersion 14</div><div class="line">        targetSdkVersion 23</div><div class="line">        applicationId &quot;com.test.gradle&quot;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="构建类型"><a href="#构建类型" class="headerlink" title="构建类型"></a>构建类型</h2><p>通过android 节点下面的buildType节点可以构建不同的类型的apk。目前只是针对一个产品，针对多个产品的可以使用 productFlavors，这个之后再做解析。<br>使用buildType节点，默认的，AS会为我们添加debug和release这两个构建类型。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            minifyEnabled true</div><div class="line">            signingConfig signingConfigs.release</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">        debug&#123;</div><div class="line">            minifyEnabled false</div><div class="line">            signingConfig signingConfigs.debug</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>这两种类型。<br>其中，minifyEnabled 是是否混淆，signingConfig 是签名，proguardFiles是混淆的文件。我们一般在开发的时候需要使用这两个版本的apk，方便我们调试。<br>假如，我们需要其他的包名，或者是签名的，可以继续添加构建类型，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            minifyEnabled false</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">        debug&#123;</div><div class="line">            minifyEnabled false</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">        dev&#123;</div><div class="line">            minifyEnabled false</div><div class="line">            applicationIdSuffix &quot;.dev&quot;</div><div class="line">            signingConfig signingConfigs.debug</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>这样子我们就可以构建了另一个一个dev的类型的apk，他的报名时原来的defaultConfig的applicationId+”.dev”，这是他的心新报名，我们允许的时候，可以在AS的左下角，build Variants选择运行类型，或者是在右边的选择对应的task去build或者是install apk都是可以的，因为定义了对应的buildType之后，gradle会生成对应的task，比如这里的会生成assembleDev，可以使用aD进行快速的构建。<br>使用buildType的另外一个好处就是可以对不同的类型使用不同的代码或者是资源，他同样是支持sourceSets的，可以为他自己设置不同的代码，不同的资源，通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sourceSets.buildType.setRoot(&apos;path&apos;)</div></pre></td></tr></table></figure></p>
-<p>其中path就是对应的目录，比如是dev的就是把dev所在的目录，相当于完整的另一个的目录设置进去，就可以作为devbuild时候的资源了。<br>注意：</p>
-<ol>
-<li>manifest 将被合并到 app 的 manifest</li>
-<li>代码只是换了一个源文件夹</li>
-<li>资源将叠加到 main 的资源中，并替换已存在的资源。<br>也就是dev这个builtType会合并main文件夹的代码和资源，合并的方式就是上面的方式。<br>但是实际上，建议使用的是产品定制化，也就是使用productFlavors去实现，关于productFlavors实现不同的产品定制化，在后续给大家分享。<h2 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h2>设置签名是位于android节点下面的signingConfigs节点下面，例如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    compileSdkVersion 23</div><div class="line">    buildToolsVersion &quot;23.0.2&quot;</div><div class="line"> </div><div class="line">    defaultConfig &#123;</div><div class="line">        applicationId &quot;com.example.user.testproject&quot;</div><div class="line">        minSdkVersion 15</div><div class="line">        targetSdkVersion 23</div><div class="line">        versionCode 1</div><div class="line">        versionName &quot;1.0&quot;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line"> signingConfigs &#123;</div><div class="line">        debug &#123;</div><div class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div class="line">            storePassword &quot;liweijie123&quot;</div><div class="line">            keyAlias &quot;liweijie&quot;</div><div class="line">            keyPassword &quot;liweijie123&quot;</div><div class="line">        &#125;</div><div class="line">        release &#123;</div><div class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div class="line">            storePassword &quot;liweijie123&quot;</div><div class="line">            keyAlias &quot;liweijie&quot;</div><div class="line">            keyPassword &quot;liweijie123&quot;</div><div class="line">        &#125;</div><div class="line">dev&#123;</div><div class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div class="line">            storePassword &quot;liweijie123&quot;</div><div class="line">            keyAlias &quot;liweijie&quot;</div><div class="line">            keyPassword &quot;liweijie123&quot;</div><div class="line">   &#125;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">             signingConfig signingConfigs.release </div><div class="line">            minifyEnabled false</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">        debug&#123;</div><div class="line">            signingConfig signingConfigs.debug</div><div class="line">            minifyEnabled false</div><div class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div class="line">        &#125;</div><div class="line">        dev&#123;</div><div class="line">            minifyEnabled false</div><div class="line">            applicationIdSuffix &quot;.dev&quot;</div><div class="line">            signingConfig signingConfigs.dev</div><div class="line">        &#125;</div><div class="line"> </div><div class="line">    &#125;</div><div class="line">    compileOptions &#123;</div><div class="line">        sourceCompatibility JavaVersion. VERSION_1_8</div><div class="line">        targetCompatibility JavaVersion. VERSION_1_8</div><div class="line">    &#125;</div><div class="line">    sourceSets.dev.setRoot(&apos;src/dev&apos;)</div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>这里设置了debug和release签名都是同一个，你也可以设置为不同的签名。<br>其中：<br>storeFile file() 指定签名的路径，可以使用相对路径，把对应的签名放在项目跟对应的build同级目录下去引用<br>storePassword  签名的密码<br>keyAlias 签名的别名<br>keyPassword 别名对应的密码<br>我们可以定义多个签名给不同的buildType，不同对应不同的签名，但是建议不需要太多，太多的话运行的时候回懵逼，特别是我们通过判断签名是否是正式的签名来判断代码是否是debug状态的时候。</p>
-<h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>使用dependencies节点，该节点是跟android节点同级的.<br>1、 引用本地的依赖，比如我们的jar，通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies&#123;</div><div class="line"> compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>他会把跟src同级的libs目录下面的jar文件作为依赖引入进来，当你存放在其他地方的时候，也可以手动的引入进来，比如我们存放在src/lib目录下面，可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">       compile files(&apos;src/lib/test.jar&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这一个方式引入进来。<br>2、 引用远程的依赖<br>我们有时候会使用一些github的开源库，或者是自己公司私有的maven库或者是一些其他公司提供的仓库，使用到他们的jar。当然我们可以把他们下载下来存放到libs目录下面进行依赖，但是这样子不是很方便，因为有时候版本变更的比较频繁的时候，我们就需要经常去下载，使用远程依赖我们就是只是需要升级一下版本号，clean一下项目就ok了。<br>使用方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">    compile &apos;com.android.support:appcompat-v7:23.1.0&apos;</div><div class="line">    compile &apos;com.android.support:design:23.1.0&apos;</div><div class="line">    compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div><div class="line">    compile &apos;io.reactivex:rxjava:1.1.6&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这里我们引入rx的依赖和v7已以及support:design依赖。依赖的引入时跟maven左边的那种<br>groupId:artifactId:version<br>比如上面的io.reactivex就是groupId，rxJava就是artifactId，1.1.6就是version<br>需要使用这些依赖，同时我们需要申明仓库地址，比如常用的maven仓库，jcenter仓库，我们在整个project的根目录(也就是声明gradle插件的地方)的build.gradle中申明。比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.2.1&apos;</div><div class="line">        classpath &apos;me.tatarka:gradle-retrolambda:3.2.0&apos;</div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>3、引用lib依赖<br>我们开发的时候，常常会考虑模块化，多人开发，功能分类等，常常有lib的抽取，同时这个lib有时候也会作为一个公用库，做成arr给别的项目依赖，当我们需要多个lib分开整个app的模块或者是测试我们做成的aar的lib的时候，我们就需要使用模块依赖。<br>我们新建一个android lib，android插件类型是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.android.library&apos;</div></pre></td></tr></table></figure></p>
-<p>然后需要使用到的app可运行或者是其他的lib，使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">        compile project(&apos;:lib&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中lib就是你的lib项目。</p>
-<h2 id="lib-module"><a href="#lib-module" class="headerlink" title="lib module"></a>lib module</h2><p>lib是可以输出一个arr别的lib或者是可运行的app module使用。<br>lib使用的android插件是com.android.library<br>lib包含的内容有源代码，资源文件，清单文件，lib本身的相关依赖(so文件或者是其他的arr,jar文件)。他被依赖到别的项目的时候，资源文件和清单会被合并，当有重复命名的时候，比如同样有两个string的name为app_name的，那么lib的将会被覆盖。java代码就是不会被合并，当存在两个包名相同，类名相同的java文件的时候回报多个字节码文件的错误。<br>当一个lib或者是app module依赖多个子lib的时候，假如子lib之间存在着资源冲突，也会发生某某资源已经定义的错误。<br>我们发布被依赖的lib版本的时候，可以通过buildType或者productFlavors去实现，同样可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    defaultPublishConfig &quot;flavor&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中，flavor在没有其他定义的产品渠道的时候，是debug或者是release，一般我们使用的是release版本，假如我们需要发布多个arr，包括debug，release或者是其他flavor或者是buildType的时候，可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    publishNonDefault true</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>每一个arr都是独立的，包含自己的资源和代码，相对应的sourceSets等。</p>
-<h2 id="Gradle构建变种版本"><a href="#Gradle构建变种版本" class="headerlink" title="Gradle构建变种版本"></a>Gradle构建变种版本</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>构建变种版本是有利于我们调试，多渠道打包。比如，我们需要上360，应用宝市场，然后需要区分这两个这两个市场的下载量，卸载量等，我们通过在清档文件带有一个渠道标识，当然，我们可以一次一次的分开打包，没打完一个包然后就再次修改渠道标识再次打包。但是这样子很繁琐时间也很长，我们就可以使用AS使用的Gradle实现变种apk来一次性打完所有的apk。同时使用多渠道打包，我们可以同时打出不同的安装名字和桌面名字的apk。比如在应用宝上面，安装名字是A，桌面名字是B，在360渠道上面安装名字是C，桌面名字是D，使用多渠道就可以一次性打出这些包。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>变种打包其实是等于productFlavors+不同的BuildType。<br>上一篇文件我们介绍了BuildType，虽然我们可以使用多个BuildType来达到使用不同的资源，代码，清单，依赖等，但是，当我们需要一次性输出多个apk的时候是行不通的，我们就可以使用productFlavors。<br>首先，我们需要在src目录下面建立一些我们需要的文件夹，就是我们需要打包的那些渠道，比如qihu360，yingyongbao，如下图：<br><img src="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png" alt=""><br>然后，在可运行的app module根目录的build.gradle中的android节点下面，添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">productFlavors&#123;</div><div class="line">     dev &#123;&#125;</div><div class="line">     dev2 &#123;&#125;</div><div class="line">     qihu360&#123;&#125;</div><div class="line">     yingyongbao&#123;&#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
-<p>这样子，同步一下，然后我们在运行测试的时候，可以在AS左下角BuildVariants中，选择安装不同的变种apk，可以用来测试。<br>他可以运行的种类是productFlavors的数目跟BuildType的数目的排列组合。比如4个变种，2个buildType，就可以输出8个apk。<br>我们通过AS的build工具，进行签名相关，就可以输出多个apk了。如下图：<br><img src="http://ocxgpwj6l.bkt.clouddn.com/dabao.png" alt=""><br><img src="http://ocxgpwj6l.bkt.clouddn.com/dabao2.png" alt=""><br>我们输出的时候一般是选择release版本的需要的变种版本的apk，然后就静静等待一下apk打包完成即可。</p>
-<h3 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h3><p>Android打包的时候回合并资源，上级会覆盖替换下级的资源。所以，假如我们需要统计某一个渠道，可以通过java的多台，使用继承，在各个变种使用不同的Application去继承main中的Application，或者是通过覆盖资源，或者是通过在各个变种的清单文件中添加不同的渠道，这样子就能起到不同的apk有不同的渠道而且可以一次性打包完成的作用。清单文件他也是会合并的。<br>在变种文件夹中，比如上面的qihu360，我们可以建立跟main文件夹一样的目录结构，只不过这些资源或是代码只可以在变种中存在和使用。这里就不一一截图了。<br>使用不同的资源和代码，通过覆盖和替换，我们可以定制各个不同的apk，公用大部分的代码和资源。比如我们的某一些变种需要广告，一些不需要，我们就可以通过java的多台实现。通过在main或者是lib中提供一个接口或者是类，然后在变种中实现，通过在变种的Application类写入，在main或者是lib中通过getApplication()获取，这样子就可以做到不同的变种使用不同的东西。<br>productFlavors中提供的变种除了可以输出不同的apk之外，他还可以设置更多的东西。<br>他可以定制变种的包名，变种的签名，变种的sdk版本等，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">productFlavors&#123;</div><div class="line">        dev &#123;</div><div class="line">            applicationId &quot;com.example.user..dev&quot;</div><div class="line">            minSdkVersion 14</div><div class="line">            targetSdkVersion 23</div><div class="line">            versionCode 1</div><div class="line">            versionName &quot;1.0&quot;</div><div class="line">            signingConfig signingConfigs.dev</div><div class="line">        &#125;</div><div class="line">        dev2 &#123;&#125;</div><div class="line">        qihu360&#123;&#125;</div><div class="line">        yingyongbao&#123;&#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>因为productFlavors和defaultConfig是同级的，所以defaultConfig的属性在productFlavors中也可以使用。这样子我们也就可以输出更加具有定制化的apk了，可以是不同签名的，不同version和针对不同android 版本的apk。<br>注意一点：<br>applicationId和package的区别：<br>applicationId是在build.gradle中定义的，package是在清单文件中定义的，他们二者可以不同。<br>applicationId是应用的真正包名，package是应用的资源包名，也就是R文件生成的路径，尹永峰资源的路径。某一些时候，他们不同是会出现一些问题的，比如，在个人实践中发现，使用友盟push的时候，假如不同会获取不到token，就是当你没有显示的设置包名参数给友盟的时候。有时候测试某一些广告的时候，有一些广告也是无法出现的。所以，还是建议这二者一般保持一致避免导致有时候找bug不知道是那里出问题了。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/gradle构建/" rel="tag">#gradle构建</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/11/07/gradle/gradle-java1/" rel="next" title="Gradle构建java程序一">
-                <i class="fa fa-chevron-left"></i> Gradle构建java程序一
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/23/gradle/GroovyLan/" rel="prev" title="Groovy语言学习基础">
-                Groovy语言学习基础 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h1 id="Gradle在Android的使用"><a href="#Gradle在Android的使用"
+                                                              class="headerlink"
+                                                              title="Gradle在Android的使用"></a>Gradle在Android的使用
+                                </h1>
+                                <p>本文是基于<a
+                                        href="https://www.gitbook.com/book/chaosleong/gradle-for-android/details"
+                                        target="_blank" rel="external">Gradle Android
+                                    Plugin中文手册总结</a>，以及自己本人测试所写</p>
+                                <h2 id="Gradle的目录结构"><a href="#Gradle的目录结构" class="headerlink"
+                                                        title="Gradle的目录结构"></a>Gradle的目录结构</h2>
+                                <p>Gradle遵循约定优先于配置的概念，在尽可能的情况下提供默认的配置参数。最基本的项目有两个”source
+                                    set”组件，他们是：</p>
+                                <ol>
+                                    <li>src/main</li>
+                                    <li>src/androidTest<br>在里面，每个存在的文件夹对应相对应的源组件，比如对应java
+                                        plugin和Android plugin来说，他们的java代码和资源路径如下：<br>java/<br>resources/
+                                    </li>
+                                </ol>
+                                <p>但是对于Android plugin来说，它还拥有一下特有的文件夹结构：</p>
+                                <ol>
+                                    <li>AndroidManifest.xml</li>
+                                    <li>res/</li>
+                                    <li>assets/</li>
+                                    <li>aild</li>
+                                    <li>rs</li>
+                                    <li>jni</li>
+                                    <li>jniLibs</li>
+                                </ol>
+                                <p>这就意味着在Android
+                                    plugin下，*.java的文件的目录是src/main/java，对于AndroidManifest.xml的目录是src/main/AndroidManifest.xml</p>
+                                <h2 id="配置目录结构"><a href="#配置目录结构" class="headerlink"
+                                                   title="配置目录结构"></a>配置目录结构</h2>
+                                <p>
+                                    有一些时候我们使用一些别的项目的代码，或者是把一些不属于Android项目的资源之类的引入进来，可以通过如下配置，在build.gradle中引入即可，可以引入的资源和方法：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">android&#123;</div><div
+                                                            class="line">    main&#123;</div><div
+                                                            class="line">           manifest.srcFile &apos;AndroidManifest.xml&apos;</div><div
+                                                            class="line">            java.srcDirs = [&apos;src&apos;]</div><div
+                                                            class="line">            resorces.sreDirs = [&apos;src&apos;]</div><div
+                                                            class="line">            aidl.srcDirs=[&apos;src&apos;]</div><div
+                                                            class="line">            renderscript.srcDirs=[&apos;src]</div><div
+                                                            class="line">            res.srcDirs=[&apos;res&apos;]</div><div
+                                                            class="line">            assets.srcDirs=[assets] </div><div
+                                                            class="line">   &#125;</div><div
+                                                            class="line"></div><div class="line"> androidTest.setRoot(&apos;tests&apos;)</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>其中，在Android特有的sourceSets在Java
+                                    sourceSets中不起作用。假如是多个，比如java.srcDirs包含多个，可以使用”,”分割开来，比如
+                                    java.srcDirs=[‘src-gen’,’src-test’]。setRoot的作用就是把另外一个可以是作为独立的测试的代码资源的文件夹安装main的格式合并进来，作为某一个builtType特有的资源。可以用作是测试，或者是dev或者是release等，在builtType中再去详细介绍。<br>例子：比如我们现在有一个使用greendao产生的src-gen的java代码，根目录就是src-gen，里面包好了greendao帮助我们产生的关于数据库的代码，我们再不适用copy进入项目而是可以直接使用的方式是：把src-gen目录拷贝到跟build.gradle同级目录，然后在build.gradle中的android节点下面，加入：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">sourceSets&#123;</div><div
+                                                            class="line">    main&#123;</div><div
+                                                            class="line">        java.srcDirs=[&apos;src-gen&apos;]</div><div
+                                                            class="line">   &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子之后，我们就可以在我们的项目中引入和使用这些代码了。</p>
+                                <h2 id="配通用task"><a href="#配通用task" class="headerlink"
+                                                    title="配通用task"></a>配通用task</h2>
+                                <p>在添加了java或者的Android插件之后，gradle会自动的带有以下task</p>
+                                <ol>
+                                    <li>assemble 组合项目的所有输出</li>
+                                    <li>check 执行所有的检查任务</li>
+                                    <li>build 执行assemble和check两个task的所有工作</li>
+                                    <li>clean 清空项目的输出，也就是build文件夹会被删除<br>实际上，assemble，Check，build这三个task不做任何事情，他只是一个Task的标志，用来告诉plugin添加实际需要执行的task去完成这些工作。<br>task的依赖关系：当一个task依赖于另外一个task的时候，当task被调用的时候，被依赖的task会先调用，比如check
+                                        task依赖于一个新task，那么当check运行的时候，新的task会先运行。<br>获取更改级别的task
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div
+                                                                class="line">gradle tasks</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>查看所有的task列表以及他们之间的依赖关系<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">gradle tasks --all</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="java的task"><a href="#java的task" class="headerlink"
+                                                      title="java的task"></a>java的task</h3>
+                                <ol>
+                                    <li>assemble jar，输出jar</li>
+                                    <li>check test 运行测试</li>
+                                </ol>
+                                <p>常用的task有assemble<br>build<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildDependents</div><div
+                                                            class="line">buildNeeded</div><div
+                                                            class="line">classes</div><div
+                                                            class="line">clean</div><div
+                                                            class="line">jar</div><div class="line">testClasses</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>documentation<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">javadoc</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>help<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildEnvironment</div><div
+                                                            class="line">components</div><div
+                                                            class="line">dependencies</div><div
+                                                            class="line">dependencyInsight</div><div
+                                                            class="line">help</div><div
+                                                            class="line">model</div><div
+                                                            class="line">projects</div><div
+                                                            class="line">properties</div><div
+                                                            class="line">tasks</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>other<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">compileJava</div><div
+                                                            class="line">compileTestJava</div><div
+                                                            class="line">processResources</div><div
+                                                            class="line">processTestResources</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>verification<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">check</div><div
+                                                            class="line">test</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>可以看到，assemble需要jar task，jar需要classes task，classes
+                                    是用于编译java生成clazz文件的task。可以使用jar或者是assemble或者是build命令去生成jar。<br>check依赖于test，task，test
+                                    task依赖于classes和testClasses，也就是需要运行java获取字节码，同时运行测试</p>
+                                <h3 id="android的task"><a href="#android的task" class="headerlink"
+                                                         title="android的task"></a>android的task</h3>
+                                <ol>
+                                    <li>assemble 输出apk文件</li>
+                                    <li>check 执行所有的检查</li>
+                                    <li>connectedCheck 在一个连接的设备或者是模拟器上面执行检查，他们可以在所有连接的设备上面并行的执行检查
+                                    </li>
+                                    <li>deviceCheck 通过APIs连接远程设备来执行检查，主要用于CI(持续集成)服务上</li>
+                                    <li>build 执行assemble和check的所有工作</li>
+                                    <li>clean 情况项目的输出<br>这些标志性的的task是必须的，以保证能够在没有设备连接的情况下执行定期检查，注意build
+                                        task不依赖于device Check<br>一个Android项目至少拥有两个输出：debug和release，他们有各自的标志构建
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">assembbleDebug</div><div
+                                                                class="line">assembleRerlease</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>其中，单独的assemble会依赖于上面的两个task，会构建出两个apk文件。<br>注意：Gradle在命令行上支持驼峰命名的task简称，比如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">gradle aR</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>等同于<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">gradle assembleRelease</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>aD等同于assembleDebug</p>
+                                <p>check task的依赖：<br>check 依赖 lint<br>connectedCheck
+                                    依赖connectedAndroidTest<br>deviceCheck 进行测试时才会触发。<br>只要可被安装，也就是使用了”com.android.application”gradle插件的项目，就可以被安装。使用<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">installDebug //安装debug版本</div><div
+                                                            class="line">installRelease//安装release版本</div><div
+                                                            class="line">uninstallAll //卸载</div><div
+                                                            class="line">uninstallDebug //卸载debug版本</div><div
+                                                            class="line">uninstallRelease  //卸载正式版本</div><div
+                                                            class="line">uninstallDebugAndroidTest // 卸载测试</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>Android的常用task有：<br>android task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">androidDependencies</div><div
+                                                            class="line">signingReport</div><div
+                                                            class="line">sourceSets</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>build task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">assemble</div><div
+                                                            class="line">assembleAndroidTest</div><div
+                                                            class="line">assembleDebug</div><div
+                                                            class="line">assembleRelease</div><div
+                                                            class="line">build</div><div
+                                                            class="line">buildDependents</div><div
+                                                            class="line">buildNeeded</div><div
+                                                            class="line">classes</div><div
+                                                            class="line">compileDebugAndroidTestSources</div><div
+                                                            class="line">compileDebugSources</div><div
+                                                            class="line">compileDebugUnitTestSources</div><div
+                                                            class="line">compileReleaseSources</div><div
+                                                            class="line">compileReleaseUnitTestSources</div><div
+                                                            class="line">compileRetrolambda</div><div
+                                                            class="line">extractDebugAnnotations</div><div
+                                                            class="line">extractReleaseAnnotations</div><div
+                                                            class="line">jar</div><div class="line">mockableAndroidJar</div><div
+                                                            class="line">testClasses</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>build setup task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">init</div><div
+                                                            class="line">wrapper</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>documentation task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">javadoc</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>help task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildEnvironment</div><div
+                                                            class="line">components</div><div
+                                                            class="line">dependencies</div><div
+                                                            class="line">dependencyInsight</div><div
+                                                            class="line">help</div><div
+                                                            class="line">model</div><div
+                                                            class="line">projects</div><div
+                                                            class="line">properties</div><div
+                                                            class="line">tasks</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>install task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">installDebug</div><div
+                                                            class="line">installDebugAndroidTest</div><div
+                                                            class="line">uninstallAll</div><div
+                                                            class="line">uninstallDebug</div><div
+                                                            class="line">uninstallDebugAndroidTest</div><div
+                                                            class="line">uninstallRelease</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>other task，这个比较多，可以在AS的gradle视图查看<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">assembleDebugAndroidTest</div><div
+                                                            class="line">assembleDebugUnitTest</div><div
+                                                            class="line">assembleDefault</div><div
+                                                            class="line">assembleReleaseUnitTest</div><div
+                                                            class="line">bundleDebug</div><div
+                                                            class="line">bundleRelease</div><div
+                                                            class="line">.....</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>verification task<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">check</div><div
+                                                            class="line">connectedAndroidTest</div><div
+                                                            class="line">connectedCheck</div><div
+                                                            class="line">connectedDebugAndroidTest</div><div
+                                                            class="line">deviceAndroidTest</div><div
+                                                            class="line">deviceCheck</div><div
+                                                            class="line">lint</div><div
+                                                            class="line">lintDebug</div><div
+                                                            class="line">lintRelease</div><div
+                                                            class="line">test</div><div
+                                                            class="line">testDebugUnitTest</div><div
+                                                            class="line">testReleaseUnitTest</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="DSL定义Manifest属性"><a href="#DSL定义Manifest属性"
+                                                            class="headerlink"
+                                                            title="DSL定义Manifest属性"></a>DSL定义Manifest属性
+                                </h2>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div
+                                                        class="line">minSdkVersion //app运行的最多版本</div><div
+                                                        class="line">tagetSdkVersion  //使用的sdk版本</div><div
+                                                        class="line">versionCode    //app版本code</div><div
+                                                        class="line">versionName    //app版本name</div><div
+                                                        class="line">applicationId    //包名</div><div
+                                                        class="line">testApplicationId    //测试包名</div><div
+                                                        class="line">testInstrumentationRunner</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>这些属性都是使用AS的android的gradle插件提供的，需要使用插件的某一个，然后在android节点下面定义。比如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">android&#123;</div><div
+                                                            class="line">    compileSdkVersion 23</div><div
+                                                            class="line">    buildToolsVersion &quot;23.0.1&quot;&apos; </div><div
+                                                            class="line">    </div><div
+                                                            class="line">    defaultConfig&#123;</div><div
+                                                            class="line">        versionCode 100</div><div
+                                                            class="line">        versionName &quot;1.0.0&quot;</div><div
+                                                            class="line">        minSdkVersion 14</div><div
+                                                            class="line">        targetSdkVersion 23</div><div
+                                                            class="line">        applicationId &quot;com.test.gradle&quot;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="构建类型"><a href="#构建类型" class="headerlink" title="构建类型"></a>构建类型
+                                </h2>
+                                <p>通过android 节点下面的buildType节点可以构建不同的类型的apk。目前只是针对一个产品，针对多个产品的可以使用
+                                    productFlavors，这个之后再做解析。<br>使用buildType节点，默认的，AS会为我们添加debug和release这两个构建类型。例如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildTypes &#123;</div><div
+                                                            class="line">        release &#123;</div><div
+                                                            class="line">            minifyEnabled true</div><div
+                                                            class="line">            signingConfig signingConfigs.release</div><div
+                                                            class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        debug&#123;</div><div
+                                                            class="line">            minifyEnabled false</div><div
+                                                            class="line">            signingConfig signingConfigs.debug</div><div
+                                                            class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这两种类型。<br>其中，minifyEnabled 是是否混淆，signingConfig
+                                    是签名，proguardFiles是混淆的文件。我们一般在开发的时候需要使用这两个版本的apk，方便我们调试。<br>假如，我们需要其他的包名，或者是签名的，可以继续添加构建类型，比如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildTypes &#123;</div><div
+                                                            class="line">        release &#123;</div><div
+                                                            class="line">            minifyEnabled false</div><div
+                                                            class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        debug&#123;</div><div
+                                                            class="line">            minifyEnabled false</div><div
+                                                            class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        dev&#123;</div><div
+                                                            class="line">            minifyEnabled false</div><div
+                                                            class="line">            applicationIdSuffix &quot;.dev&quot;</div><div
+                                                            class="line">            signingConfig signingConfigs.debug</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    这样子我们就可以构建了另一个一个dev的类型的apk，他的报名时原来的defaultConfig的applicationId+”.dev”，这是他的心新报名，我们允许的时候，可以在AS的左下角，build
+                                    Variants选择运行类型，或者是在右边的选择对应的task去build或者是install
+                                    apk都是可以的，因为定义了对应的buildType之后，gradle会生成对应的task，比如这里的会生成assembleDev，可以使用aD进行快速的构建。<br>使用buildType的另外一个好处就是可以对不同的类型使用不同的代码或者是资源，他同样是支持sourceSets的，可以为他自己设置不同的代码，不同的资源，通过<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">sourceSets.buildType.setRoot(&apos;path&apos;)</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    其中path就是对应的目录，比如是dev的就是把dev所在的目录，相当于完整的另一个的目录设置进去，就可以作为devbuild时候的资源了。<br>注意：
+                                </p>
+                                <ol>
+                                    <li>manifest 将被合并到 app 的 manifest</li>
+                                    <li>代码只是换了一个源文件夹</li>
+                                    <li>资源将叠加到 main 的资源中，并替换已存在的资源。<br>也就是dev这个builtType会合并main文件夹的代码和资源，合并的方式就是上面的方式。<br>但是实际上，建议使用的是产品定制化，也就是使用productFlavors去实现，关于productFlavors实现不同的产品定制化，在后续给大家分享。
+                                        <h2 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名
+                                        </h2>设置签名是位于android节点下面的signingConfigs节点下面，例如：
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div><div
+                                                                class="line">45</div><div
+                                                                class="line">46</div><div
+                                                                class="line">47</div><div
+                                                                class="line">48</div><div
+                                                                class="line">49</div><div
+                                                                class="line">50</div><div
+                                                                class="line">51</div><div
+                                                                class="line">52</div><div
+                                                                class="line">53</div><div
+                                                                class="line">54</div><div
+                                                                class="line">55</div><div
+                                                                class="line">56</div><div
+                                                                class="line">57</div><div
+                                                                class="line">58</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">android &#123;</div><div
+                                                                class="line">    compileSdkVersion 23</div><div
+                                                                class="line">    buildToolsVersion &quot;23.0.2&quot;</div><div
+                                                                class="line"> </div><div
+                                                                class="line">    defaultConfig &#123;</div><div
+                                                                class="line">        applicationId &quot;com.example.user.testproject&quot;</div><div
+                                                                class="line">        minSdkVersion 15</div><div
+                                                                class="line">        targetSdkVersion 23</div><div
+                                                                class="line">        versionCode 1</div><div
+                                                                class="line">        versionName &quot;1.0&quot;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line"> </div><div
+                                                                class="line"> signingConfigs &#123;</div><div
+                                                                class="line">        debug &#123;</div><div
+                                                                class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div
+                                                                class="line">            storePassword &quot;liweijie123&quot;</div><div
+                                                                class="line">            keyAlias &quot;liweijie&quot;</div><div
+                                                                class="line">            keyPassword &quot;liweijie123&quot;</div><div
+                                                                class="line">        &#125;</div><div
+                                                                class="line">        release &#123;</div><div
+                                                                class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div
+                                                                class="line">            storePassword &quot;liweijie123&quot;</div><div
+                                                                class="line">            keyAlias &quot;liweijie&quot;</div><div
+                                                                class="line">            keyPassword &quot;liweijie123&quot;</div><div
+                                                                class="line">        &#125;</div><div
+                                                                class="line">dev&#123;</div><div
+                                                                class="line">            storeFile file(&quot;C:\\Users\\liweijie\\Desktop\\liweijie.jks&quot;)</div><div
+                                                                class="line">            storePassword &quot;liweijie123&quot;</div><div
+                                                                class="line">            keyAlias &quot;liweijie&quot;</div><div
+                                                                class="line">            keyPassword &quot;liweijie123&quot;</div><div
+                                                                class="line">   &#125;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line"> </div><div
+                                                                class="line">    buildTypes &#123;</div><div
+                                                                class="line">        release &#123;</div><div
+                                                                class="line">             signingConfig signingConfigs.release </div><div
+                                                                class="line">            minifyEnabled false</div><div
+                                                                class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                                class="line">        &#125;</div><div
+                                                                class="line">        debug&#123;</div><div
+                                                                class="line">            signingConfig signingConfigs.debug</div><div
+                                                                class="line">            minifyEnabled false</div><div
+                                                                class="line">            proguardFiles getDefaultProguardFile(&apos;proguard-android.txt&apos;), &apos;proguard-rules.pro&apos;</div><div
+                                                                class="line">        &#125;</div><div
+                                                                class="line">        dev&#123;</div><div
+                                                                class="line">            minifyEnabled false</div><div
+                                                                class="line">            applicationIdSuffix &quot;.dev&quot;</div><div
+                                                                class="line">            signingConfig signingConfigs.dev</div><div
+                                                                class="line">        &#125;</div><div
+                                                                class="line"> </div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    compileOptions &#123;</div><div
+                                                                class="line">        sourceCompatibility JavaVersion. VERSION_1_8</div><div
+                                                                class="line">        targetCompatibility JavaVersion. VERSION_1_8</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    sourceSets.dev.setRoot(&apos;src/dev&apos;)</div><div
+                                                                class="line"> </div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>这里设置了debug和release签名都是同一个，你也可以设置为不同的签名。<br>其中：<br>storeFile
+                                    file() 指定签名的路径，可以使用相对路径，把对应的签名放在项目跟对应的build同级目录下去引用<br>storePassword
+                                    签名的密码<br>keyAlias 签名的别名<br>keyPassword 别名对应的密码<br>我们可以定义多个签名给不同的buildType，不同对应不同的签名，但是建议不需要太多，太多的话运行的时候回懵逼，特别是我们通过判断签名是否是正式的签名来判断代码是否是debug状态的时候。
+                                </p>
+                                <h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理
+                                </h2>
+                                <p>使用dependencies节点，该节点是跟android节点同级的.<br>1、 引用本地的依赖，比如我们的jar，通过<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">dependencies&#123;</div><div
+                                                            class="line"> compile fileTree(dir: &apos;libs&apos;, include: [&apos;*.jar&apos;])</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    他会把跟src同级的libs目录下面的jar文件作为依赖引入进来，当你存放在其他地方的时候，也可以手动的引入进来，比如我们存放在src/lib目录下面，可以通过<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">dependencies &#123;</div><div
+                                                            class="line">       compile files(&apos;src/lib/test.jar&apos;)</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这一个方式引入进来。<br>2、 引用远程的依赖<br>我们有时候会使用一些github的开源库，或者是自己公司私有的maven库或者是一些其他公司提供的仓库，使用到他们的jar。当然我们可以把他们下载下来存放到libs目录下面进行依赖，但是这样子不是很方便，因为有时候版本变更的比较频繁的时候，我们就需要经常去下载，使用远程依赖我们就是只是需要升级一下版本号，clean一下项目就ok了。<br>使用方式：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">dependencies &#123;</div><div
+                                                            class="line">    compile &apos;com.android.support:appcompat-v7:23.1.0&apos;</div><div
+                                                            class="line">    compile &apos;com.android.support:design:23.1.0&apos;</div><div
+                                                            class="line">    compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div><div
+                                                            class="line">    compile &apos;io.reactivex:rxjava:1.1.6&apos;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这里我们引入rx的依赖和v7已以及support:design依赖。依赖的引入时跟maven左边的那种<br>groupId:artifactId:version<br>比如上面的io.reactivex就是groupId，rxJava就是artifactId，1.1.6就是version<br>需要使用这些依赖，同时我们需要申明仓库地址，比如常用的maven仓库，jcenter仓库，我们在整个project的根目录(也就是声明gradle插件的地方)的build.gradle中申明。比如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">buildscript &#123;</div><div
+                                                            class="line">    repositories &#123;</div><div
+                                                            class="line">        jcenter()</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    dependencies &#123;</div><div
+                                                            class="line">        classpath &apos;com.android.tools.build:gradle:2.2.1&apos;</div><div
+                                                            class="line">        classpath &apos;me.tatarka:gradle-retrolambda:3.2.0&apos;</div><div
+                                                            class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div
+                                                            class="line">        // in the individual module build.gradle files</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>3、引用lib依赖<br>我们开发的时候，常常会考虑模块化，多人开发，功能分类等，常常有lib的抽取，同时这个lib有时候也会作为一个公用库，做成arr给别的项目依赖，当我们需要多个lib分开整个app的模块或者是测试我们做成的aar的lib的时候，我们就需要使用模块依赖。<br>我们新建一个android
+                                    lib，android插件类型是<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">apply plugin: &apos;com.android.library&apos;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>然后需要使用到的app可运行或者是其他的lib，使用<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">dependencies &#123;</div><div
+                                                            class="line">        compile project(&apos;:lib&apos;)</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>其中lib就是你的lib项目。</p>
+                                <h2 id="lib-module"><a href="#lib-module" class="headerlink"
+                                                       title="lib module"></a>lib module</h2>
+                                <p>lib是可以输出一个arr别的lib或者是可运行的app module使用。<br>lib使用的android插件是com.android.library<br>lib包含的内容有源代码，资源文件，清单文件，lib本身的相关依赖(so文件或者是其他的arr,jar文件)。他被依赖到别的项目的时候，资源文件和清单会被合并，当有重复命名的时候，比如同样有两个string的name为app_name的，那么lib的将会被覆盖。java代码就是不会被合并，当存在两个包名相同，类名相同的java文件的时候回报多个字节码文件的错误。<br>当一个lib或者是app
+                                    module依赖多个子lib的时候，假如子lib之间存在着资源冲突，也会发生某某资源已经定义的错误。<br>我们发布被依赖的lib版本的时候，可以通过buildType或者productFlavors去实现，同样可以通过<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">android &#123;</div><div
+                                                            class="line">    defaultPublishConfig &quot;flavor&quot;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    其中，flavor在没有其他定义的产品渠道的时候，是debug或者是release，一般我们使用的是release版本，假如我们需要发布多个arr，包括debug，release或者是其他flavor或者是buildType的时候，可以通过<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">android &#123;</div><div
+                                                            class="line">    publishNonDefault true</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>每一个arr都是独立的，包含自己的资源和代码，相对应的sourceSets等。</p>
+                                <h2 id="Gradle构建变种版本"><a href="#Gradle构建变种版本" class="headerlink"
+                                                         title="Gradle构建变种版本"></a>Gradle构建变种版本</h2>
+                                <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3>
+                                <p>
+                                    构建变种版本是有利于我们调试，多渠道打包。比如，我们需要上360，应用宝市场，然后需要区分这两个这两个市场的下载量，卸载量等，我们通过在清档文件带有一个渠道标识，当然，我们可以一次一次的分开打包，没打完一个包然后就再次修改渠道标识再次打包。但是这样子很繁琐时间也很长，我们就可以使用AS使用的Gradle实现变种apk来一次性打完所有的apk。同时使用多渠道打包，我们可以同时打出不同的安装名字和桌面名字的apk。比如在应用宝上面，安装名字是A，桌面名字是B，在360渠道上面安装名字是C，桌面名字是D，使用多渠道就可以一次性打出这些包。</p>
+                                <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3>
+                                <p>变种打包其实是等于productFlavors+不同的BuildType。<br>上一篇文件我们介绍了BuildType，虽然我们可以使用多个BuildType来达到使用不同的资源，代码，清单，依赖等，但是，当我们需要一次性输出多个apk的时候是行不通的，我们就可以使用productFlavors。<br>首先，我们需要在src目录下面建立一些我们需要的文件夹，就是我们需要打包的那些渠道，比如qihu360，yingyongbao，如下图：<br><img
+                                        src="http://ocxgpwj6l.bkt.clouddn.com/duoqudao.png"
+                                        alt=""><br>然后，在可运行的app
+                                    module根目录的build.gradle中的android节点下面，添加<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">productFlavors&#123;</div><div
+                                                            class="line">     dev &#123;&#125;</div><div
+                                                            class="line">     dev2 &#123;&#125;</div><div
+                                                            class="line">     qihu360&#123;&#125;</div><div
+                                                            class="line">     yingyongbao&#123;&#125;</div><div
+                                                            class="line"> &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>这样子，同步一下，然后我们在运行测试的时候，可以在AS左下角BuildVariants中，选择安装不同的变种apk，可以用来测试。<br>他可以运行的种类是productFlavors的数目跟BuildType的数目的排列组合。比如4个变种，2个buildType，就可以输出8个apk。<br>我们通过AS的build工具，进行签名相关，就可以输出多个apk了。如下图：<br><img
+                                        src="http://ocxgpwj6l.bkt.clouddn.com/dabao.png" alt=""><br><img
+                                        src="http://ocxgpwj6l.bkt.clouddn.com/dabao2.png"
+                                        alt=""><br>我们输出的时候一般是选择release版本的需要的变种版本的apk，然后就静静等待一下apk打包完成即可。
+                                </p>
+                                <h3 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h3>
+                                <p>
+                                    Android打包的时候回合并资源，上级会覆盖替换下级的资源。所以，假如我们需要统计某一个渠道，可以通过java的多台，使用继承，在各个变种使用不同的Application去继承main中的Application，或者是通过覆盖资源，或者是通过在各个变种的清单文件中添加不同的渠道，这样子就能起到不同的apk有不同的渠道而且可以一次性打包完成的作用。清单文件他也是会合并的。<br>在变种文件夹中，比如上面的qihu360，我们可以建立跟main文件夹一样的目录结构，只不过这些资源或是代码只可以在变种中存在和使用。这里就不一一截图了。<br>使用不同的资源和代码，通过覆盖和替换，我们可以定制各个不同的apk，公用大部分的代码和资源。比如我们的某一些变种需要广告，一些不需要，我们就可以通过java的多台实现。通过在main或者是lib中提供一个接口或者是类，然后在变种中实现，通过在变种的Application类写入，在main或者是lib中通过getApplication()获取，这样子就可以做到不同的变种使用不同的东西。<br>productFlavors中提供的变种除了可以输出不同的apk之外，他还可以设置更多的东西。<br>他可以定制变种的包名，变种的签名，变种的sdk版本等，比如：<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">productFlavors&#123;</div><div
+                                                            class="line">        dev &#123;</div><div
+                                                            class="line">            applicationId &quot;com.example.user..dev&quot;</div><div
+                                                            class="line">            minSdkVersion 14</div><div
+                                                            class="line">            targetSdkVersion 23</div><div
+                                                            class="line">            versionCode 1</div><div
+                                                            class="line">            versionName &quot;1.0&quot;</div><div
+                                                            class="line">            signingConfig signingConfigs.dev</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        dev2 &#123;&#125;</div><div
+                                                            class="line">        qihu360&#123;&#125;</div><div
+                                                            class="line">        yingyongbao&#123;&#125;</div><div
+                                                            class="line">    &#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    因为productFlavors和defaultConfig是同级的，所以defaultConfig的属性在productFlavors中也可以使用。这样子我们也就可以输出更加具有定制化的apk了，可以是不同签名的，不同version和针对不同android
+                                    版本的apk。<br>注意一点：<br>applicationId和package的区别：<br>applicationId是在build.gradle中定义的，package是在清单文件中定义的，他们二者可以不同。<br>applicationId是应用的真正包名，package是应用的资源包名，也就是R文件生成的路径，尹永峰资源的路径。某一些时候，他们不同是会出现一些问题的，比如，在个人实践中发现，使用友盟push的时候，假如不同会获取不到token，就是当你没有显示的设置包名参数给友盟的时候。有时候测试某一些广告的时候，有一些广告也是无法出现的。所以，还是建议这二者一般保持一致避免导致有时候找bug不知道是那里出问题了。
+                                </p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/gradle构建/" rel="tag">#gradle构建</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2016/11/07/gradle/gradle-java1/" rel="next"
+                                           title="Gradle构建java程序一">
+                                            <i class="fa fa-chevron-left"></i> Gradle构建java程序一
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2016/11/23/gradle/GroovyLan/" rel="prev"
+                                           title="Groovy语言学习基础">
+                                            Groovy语言学习基础 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-1"><a class="nav-link"
+                                                                        href="#Gradle在Android的使用"><span
+                                            class="nav-number">1.</span> <span class="nav-text">Gradle在Android的使用</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#Gradle的目录结构"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">Gradle的目录结构</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#配置目录结构"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">配置目录结构</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#配通用task"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">配通用task</span></a>
+                                                <ol class="nav-child">
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#java的task"><span
+                                                            class="nav-number">1.3.1.</span> <span
+                                                            class="nav-text">java的task</span></a>
+                                                    </li>
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link"
+                                                            href="#android的task"><span
+                                                            class="nav-number">1.3.2.</span> <span
+                                                            class="nav-text">android的task</span></a>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#DSL定义Manifest属性"><span
+                                                    class="nav-number">1.4.</span> <span
+                                                    class="nav-text">DSL定义Manifest属性</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#构建类型"><span
+                                                    class="nav-number">1.5.</span> <span
+                                                    class="nav-text">构建类型</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#签名"><span
+                                                    class="nav-number">1.6.</span> <span
+                                                    class="nav-text">签名</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#依赖管理"><span
+                                                    class="nav-number">1.7.</span> <span
+                                                    class="nav-text">依赖管理</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#lib-module"><span
+                                                    class="nav-number">1.8.</span> <span
+                                                    class="nav-text">lib module</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#Gradle构建变种版本"><span
+                                                    class="nav-number">1.9.</span> <span
+                                                    class="nav-text">Gradle构建变种版本</span></a>
+                                                <ol class="nav-child">
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#介绍"><span
+                                                            class="nav-number">1.9.1.</span> <span
+                                                            class="nav-text">介绍</span></a></li>
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#使用"><span
+                                                            class="nav-number">1.9.2.</span> <span
+                                                            class="nav-text">使用</span></a></li>
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#高级"><span
+                                                            class="nav-number">1.9.3.</span> <span
+                                                            class="nav-text">高级</span></a></li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradle在Android的使用"><span class="nav-number">1.</span> <span class="nav-text">Gradle在Android的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle的目录结构"><span class="nav-number">1.1.</span> <span class="nav-text">Gradle的目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置目录结构"><span class="nav-number">1.2.</span> <span class="nav-text">配置目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配通用task"><span class="nav-number">1.3.</span> <span class="nav-text">配通用task</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#java的task"><span class="nav-number">1.3.1.</span> <span class="nav-text">java的task</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android的task"><span class="nav-number">1.3.2.</span> <span class="nav-text">android的task</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DSL定义Manifest属性"><span class="nav-number">1.4.</span> <span class="nav-text">DSL定义Manifest属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建类型"><span class="nav-number">1.5.</span> <span class="nav-text">构建类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#签名"><span class="nav-number">1.6.</span> <span class="nav-text">签名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖管理"><span class="nav-number">1.7.</span> <span class="nav-text">依赖管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lib-module"><span class="nav-number">1.8.</span> <span class="nav-text">lib module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle构建变种版本"><span class="nav-number">1.9.</span> <span class="nav-text">Gradle构建变种版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">1.9.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.9.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高级"><span class="nav-number">1.9.3.</span> <span class="nav-text">高级</span></a></li></ol></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -632,85 +1563,40 @@ src/androidTest在里面，每个存在的文件夹对应相对应的源组件�
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

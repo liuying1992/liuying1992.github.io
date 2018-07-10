@@ -22,18 +22,16 @@ $(document).ready(function () {
     });
   });
 
-
   CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
   NexT.utils.embeddedVideoTransformer();
   NexT.utils.addActiveClassToMenuItem();
 
-
   // Define Motion Sequence.
   NexT.motion.integrator
-    .add(NexT.motion.middleWares.logo)
-    .add(NexT.motion.middleWares.menu)
-    .add(NexT.motion.middleWares.postList)
-    .add(NexT.motion.middleWares.sidebar);
+      .add(NexT.motion.middleWares.logo)
+      .add(NexT.motion.middleWares.menu)
+      .add(NexT.motion.middleWares.postList)
+      .add(NexT.motion.middleWares.sidebar);
 
   $(document).trigger('motion:before');
 

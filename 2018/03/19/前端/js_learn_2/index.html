@@ -1,90 +1,37 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="javascript,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="javascript," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="基础数据
+    <meta name="description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -94,11 +41,11 @@
 
 对于严格等于，使用===表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照==去比较
 对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript基础二">
-<meta property="og:url" content="http://yoursite.com/2018/03/19/前端/js_learn_2/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="基础数据
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JavaScript基础二">
+    <meta property="og:url" content="http://yoursite.com/2018/03/19/前端/js_learn_2/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -108,10 +55,10 @@
 
 对于严格等于，使用===表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照==去比较
 对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
-<meta property="og:updated_time" content="2018-03-25T10:00:42.987Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript基础二">
-<meta name="twitter:description" content="基础数据
+    <meta property="og:updated_time" content="2018-03-25T10:00:42.987Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JavaScript基础二">
+    <meta name="twitter:description" content="基础数据
 基本类型
 123456objection:比如function，Array，Datestringnumbernullbooleanundefined
 
@@ -123,174 +70,145 @@
 对于==比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/03/19/前端/js_learn_2/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/19/前端/js_learn_2/"/>
-
-
-  <title> JavaScript基础二 | Blog </title>
+    <title> JavaScript基础二 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                JavaScript基础二
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    JavaScript基础二
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -301,8 +219,8 @@
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -320,298 +238,740 @@
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h3 id="基础数据"><a href="#基础数据" class="headerlink" title="基础数据"></a>基础数据</h3><ul>
-<li><p>基本类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">objection:比如function，Array，Date</div><div class="line">string</div><div class="line">number</div><div class="line">null</div><div class="line">boolean</div><div class="line">undefined</div></pre></td></tr></table></figure>
-</li>
-<li><p>隐式转换</p>
-</li>
-</ul>
-<ol>
-<li>对于严格等于，使用<code>===</code>表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照<code>==</code>去比较</li>
-<li>对于<code>==</code>比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而是引用。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//使用===</div><div class="line">null === null //true</div><div class="line">undefined===undefined//true</div><div class="line">NaN===NaN //false</div><div class="line">null === undefined //false</div><div class="line">new Objection === new Objection //false</div><div class="line">&apos;123&apos; === 123 //false</div><div class="line">//使用==</div><div class="line">null == undefined //true</div><div class="line">&apos;123&apos;==123//true String会先转换为number</div><div class="line">booleab==&apos;1&apos; //true</div><div class="line">object == number|string //objection尝试转换为number或者是String，之后在比较。</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li>包装对象<br><code>string</code> ，<code>boolean</code> ，<code>number</code>这三种基本类型有对应的基本类型。<br>对于基本类型，他是没有属性的，但是通过包装类就可以获得一个临时对象，使用对应的属性，比如<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &quot;hello&quot;;</div><div class="line">var str2 = new String(&quot;World!&quot;);//对象</div><div class="line">console.log(str.length);</div><div class="line">//输出5</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>对于str而言，他是没有数学的，但是却可以使用length，因为他被包装成为了String对象。</p>
-<ul>
-<li>类型检测</li>
-</ul>
-<ol>
-<li>typeof //用于判断基本类型，function</li>
-<li>instance //用户判断对象，在iframe和Window之间检测失效。</li>
-<li>Object.prototype.toString.apply()//适合内置对象和基本类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//typeof</div><div class="line">typeof 100 //number</div><div class="line">type true //boolean</div><div class="line">function fun()&#123;&#125;</div><div class="line">typeof fun //function</div><div class="line">typeof undefined //undefined</div><div class="line">type new Object() //object</div><div class="line">type [1,2] //object</div><div class="line">type NaN  //number</div><div class="line">typeof null //object</div><div class="line">//instanceof</div><div class="line">[1,2] instanceof Array //true</div><div class="line">&quot;str&quot; instanceof String //false</div><div class="line">//Object.ptototype.toString.apply()</div><div class="line">Object.prototype.toString.apply(null) == &quot;[object Null]&quot;; //true，对于IE 678这是一个特殊的，他的值是[Object Object]</div><div class="line">Object.prototype.toString.apply([]) //[object Array]</div><div class="line">Object.prototype.toString.apply(undefined)//[object Undefined]，IE678也会有问题，他的值是[object Object]</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><ul>
-<li><p>表达式类别</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1. 原始表达式： 常量 1 &quot;test&quot;，关键字 null,this,true， 变量 i,j,k</div><div class="line">2. 初始化表达式 var x = 1;</div><div class="line">3. 数组，对象表达式 [1,2] &#123;x:1,y:2&#125;</div><div class="line">4. 函数表达式 var f = function()&#123;&#125;</div><div class="line">5. 属性访问表达式 var x=&#123;x:1&#125;;x.x</div><div class="line">6.调用表达式，就是调用函数语句</div><div class="line">7. 对象创建表达式，new Object();</div></pre></td></tr></table></figure>
-</li>
-<li><p>运算符</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">一元运算符:+-*/%</div><div class="line">二元表达式:++,--,&amp;&amp;,||,</div><div class="line">三元表达式：c?a:b</div><div class="line">作用分类：</div><div class="line">赋值运算符： x+=1</div><div class="line">比较云算法： x==y</div><div class="line">算术运算符 a+b</div><div class="line">位运算符： a|b</div><div class="line">逻辑运算符: a&amp;&amp;b,a||b</div><div class="line">字符串： &quot;a&quot;+&quot;b&quot;</div><div class="line">特殊运算符： delete obj.x，x in obj，instanceof ，typeof，new，this，void</div><div class="line">var obj = &#123;x:1&#125;</div><div class="line">obj.x //1</div><div class="line">delete obj.x //返回true</div><div class="line">obj.x //undefined</div><div class="line">//设置属性不可删除，IE9开始</div><div class="line">var obj=&#123;&#125;;</div><div class="line">Object.defineProperty(obj,x,&#123;</div><div class="line">    configurable:false,//false的时候，该属性不可以被delete</div><div class="line">    value:1</div><div class="line">    &#125;)</div><div class="line">delete obj.x;//无效，返回false</div><div class="line">obj.x;//1</div><div class="line"></div><div class="line">//in运算符</div><div class="line">var obj=&#123;x:1&#125;;</div><div class="line">x in obj ;//true</div><div class="line">y in obj;//false</div><div class="line"></div><div class="line">//new运算符</div><div class="line">funtion Foo()&#123;&#125;;</div><div class="line">Foo.protorype.x = 1;</div><div class="line">var obj = new Foo();</div><div class="line">obj.x ;//1</div><div class="line">obj.hasOwnProperty(&apos;x&apos;); //false，是否他自己本身有该属性，而非原型上的属性</div><div class="line">obj._proto_.hasOwnProperty(&apos;x&apos;);//true</div><div class="line"></div><div class="line">//this</div><div class="line">this ;//全局中，指代window</div><div class="line">var obj =&#123;</div><div class="line">func:function()&#123;return this;&#125;</div><div class="line">&#125;</div><div class="line">obj.func() ;//指代obj</div><div class="line">void 0 //undefined void之后的属性返回都是undefined</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><ul>
-<li><p>类别</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">block,var,break</div><div class="line">return,continue,empty,do...while</div><div class="line">debugger,if..else,for,with</div><div class="line">switch,for...in</div><div class="line">try,catct,while</div></pre></td></tr></table></figure>
-</li>
-<li><p>不存在块级作用域，但是有函数作用域，全局作用域等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i;0i&lt;3;i++)&#123;</div><div class="line">var a = i;</div><div class="line">&#125;</div><div class="line">console.log(i);//i=4</div><div class="line">console.log(a);//a=4</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>定义变量的时候，注意连续使用<code>=</code>赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">var x=y=1;</div><div class="line">&#125;</div><div class="line">console.log(x);//undefined</div><div class="line">console.log(y);//1</div><div class="line">//使用 var x=1,y=1这样子是正常的</div></pre></td></tr></table></figure></p>
-<ul>
-<li><p>try…catch语句：用于捕获异常，try之后要么有catch要么有finally或者是二者都有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">try&#123;</div><div class="line">throw &quot;exception&quot;;// 抛出异常，被catch掉，</div><div class="line">&#125;catch(ex)&#123;</div><div class="line">&#125;finallly&#123;</div><div class="line">   //最终都会执行</div><div class="line">&#125;</div><div class="line">//特殊例子</div><div class="line">try&#123;</div><div class="line">try&#123;</div><div class="line">throw new Error(&quot;x&quot;);//抛出异常，w不会打印</div><div class="line">console.log(&quot;w&quot;);</div><div class="line">&#125;finally&#123;</div><div class="line">console.log(&quot;y&quot;);//抛出异常之前，执行完finally</div><div class="line">&#125;</div><div class="line">&#125;catch(ex)&#123;</div><div class="line">console.log(&quot;z&quot;);//捕获异常，打印z</div><div class="line">&#125;</div><div class="line">//执行结果是</div><div class="line">y</div><div class="line">z</div></pre></td></tr></table></figure>
-</li>
-<li><p>函数，switch，循环<br>函数声明和函数表达式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fun();//可以这样子调用</div><div class="line">funchtion fun()&#123;</div><div class="line">    //do something</div><div class="line">    return something;</div><div class="line">&#125;</div><div class="line">fe();//不能这样子调用</div><div class="line">var fe = function()&#123;</div><div class="line">    //dosomethin</div><div class="line">    return something;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>for…in</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var p;</div><div class="line">var obj = &#123;x:1&#125;;</div><div class="line">for( p in obj)&#123;</div><div class="line">console.log(p);</div><div class="line">&#125;</div><div class="line">//需要注意for in</div><div class="line">1. 他的顺序不定，跟浏览器引擎有关</div><div class="line">2. enumerable为false的不会出现</div><div class="line">3. for in对象属性受原型链影响，当原型链有属性的enumerable为true的时候，也会遍历出来。</div></pre></td></tr></table></figure>
-</li>
-<li><p>switch：跟java一样</p>
-</li>
-<li>while相关的也是跟java一样</li>
-<li><p>with：不建议使用，他可以直接在定义的内部直接方法属性，在严格模式下禁用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">with(&#123;x:1&#125;)</div><div class="line">&#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line">//等同于</div><div class="line">var x = &#123;x:1&#125;;</div><div class="line">console.log(x);</div></pre></td></tr></table></figure>
-</li>
-<li><p>严格模式<br>他修复了语言上的不足，提供更强的错误检查，并且增强了安全性。需要某一段代码或者某一个js文件使用严格模式，只需要在他的开头添加<code>use strict</code>既可。当一些浏览器不支持一些语法的时候，他可以当做普通字符串忽掉。严格模式下的特点如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1. 严格模式不支持with</div><div class="line">2. 严格模式不支持使用未声明的变量，一般模式可以直接给变量赋值而不需要声明(直接在webStrom下虽然可以，但是运行浏览器上是不可以的)。</div><div class="line">3. argument变为参数副本，在function中传递参数的时候，一般模式下，修改argument的值，会修改对应的参数值(除非没有传入参数，undefined)。但是严格模式下，argument的值会有一个副本。假如参数不是一个对象，他修改了不会影响原来参数,argument会一直保持一直开始传入的值。但是假如参数传入的是一个对象，那么在argument中修改该对象的属性值，也会影响到原对象。</div><div class="line">4. 严格模式下无法使用delete删除参数或者是函数名，一般模式下虽然不会删除，但是不会报错，只是delete返回false。</div><div class="line">5. 严格模式下，delete属性为configurable的属性为false的时候会报错。</div><div class="line">6. 严格模式下，不可以声明重复属性名。</div><div class="line">7. 严格模式禁止使用八进制字面量。</div><div class="line">8. 严格模式eval，argument变为关键字，不能作为函数名。</div><div class="line">9. 严格模式下，eval具有独立作用域</div></pre></td></tr></table></figure>
-</li>
-<li><p>定义变量<br>var:全局，非严格模式前后<br>const：常量，定义赋值<br>let：局部变量，可修改。括号内向下有效。</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag">#javascript</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/19/Android/支付/pay/" rel="next" title="Android集成微信和支付宝支付(客户端)">
-                <i class="fa fa-chevron-left"></i> Android集成微信和支付宝支付(客户端)
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/21/前端/promise_learn/" rel="prev" title="Promise学习">
-                Promise学习 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h3 id="基础数据"><a href="#基础数据" class="headerlink" title="基础数据"></a>基础数据
+                                </h3>
+                                <ul>
+                                    <li><p>基本类型</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">objection:比如function，Array，Date</div><div
+                                                                class="line">string</div><div
+                                                                class="line">number</div><div
+                                                                class="line">null</div><div
+                                                                class="line">boolean</div><div
+                                                                class="line">undefined</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>隐式转换</p>
+                                    </li>
+                                </ul>
+                                <ol>
+                                    <li>对于严格等于，使用<code>===</code>表示，他会首先比较等号两边是否是同类型假如是不同类型，则返回false，假如是同类型则按照<code>==</code>去比较
+                                    </li>
+                                    <li>对于<code>==</code>比较，当不同类型比较的时候，会有一个隐式的转换(例子)，比较对象的时候，比较的不是值，而是引用。
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//使用===</div><div
+                                                                class="line">null === null //true</div><div
+                                                                class="line">undefined===undefined//true</div><div
+                                                                class="line">NaN===NaN //false</div><div
+                                                                class="line">null === undefined //false</div><div
+                                                                class="line">new Objection === new Objection //false</div><div
+                                                                class="line">&apos;123&apos; === 123 //false</div><div
+                                                                class="line">//使用==</div><div
+                                                                class="line">null == undefined //true</div><div
+                                                                class="line">&apos;123&apos;==123//true String会先转换为number</div><div
+                                                                class="line">booleab==&apos;1&apos; //true</div><div
+                                                                class="line">object == number|string //objection尝试转换为number或者是String，之后在比较。</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <ul>
+                                    <li>包装对象<br><code>string</code> ，<code>boolean</code> ，<code>number</code>这三种基本类型有对应的基本类型。<br>对于基本类型，他是没有属性的，但是通过包装类就可以获得一个临时对象，使用对应的属性，比如
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">var str = &quot;hello&quot;;</div><div
+                                                                class="line">var str2 = new String(&quot;World!&quot;);//对象</div><div
+                                                                class="line">console.log(str.length);</div><div
+                                                                class="line">//输出5</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>对于str而言，他是没有数学的，但是却可以使用length，因为他被包装成为了String对象。</p>
+                                <ul>
+                                    <li>类型检测</li>
+                                </ul>
+                                <ol>
+                                    <li>typeof //用于判断基本类型，function</li>
+                                    <li>instance //用户判断对象，在iframe和Window之间检测失效。</li>
+                                    <li>Object.prototype.toString.apply()//适合内置对象和基本类型
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//typeof</div><div
+                                                                class="line">typeof 100 //number</div><div
+                                                                class="line">type true //boolean</div><div
+                                                                class="line">function fun()&#123;&#125;</div><div
+                                                                class="line">typeof fun //function</div><div
+                                                                class="line">typeof undefined //undefined</div><div
+                                                                class="line">type new Object() //object</div><div
+                                                                class="line">type [1,2] //object</div><div
+                                                                class="line">type NaN  //number</div><div
+                                                                class="line">typeof null //object</div><div
+                                                                class="line">//instanceof</div><div
+                                                                class="line">[1,2] instanceof Array //true</div><div
+                                                                class="line">&quot;str&quot; instanceof String //false</div><div
+                                                                class="line">//Object.ptototype.toString.apply()</div><div
+                                                                class="line">Object.prototype.toString.apply(null) == &quot;[object Null]&quot;; //true，对于IE 678这是一个特殊的，他的值是[Object Object]</div><div
+                                                                class="line">Object.prototype.toString.apply([]) //[object Array]</div><div
+                                                                class="line">Object.prototype.toString.apply(undefined)//[object Undefined]，IE678也会有问题，他的值是[object Object]</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式
+                                </h3>
+                                <ul>
+                                    <li><p>表达式类别</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">1. 原始表达式： 常量 1 &quot;test&quot;，关键字 null,this,true， 变量 i,j,k</div><div
+                                                                class="line">2. 初始化表达式 var x = 1;</div><div
+                                                                class="line">3. 数组，对象表达式 [1,2] &#123;x:1,y:2&#125;</div><div
+                                                                class="line">4. 函数表达式 var f = function()&#123;&#125;</div><div
+                                                                class="line">5. 属性访问表达式 var x=&#123;x:1&#125;;x.x</div><div
+                                                                class="line">6.调用表达式，就是调用函数语句</div><div
+                                                                class="line">7. 对象创建表达式，new Object();</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>运算符</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">一元运算符:+-*/%</div><div
+                                                                class="line">二元表达式:++,--,&amp;&amp;,||,</div><div
+                                                                class="line">三元表达式：c?a:b</div><div
+                                                                class="line">作用分类：</div><div
+                                                                class="line">赋值运算符： x+=1</div><div
+                                                                class="line">比较云算法： x==y</div><div
+                                                                class="line">算术运算符 a+b</div><div
+                                                                class="line">位运算符： a|b</div><div
+                                                                class="line">逻辑运算符: a&amp;&amp;b,a||b</div><div
+                                                                class="line">字符串： &quot;a&quot;+&quot;b&quot;</div><div
+                                                                class="line">特殊运算符： delete obj.x，x in obj，instanceof ，typeof，new，this，void</div><div
+                                                                class="line">var obj = &#123;x:1&#125;</div><div
+                                                                class="line">obj.x //1</div><div
+                                                                class="line">delete obj.x //返回true</div><div
+                                                                class="line">obj.x //undefined</div><div
+                                                                class="line">//设置属性不可删除，IE9开始</div><div
+                                                                class="line">var obj=&#123;&#125;;</div><div
+                                                                class="line">Object.defineProperty(obj,x,&#123;</div><div
+                                                                class="line">    configurable:false,//false的时候，该属性不可以被delete</div><div
+                                                                class="line">    value:1</div><div
+                                                                class="line">    &#125;)</div><div
+                                                                class="line">delete obj.x;//无效，返回false</div><div
+                                                                class="line">obj.x;//1</div><div
+                                                                class="line"></div><div
+                                                                class="line">//in运算符</div><div
+                                                                class="line">var obj=&#123;x:1&#125;;</div><div
+                                                                class="line">x in obj ;//true</div><div
+                                                                class="line">y in obj;//false</div><div
+                                                                class="line"></div><div
+                                                                class="line">//new运算符</div><div
+                                                                class="line">funtion Foo()&#123;&#125;;</div><div
+                                                                class="line">Foo.protorype.x = 1;</div><div
+                                                                class="line">var obj = new Foo();</div><div
+                                                                class="line">obj.x ;//1</div><div
+                                                                class="line">obj.hasOwnProperty(&apos;x&apos;); //false，是否他自己本身有该属性，而非原型上的属性</div><div
+                                                                class="line">obj._proto_.hasOwnProperty(&apos;x&apos;);//true</div><div
+                                                                class="line"></div><div
+                                                                class="line">//this</div><div
+                                                                class="line">this ;//全局中，指代window</div><div
+                                                                class="line">var obj =&#123;</div><div
+                                                                class="line">func:function()&#123;return this;&#125;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">obj.func() ;//指代obj</div><div
+                                                                class="line">void 0 //undefined void之后的属性返回都是undefined</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3>
+                                <ul>
+                                    <li><p>类别</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">block,var,break</div><div
+                                                                class="line">return,continue,empty,do...while</div><div
+                                                                class="line">debugger,if..else,for,with</div><div
+                                                                class="line">switch,for...in</div><div
+                                                                class="line">try,catct,while</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>不存在块级作用域，但是有函数作用域，全局作用域等</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">for(var i;0i&lt;3;i++)&#123;</div><div
+                                                                class="line">var a = i;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">console.log(i);//i=4</div><div
+                                                                class="line">console.log(a);//a=4</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>定义变量的时候，注意连续使用<code>=</code>赋值<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">&#123;</div><div
+                                                            class="line">var x=y=1;</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">console.log(x);//undefined</div><div
+                                                            class="line">console.log(y);//1</div><div
+                                                            class="line">//使用 var x=1,y=1这样子是正常的</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <ul>
+                                    <li><p>try…catch语句：用于捕获异常，try之后要么有catch要么有finally或者是二者都有</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">try&#123;</div><div
+                                                                class="line">throw &quot;exception&quot;;// 抛出异常，被catch掉，</div><div
+                                                                class="line">&#125;catch(ex)&#123;</div><div
+                                                                class="line">&#125;finallly&#123;</div><div
+                                                                class="line">   //最终都会执行</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//特殊例子</div><div
+                                                                class="line">try&#123;</div><div
+                                                                class="line">try&#123;</div><div
+                                                                class="line">throw new Error(&quot;x&quot;);//抛出异常，w不会打印</div><div
+                                                                class="line">console.log(&quot;w&quot;);</div><div
+                                                                class="line">&#125;finally&#123;</div><div
+                                                                class="line">console.log(&quot;y&quot;);//抛出异常之前，执行完finally</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">&#125;catch(ex)&#123;</div><div
+                                                                class="line">console.log(&quot;z&quot;);//捕获异常，打印z</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//执行结果是</div><div
+                                                                class="line">y</div><div
+                                                                class="line">z</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>函数，switch，循环<br>函数声明和函数表达式</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">fun();//可以这样子调用</div><div
+                                                                class="line">funchtion fun()&#123;</div><div
+                                                                class="line">    //do something</div><div
+                                                                class="line">    return something;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">fe();//不能这样子调用</div><div
+                                                                class="line">var fe = function()&#123;</div><div
+                                                                class="line">    //dosomethin</div><div
+                                                                class="line">    return something;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>for…in</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">var p;</div><div
+                                                                class="line">var obj = &#123;x:1&#125;;</div><div
+                                                                class="line">for( p in obj)&#123;</div><div
+                                                                class="line">console.log(p);</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//需要注意for in</div><div
+                                                                class="line">1. 他的顺序不定，跟浏览器引擎有关</div><div
+                                                                class="line">2. enumerable为false的不会出现</div><div
+                                                                class="line">3. for in对象属性受原型链影响，当原型链有属性的enumerable为true的时候，也会遍历出来。</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>switch：跟java一样</p>
+                                    </li>
+                                    <li>while相关的也是跟java一样</li>
+                                    <li><p>with：不建议使用，他可以直接在定义的内部直接方法属性，在严格模式下禁用</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div
+                                                                class="line">with(&#123;x:1&#125;)</div><div
+                                                                class="line">&#123;</div><div
+                                                                class="line">    console.log(x);</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">//等同于</div><div
+                                                                class="line">var x = &#123;x:1&#125;;</div><div
+                                                                class="line">console.log(x);</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>严格模式<br>他修复了语言上的不足，提供更强的错误检查，并且增强了安全性。需要某一段代码或者某一个js文件使用严格模式，只需要在他的开头添加<code>use
+                                        strict</code>既可。当一些浏览器不支持一些语法的时候，他可以当做普通字符串忽掉。严格模式下的特点如下：
+                                    </p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">1. 严格模式不支持with</div><div
+                                                                class="line">2. 严格模式不支持使用未声明的变量，一般模式可以直接给变量赋值而不需要声明(直接在webStrom下虽然可以，但是运行浏览器上是不可以的)。</div><div
+                                                                class="line">3. argument变为参数副本，在function中传递参数的时候，一般模式下，修改argument的值，会修改对应的参数值(除非没有传入参数，undefined)。但是严格模式下，argument的值会有一个副本。假如参数不是一个对象，他修改了不会影响原来参数,argument会一直保持一直开始传入的值。但是假如参数传入的是一个对象，那么在argument中修改该对象的属性值，也会影响到原对象。</div><div
+                                                                class="line">4. 严格模式下无法使用delete删除参数或者是函数名，一般模式下虽然不会删除，但是不会报错，只是delete返回false。</div><div
+                                                                class="line">5. 严格模式下，delete属性为configurable的属性为false的时候会报错。</div><div
+                                                                class="line">6. 严格模式下，不可以声明重复属性名。</div><div
+                                                                class="line">7. 严格模式禁止使用八进制字面量。</div><div
+                                                                class="line">8. 严格模式eval，argument变为关键字，不能作为函数名。</div><div
+                                                                class="line">9. 严格模式下，eval具有独立作用域</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>定义变量<br>var:全局，非严格模式前后<br>const：常量，定义赋值<br>let：局部变量，可修改。括号内向下有效。
+                                    </p>
+                                    </li>
+                                </ul>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/javascript/" rel="tag">#javascript</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/03/19/Android/支付/pay/" rel="next"
+                                           title="Android集成微信和支付宝支付(客户端)">
+                                            <i class="fa fa-chevron-left"></i>
+                                            Android集成微信和支付宝支付(客户端)
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/03/21/前端/promise_learn/" rel="prev"
+                                           title="Promise学习">
+                                            Promise学习 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                        href="#基础数据"><span
+                                            class="nav-number">1.</span> <span
+                                            class="nav-text">基础数据</span></a></li>
+                                    <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                        href="#表达式"><span
+                                            class="nav-number">2.</span> <span
+                                            class="nav-text">表达式</span></a></li>
+                                    <li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span
+                                            class="nav-number">3.</span> <span
+                                            class="nav-text">语句</span></a></li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础数据"><span class="nav-number">1.</span> <span class="nav-text">基础数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">2.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语句"><span class="nav-number">3.</span> <span class="nav-text">语句</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -620,85 +980,40 @@
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

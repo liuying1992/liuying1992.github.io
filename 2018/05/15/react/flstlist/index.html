@@ -1,90 +1,37 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="react-native,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="react-native," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
+    <meta name="description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
 
 跨平台
 支持水平
@@ -96,11 +43,11 @@
 支持跳转到指定行他是继承自ScrollView以及VirtualizedList的，所以具有他们二者的props；
 
 简单例子123456789render()&amp;#123;    return &amp;lt;View&amp;gt;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="FlatList组件学习和封装">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/react/flstlist/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="FlatList组件学习和封装">
+    <meta property="og:url" content="http://yoursite.com/2018/05/15/react/flstlist/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
 
 跨平台
 支持水平
@@ -112,11 +59,12 @@
 支持跳转到指定行他是继承自ScrollView以及VirtualizedList的，所以具有他们二者的props；
 
 简单例子123456789render()&amp;#123;    return &amp;lt;View&amp;gt;">
-<meta property="og:image" content="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif">
-<meta property="og:updated_time" content="2018-05-15T14:41:48.987Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FlatList组件学习和封装">
-<meta name="twitter:description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
+    <meta property="og:image"
+          content="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif">
+    <meta property="og:updated_time" content="2018-05-15T14:41:48.987Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FlatList组件学习和封装">
+    <meta name="twitter:description" content="FlatList组件学习和封装是一个用于呈现简单的平面列表的高性能组件，支持下面功能：
 
 跨平台
 支持水平
@@ -128,177 +76,149 @@
 支持跳转到指定行他是继承自ScrollView以及VirtualizedList的，所以具有他们二者的props；
 
 简单例子123456789render()&amp;#123;    return &amp;lt;View&amp;gt;">
-<meta name="twitter:image" content="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif">
+    <meta name="twitter:image"
+          content="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/05/15/react/flstlist/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/react/flstlist/"/>
-
-
-  <title> FlatList组件学习和封装 | Blog </title>
+    <title> FlatList组件学习和封装 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                FlatList组件学习和封装
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    FlatList组件学习和封装
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -309,8 +229,8 @@
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -328,302 +248,1080 @@
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="FlatList组件学习和封装"><a href="#FlatList组件学习和封装" class="headerlink" title="FlatList组件学习和封装"></a>FlatList组件学习和封装</h2><p>是一个用于呈现简单的平面列表的高性能组件，支持下面功能：</p>
-<ul>
-<li>跨平台</li>
-<li>支持水平</li>
-<li>支持可配置的可视性回调</li>
-<li>支持头部</li>
-<li>支持尾部</li>
-<li>支持下拉刷新</li>
-<li>支持上来加载</li>
-<li>支持跳转到指定行<br>他是继承自ScrollView以及VirtualizedList的，所以具有他们二者的props；</li>
-</ul>
-<h3 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">render()&#123;</div><div class="line">    return &lt;View&gt;</div><div class="line">        &lt;FlatList</div><div class="line">            data=&#123;[&#123;key: &apos;a&apos;&#125;, &#123;key: &apos;b&apos;&#125;]&#125;</div><div class="line">            renderItem=&#123;(&#123;item&#125;) =&gt; &lt;Text&gt;&#123;item.key&#125;&lt;/Text&gt;&#125;</div><div class="line">        /&gt;</div><div class="line"></div><div class="line">    &lt;/View&gt;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>其中包含了最重要两个组件<code>data</code>和<code>renderItem</code>，data是数据list，是一个一个对象组合而成的，renderItem是条目。</p>
-<h3 id="FlatList重要方法"><a href="#FlatList重要方法" class="headerlink" title="FlatList重要方法"></a>FlatList重要方法</h3><p>1 <strong>renderItem</strong><br>他是一个方法，用于渲染具体的Item，他回调有几个参数，定义如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">renderItem(item,index,separators)&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>需要注意的是我们使用的时候一般需要进行解构赋值去取item的单个内容，下面谈到封装的时候再给例子。</p>
-<p>2 <strong>data</strong><br>他是FlastList的数据源，是一个数组</p>
-<p>3 <strong>ListEmptyComponent</strong><br>需要返回一个Component，当FlatList数据为空的时候的组件</p>
-<p>4 <strong>ListFooterComponent</strong><br>需要返回一个Component，FlatList的footer组件</p>
-<p>5 <strong>ListHeaderComponent</strong><br>需要返回一个Component，FlatList的头部组件，需要注意他不是刷新的那个组件，只是一个不同于普通item的头部组件</p>
-<p>6 <strong>horizontal</strong><br>一个布尔值，表明 是垂直的还是水平的FlatList，true是水平，false是垂直。</p>
-<p>7 <strong>keyExtractor</strong><br>定义是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(item: object, index: number) =&gt; string;</div></pre></td></tr></table></figure></p>
-<p>指定一个function，返回item的index，相当于Android的adapter的getIndex()方法，返回一个独立Item的唯一标识，需要返回一个index</p>
-<p>8 <strong>numColumns</strong><br>是一个number，表明该FlatList是几列。</p>
-<p>9 <strong>onEndReached</strong><br>当FlatLst到达底部的时候的回调</p>
-<p>10 <strong>onRefresh</strong><br>FlatList触发刷新时候的回调</p>
-<p>11 <strong>refreshing</strong><br>控制是否处于刷新状态</p>
-<p>12 <strong>ItemSeparatorComponent</strong><br>需要返回一个Component，作为item之间的分割线</p>
-<p>13 FlatList提供的一些scroll方法，比如滚动到底部，滚动到具体item，滚动多少距离等。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">scrollToEnd //滚动到底部</div><div class="line">scrollToIndex //滚动到第几个item</div><div class="line">scrollToItem //滚动到某个item</div><div class="line">scrollToOffset //滚动多少距离</div><div class="line">recordInteraction //告诉列表滚动发送了，会去调用viewability的计算。</div><div class="line">flashScrollIndicators //随时显示滚动指示器</div></pre></td></tr></table></figure></p>
-<h3 id="封装FlatList"><a href="#封装FlatList" class="headerlink" title="封装FlatList"></a>封装FlatList</h3><p>对于FlatList的刷新样式，我们能够定义或者是改造的可行性比较难，他的样式一般是比较固定，我们，假如需要自定义刷新的组件，可以参考我给出的推荐学习。</p>
-<p>对于FlatList的封装，整体需要做到开闭原则，我们有几点需求需要明确:</p>
-<ol>
-<li>提供刷新+加载</li>
-<li>可分别设置是否刷新+加载是否可用</li>
-<li>提供样式外部可定义以及一套默认样式</li>
-<li>提供多种列表状态，比如刷新中，加载中，加载完成，加载失败，空数据等</li>
-<li>提供一个onRequest(isRefresh：boolean)方法给外部，进行刷新或者加载处理</li>
-<li>对于一些方法，提供默认配置，但是外部也可以进行修改。</li>
-</ol>
-<ul>
-<li><p>定义FlatList的状态，默认props，styles以及需要的state</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">//state</div><div class="line">export const State = &#123;</div><div class="line">  NORMAL: 0,//正常状态</div><div class="line">  REFRESHING: 1,//刷新中</div><div class="line">  LOADING: 2,//正在加载</div><div class="line">  LOAD_END: 3,//上拉加载完成</div><div class="line">  ERROR: 4,//上拉加载发生错误</div><div class="line">  NO_DATA: 5,//无数据情况</div><div class="line">&#125;;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 默认样式</div><div class="line"> */</div><div class="line">const styles = StyleSheet.create(&#123;</div><div class="line">  //底部默认样式</div><div class="line">  footerContainer: &#123;</div><div class="line">    flex: 1,</div><div class="line">    flexDirection: &quot;row&quot;,</div><div class="line">    justifyContent: &quot;center&quot;,</div><div class="line">    alignItems: &quot;center&quot;,</div><div class="line">    padding: 10,</div><div class="line">    height: 44,</div><div class="line">  &#125;,</div><div class="line">  footerText: &#123;</div><div class="line">    fontSize: 14,</div><div class="line">    color: &quot;#555555&quot;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//props+state</div><div class="line">    static defaultProps = &#123;</div><div class="line">    loadingText: &quot;数据加载中...&quot;,</div><div class="line">    loadErrorText: &quot;点击重新加载...&quot;,</div><div class="line">    loadEndText: &quot;已加载全部数据&quot;,</div><div class="line">    loadEmptyText: &quot;暂时没有相关数据&quot;,</div><div class="line">    requestState: State.NORMAL,</div><div class="line">    footerContainer: &#123;&#125;,</div><div class="line">    footerText: &#123;&#125;,</div><div class="line">    data: [],</div><div class="line">    id: &quot;flat_list&quot;,</div><div class="line">    onRequest: (isRefresh) =&gt; &#123;</div><div class="line">    &#125;,</div><div class="line">  &#125;;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    //是否刷新/加载可用，外部可以通过调用方法设置，默认都可以</div><div class="line">    this.state = &#123;</div><div class="line">      enableLoadMore: true,</div><div class="line">      enableRefresh: true,</div><div class="line">    &#125;;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>外部设置是否可用方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 不会显示顶部可以刷新的UI</div><div class="line"> * @param enableLoad</div><div class="line"> */</div><div class="line">setEnableLoad(enableLoad) &#123;</div><div class="line">  this.setState(&#123;</div><div class="line">    enableLoad: enableLoad,</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line">/**</div><div class="line"> * 他是不会显示底部刷新的UI的</div><div class="line"> * @param enableRefresh</div><div class="line"> */</div><div class="line">setEnableRefresh(enableRefresh) &#123;</div><div class="line">  this.setState(&#123;</div><div class="line">    enableRefresh: enableRefresh,</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>数据加载方法</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 刷新触发</div><div class="line"> * @private</div><div class="line"> */</div><div class="line">_onRefresh = () =&gt; &#123;</div><div class="line">  if (this._enableRefresh()) &#123;</div><div class="line">    this.props.onRequest &amp;&amp; this.props.onRequest(true);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">/**</div><div class="line"> * 是否可以顶部刷新</div><div class="line"> * 当前需要 非刷新，而且也不是正在加载</div><div class="line"> * @returns &#123;boolean&#125;</div><div class="line"> */</div><div class="line">_enableRefresh = () =&gt; &#123;</div><div class="line">  return !(this.props.requestState === State.REFRESHING || this.props.requestState === State.LOADING);</div><div class="line">&#125;;</div><div class="line">_onEndReached = () =&gt; &#123;</div><div class="line">  if (this._enableLoad()) &#123;</div><div class="line">    this.props.onRequest &amp;&amp; this.props.onRequest(false);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">/**</div><div class="line"> * 是否可以加载，当前数据不能是0(因为进入的时候必须是refresh获取的数据显示)</div><div class="line"> * @returns &#123;boolean&#125;</div><div class="line"> */</div><div class="line">_enableLoad = () =&gt; &#123;</div><div class="line">  let &#123; requestState, data &#125; = this.props;</div><div class="line">  if (data.length === 0) &#123;</div><div class="line">    return false;</div><div class="line">  &#125;</div><div class="line">  return requestState === State.NORMAL;</div><div class="line">&#125;;</div><div class="line">/**</div><div class="line"> * 刷新或加载</div><div class="line"> * @param isRefresh</div><div class="line"> * @private</div><div class="line"> */</div><div class="line">_reRequest = (isRefresh) =&gt; &#123;</div><div class="line">  //回调外部方法</div><div class="line">  this.props.onRequest &amp;&amp; this.props.onRequest(isRefresh);</div><div class="line">&#125;;</div><div class="line">_keyExtractor = (item, index) =&gt; &#123;</div><div class="line">  const &#123; keyExtractor &#125; = this.props;</div><div class="line">  if (keyExtractor) &#123;</div><div class="line">    return keyExtractor(item, index);</div><div class="line">  &#125;</div><div class="line">  return index.toString();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>Item的唯一标识以及默认的分割线</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">  _keyExtractor = (item, index) =&gt; &#123;</div><div class="line">    const &#123; keyExtractor &#125; = this.props;</div><div class="line">    if (keyExtractor) &#123;</div><div class="line">      return keyExtractor(item, index);</div><div class="line">    &#125;</div><div class="line">    return index.toString();</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">_separator = () =&gt; &#123;</div><div class="line">    const &#123; separator &#125; = this.props;</div><div class="line">    if (separator) &#123;</div><div class="line">      return separator();</div><div class="line">    &#125;</div><div class="line">    return &lt;View style=&#123;&#123;</div><div class="line">      height: 1,</div><div class="line">      backgroundColor: &quot;#ededed&quot;,</div><div class="line">      marginLeft: 10,</div><div class="line">      marginRight: 10</div><div class="line">    &#125;&#125;/&gt;;</div><div class="line">  &#125;;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Footer，footer对于不同的FlatList状态会返回不同的Component</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 渲染底部</div><div class="line">   * @returns &#123;*&#125;</div><div class="line">   */</div><div class="line">  _renderFooter = () =&gt; &#123;</div><div class="line">    let footer = null;</div><div class="line">    let footerContainerStyle = [styles.footerContainer, this.props.footerContainer];</div><div class="line">    let footerTextStyle = [styles.footerText, this.props.footerText];</div><div class="line">    let &#123; loadingText, loadErrorText, loadEndText, loadEmptyText &#125; = this.props;</div><div class="line">    const hasData = this.props.data &amp;&amp; this.props.data.length &gt; 0;</div><div class="line">    switch (this.props.requestState) &#123;</div><div class="line">      case State.NORMAL:</div><div class="line">        footer = (&lt;View style=&#123;footerContainerStyle&#125;/&gt;);</div><div class="line">        break;</div><div class="line">      case State.ERROR: &#123;</div><div class="line">        //是否有数据</div><div class="line">        footer = hasData ? (</div><div class="line">          &lt;TouchableOpacity</div><div class="line">            activeOpacity=&#123;0.8&#125;</div><div class="line">            style=&#123;footerContainerStyle&#125;</div><div class="line">            onPress=&#123;this._reRequest&#125;</div><div class="line">          &gt;</div><div class="line">            &lt;Text style=&#123;footerTextStyle&#125;&gt;&#123;loadErrorText&#125;&lt;/Text&gt;</div><div class="line">          &lt;/TouchableOpacity&gt;</div><div class="line">        ) : (&lt;EmptyData onPress=&#123;this._reRequest&#125; tips=&#123;loadErrorText&#125;/&gt;);</div><div class="line">        break;</div><div class="line">      &#125;</div><div class="line">      case State.NO_DATA: &#123;</div><div class="line">        footer = &lt;EmptyData onPress=&#123;this._reRequest&#125; tips=&#123;loadEmptyText&#125;/&gt;;</div><div class="line">        break;</div><div class="line">      &#125;</div><div class="line">      case State.LOADING: &#123;</div><div class="line">        footer = (</div><div class="line">          &lt;View style=&#123;footerContainerStyle&#125;&gt;</div><div class="line">            &lt;ActivityIndicator size=&quot;small&quot; color=&quot;#888888&quot;/&gt;</div><div class="line">            &lt;Text style=&#123;[footerTextStyle, &#123; marginLeft: 7 &#125;]&#125;&gt;&#123;loadingText&#125;&lt;/Text&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">        );</div><div class="line">        break;</div><div class="line">      &#125;</div><div class="line">      case State.LOAD_END: &#123;</div><div class="line">        footer = (</div><div class="line">          &lt;View style=&#123;footerContainerStyle&#125;&gt;</div><div class="line">            &lt;Text style=&#123;footerTextStyle&#125;&gt;&#123;loadEndText&#125;&lt;/Text&gt;</div><div class="line">          &lt;/View&gt;</div><div class="line">        );</div><div class="line">        break;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    return footer;</div><div class="line">  &#125;;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>其中Empty是空数据的组件，另外独立定义了他的Component<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">class EmptyData extends Component &#123;</div><div class="line">  static defaultProps = &#123;</div><div class="line">    tips: &quot;暂无数据&quot;,</div><div class="line">  &#125;;</div><div class="line">  _onPress = () =&gt; &#123;</div><div class="line">    const &#123; onPress &#125; = this.props;</div><div class="line">    if (onPress) &#123;</div><div class="line">      onPress(true);</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">  render() &#123;</div><div class="line">    return (</div><div class="line">      &lt;TouchableOpacity onPress=&#123;this._onPress&#125; activeOpacity=&#123;0.8&#125;&gt;</div><div class="line">        &lt;View style=&#123;&#123;</div><div class="line">          flex: 1,</div><div class="line">          alignItems: &quot;center&quot;,</div><div class="line">          justifyContent: &quot;center&quot;</div><div class="line">        &#125;&#125;&gt;</div><div class="line">          &lt;Image</div><div class="line">            style=&#123;&#123;</div><div class="line">              marginTop: 10,</div><div class="line">              marginBottom: 10,</div><div class="line">              width: 120,</div><div class="line">              height: 120,</div><div class="line">              resizeMode: &quot;contain&quot;</div><div class="line">            &#125;&#125;</div><div class="line">            source=&#123;require(&quot;../../img/pic_empty_data.png&quot;)&#125;</div><div class="line">          /&gt;</div><div class="line">          &lt;Text&gt;&#123;this.props.tips&#125;&lt;/Text&gt;</div><div class="line">        &lt;/View&gt;</div><div class="line">      &lt;/TouchableOpacity&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>render方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   * 渲染</div><div class="line">   * @returns &#123;*&#125;</div><div class="line">   */</div><div class="line">  render() &#123;</div><div class="line">    let &#123;</div><div class="line">      renderItem = () =&gt; &#123;</div><div class="line">      &#125;</div><div class="line">    &#125; = this.props;</div><div class="line">    return (</div><div class="line">      &lt;FlatList</div><div class="line">        onEndReached=&#123;this._onEndReached&#125;</div><div class="line">        onRefresh=&#123;this.state.enableRefresh ? this._onRefresh : null&#125;</div><div class="line">        refreshing=&#123;this.state.enableRefresh &amp;&amp; (this.props.requestState === State.REFRESHING)&#125;</div><div class="line">        ListFooterComponent=&#123;this.state.enableLoad ? this._renderFooter : null&#125;</div><div class="line">        onEndReachedThreshold=&#123;0.1&#125;</div><div class="line">        renderItem=&#123;renderItem&#125;</div><div class="line">        &#123;...this.props&#125;</div><div class="line">        ItemSeparatorComponent=&#123;this._separator&#125;</div><div class="line">        keyExtractor=&#123;this._keyExtractor&#125; Ò</div><div class="line">      /&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>这样子我们就定义了一个完整的PullLoadComponent。</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>我们用玩Android开发的Api，这里感谢<a href="http://www.wanandroid.com" target="_blank" rel="external">玩Android</a>提供的Api接口。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">const API = &quot;http://www.wanandroid.com/article/list/&quot;;</div><div class="line">export default class FlatListDemoPage extends Component &#123;</div><div class="line">  static navigationOptions = &#123;</div><div class="line">    // headerTitle: &apos;first&apos;,</div><div class="line">    title: &quot;FlatListDemoPage&quot;,</div><div class="line">  &#125;;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;</div><div class="line">      requestState: State.NORMAL,</div><div class="line">      data: []</div><div class="line">    &#125;;</div><div class="line">    this.currentPage = 0;</div><div class="line">  &#125;</div><div class="line">  componentDidMount() &#123;</div><div class="line">    this._request(true);</div><div class="line">  &#125;</div><div class="line">  _request = (isRefresh) =&gt; &#123;</div><div class="line">    this.currentPage = isRefresh ? 0 : this.currentPage + 1;</div><div class="line">    this.setState(&#123; requestState: isRefresh ? State.REFRESHING : State.LOADING &#125;);</div><div class="line">    //发起请求</div><div class="line">    fetch(API + this.currentPage + &quot;/json&quot;) // 返回一个Promise对象</div><div class="line">      .then((res) =&gt; &#123;</div><div class="line">        return res.json();</div><div class="line">      &#125;)</div><div class="line">      .then((res) =&gt; &#123;</div><div class="line">        const &#123; data &#125; = res;</div><div class="line">        const &#123; datas &#125; = data;</div><div class="line">        this._setData(datas);</div><div class="line">      &#125;)</div><div class="line">      .catch(e =&gt; &#123;</div><div class="line">        //加载失败</div><div class="line">        console.log(e);</div><div class="line">        this.setState(&#123; requestState: State.ERROR &#125;);</div><div class="line">      &#125;);</div><div class="line">  &#125;;</div><div class="line">  _setData = (data, isRefresh) =&gt; &#123;</div><div class="line">    if (data &amp;&amp; data.length &gt; 0) &#123;</div><div class="line">      //判断一下是否还有下一页，因为一页最多20条，不满足则是无法去加载更多了</div><div class="line">      this.setState(&#123;</div><div class="line">        requestState: data.length &gt;= 20 ? State.NORMAL : State.LOAD_END,</div><div class="line">        data: isRefresh ? data : this.state.data.concat(data)</div><div class="line">      &#125;);</div><div class="line">    &#125; else &#123;</div><div class="line">      //已经没有数据了，需要对footer进行处理</div><div class="line">      if (this.currentPage === 0) &#123;</div><div class="line">        //第一页没有数据，那么就是当前接口无数据</div><div class="line">        this.setState(&#123;</div><div class="line">          requestState: State.NO_DATA,</div><div class="line">          data: []</div><div class="line">        &#125;);</div><div class="line">      &#125; else &#123;</div><div class="line">        //不是第一页，新页返回空，就是接下来没有数据了</div><div class="line">        this.setState(&#123;</div><div class="line">          requestState: State.LOAD_END,</div><div class="line">          data: this.state.data</div><div class="line">        &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">  _renderItem = (&#123; item &#125;) =&gt; &#123;</div><div class="line">    const &#123; title &#125; = item;</div><div class="line">    return &lt;Text style=&#123;&#123;</div><div class="line">      color: &quot;black&quot;,</div><div class="line">      textAlign: &quot;center&quot;,</div><div class="line">    &#125;&#125;&gt;&#123;title&#125;&lt;/Text&gt;;</div><div class="line">  &#125;;</div><div class="line">  render() &#123;</div><div class="line">    console.log(&quot;requestState=&quot; + this.state.requestState);</div><div class="line">    return (</div><div class="line">      &lt;View&gt;</div><div class="line">        &lt;PullLoadComponent</div><div class="line">          ref=&#123;(flat_list) =&gt; &#123;</div><div class="line">            this.flat_list = flat_list;</div><div class="line">          &#125;&#125;</div><div class="line">          onRequest=&#123;this._request&#125;</div><div class="line">          data=&#123;this.state.data&#125;</div><div class="line">          requestState=&#123;this.state.requestState&#125;</div><div class="line">          renderItem=&#123;this._renderItem&#125;</div><div class="line">        /&gt;</div><div class="line">      &lt;/View&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>效果图：<br><img src="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif" alt=""></p>
-<h3 id="推荐学习"><a href="#推荐学习" class="headerlink" title="推荐学习"></a>推荐学习</h3><ul>
-<li><a href="http://facebook.github.io/react-native/docs/flatlist.html" target="_blank" rel="external">官网</a></li>
-<li><a href="https://www.jianshu.com/p/9a4151852722" target="_blank" rel="external">React Native 之自定义下拉刷新</a></li>
-</ul>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/react-native/" rel="tag">#react-native</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/21/前端/promise_learn/" rel="next" title="Promise学习">
-                <i class="fa fa-chevron-left"></i> Promise学习
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/15/react/rn_summary/" rel="prev" title="ReactNative开发经验总结">
-                ReactNative开发经验总结 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h2 id="FlatList组件学习和封装"><a href="#FlatList组件学习和封装"
+                                                            class="headerlink"
+                                                            title="FlatList组件学习和封装"></a>FlatList组件学习和封装
+                                </h2>
+                                <p>是一个用于呈现简单的平面列表的高性能组件，支持下面功能：</p>
+                                <ul>
+                                    <li>跨平台</li>
+                                    <li>支持水平</li>
+                                    <li>支持可配置的可视性回调</li>
+                                    <li>支持头部</li>
+                                    <li>支持尾部</li>
+                                    <li>支持下拉刷新</li>
+                                    <li>支持上来加载</li>
+                                    <li>支持跳转到指定行<br>他是继承自ScrollView以及VirtualizedList的，所以具有他们二者的props；
+                                    </li>
+                                </ul>
+                                <h3 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子
+                                </h3>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">render()&#123;</div><div
+                                                        class="line">    return &lt;View&gt;</div><div
+                                                        class="line">        &lt;FlatList</div><div
+                                                        class="line">            data=&#123;[&#123;key: &apos;a&apos;&#125;, &#123;key: &apos;b&apos;&#125;]&#125;</div><div
+                                                        class="line">            renderItem=&#123;(&#123;item&#125;) =&gt; &lt;Text&gt;&#123;item.key&#125;&lt;/Text&gt;&#125;</div><div
+                                                        class="line">        /&gt;</div><div
+                                                        class="line"></div><div class="line">    &lt;/View&gt;</div><div
+                                                        class="line">&#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>其中包含了最重要两个组件<code>data</code>和<code>renderItem</code>，data是数据list，是一个一个对象组合而成的，renderItem是条目。
+                                </p>
+                                <h3 id="FlatList重要方法"><a href="#FlatList重要方法" class="headerlink"
+                                                         title="FlatList重要方法"></a>FlatList重要方法</h3>
+                                <p>1 <strong>renderItem</strong><br>他是一个方法，用于渲染具体的Item，他回调有几个参数，定义如下<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">renderItem(item,index,separators)&#123;</div><div
+                                                            class="line"></div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>需要注意的是我们使用的时候一般需要进行解构赋值去取item的单个内容，下面谈到封装的时候再给例子。</p>
+                                <p>2 <strong>data</strong><br>他是FlastList的数据源，是一个数组</p>
+                                <p>3 <strong>ListEmptyComponent</strong><br>需要返回一个Component，当FlatList数据为空的时候的组件
+                                </p>
+                                <p>4 <strong>ListFooterComponent</strong><br>需要返回一个Component，FlatList的footer组件
+                                </p>
+                                <p>5 <strong>ListHeaderComponent</strong><br>需要返回一个Component，FlatList的头部组件，需要注意他不是刷新的那个组件，只是一个不同于普通item的头部组件
+                                </p>
+                                <p>6 <strong>horizontal</strong><br>一个布尔值，表明
+                                    是垂直的还是水平的FlatList，true是水平，false是垂直。</p>
+                                <p>7 <strong>keyExtractor</strong><br>定义是<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">(item: object, index: number) =&gt; string;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    指定一个function，返回item的index，相当于Android的adapter的getIndex()方法，返回一个独立Item的唯一标识，需要返回一个index</p>
+                                <p>8 <strong>numColumns</strong><br>是一个number，表明该FlatList是几列。</p>
+                                <p>9 <strong>onEndReached</strong><br>当FlatLst到达底部的时候的回调</p>
+                                <p>10 <strong>onRefresh</strong><br>FlatList触发刷新时候的回调</p>
+                                <p>11 <strong>refreshing</strong><br>控制是否处于刷新状态</p>
+                                <p>12 <strong>ItemSeparatorComponent</strong><br>需要返回一个Component，作为item之间的分割线
+                                </p>
+                                <p>13 FlatList提供的一些scroll方法，比如滚动到底部，滚动到具体item，滚动多少距离等。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">scrollToEnd //滚动到底部</div><div
+                                                            class="line">scrollToIndex //滚动到第几个item</div><div
+                                                            class="line">scrollToItem //滚动到某个item</div><div
+                                                            class="line">scrollToOffset //滚动多少距离</div><div
+                                                            class="line">recordInteraction //告诉列表滚动发送了，会去调用viewability的计算。</div><div
+                                                            class="line">flashScrollIndicators //随时显示滚动指示器</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h3 id="封装FlatList"><a href="#封装FlatList" class="headerlink"
+                                                       title="封装FlatList"></a>封装FlatList</h3>
+                                <p>
+                                    对于FlatList的刷新样式，我们能够定义或者是改造的可行性比较难，他的样式一般是比较固定，我们，假如需要自定义刷新的组件，可以参考我给出的推荐学习。</p>
+                                <p>对于FlatList的封装，整体需要做到开闭原则，我们有几点需求需要明确:</p>
+                                <ol>
+                                    <li>提供刷新+加载</li>
+                                    <li>可分别设置是否刷新+加载是否可用</li>
+                                    <li>提供样式外部可定义以及一套默认样式</li>
+                                    <li>提供多种列表状态，比如刷新中，加载中，加载完成，加载失败，空数据等</li>
+                                    <li>提供一个onRequest(isRefresh：boolean)方法给外部，进行刷新或者加载处理</li>
+                                    <li>对于一些方法，提供默认配置，但是外部也可以进行修改。</li>
+                                </ol>
+                                <ul>
+                                    <li><p>定义FlatList的状态，默认props，styles以及需要的state</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div><div
+                                                                class="line">45</div><div
+                                                                class="line">46</div><div
+                                                                class="line">47</div><div
+                                                                class="line">48</div><div
+                                                                class="line">49</div><div
+                                                                class="line">50</div><div
+                                                                class="line">51</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">//state</div><div
+                                                                class="line">export const State = &#123;</div><div
+                                                                class="line">  NORMAL: 0,//正常状态</div><div
+                                                                class="line">  REFRESHING: 1,//刷新中</div><div
+                                                                class="line">  LOADING: 2,//正在加载</div><div
+                                                                class="line">  LOAD_END: 3,//上拉加载完成</div><div
+                                                                class="line">  ERROR: 4,//上拉加载发生错误</div><div
+                                                                class="line">  NO_DATA: 5,//无数据情况</div><div
+                                                                class="line">&#125;;</div><div
+                                                                class="line"></div><div
+                                                                class="line">/**</div><div
+                                                                class="line"> * 默认样式</div><div
+                                                                class="line"> */</div><div
+                                                                class="line">const styles = StyleSheet.create(&#123;</div><div
+                                                                class="line">  //底部默认样式</div><div
+                                                                class="line">  footerContainer: &#123;</div><div
+                                                                class="line">    flex: 1,</div><div
+                                                                class="line">    flexDirection: &quot;row&quot;,</div><div
+                                                                class="line">    justifyContent: &quot;center&quot;,</div><div
+                                                                class="line">    alignItems: &quot;center&quot;,</div><div
+                                                                class="line">    padding: 10,</div><div
+                                                                class="line">    height: 44,</div><div
+                                                                class="line">  &#125;,</div><div
+                                                                class="line">  footerText: &#123;</div><div
+                                                                class="line">    fontSize: 14,</div><div
+                                                                class="line">    color: &quot;#555555&quot;</div><div
+                                                                class="line">  &#125;</div><div
+                                                                class="line">&#125;);</div><div
+                                                                class="line"></div><div
+                                                                class="line">//props+state</div><div
+                                                                class="line">    static defaultProps = &#123;</div><div
+                                                                class="line">    loadingText: &quot;数据加载中...&quot;,</div><div
+                                                                class="line">    loadErrorText: &quot;点击重新加载...&quot;,</div><div
+                                                                class="line">    loadEndText: &quot;已加载全部数据&quot;,</div><div
+                                                                class="line">    loadEmptyText: &quot;暂时没有相关数据&quot;,</div><div
+                                                                class="line">    requestState: State.NORMAL,</div><div
+                                                                class="line">    footerContainer: &#123;&#125;,</div><div
+                                                                class="line">    footerText: &#123;&#125;,</div><div
+                                                                class="line">    data: [],</div><div
+                                                                class="line">    id: &quot;flat_list&quot;,</div><div
+                                                                class="line">    onRequest: (isRefresh) =&gt; &#123;</div><div
+                                                                class="line">    &#125;,</div><div
+                                                                class="line">  &#125;;</div><div
+                                                                class="line">  constructor(props) &#123;</div><div
+                                                                class="line">    super(props);</div><div
+                                                                class="line">    //是否刷新/加载可用，外部可以通过调用方法设置，默认都可以</div><div
+                                                                class="line">    this.state = &#123;</div><div
+                                                                class="line">      enableLoadMore: true,</div><div
+                                                                class="line">      enableRefresh: true,</div><div
+                                                                class="line">    &#125;;</div><div
+                                                                class="line">  &#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>外部设置是否可用方法</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">/**</div><div
+                                                                class="line"> * 不会显示顶部可以刷新的UI</div><div
+                                                                class="line"> * @param enableLoad</div><div
+                                                                class="line"> */</div><div
+                                                                class="line">setEnableLoad(enableLoad) &#123;</div><div
+                                                                class="line">  this.setState(&#123;</div><div
+                                                                class="line">    enableLoad: enableLoad,</div><div
+                                                                class="line">  &#125;);</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line">/**</div><div
+                                                                class="line"> * 他是不会显示底部刷新的UI的</div><div
+                                                                class="line"> * @param enableRefresh</div><div
+                                                                class="line"> */</div><div
+                                                                class="line">setEnableRefresh(enableRefresh) &#123;</div><div
+                                                                class="line">  this.setState(&#123;</div><div
+                                                                class="line">    enableRefresh: enableRefresh,</div><div
+                                                                class="line">  &#125;);</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>数据加载方法</p>
+                                    </li>
+                                </ul>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div><div
+                                                        class="line">14</div><div
+                                                        class="line">15</div><div
+                                                        class="line">16</div><div
+                                                        class="line">17</div><div
+                                                        class="line">18</div><div
+                                                        class="line">19</div><div
+                                                        class="line">20</div><div
+                                                        class="line">21</div><div
+                                                        class="line">22</div><div
+                                                        class="line">23</div><div
+                                                        class="line">24</div><div
+                                                        class="line">25</div><div
+                                                        class="line">26</div><div
+                                                        class="line">27</div><div
+                                                        class="line">28</div><div
+                                                        class="line">29</div><div
+                                                        class="line">30</div><div
+                                                        class="line">31</div><div
+                                                        class="line">32</div><div
+                                                        class="line">33</div><div
+                                                        class="line">34</div><div
+                                                        class="line">35</div><div
+                                                        class="line">36</div><div
+                                                        class="line">37</div><div
+                                                        class="line">38</div><div
+                                                        class="line">39</div><div
+                                                        class="line">40</div><div
+                                                        class="line">41</div><div
+                                                        class="line">42</div><div
+                                                        class="line">43</div><div
+                                                        class="line">44</div><div
+                                                        class="line">45</div><div
+                                                        class="line">46</div><div
+                                                        class="line">47</div><div
+                                                        class="line">48</div><div
+                                                        class="line">49</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">/**</div><div class="line"> * 刷新触发</div><div
+                                                        class="line"> * @private</div><div
+                                                        class="line"> */</div><div class="line">_onRefresh = () =&gt; &#123;</div><div
+                                                        class="line">  if (this._enableRefresh()) &#123;</div><div
+                                                        class="line">    this.props.onRequest &amp;&amp; this.props.onRequest(true);</div><div
+                                                        class="line">  &#125;</div><div
+                                                        class="line">&#125;;</div><div class="line">/**</div><div
+                                                        class="line"> * 是否可以顶部刷新</div><div
+                                                        class="line"> * 当前需要 非刷新，而且也不是正在加载</div><div
+                                                        class="line"> * @returns &#123;boolean&#125;</div><div
+                                                        class="line"> */</div><div class="line">_enableRefresh = () =&gt; &#123;</div><div
+                                                        class="line">  return !(this.props.requestState === State.REFRESHING || this.props.requestState === State.LOADING);</div><div
+                                                        class="line">&#125;;</div><div class="line">_onEndReached = () =&gt; &#123;</div><div
+                                                        class="line">  if (this._enableLoad()) &#123;</div><div
+                                                        class="line">    this.props.onRequest &amp;&amp; this.props.onRequest(false);</div><div
+                                                        class="line">  &#125;</div><div
+                                                        class="line">&#125;;</div><div class="line">/**</div><div
+                                                        class="line"> * 是否可以加载，当前数据不能是0(因为进入的时候必须是refresh获取的数据显示)</div><div
+                                                        class="line"> * @returns &#123;boolean&#125;</div><div
+                                                        class="line"> */</div><div class="line">_enableLoad = () =&gt; &#123;</div><div
+                                                        class="line">  let &#123; requestState, data &#125; = this.props;</div><div
+                                                        class="line">  if (data.length === 0) &#123;</div><div
+                                                        class="line">    return false;</div><div
+                                                        class="line">  &#125;</div><div
+                                                        class="line">  return requestState === State.NORMAL;</div><div
+                                                        class="line">&#125;;</div><div class="line">/**</div><div
+                                                        class="line"> * 刷新或加载</div><div
+                                                        class="line"> * @param isRefresh</div><div
+                                                        class="line"> * @private</div><div
+                                                        class="line"> */</div><div class="line">_reRequest = (isRefresh) =&gt; &#123;</div><div
+                                                        class="line">  //回调外部方法</div><div
+                                                        class="line">  this.props.onRequest &amp;&amp; this.props.onRequest(isRefresh);</div><div
+                                                        class="line">&#125;;</div><div class="line">_keyExtractor = (item, index) =&gt; &#123;</div><div
+                                                        class="line">  const &#123; keyExtractor &#125; = this.props;</div><div
+                                                        class="line">  if (keyExtractor) &#123;</div><div
+                                                        class="line">    return keyExtractor(item, index);</div><div
+                                                        class="line">  &#125;</div><div
+                                                        class="line">  return index.toString();</div><div
+                                                        class="line">&#125;;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <ul>
+                                    <li><p>Item的唯一标识以及默认的分割线</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">  _keyExtractor = (item, index) =&gt; &#123;</div><div
+                                                                class="line">    const &#123; keyExtractor &#125; = this.props;</div><div
+                                                                class="line">    if (keyExtractor) &#123;</div><div
+                                                                class="line">      return keyExtractor(item, index);</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    return index.toString();</div><div
+                                                                class="line">  &#125;;</div><div
+                                                                class="line"></div><div
+                                                                class="line">_separator = () =&gt; &#123;</div><div
+                                                                class="line">    const &#123; separator &#125; = this.props;</div><div
+                                                                class="line">    if (separator) &#123;</div><div
+                                                                class="line">      return separator();</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    return &lt;View style=&#123;&#123;</div><div
+                                                                class="line">      height: 1,</div><div
+                                                                class="line">      backgroundColor: &quot;#ededed&quot;,</div><div
+                                                                class="line">      marginLeft: 10,</div><div
+                                                                class="line">      marginRight: 10</div><div
+                                                                class="line">    &#125;&#125;/&gt;;</div><div
+                                                                class="line">  &#125;;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                    <li><p>Footer，footer对于不同的FlatList状态会返回不同的Component</p>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div><div
+                                                                class="line">45</div><div
+                                                                class="line">46</div><div
+                                                                class="line">47</div><div
+                                                                class="line">48</div><div
+                                                                class="line">49</div><div
+                                                                class="line">50</div><div
+                                                                class="line">51</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">/**</div><div
+                                                                class="line">   * 渲染底部</div><div
+                                                                class="line">   * @returns &#123;*&#125;</div><div
+                                                                class="line">   */</div><div
+                                                                class="line">  _renderFooter = () =&gt; &#123;</div><div
+                                                                class="line">    let footer = null;</div><div
+                                                                class="line">    let footerContainerStyle = [styles.footerContainer, this.props.footerContainer];</div><div
+                                                                class="line">    let footerTextStyle = [styles.footerText, this.props.footerText];</div><div
+                                                                class="line">    let &#123; loadingText, loadErrorText, loadEndText, loadEmptyText &#125; = this.props;</div><div
+                                                                class="line">    const hasData = this.props.data &amp;&amp; this.props.data.length &gt; 0;</div><div
+                                                                class="line">    switch (this.props.requestState) &#123;</div><div
+                                                                class="line">      case State.NORMAL:</div><div
+                                                                class="line">        footer = (&lt;View style=&#123;footerContainerStyle&#125;/&gt;);</div><div
+                                                                class="line">        break;</div><div
+                                                                class="line">      case State.ERROR: &#123;</div><div
+                                                                class="line">        //是否有数据</div><div
+                                                                class="line">        footer = hasData ? (</div><div
+                                                                class="line">          &lt;TouchableOpacity</div><div
+                                                                class="line">            activeOpacity=&#123;0.8&#125;</div><div
+                                                                class="line">            style=&#123;footerContainerStyle&#125;</div><div
+                                                                class="line">            onPress=&#123;this._reRequest&#125;</div><div
+                                                                class="line">          &gt;</div><div
+                                                                class="line">            &lt;Text style=&#123;footerTextStyle&#125;&gt;&#123;loadErrorText&#125;&lt;/Text&gt;</div><div
+                                                                class="line">          &lt;/TouchableOpacity&gt;</div><div
+                                                                class="line">        ) : (&lt;EmptyData onPress=&#123;this._reRequest&#125; tips=&#123;loadErrorText&#125;/&gt;);</div><div
+                                                                class="line">        break;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">      case State.NO_DATA: &#123;</div><div
+                                                                class="line">        footer = &lt;EmptyData onPress=&#123;this._reRequest&#125; tips=&#123;loadEmptyText&#125;/&gt;;</div><div
+                                                                class="line">        break;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">      case State.LOADING: &#123;</div><div
+                                                                class="line">        footer = (</div><div
+                                                                class="line">          &lt;View style=&#123;footerContainerStyle&#125;&gt;</div><div
+                                                                class="line">            &lt;ActivityIndicator size=&quot;small&quot; color=&quot;#888888&quot;/&gt;</div><div
+                                                                class="line">            &lt;Text style=&#123;[footerTextStyle, &#123; marginLeft: 7 &#125;]&#125;&gt;&#123;loadingText&#125;&lt;/Text&gt;</div><div
+                                                                class="line">          &lt;/View&gt;</div><div
+                                                                class="line">        );</div><div
+                                                                class="line">        break;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">      case State.LOAD_END: &#123;</div><div
+                                                                class="line">        footer = (</div><div
+                                                                class="line">          &lt;View style=&#123;footerContainerStyle&#125;&gt;</div><div
+                                                                class="line">            &lt;Text style=&#123;footerTextStyle&#125;&gt;&#123;loadEndText&#125;&lt;/Text&gt;</div><div
+                                                                class="line">          &lt;/View&gt;</div><div
+                                                                class="line">        );</div><div
+                                                                class="line">        break;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">    &#125;</div><div
+                                                                class="line">    return footer;</div><div
+                                                                class="line">  &#125;;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>其中Empty是空数据的组件，另外独立定义了他的Component<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">class EmptyData extends Component &#123;</div><div
+                                                            class="line">  static defaultProps = &#123;</div><div
+                                                            class="line">    tips: &quot;暂无数据&quot;,</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  _onPress = () =&gt; &#123;</div><div
+                                                            class="line">    const &#123; onPress &#125; = this.props;</div><div
+                                                            class="line">    if (onPress) &#123;</div><div
+                                                            class="line">      onPress(true);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  render() &#123;</div><div
+                                                            class="line">    return (</div><div
+                                                            class="line">      &lt;TouchableOpacity onPress=&#123;this._onPress&#125; activeOpacity=&#123;0.8&#125;&gt;</div><div
+                                                            class="line">        &lt;View style=&#123;&#123;</div><div
+                                                            class="line">          flex: 1,</div><div
+                                                            class="line">          alignItems: &quot;center&quot;,</div><div
+                                                            class="line">          justifyContent: &quot;center&quot;</div><div
+                                                            class="line">        &#125;&#125;&gt;</div><div
+                                                            class="line">          &lt;Image</div><div
+                                                            class="line">            style=&#123;&#123;</div><div
+                                                            class="line">              marginTop: 10,</div><div
+                                                            class="line">              marginBottom: 10,</div><div
+                                                            class="line">              width: 120,</div><div
+                                                            class="line">              height: 120,</div><div
+                                                            class="line">              resizeMode: &quot;contain&quot;</div><div
+                                                            class="line">            &#125;&#125;</div><div
+                                                            class="line">            source=&#123;require(&quot;../../img/pic_empty_data.png&quot;)&#125;</div><div
+                                                            class="line">          /&gt;</div><div
+                                                            class="line">          &lt;Text&gt;&#123;this.props.tips&#125;&lt;/Text&gt;</div><div
+                                                            class="line">        &lt;/View&gt;</div><div
+                                                            class="line">      &lt;/TouchableOpacity&gt;</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <ul>
+                                    <li>render方法
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">/**</div><div
+                                                                class="line">   * 渲染</div><div
+                                                                class="line">   * @returns &#123;*&#125;</div><div
+                                                                class="line">   */</div><div
+                                                                class="line">  render() &#123;</div><div
+                                                                class="line">    let &#123;</div><div
+                                                                class="line">      renderItem = () =&gt; &#123;</div><div
+                                                                class="line">      &#125;</div><div
+                                                                class="line">    &#125; = this.props;</div><div
+                                                                class="line">    return (</div><div
+                                                                class="line">      &lt;FlatList</div><div
+                                                                class="line">        onEndReached=&#123;this._onEndReached&#125;</div><div
+                                                                class="line">        onRefresh=&#123;this.state.enableRefresh ? this._onRefresh : null&#125;</div><div
+                                                                class="line">        refreshing=&#123;this.state.enableRefresh &amp;&amp; (this.props.requestState === State.REFRESHING)&#125;</div><div
+                                                                class="line">        ListFooterComponent=&#123;this.state.enableLoad ? this._renderFooter : null&#125;</div><div
+                                                                class="line">        onEndReachedThreshold=&#123;0.1&#125;</div><div
+                                                                class="line">        renderItem=&#123;renderItem&#125;</div><div
+                                                                class="line">        &#123;...this.props&#125;</div><div
+                                                                class="line">        ItemSeparatorComponent=&#123;this._separator&#125;</div><div
+                                                                class="line">        keyExtractor=&#123;this._keyExtractor&#125; Ò</div><div
+                                                                class="line">      /&gt;</div><div
+                                                                class="line">    );</div><div
+                                                                class="line">  &#125;</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ul>
+                                <p>这样子我们就定义了一个完整的PullLoadComponent。</p>
+                                <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3>
+                                <p>我们用玩Android开发的Api，这里感谢<a href="http://www.wanandroid.com"
+                                                            target="_blank"
+                                                            rel="external">玩Android</a>提供的Api接口。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div><div class="line">39</div><div
+                                                            class="line">40</div><div class="line">41</div><div
+                                                            class="line">42</div><div class="line">43</div><div
+                                                            class="line">44</div><div class="line">45</div><div
+                                                            class="line">46</div><div class="line">47</div><div
+                                                            class="line">48</div><div class="line">49</div><div
+                                                            class="line">50</div><div class="line">51</div><div
+                                                            class="line">52</div><div class="line">53</div><div
+                                                            class="line">54</div><div class="line">55</div><div
+                                                            class="line">56</div><div class="line">57</div><div
+                                                            class="line">58</div><div class="line">59</div><div
+                                                            class="line">60</div><div class="line">61</div><div
+                                                            class="line">62</div><div class="line">63</div><div
+                                                            class="line">64</div><div class="line">65</div><div
+                                                            class="line">66</div><div class="line">67</div><div
+                                                            class="line">68</div><div class="line">69</div><div
+                                                            class="line">70</div><div class="line">71</div><div
+                                                            class="line">72</div><div class="line">73</div><div
+                                                            class="line">74</div><div class="line">75</div><div
+                                                            class="line">76</div><div class="line">77</div><div
+                                                            class="line">78</div><div class="line">79</div><div
+                                                            class="line">80</div><div class="line">81</div><div
+                                                            class="line">82</div><div class="line">83</div><div
+                                                            class="line">84</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">const API = &quot;http://www.wanandroid.com/article/list/&quot;;</div><div
+                                                            class="line">export default class FlatListDemoPage extends Component &#123;</div><div
+                                                            class="line">  static navigationOptions = &#123;</div><div
+                                                            class="line">    // headerTitle: &apos;first&apos;,</div><div
+                                                            class="line">    title: &quot;FlatListDemoPage&quot;,</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  constructor(props) &#123;</div><div
+                                                            class="line">    super(props);</div><div
+                                                            class="line">    this.state = &#123;</div><div
+                                                            class="line">      requestState: State.NORMAL,</div><div
+                                                            class="line">      data: []</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line">    this.currentPage = 0;</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  componentDidMount() &#123;</div><div
+                                                            class="line">    this._request(true);</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">  _request = (isRefresh) =&gt; &#123;</div><div
+                                                            class="line">    this.currentPage = isRefresh ? 0 : this.currentPage + 1;</div><div
+                                                            class="line">    this.setState(&#123; requestState: isRefresh ? State.REFRESHING : State.LOADING &#125;);</div><div
+                                                            class="line">    //发起请求</div><div
+                                                            class="line">    fetch(API + this.currentPage + &quot;/json&quot;) // 返回一个Promise对象</div><div
+                                                            class="line">      .then((res) =&gt; &#123;</div><div
+                                                            class="line">        return res.json();</div><div
+                                                            class="line">      &#125;)</div><div
+                                                            class="line">      .then((res) =&gt; &#123;</div><div
+                                                            class="line">        const &#123; data &#125; = res;</div><div
+                                                            class="line">        const &#123; datas &#125; = data;</div><div
+                                                            class="line">        this._setData(datas);</div><div
+                                                            class="line">      &#125;)</div><div
+                                                            class="line">      .catch(e =&gt; &#123;</div><div
+                                                            class="line">        //加载失败</div><div
+                                                            class="line">        console.log(e);</div><div
+                                                            class="line">        this.setState(&#123; requestState: State.ERROR &#125;);</div><div
+                                                            class="line">      &#125;);</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  _setData = (data, isRefresh) =&gt; &#123;</div><div
+                                                            class="line">    if (data &amp;&amp; data.length &gt; 0) &#123;</div><div
+                                                            class="line">      //判断一下是否还有下一页，因为一页最多20条，不满足则是无法去加载更多了</div><div
+                                                            class="line">      this.setState(&#123;</div><div
+                                                            class="line">        requestState: data.length &gt;= 20 ? State.NORMAL : State.LOAD_END,</div><div
+                                                            class="line">        data: isRefresh ? data : this.state.data.concat(data)</div><div
+                                                            class="line">      &#125;);</div><div
+                                                            class="line">    &#125; else &#123;</div><div
+                                                            class="line">      //已经没有数据了，需要对footer进行处理</div><div
+                                                            class="line">      if (this.currentPage === 0) &#123;</div><div
+                                                            class="line">        //第一页没有数据，那么就是当前接口无数据</div><div
+                                                            class="line">        this.setState(&#123;</div><div
+                                                            class="line">          requestState: State.NO_DATA,</div><div
+                                                            class="line">          data: []</div><div
+                                                            class="line">        &#125;);</div><div
+                                                            class="line">      &#125; else &#123;</div><div
+                                                            class="line">        //不是第一页，新页返回空，就是接下来没有数据了</div><div
+                                                            class="line">        this.setState(&#123;</div><div
+                                                            class="line">          requestState: State.LOAD_END,</div><div
+                                                            class="line">          data: this.state.data</div><div
+                                                            class="line">        &#125;);</div><div
+                                                            class="line">      &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  _renderItem = (&#123; item &#125;) =&gt; &#123;</div><div
+                                                            class="line">    const &#123; title &#125; = item;</div><div
+                                                            class="line">    return &lt;Text style=&#123;&#123;</div><div
+                                                            class="line">      color: &quot;black&quot;,</div><div
+                                                            class="line">      textAlign: &quot;center&quot;,</div><div
+                                                            class="line">    &#125;&#125;&gt;&#123;title&#125;&lt;/Text&gt;;</div><div
+                                                            class="line">  &#125;;</div><div
+                                                            class="line">  render() &#123;</div><div
+                                                            class="line">    console.log(&quot;requestState=&quot; + this.state.requestState);</div><div
+                                                            class="line">    return (</div><div
+                                                            class="line">      &lt;View&gt;</div><div
+                                                            class="line">        &lt;PullLoadComponent</div><div
+                                                            class="line">          ref=&#123;(flat_list) =&gt; &#123;</div><div
+                                                            class="line">            this.flat_list = flat_list;</div><div
+                                                            class="line">          &#125;&#125;</div><div
+                                                            class="line">          onRequest=&#123;this._request&#125;</div><div
+                                                            class="line">          data=&#123;this.state.data&#125;</div><div
+                                                            class="line">          requestState=&#123;this.state.requestState&#125;</div><div
+                                                            class="line">          renderItem=&#123;this._renderItem&#125;</div><div
+                                                            class="line">        /&gt;</div><div
+                                                            class="line">      &lt;/View&gt;</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">  &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>效果图：<br><img
+                                        src="https://github.com/liweijieok/ReactNativeDemo/blob/master/screenshots/FlatList.gif"
+                                        alt=""></p>
+                                <h3 id="推荐学习"><a href="#推荐学习" class="headerlink" title="推荐学习"></a>推荐学习
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="http://facebook.github.io/react-native/docs/flatlist.html"
+                                           target="_blank" rel="external">官网</a></li>
+                                    <li><a href="https://www.jianshu.com/p/9a4151852722"
+                                           target="_blank" rel="external">React Native 之自定义下拉刷新</a>
+                                    </li>
+                                </ul>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/react-native/" rel="tag">#react-native</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/03/21/前端/promise_learn/" rel="next"
+                                           title="Promise学习">
+                                            <i class="fa fa-chevron-left"></i> Promise学习
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/05/15/react/rn_summary/" rel="prev"
+                                           title="ReactNative开发经验总结">
+                                            ReactNative开发经验总结 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                        href="#FlatList组件学习和封装"><span
+                                            class="nav-number">1.</span> <span class="nav-text">FlatList组件学习和封装</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#简单例子"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">简单例子</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#FlatList重要方法"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">FlatList重要方法</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#封装FlatList"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">封装FlatList</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#使用"><span
+                                                    class="nav-number">1.4.</span> <span
+                                                    class="nav-text">使用</span></a></li>
+                                            <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                href="#推荐学习"><span
+                                                    class="nav-number">1.5.</span> <span
+                                                    class="nav-text">推荐学习</span></a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#FlatList组件学习和封装"><span class="nav-number">1.</span> <span class="nav-text">FlatList组件学习和封装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单例子"><span class="nav-number">1.1.</span> <span class="nav-text">简单例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlatList重要方法"><span class="nav-number">1.2.</span> <span class="nav-text">FlatList重要方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装FlatList"><span class="nav-number">1.3.</span> <span class="nav-text">封装FlatList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐学习"><span class="nav-number">1.5.</span> <span class="nav-text">推荐学习</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -632,85 +1330,40 @@
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

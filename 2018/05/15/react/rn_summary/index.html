@@ -1,272 +1,190 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="react-native,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="react-native," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
+    <meta name="description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
 state与props他们二者是RN的数据核心。state主要是自身数据更新，props主要是父组件传入到子组件中使用，也会有自身的默认props。对于props，建议一般都传入子组件，防止以后进行修改。特定的flag则进行制定，比如：有一个Page A，他包含Component B12">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ReactNative开发经验总结">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/react/rn_summary/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ReactNative开发经验总结">
+    <meta property="og:url" content="http://yoursite.com/2018/05/15/react/rn_summary/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
 state与props他们二者是RN的数据核心。state主要是自身数据更新，props主要是父组件传入到子组件中使用，也会有自身的默认props。对于props，建议一般都传入子组件，防止以后进行修改。特定的flag则进行制定，比如：有一个Page A，他包含Component B12">
-<meta property="og:updated_time" content="2018-05-15T14:32:50.407Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactNative开发经验总结">
-<meta name="twitter:description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
+    <meta property="og:updated_time" content="2018-05-15T14:32:50.407Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ReactNative开发经验总结">
+    <meta name="twitter:description" content="ReactNative开发经验总结本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。
 state与props他们二者是RN的数据核心。state主要是自身数据更新，props主要是父组件传入到子组件中使用，也会有自身的默认props。对于props，建议一般都传入子组件，防止以后进行修改。特定的flag则进行制定，比如：有一个Page A，他包含Component B12">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2018/05/15/react/rn_summary/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/react/rn_summary/"/>
-
-
-  <title> ReactNative开发经验总结 | Blog </title>
+    <title> ReactNative开发经验总结 | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                ReactNative开发经验总结
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    ReactNative开发经验总结
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -277,8 +195,8 @@ state与props他们二者是RN的数据核心。state主要是自身数据更新
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -296,263 +214,680 @@ state与props他们二者是RN的数据核心。state主要是自身数据更新
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="ReactNative开发经验总结"><a href="#ReactNative开发经验总结" class="headerlink" title="ReactNative开发经验总结"></a>ReactNative开发经验总结</h1><p>本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。</p>
-<h2 id="state与props"><a href="#state与props" class="headerlink" title="state与props"></a>state与props</h2><p>他们二者是RN的数据核心。state主要是自身数据更新，props主要是父组件传入到子组件中使用，也会有自身的默认props。<br>对于props，建议一般都传入子组件，防止以后进行修改。特定的flag则进行制定，比如：有一个Page A，他包含Component B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">A extends Component&#123;</div><div class="line">...</div><div class="line">render()&#123;</div><div class="line">    return (</div><div class="line">        ...</div><div class="line">        &lt;B url=this.state.url &#123;...this.state&#125;/&gt;</div><div class="line">        ...</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>对于State，需要注意死循环，这种情况可能发生在render过程(不是事件响应过程)，假如在渲染过程中，我们需要修改state，一般先进行判断，然后再去设置，否则可能一直死循环render比如下面的Component例子。</p>
-<h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><p>在RN中，提倡组件化。他是可以根据UI划分组件，对于底层组件，我们需要实现逻辑不需要实现业务。比如，对于styles，我们一般需要提供一个默认样式，然后再通过外部插入的props样式，通过数组组合一起，外部可以覆盖内部。<br>例如，下面例子是定义一个通用的Image组件，他可以在图片加载失败或者是URL为空等适合显示出place holder图片。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">export default class ImageHolderComponent extends Component &#123;</div><div class="line">    static defaultProps = &#123;</div><div class="line">        url: &quot;&quot;,</div><div class="line">        imageStyle: &#123;&#125;,</div><div class="line">        holderResizeMode: &quot;cover&quot;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        this.state = &#123;</div><div class="line">            loadState: 0</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    _emptyUri = () =&gt; &#123;</div><div class="line">        return &lt;Image</div><div class="line">            resizeMode=&#123;this.props.holderResizeMode&#125;</div><div class="line">            source=&#123;this._holder()&#125;</div><div class="line"></div><div class="line">            style=&#123;[&#123;</div><div class="line">                width: 60,</div><div class="line">                height: 60,</div><div class="line">                borderRadius: 60,</div><div class="line">            &#125;, this.props.imageStyle]&#125;/&gt;;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    _normal = () =&gt; &#123;</div><div class="line">        return &lt;Image</div><div class="line">            source=&#123;&#123;uri: this.props.url&#125;&#125;</div><div class="line">            defaultSource=&#123;this._holder()&#125;</div><div class="line">            onError=&#123;() =&gt; &#123;</div><div class="line">                if (this.state.loadState === 1) &#123;</div><div class="line">                    return;</div><div class="line">                &#125;</div><div class="line">                this.setState(&#123;loadState: 1&#125;);</div><div class="line">            &#125;&#125;</div><div class="line">            onLoad=&#123;() =&gt; &#123;</div><div class="line">                if (this.state.loadState === 2) &#123;</div><div class="line">                    return</div><div class="line">                &#125;</div><div class="line">                this.setState(&#123;loadState: 2&#125;);</div><div class="line">            &#125;</div><div class="line">            &#125;</div><div class="line">            style=&#123;[&#123;</div><div class="line">                width: 60,</div><div class="line">                height: 60,</div><div class="line">                borderRadius: 60,</div><div class="line">            &#125;, this.props.imageStyle]&#125;/&gt;;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    _holder = () =&gt; &#123;</div><div class="line">        const &#123;holder&#125; = this.props;</div><div class="line">        if (holder) &#123;</div><div class="line">            return holder();</div><div class="line">        &#125;</div><div class="line">        return require(&quot;../../img/pic_empty_data.png&quot;);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        const showView = this.props.url &amp;&amp; (this.props.url.indexOf(&quot;http&quot;) &gt;= 0) &amp;&amp; this.state.loadState !== 1 ? this._normal() : this._emptyUri();</div><div class="line">        return (</div><div class="line">            &lt;TouchableWithoutFeedback onPress=&#123;() =&gt; &#123;</div><div class="line">                const &#123;onPress&#125; = this.props;</div><div class="line">                if (onPress) &#123;</div><div class="line">                    onPress(this.props.url);</div><div class="line">                &#125;</div><div class="line">            &#125;&#125;&gt;</div><div class="line">                &#123;showView&#125;</div><div class="line">            &lt;/TouchableWithoutFeedback&gt;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>他需要外部传入一个url即可，假如需要复写样式则传入参数名为imageStyle的style即可。<br>这样子，就做到Component独立，又能与外部进行交互。</p>
-<h2 id="fetch封装"><a href="#fetch封装" class="headerlink" title="fetch封装"></a>fetch封装</h2><p>因为fetch是返回一个Promise的，所以还是比较友好的。<br>我们可以对fetch进行一个比较好的封装，需求是：</p>
-<ol>
-<li>外部需要传入参数即可</li>
-<li>返回一个Promise</li>
-<li>对于基本错误，我们能够catch返回。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function _body(method, params) &#123;</div><div class="line">    const _params = JSON.stringify(params);</div><div class="line">    console.log((&quot;http=&gt; params = &quot; + _params));</div><div class="line">    return &#123;method: method, headers: HEADER, body: _params&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">function _get(url, params) &#123;</div><div class="line">    return _request(url, _body(&quot;GET&quot;, params));</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">function _post(url, params) &#123;</div><div class="line">    return _request(url, _body(&quot;POST&quot;, params))</div><div class="line">&#125;</div><div class="line"></div><div class="line">//发起请求</div><div class="line">function _request(url, params, timeout) &#123;</div><div class="line">    console.log((&quot;http=&gt; url = &quot; + url));</div><div class="line">    const request = fetch(url, params)</div><div class="line">        .then(result =&gt; &#123;</div><div class="line">            if (result.ok) &#123;</div><div class="line">                console.log((&quot;http=&gt; respond = &quot; + result.json()));</div><div class="line">                return result.json();</div><div class="line">            &#125; else &#123;</div><div class="line">                return Promise.reject(&#123;code: -1, message: &quot;请求失败&quot;&#125;);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;)</div><div class="line">        .then(value =&gt; &#123;</div><div class="line">            //可以进行进一步刷选</div><div class="line">            return value;</div><div class="line">        &#125;)</div><div class="line">        .catch(error =&gt; &#123;</div><div class="line">            return Promise.reject(error);</div><div class="line">        &#125;);</div><div class="line">    return _wrapRequest(request, timeout)</div><div class="line">&#125;</div><div class="line"></div><div class="line">//设置超时,默认10000</div><div class="line">function _wrapRequest(promise, timeout = 10000) &#123;</div><div class="line">    return Promise.race([promise, new Promise(function (resolve, reject) &#123;</div><div class="line">        setTimeout(() =&gt; &#123;</div><div class="line">                reject(&#123;code: -1, message: &quot;请求超时&quot;&#125;);</div><div class="line">            &#125;,</div><div class="line">            timeout);</div><div class="line">    &#125;)]).catch(e =&gt; &#123;</div><div class="line">        return Promise.reject(e)</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>比如对于登陆而言<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//登陆</div><div class="line">function _body(password,username) &#123;</div><div class="line">    const params = &#123;&#125;;</div><div class="line">    params[USER_NAME] = username;</div><div class="line">    params[PASSWORD] = password;</div><div class="line">    ....</div><div class="line">    return _post(&quot;loginurl&quot;,params)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>就可以了。</p>
-<h2 id="启用代码检测"><a href="#启用代码检测" class="headerlink" title="启用代码检测"></a>启用代码检测</h2><p>个人认为这个还是比较有必要的，这样子可以统一代码风格，什么分号，括号，无用导入，一些可能出现错误的地方，通过ESLint都可以检测出来。需要可以前往<a href="https://github.com/liweijieok/ReactNativeDemo" target="_blank" rel="external">ReactNativeDemo</a>  查看.eslint文件和package.json文件。</p>
-<h2 id="分包-代码"><a href="#分包-代码" class="headerlink" title="分包+代码"></a>分包+代码</h2><p>在开发中，一般独立页面使用Page结尾，一般组件使用Component结尾。<br>对于对内方法添加下划线，对外方法就不用，还是使用驼峰的命名规则。<br>一般，我们尽量使用解构赋值取数据，这样子可以给一些默认值。</p>
-<h2 id="方法问题"><a href="#方法问题" class="headerlink" title="方法问题"></a>方法问题</h2><p>在RN中，他相对于CSS顶层的this是window，RN顶层的this是本身Component，所以我们尽量使用<code>方法变量</code>而不是定义方法，这样子他就可以自动绑定this了。例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">A extends Component&#123;</div><div class="line">    //不推荐</div><div class="line">    methodA()&#123;</div><div class="line">        //...</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //推荐</div><div class="line">    methodB = ()=&gt;&#123;</div><div class="line">        //。。</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="navigate"><a href="#navigate" class="headerlink" title="navigate"></a>navigate</h2><p>我们进行页面跳转的时候，比如使用的是<code>react-navigation</code>，我们尽量带一个<code>from</code>这样子一个key，value是该页面的String值。这样子方便下一个页面无论是goback还是navigate去别的页面在过把存款都比较好操作</p>
-<h2 id="Android物理back键"><a href="#Android物理back键" class="headerlink" title="Android物理back键"></a>Android物理back键</h2><p>对于Android物理back键，我们可能在特殊的页面需要进行特殊处理，比如back的时候需要弹窗什么的。<br>但是，在RN中，比如一个需求是A.navigate(B)，然后B.navigate(C)。假如是有这样子一个跳转关系，在B中需要监听back键，这时候在C中没有监听，在C中按下back键就会把B也结束掉，因为B中的监听并没有被移除，而在C中，他是没有处理back event的返回值的，导致B响应了，就连续返回了。<br>需要处理该问题，我们就需要定义一个BaseComponent，以后每一个独立页面Page，都需要继承该Component，假如是有特殊处理的，需要注意super。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function log(msg) &#123;</div><div class="line">    console.log(&quot;BaseComponentPage==&gt;&quot; + msg);</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default class BaseComponentPage extends Component &#123;</div><div class="line">    constructor(props) &#123;</div><div class="line">        super(props);</div><div class="line">        log(&quot;addEventListener hardwareBackPress&quot;);</div><div class="line">        BackHandler.addEventListener(&quot;hardwareBackPress&quot;, this._onBackPress);</div><div class="line">    &#125;</div><div class="line">    //子类需要重写该方法到时候，必须super</div><div class="line">    componentWillUnmount() &#123;</div><div class="line">        log(&quot;removeEventListener hardwareBackPress&quot;);</div><div class="line">        BackHandler.removeEventListener(&quot;hardwareBackPress&quot;, this._onBackPress);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    _onBackPress = () =&gt; &#123;</div><div class="line">        this.props.navigation.goBack();</div><div class="line">        log(&quot;_onBackPress&quot;);</div><div class="line">        return true;</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="常用第三方开源Package"><a href="#常用第三方开源Package" class="headerlink" title="常用第三方开源Package"></a>常用第三方开源Package</h2><ul>
-<li><code>react-navigation</code> 导航</li>
-<li><code>react-native-router-flux</code> 导航，他更加友好的封装了<code>react-navigation</code></li>
-<li><code>react-redux</code>，<code>redux</code>，<code>redux-logger</code>，<code>redux-thunk</code> redux全家桶</li>
-<li><code>react-native-scrollable-tab-view</code> 可以做到类似Android的TabLayout</li>
-<li><code>prop-types</code> 类型检测</li>
-<li><code>react-native-video</code> 视频播放</li>
-<li><code>react-native-image-zoom-viewer</code>图片缩放</li>
-<li><code>react-native-fetch-blob</code> 网络请求，也可以自己直接封装一下fetch。</li>
-<li><code>react-native-cached-image</code> 图片缓存+显示</li>
-</ul>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/react-native/" rel="tag">#react-native</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/15/react/flstlist/" rel="next" title="FlatList组件学习和封装">
-                <i class="fa fa-chevron-left"></i> FlatList组件学习和封装
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/15/微信小程序/miniprogram/" rel="prev" title="微信小程序开发总结">
-                微信小程序开发总结 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h1 id="ReactNative开发经验总结"><a href="#ReactNative开发经验总结"
+                                                              class="headerlink"
+                                                              title="ReactNative开发经验总结"></a>ReactNative开发经验总结
+                                </h1>
+                                <p>本文主要是本人从Android原生到开发出一套完整的RN模块嵌入原生的经验。</p>
+                                <h2 id="state与props"><a href="#state与props" class="headerlink"
+                                                        title="state与props"></a>state与props</h2>
+                                <p>
+                                    他们二者是RN的数据核心。state主要是自身数据更新，props主要是父组件传入到子组件中使用，也会有自身的默认props。<br>对于props，建议一般都传入子组件，防止以后进行修改。特定的flag则进行制定，比如：有一个Page
+                                    A，他包含Component B<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">A extends Component&#123;</div><div
+                                                            class="line">...</div><div class="line">render()&#123;</div><div
+                                                            class="line">    return (</div><div
+                                                            class="line">        ...</div><div
+                                                            class="line">        &lt;B url=this.state.url &#123;...this.state&#125;/&gt;</div><div
+                                                            class="line">        ...</div><div
+                                                            class="line">    );</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line">...</div><div class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>
+                                    对于State，需要注意死循环，这种情况可能发生在render过程(不是事件响应过程)，假如在渲染过程中，我们需要修改state，一般先进行判断，然后再去设置，否则可能一直死循环render比如下面的Component例子。</p>
+                                <h2 id="Component"><a href="#Component" class="headerlink"
+                                                      title="Component"></a>Component</h2>
+                                <p>
+                                    在RN中，提倡组件化。他是可以根据UI划分组件，对于底层组件，我们需要实现逻辑不需要实现业务。比如，对于styles，我们一般需要提供一个默认样式，然后再通过外部插入的props样式，通过数组组合一起，外部可以覆盖内部。<br>例如，下面例子是定义一个通用的Image组件，他可以在图片加载失败或者是URL为空等适合显示出place
+                                    holder图片。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div><div class="line">23</div><div
+                                                            class="line">24</div><div class="line">25</div><div
+                                                            class="line">26</div><div class="line">27</div><div
+                                                            class="line">28</div><div class="line">29</div><div
+                                                            class="line">30</div><div class="line">31</div><div
+                                                            class="line">32</div><div class="line">33</div><div
+                                                            class="line">34</div><div class="line">35</div><div
+                                                            class="line">36</div><div class="line">37</div><div
+                                                            class="line">38</div><div class="line">39</div><div
+                                                            class="line">40</div><div class="line">41</div><div
+                                                            class="line">42</div><div class="line">43</div><div
+                                                            class="line">44</div><div class="line">45</div><div
+                                                            class="line">46</div><div class="line">47</div><div
+                                                            class="line">48</div><div class="line">49</div><div
+                                                            class="line">50</div><div class="line">51</div><div
+                                                            class="line">52</div><div class="line">53</div><div
+                                                            class="line">54</div><div class="line">55</div><div
+                                                            class="line">56</div><div class="line">57</div><div
+                                                            class="line">58</div><div class="line">59</div><div
+                                                            class="line">60</div><div class="line">61</div><div
+                                                            class="line">62</div><div class="line">63</div><div
+                                                            class="line">64</div><div class="line">65</div><div
+                                                            class="line">66</div><div class="line">67</div><div
+                                                            class="line">68</div><div class="line">69</div><div
+                                                            class="line">70</div><div class="line">71</div><div
+                                                            class="line">72</div><div class="line">73</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line"></div><div class="line">export default class ImageHolderComponent extends Component &#123;</div><div
+                                                            class="line">    static defaultProps = &#123;</div><div
+                                                            class="line">        url: &quot;&quot;,</div><div
+                                                            class="line">        imageStyle: &#123;&#125;,</div><div
+                                                            class="line">        holderResizeMode: &quot;cover&quot;</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line"></div><div class="line">    constructor(props) &#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        this.state = &#123;</div><div
+                                                            class="line">            loadState: 0</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">    _emptyUri = () =&gt; &#123;</div><div
+                                                            class="line">        return &lt;Image</div><div
+                                                            class="line">            resizeMode=&#123;this.props.holderResizeMode&#125;</div><div
+                                                            class="line">            source=&#123;this._holder()&#125;</div><div
+                                                            class="line"></div><div class="line">            style=&#123;[&#123;</div><div
+                                                            class="line">                width: 60,</div><div
+                                                            class="line">                height: 60,</div><div
+                                                            class="line">                borderRadius: 60,</div><div
+                                                            class="line">            &#125;, this.props.imageStyle]&#125;/&gt;;</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line"></div><div class="line">    _normal = () =&gt; &#123;</div><div
+                                                            class="line">        return &lt;Image</div><div
+                                                            class="line">            source=&#123;&#123;uri: this.props.url&#125;&#125;</div><div
+                                                            class="line">            defaultSource=&#123;this._holder()&#125;</div><div
+                                                            class="line">            onError=&#123;() =&gt; &#123;</div><div
+                                                            class="line">                if (this.state.loadState === 1) &#123;</div><div
+                                                            class="line">                    return;</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">                this.setState(&#123;loadState: 1&#125;);</div><div
+                                                            class="line">            &#125;&#125;</div><div
+                                                            class="line">            onLoad=&#123;() =&gt; &#123;</div><div
+                                                            class="line">                if (this.state.loadState === 2) &#123;</div><div
+                                                            class="line">                    return</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">                this.setState(&#123;loadState: 2&#125;);</div><div
+                                                            class="line">            &#125;</div><div
+                                                            class="line">            &#125;</div><div
+                                                            class="line">            style=&#123;[&#123;</div><div
+                                                            class="line">                width: 60,</div><div
+                                                            class="line">                height: 60,</div><div
+                                                            class="line">                borderRadius: 60,</div><div
+                                                            class="line">            &#125;, this.props.imageStyle]&#125;/&gt;;</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line"></div><div class="line">    _holder = () =&gt; &#123;</div><div
+                                                            class="line">        const &#123;holder&#125; = this.props;</div><div
+                                                            class="line">        if (holder) &#123;</div><div
+                                                            class="line">            return holder();</div><div
+                                                            class="line">        &#125;</div><div
+                                                            class="line">        return require(&quot;../../img/pic_empty_data.png&quot;);</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line"></div><div class="line">    render() &#123;</div><div
+                                                            class="line">        const showView = this.props.url &amp;&amp; (this.props.url.indexOf(&quot;http&quot;) &gt;= 0) &amp;&amp; this.state.loadState !== 1 ? this._normal() : this._emptyUri();</div><div
+                                                            class="line">        return (</div><div
+                                                            class="line">            &lt;TouchableWithoutFeedback onPress=&#123;() =&gt; &#123;</div><div
+                                                            class="line">                const &#123;onPress&#125; = this.props;</div><div
+                                                            class="line">                if (onPress) &#123;</div><div
+                                                            class="line">                    onPress(this.props.url);</div><div
+                                                            class="line">                &#125;</div><div
+                                                            class="line">            &#125;&#125;&gt;</div><div
+                                                            class="line">                &#123;showView&#125;</div><div
+                                                            class="line">            &lt;/TouchableWithoutFeedback&gt;</div><div
+                                                            class="line">        );</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>他需要外部传入一个url即可，假如需要复写样式则传入参数名为imageStyle的style即可。<br>这样子，就做到Component独立，又能与外部进行交互。
+                                </p>
+                                <h2 id="fetch封装"><a href="#fetch封装" class="headerlink"
+                                                    title="fetch封装"></a>fetch封装</h2>
+                                <p>因为fetch是返回一个Promise的，所以还是比较友好的。<br>我们可以对fetch进行一个比较好的封装，需求是：</p>
+                                <ol>
+                                    <li>外部需要传入参数即可</li>
+                                    <li>返回一个Promise</li>
+                                    <li>对于基本错误，我们能够catch返回。
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div
+                                                                class="line">2</div><div
+                                                                class="line">3</div><div
+                                                                class="line">4</div><div
+                                                                class="line">5</div><div
+                                                                class="line">6</div><div
+                                                                class="line">7</div><div
+                                                                class="line">8</div><div
+                                                                class="line">9</div><div
+                                                                class="line">10</div><div
+                                                                class="line">11</div><div
+                                                                class="line">12</div><div
+                                                                class="line">13</div><div
+                                                                class="line">14</div><div
+                                                                class="line">15</div><div
+                                                                class="line">16</div><div
+                                                                class="line">17</div><div
+                                                                class="line">18</div><div
+                                                                class="line">19</div><div
+                                                                class="line">20</div><div
+                                                                class="line">21</div><div
+                                                                class="line">22</div><div
+                                                                class="line">23</div><div
+                                                                class="line">24</div><div
+                                                                class="line">25</div><div
+                                                                class="line">26</div><div
+                                                                class="line">27</div><div
+                                                                class="line">28</div><div
+                                                                class="line">29</div><div
+                                                                class="line">30</div><div
+                                                                class="line">31</div><div
+                                                                class="line">32</div><div
+                                                                class="line">33</div><div
+                                                                class="line">34</div><div
+                                                                class="line">35</div><div
+                                                                class="line">36</div><div
+                                                                class="line">37</div><div
+                                                                class="line">38</div><div
+                                                                class="line">39</div><div
+                                                                class="line">40</div><div
+                                                                class="line">41</div><div
+                                                                class="line">42</div><div
+                                                                class="line">43</div><div
+                                                                class="line">44</div><div
+                                                                class="line">45</div><div
+                                                                class="line">46</div><div
+                                                                class="line">47</div><div
+                                                                class="line">48</div><div
+                                                                class="line">49</div><div
+                                                                class="line">50</div><div
+                                                                class="line">51</div></pre>
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line"></div><div
+                                                                class="line">function _body(method, params) &#123;</div><div
+                                                                class="line">    const _params = JSON.stringify(params);</div><div
+                                                                class="line">    console.log((&quot;http=&gt; params = &quot; + _params));</div><div
+                                                                class="line">    return &#123;method: method, headers: HEADER, body: _params&#125;</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line"></div><div
+                                                                class="line"></div><div
+                                                                class="line">function _get(url, params) &#123;</div><div
+                                                                class="line">    return _request(url, _body(&quot;GET&quot;, params));</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line"></div><div
+                                                                class="line"></div><div
+                                                                class="line">function _post(url, params) &#123;</div><div
+                                                                class="line">    return _request(url, _body(&quot;POST&quot;, params))</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line"></div><div
+                                                                class="line">//发起请求</div><div
+                                                                class="line">function _request(url, params, timeout) &#123;</div><div
+                                                                class="line">    console.log((&quot;http=&gt; url = &quot; + url));</div><div
+                                                                class="line">    const request = fetch(url, params)</div><div
+                                                                class="line">        .then(result =&gt; &#123;</div><div
+                                                                class="line">            if (result.ok) &#123;</div><div
+                                                                class="line">                console.log((&quot;http=&gt; respond = &quot; + result.json()));</div><div
+                                                                class="line">                return result.json();</div><div
+                                                                class="line">            &#125; else &#123;</div><div
+                                                                class="line">                return Promise.reject(&#123;code: -1, message: &quot;请求失败&quot;&#125;);</div><div
+                                                                class="line">            &#125;</div><div
+                                                                class="line"></div><div
+                                                                class="line">        &#125;)</div><div
+                                                                class="line">        .then(value =&gt; &#123;</div><div
+                                                                class="line">            //可以进行进一步刷选</div><div
+                                                                class="line">            return value;</div><div
+                                                                class="line">        &#125;)</div><div
+                                                                class="line">        .catch(error =&gt; &#123;</div><div
+                                                                class="line">            return Promise.reject(error);</div><div
+                                                                class="line">        &#125;);</div><div
+                                                                class="line">    return _wrapRequest(request, timeout)</div><div
+                                                                class="line">&#125;</div><div
+                                                                class="line"></div><div
+                                                                class="line">//设置超时,默认10000</div><div
+                                                                class="line">function _wrapRequest(promise, timeout = 10000) &#123;</div><div
+                                                                class="line">    return Promise.race([promise, new Promise(function (resolve, reject) &#123;</div><div
+                                                                class="line">        setTimeout(() =&gt; &#123;</div><div
+                                                                class="line">                reject(&#123;code: -1, message: &quot;请求超时&quot;&#125;);</div><div
+                                                                class="line">            &#125;,</div><div
+                                                                class="line">            timeout);</div><div
+                                                                class="line">    &#125;)]).catch(e =&gt; &#123;</div><div
+                                                                class="line">        return Promise.reject(e)</div><div
+                                                                class="line">    &#125;)</div><div
+                                                                class="line">&#125;</div></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </li>
+                                </ol>
+                                <p>比如对于登陆而言<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">//登陆</div><div
+                                                            class="line">function _body(password,username) &#123;</div><div
+                                                            class="line">    const params = &#123;&#125;;</div><div
+                                                            class="line">    params[USER_NAME] = username;</div><div
+                                                            class="line">    params[PASSWORD] = password;</div><div
+                                                            class="line">    ....</div><div
+                                                            class="line">    return _post(&quot;loginurl&quot;,params)</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p>就可以了。</p>
+                                <h2 id="启用代码检测"><a href="#启用代码检测" class="headerlink"
+                                                   title="启用代码检测"></a>启用代码检测</h2>
+                                <p>
+                                    个人认为这个还是比较有必要的，这样子可以统一代码风格，什么分号，括号，无用导入，一些可能出现错误的地方，通过ESLint都可以检测出来。需要可以前往<a
+                                        href="https://github.com/liweijieok/ReactNativeDemo"
+                                        target="_blank" rel="external">ReactNativeDemo</a>
+                                    查看.eslint文件和package.json文件。</p>
+                                <h2 id="分包-代码"><a href="#分包-代码" class="headerlink"
+                                                  title="分包+代码"></a>分包+代码</h2>
+                                <p>在开发中，一般独立页面使用Page结尾，一般组件使用Component结尾。<br>对于对内方法添加下划线，对外方法就不用，还是使用驼峰的命名规则。<br>一般，我们尽量使用解构赋值取数据，这样子可以给一些默认值。
+                                </p>
+                                <h2 id="方法问题"><a href="#方法问题" class="headerlink" title="方法问题"></a>方法问题
+                                </h2>
+                                <p>在RN中，他相对于CSS顶层的this是window，RN顶层的this是本身Component，所以我们尽量使用<code>方法变量</code>而不是定义方法，这样子他就可以自动绑定this了。例如<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">A extends Component&#123;</div><div
+                                                            class="line">    //不推荐</div><div
+                                                            class="line">    methodA()&#123;</div><div
+                                                            class="line">        //...</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">    //推荐</div><div
+                                                            class="line">    methodB = ()=&gt;&#123;</div><div
+                                                            class="line">        //。。</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="navigate"><a href="#navigate" class="headerlink"
+                                                     title="navigate"></a>navigate</h2>
+                                <p>
+                                    我们进行页面跳转的时候，比如使用的是<code>react-navigation</code>，我们尽量带一个<code>from</code>这样子一个key，value是该页面的String值。这样子方便下一个页面无论是goback还是navigate去别的页面在过把存款都比较好操作
+                                </p>
+                                <h2 id="Android物理back键"><a href="#Android物理back键" class="headerlink"
+                                                           title="Android物理back键"></a>Android物理back键
+                                </h2>
+                                <p>对于Android物理back键，我们可能在特殊的页面需要进行特殊处理，比如back的时候需要弹窗什么的。<br>但是，在RN中，比如一个需求是A.navigate(B)，然后B.navigate(C)。假如是有这样子一个跳转关系，在B中需要监听back键，这时候在C中没有监听，在C中按下back键就会把B也结束掉，因为B中的监听并没有被移除，而在C中，他是没有处理back
+                                    event的返回值的，导致B响应了，就连续返回了。<br>需要处理该问题，我们就需要定义一个BaseComponent，以后每一个独立页面Page，都需要继承该Component，假如是有特殊处理的，需要注意super。<br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                            class="line">3</div><div
+                                                            class="line">4</div><div
+                                                            class="line">5</div><div
+                                                            class="line">6</div><div
+                                                            class="line">7</div><div
+                                                            class="line">8</div><div
+                                                            class="line">9</div><div
+                                                            class="line">10</div><div class="line">11</div><div
+                                                            class="line">12</div><div class="line">13</div><div
+                                                            class="line">14</div><div class="line">15</div><div
+                                                            class="line">16</div><div class="line">17</div><div
+                                                            class="line">18</div><div class="line">19</div><div
+                                                            class="line">20</div><div class="line">21</div><div
+                                                            class="line">22</div></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div
+                                                            class="line">function log(msg) &#123;</div><div
+                                                            class="line">    console.log(&quot;BaseComponentPage==&gt;&quot; + msg);</div><div
+                                                            class="line">&#125;</div><div
+                                                            class="line"></div><div class="line">export default class BaseComponentPage extends Component &#123;</div><div
+                                                            class="line">    constructor(props) &#123;</div><div
+                                                            class="line">        super(props);</div><div
+                                                            class="line">        log(&quot;addEventListener hardwareBackPress&quot;);</div><div
+                                                            class="line">        BackHandler.addEventListener(&quot;hardwareBackPress&quot;, this._onBackPress);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line">    //子类需要重写该方法到时候，必须super</div><div
+                                                            class="line">    componentWillUnmount() &#123;</div><div
+                                                            class="line">        log(&quot;removeEventListener hardwareBackPress&quot;);</div><div
+                                                            class="line">        BackHandler.removeEventListener(&quot;hardwareBackPress&quot;, this._onBackPress);</div><div
+                                                            class="line">    &#125;</div><div
+                                                            class="line"></div><div class="line">    _onBackPress = () =&gt; &#123;</div><div
+                                                            class="line">        this.props.navigation.goBack();</div><div
+                                                            class="line">        log(&quot;_onBackPress&quot;);</div><div
+                                                            class="line">        return true;</div><div
+                                                            class="line">    &#125;;</div><div
+                                                            class="line">&#125;</div></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <h2 id="常用第三方开源Package"><a href="#常用第三方开源Package" class="headerlink"
+                                                           title="常用第三方开源Package"></a>常用第三方开源Package
+                                </h2>
+                                <ul>
+                                    <li><code>react-navigation</code> 导航</li>
+                                    <li><code>react-native-router-flux</code> 导航，他更加友好的封装了<code>react-navigation</code>
+                                    </li>
+                                    <li><code>react-redux</code>，<code>redux</code>，<code>redux-logger</code>，<code>redux-thunk</code>
+                                        redux全家桶
+                                    </li>
+                                    <li><code>react-native-scrollable-tab-view</code>
+                                        可以做到类似Android的TabLayout
+                                    </li>
+                                    <li><code>prop-types</code> 类型检测</li>
+                                    <li><code>react-native-video</code> 视频播放</li>
+                                    <li><code>react-native-image-zoom-viewer</code>图片缩放</li>
+                                    <li><code>react-native-fetch-blob</code> 网络请求，也可以自己直接封装一下fetch。
+                                    </li>
+                                    <li><code>react-native-cached-image</code> 图片缓存+显示</li>
+                                </ul>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/react-native/" rel="tag">#react-native</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2018/05/15/react/flstlist/" rel="next"
+                                           title="FlatList组件学习和封装">
+                                            <i class="fa fa-chevron-left"></i> FlatList组件学习和封装
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2018/05/15/微信小程序/miniprogram/" rel="prev"
+                                           title="微信小程序开发总结">
+                                            微信小程序开发总结 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-1"><a class="nav-link"
+                                                                        href="#ReactNative开发经验总结"><span
+                                            class="nav-number">1.</span> <span class="nav-text">ReactNative开发经验总结</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#state与props"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">state与props</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#Component"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">Component</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#fetch封装"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">fetch封装</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#启用代码检测"><span
+                                                    class="nav-number">1.4.</span> <span
+                                                    class="nav-text">启用代码检测</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#分包-代码"><span
+                                                    class="nav-number">1.5.</span> <span
+                                                    class="nav-text">分包+代码</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#方法问题"><span
+                                                    class="nav-number">1.6.</span> <span
+                                                    class="nav-text">方法问题</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#navigate"><span
+                                                    class="nav-number">1.7.</span> <span
+                                                    class="nav-text">navigate</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#Android物理back键"><span
+                                                    class="nav-number">1.8.</span> <span
+                                                    class="nav-text">Android物理back键</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#常用第三方开源Package"><span
+                                                    class="nav-number">1.9.</span> <span
+                                                    class="nav-text">常用第三方开源Package</span></a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ReactNative开发经验总结"><span class="nav-number">1.</span> <span class="nav-text">ReactNative开发经验总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#state与props"><span class="nav-number">1.1.</span> <span class="nav-text">state与props</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Component"><span class="nav-number">1.2.</span> <span class="nav-text">Component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fetch封装"><span class="nav-number">1.3.</span> <span class="nav-text">fetch封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用代码检测"><span class="nav-number">1.4.</span> <span class="nav-text">启用代码检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分包-代码"><span class="nav-number">1.5.</span> <span class="nav-text">分包+代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法问题"><span class="nav-number">1.6.</span> <span class="nav-text">方法问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#navigate"><span class="nav-number">1.7.</span> <span class="nav-text">navigate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android物理back键"><span class="nav-number">1.8.</span> <span class="nav-text">Android物理back键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用第三方开源Package"><span class="nav-number">1.9.</span> <span class="nav-text">常用第三方开源Package</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -561,85 +896,40 @@ state与props他们二者是RN的数据核心。state主要是自身数据更新
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

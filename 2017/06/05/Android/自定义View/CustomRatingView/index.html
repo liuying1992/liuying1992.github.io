@@ -1,281 +1,200 @@
 <!doctype html>
 
 
-
-  
-
-
 <html class="theme-next pisces use-motion">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
 
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+          rel="stylesheet" type="text/css">
 
 
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
+          type="text/css"/>
+
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
 
 
+    <meta name="keywords" content="自定义View,"/>
 
 
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
 
 
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="自定义View," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
-
-
-
-
-
-
-<meta name="description" content="自定义五角星样式是：
+    <meta name="description" content="自定义五角星样式是：
 
 需求概述我们需要一个类似原生RatingBar的这样一个评分View，但是RatingBar不够灵活，我们需要有不同颜色，不同间距，而且可调的一个评分Bar。
 分析我们主要是定义ratingbar，不和文字一起定义。首先是：单个星星的高和宽，然后是需要知道每个星星之间的间距，还有就是那几颗星星是active那几颗是disactivie的。同时，我们需要计算在这个View中的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="自定义星星评分RatingBar">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/Android/自定义View/CustomRatingView/index.html">
-<meta property="og:site_name" content="Blog">
-<meta property="og:description" content="自定义五角星样式是：
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="自定义星星评分RatingBar">
+    <meta property="og:url"
+          content="http://yoursite.com/2017/06/05/Android/自定义View/CustomRatingView/index.html">
+    <meta property="og:site_name" content="Blog">
+    <meta property="og:description" content="自定义五角星样式是：
 
 需求概述我们需要一个类似原生RatingBar的这样一个评分View，但是RatingBar不够灵活，我们需要有不同颜色，不同间距，而且可调的一个评分Bar。
 分析我们主要是定义ratingbar，不和文字一起定义。首先是：单个星星的高和宽，然后是需要知道每个星星之间的间距，还有就是那几颗星星是active那几颗是disactivie的。同时，我们需要计算在这个View中的">
-<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png">
-<meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/ratingbar.png">
-<meta property="og:updated_time" content="2017-06-05T03:10:14.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义星星评分RatingBar">
-<meta name="twitter:description" content="自定义五角星样式是：
+    <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png">
+    <meta property="og:image" content="http://ocxgpwj6l.bkt.clouddn.com/ratingbar.png">
+    <meta property="og:updated_time" content="2017-06-05T03:10:14.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="自定义星星评分RatingBar">
+    <meta name="twitter:description" content="自定义五角星样式是：
 
 需求概述我们需要一个类似原生RatingBar的这样一个评分View，但是RatingBar不够灵活，我们需要有不同颜色，不同间距，而且可调的一个评分Bar。
 分析我们主要是定义ratingbar，不和文字一起定义。首先是：单个星星的高和宽，然后是需要知道每个星星之间的间距，还有就是那几颗星星是active那几颗是disactivie的。同时，我们需要计算在这个View中的">
-<meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png">
+    <meta name="twitter:image" content="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png">
 
 
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    }
-  };
-</script>
+    <script type="text/javascript" id="hexo.configuration">
+      var NexT = window.NexT || {};
+      var CONFIG = {
+        scheme: 'Pisces',
+        sidebar: {"position": "left", "display": "post"},
+        fancybox: true,
+        motion: true,
+        duoshuo: {
+          userId: '0', author: '博主'
+        }
+      };
+    </script>
 
 
+    <link rel="canonical" href="http://yoursite.com/2017/06/05/Android/自定义View/CustomRatingView/"/>
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/05/Android/自定义View/CustomRatingView/"/>
-
-
-  <title> 自定义星星评分RatingBar | Blog </title>
+    <title> 自定义星星评分RatingBar | Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+<div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+        <div class="header-inner">
+            <div class="site-meta ">
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">个人技术博客</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
+                <div class="custom-logo-site-title">
+                    <a href="/" class="brand" rel="start">
+                        <span class="logo-line-before"><i></i></span>
+                        <span class="site-title">Blog</span>
+                        <span class="logo-line-after"><i></i></span>
+                    </a>
+                </div>
+                <p class="site-subtitle">个人技术博客</p>
+            </div>
 
-<nav class="site-nav">
-  
+            <div class="site-nav-toggle">
+                <button>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                    <span class="btn-bar"></span>
+                </button>
+            </div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+            <nav class="site-nav">
 
-      
-    </ul>
-  
 
-  
-</nav>
+                <ul id="menu" class="menu">
 
- </div>
+
+                    <li class="menu-item menu-item-home">
+                        <a href="/" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
+
+                            首页
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-archives">
+                        <a href="/archives" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
+
+                            归档
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-categories">
+                        <a href="/categories" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-th"></i> <br/>
+
+                            分类
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-tags">
+                        <a href="/tags" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>
+
+                            标签
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item menu-item-about">
+                        <a href="/about" rel="section">
+
+                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+
+                            关于
+                        </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+        </div>
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
+        <div class="main-inner">
+            <div class="content-wrap">
+                <div id="content" class="content">
 
-  <div id="posts" class="posts-expand">
-    
 
-  
-  
+                    <div id="posts" class="posts-expand">
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+                        <article class="post post-type-normal " itemscope
+                                 itemtype="//schema.org/Article">
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                自定义星星评分RatingBar
-              
-            
-          </h1>
-        
+                            <header class="post-header">
 
-        <div class="post-meta">
+
+                                <h1 class="post-title" itemprop="name headline">
+
+
+                                    自定义星星评分RatingBar
+
+
+                                </h1>
+
+
+                                <div class="post-meta">
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
@@ -286,8 +205,8 @@
             </time>
           </span>
 
-          
-            <span class="post-category" >
+
+                                    <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -317,254 +236,547 @@
 
               
             </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
 
 
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="自定义五角星"><a href="#自定义五角星" class="headerlink" title="自定义五角星"></a>自定义五角星</h1><p>样式是：</p>
-<p><img src="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png" alt=""></p>
-<h2 id="需求概述"><a href="#需求概述" class="headerlink" title="需求概述"></a>需求概述</h2><p>我们需要一个类似原生RatingBar的这样一个评分View，但是RatingBar不够灵活，我们需要有不同颜色，不同间距，而且可调的一个评分Bar。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我们主要是定义ratingbar，不和文字一起定义。<br>首先是：单个星星的高和宽，然后是需要知道每个星星之间的间距，还有就是那几颗星星是active那几颗是disactivie的。同时，我们需要计算在这个View中的什么位置开始画，最后就是需要指定我们的星星的resource了。</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="属性定义"><a href="#属性定义" class="headerlink" title="属性定义"></a>属性定义</h3><p>需要定义的属性有:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;declare-styleable name=&quot;CustomRatingStyle&quot;&gt;</div><div class="line">       &lt;!--宽，高，间距，激活的数量，没有激活的数量，激活的icon,没有激活的icon--&gt;</div><div class="line">       &lt;!--属性分别是：单个的宽，高，之间的距离，激活的数量，总数量，激活的drawable，没有激活的drawable--&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_width&quot; format=&quot;dimension&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_height&quot; format=&quot;dimension&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_padding&quot; format=&quot;dimension&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_active_size&quot; format=&quot;integer&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_size&quot; format=&quot;integer&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_active_drawable&quot; format=&quot;reference&quot;/&gt;</div><div class="line">       &lt;attr name=&quot;custom_rate_disactive_drawable&quot; format=&quot;reference&quot;/&gt;</div><div class="line">   &lt;/declare-styleable&gt;</div></pre></td></tr></table></figure>
-<p>代码实现：</p>
-<p>我们继承自View就好，不要ViewGroup。然后获取xml文件中的自定义属性值，获取属性值完成，同时给定默认值。同时，我们需要计算一个步长，作用是知道我们画下一个星星开始的坐标，他的计算是星星的width+星星之间的padding。同时，还有一点是可能active和disactivie的drawable大小不同，所以我们需要按照其中一个区计算步长，同时缩放到等同大小。比如我们按照active的drawable大小为标准，当disactive的drawable大小不同的时候，就对他进行比例缩放，直到相同。代码如下：</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//单个高</div><div class="line"> private float singleWidth;</div><div class="line"> //单个宽</div><div class="line"> private float singleHeight;</div><div class="line"> //间距</div><div class="line"> private int padding;</div><div class="line"> //总数量</div><div class="line"> private int size = 5;</div><div class="line"> //默认激活数量</div><div class="line"> private int activeSize = 3;</div><div class="line"> //激活的bitmap</div><div class="line"> private Bitmap activeBitmap;</div><div class="line"> //没有激活的bitmap</div><div class="line"> private Bitmap disactiveBitmap;</div><div class="line"> //画笔</div><div class="line"> private Paint mPaint;</div><div class="line"> //步长</div><div class="line"> private int stepSize;</div><div class="line"> //开始画的x坐标</div><div class="line"> private int drawStartX;</div><div class="line"> //开始画的y坐标</div><div class="line"> private int drawStartY;</div></pre></td></tr></table></figure>
-<p>初始化代码:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">int activeId = 0;</div><div class="line">    int disactiveId = 0;</div><div class="line">    if (attrs != null) &#123;</div><div class="line">        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CustomRatingStyle);</div><div class="line">        singleWidth = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_width, 0);</div><div class="line">        singleHeight = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_height, 0);</div><div class="line">        activeId = array.getResourceId(R.styleable.CustomRatingStyle_custom_rate_active_drawable, R.drawable.custom_rateingbar_active);</div><div class="line">        disactiveId = array.getResourceId(R.styleable.CustomRatingStyle_custom_rate_disactive_drawable, R.drawable.custom_rateingbar_disactive);</div><div class="line">        size = array.getInteger(R.styleable.CustomRatingStyle_custom_rate_size, 5);</div><div class="line">        activeSize = array.getInteger(R.styleable.CustomRatingStyle_custom_rate_active_size, 3);</div><div class="line">        padding = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_padding, 10);</div><div class="line">        array.recycle();</div><div class="line">    &#125;</div><div class="line">    activeBitmap = BitmapFactory.decodeResource(getResources(), activeId);</div><div class="line">    disactiveBitmap = BitmapFactory.decodeResource(getResources(), disactiveId);</div><div class="line">    stepSize = padding + activeBitmap.getWidth();</div><div class="line">    mPaint = new Paint();</div><div class="line">    if (singleHeight &lt;= 0) &#123;</div><div class="line">        singleHeight = activeBitmap.getHeight();</div><div class="line">    &#125;</div><div class="line">    if (singleWidth &lt;= 0) &#123;</div><div class="line">        singleWidth = activeBitmap.getWidth();</div><div class="line">    &#125;</div><div class="line">    //大小不同的话，对Bitmap进行压缩，</div><div class="line">    if (activeBitmap.getWidth() != disactiveBitmap.getWidth() || activeBitmap.getHeight() != disactiveBitmap.getHeight()) &#123;</div><div class="line">        //把dis压缩或者是放大的active的大小</div><div class="line">        disactiveBitmap = Bitmap.createScaledBitmap(disactiveBitmap, activeBitmap.getWidth(), activeBitmap.getHeight(), false);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h3 id="逻辑实现"><a href="#逻辑实现" class="headerlink" title="逻辑实现"></a>逻辑实现</h3><p>测量步长计算：我们是把五角星放在这个View的center位置，然后他所占的长度是5<em>width+4</em>padding。</p>
-<p>onMeasure 方法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">   protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div class="line">       int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div class="line">       int widthSize = MeasureSpec.getSize(widthMeasureSpec);</div><div class="line">       int heightMode = MeasureSpec.getMode(heightMeasureSpec);</div><div class="line">       int heightSize = MeasureSpec.getSize(heightMeasureSpec);</div><div class="line">       int width;</div><div class="line">       int height;</div><div class="line">       //计算宽</div><div class="line">       if (widthMode == MeasureSpec.EXACTLY) &#123;</div><div class="line">           width = widthSize;</div><div class="line">       &#125; else &#123;</div><div class="line">           width = 5 * stepSize;</div><div class="line">       &#125;</div><div class="line">       //计算高</div><div class="line">       if (heightMode == MeasureSpec.EXACTLY) &#123;</div><div class="line">           height = heightSize;</div><div class="line">       &#125; else &#123;</div><div class="line">           height = (int) singleHeight;</div><div class="line">       &#125;</div><div class="line">       //总共应该的宽</div><div class="line">       int drawWidth = (int) (size * singleWidth + (size &lt;= 1 ? 0 : (size - 1) * padding));</div><div class="line">       //开始的y位置</div><div class="line">       int drawHeight = (int) ((height - singleHeight) / 2);</div><div class="line">       drawStartX = (width - drawWidth) / 2;</div><div class="line">       drawStartY = drawHeight &gt; 0 ? drawHeight : 0;</div><div class="line">       setMeasuredDimension(width, height);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-<p>onDraw方法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">  protected void onDraw(Canvas canvas) &#123;</div><div class="line">      super.onDraw(canvas);</div><div class="line">      //开始画active</div><div class="line">      for (int i = 0; i &lt; activeSize; i++) &#123;</div><div class="line">          canvas.drawBitmap(activeBitmap, drawStartX + i * stepSize, drawStartY, mPaint);</div><div class="line">      &#125;</div><div class="line">      //开始画disactive</div><div class="line">      for (int i = activeSize; i &lt; size; i++) &#123;</div><div class="line">          canvas.drawBitmap(disactiveBitmap, drawStartX + i * stepSize, drawStartY, mPaint);</div><div class="line">      &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p>然后，我们在对外提供一个设置activie的方法:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 设置激活的数量</div><div class="line"> *</div><div class="line"> * @param activeSize</div><div class="line"> */</div><div class="line">public void setActiveSize(int activeSize) &#123;</div><div class="line">    this.activeSize = activeSize;</div><div class="line">    if (CommentUtil.isUIThread()) &#123;</div><div class="line">        invalidate();</div><div class="line">    &#125; else &#123;</div><div class="line">        postInvalidate();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这样子就完成了星星评分的UI了。<br>结果截图:</p>
-<p><img src="http://ocxgpwj6l.bkt.clouddn.com/ratingbar.png" alt=""></p>
-<p><a href="https://github.com/liweijieok/SilmpleView" target="_blank" rel="external">源码下载</a></p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/自定义View/" rel="tag">#自定义View</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/20/Android/开源项目学习/modulesample/" rel="next" title="使用Arouter实现组件化">
-                <i class="fa fa-chevron-left"></i> 使用Arouter实现组件化
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/05/Android/Android基础/Activity的生命周期介绍/" rel="prev" title="Activity的生命周期介绍">
-                Activity的生命周期介绍 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
+                                </div>
+                            </header>
 
 
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
+                            <div class="post-body" itemprop="articleBody">
 
 
-          </div>
-          
+                                <h1 id="自定义五角星"><a href="#自定义五角星" class="headerlink"
+                                                   title="自定义五角星"></a>自定义五角星</h1>
+                                <p>样式是：</p>
+                                <p><img src="http://ocxgpwj6l.bkt.clouddn.com/yunshi.png" alt="">
+                                </p>
+                                <h2 id="需求概述"><a href="#需求概述" class="headerlink" title="需求概述"></a>需求概述
+                                </h2>
+                                <p>
+                                    我们需要一个类似原生RatingBar的这样一个评分View，但是RatingBar不够灵活，我们需要有不同颜色，不同间距，而且可调的一个评分Bar。</p>
+                                <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2>
+                                <p>我们主要是定义ratingbar，不和文字一起定义。<br>首先是：单个星星的高和宽，然后是需要知道每个星星之间的间距，还有就是那几颗星星是active那几颗是disactivie的。同时，我们需要计算在这个View中的什么位置开始画，最后就是需要指定我们的星星的resource了。
+                                </p>
+                                <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2>
+                                <h3 id="属性定义"><a href="#属性定义" class="headerlink" title="属性定义"></a>属性定义
+                                </h3>
+                                <p>需要定义的属性有:</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">&lt;declare-styleable name=&quot;CustomRatingStyle&quot;&gt;</div><div
+                                                        class="line">       &lt;!--宽，高，间距，激活的数量，没有激活的数量，激活的icon,没有激活的icon--&gt;</div><div
+                                                        class="line">       &lt;!--属性分别是：单个的宽，高，之间的距离，激活的数量，总数量，激活的drawable，没有激活的drawable--&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_width&quot; format=&quot;dimension&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_height&quot; format=&quot;dimension&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_padding&quot; format=&quot;dimension&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_active_size&quot; format=&quot;integer&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_size&quot; format=&quot;integer&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_active_drawable&quot; format=&quot;reference&quot;/&gt;</div><div
+                                                        class="line">       &lt;attr name=&quot;custom_rate_disactive_drawable&quot; format=&quot;reference&quot;/&gt;</div><div
+                                                        class="line">   &lt;/declare-styleable&gt;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>代码实现：</p>
+                                <p>
+                                    我们继承自View就好，不要ViewGroup。然后获取xml文件中的自定义属性值，获取属性值完成，同时给定默认值。同时，我们需要计算一个步长，作用是知道我们画下一个星星开始的坐标，他的计算是星星的width+星星之间的padding。同时，还有一点是可能active和disactivie的drawable大小不同，所以我们需要按照其中一个区计算步长，同时缩放到等同大小。比如我们按照active的drawable大小为标准，当disactive的drawable大小不同的时候，就对他进行比例缩放，直到相同。代码如下：</p>
+                                <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现
+                                </h3>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div><div
+                                                        class="line">14</div><div
+                                                        class="line">15</div><div
+                                                        class="line">16</div><div
+                                                        class="line">17</div><div
+                                                        class="line">18</div><div
+                                                        class="line">19</div><div
+                                                        class="line">20</div><div
+                                                        class="line">21</div><div
+                                                        class="line">22</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">//单个高</div><div class="line"> private float singleWidth;</div><div
+                                                        class="line"> //单个宽</div><div class="line"> private float singleHeight;</div><div
+                                                        class="line"> //间距</div><div class="line"> private int padding;</div><div
+                                                        class="line"> //总数量</div><div class="line"> private int size = 5;</div><div
+                                                        class="line"> //默认激活数量</div><div
+                                                        class="line"> private int activeSize = 3;</div><div
+                                                        class="line"> //激活的bitmap</div><div
+                                                        class="line"> private Bitmap activeBitmap;</div><div
+                                                        class="line"> //没有激活的bitmap</div><div
+                                                        class="line"> private Bitmap disactiveBitmap;</div><div
+                                                        class="line"> //画笔</div><div class="line"> private Paint mPaint;</div><div
+                                                        class="line"> //步长</div><div class="line"> private int stepSize;</div><div
+                                                        class="line"> //开始画的x坐标</div><div
+                                                        class="line"> private int drawStartX;</div><div
+                                                        class="line"> //开始画的y坐标</div><div
+                                                        class="line"> private int drawStartY;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>初始化代码:</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div><div
+                                                        class="line">14</div><div
+                                                        class="line">15</div><div
+                                                        class="line">16</div><div
+                                                        class="line">17</div><div
+                                                        class="line">18</div><div
+                                                        class="line">19</div><div
+                                                        class="line">20</div><div
+                                                        class="line">21</div><div
+                                                        class="line">22</div><div
+                                                        class="line">23</div><div
+                                                        class="line">24</div><div
+                                                        class="line">25</div><div
+                                                        class="line">26</div><div
+                                                        class="line">27</div><div
+                                                        class="line">28</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">int activeId = 0;</div><div
+                                                        class="line">    int disactiveId = 0;</div><div
+                                                        class="line">    if (attrs != null) &#123;</div><div
+                                                        class="line">        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CustomRatingStyle);</div><div
+                                                        class="line">        singleWidth = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_width, 0);</div><div
+                                                        class="line">        singleHeight = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_height, 0);</div><div
+                                                        class="line">        activeId = array.getResourceId(R.styleable.CustomRatingStyle_custom_rate_active_drawable, R.drawable.custom_rateingbar_active);</div><div
+                                                        class="line">        disactiveId = array.getResourceId(R.styleable.CustomRatingStyle_custom_rate_disactive_drawable, R.drawable.custom_rateingbar_disactive);</div><div
+                                                        class="line">        size = array.getInteger(R.styleable.CustomRatingStyle_custom_rate_size, 5);</div><div
+                                                        class="line">        activeSize = array.getInteger(R.styleable.CustomRatingStyle_custom_rate_active_size, 3);</div><div
+                                                        class="line">        padding = array.getDimensionPixelOffset(R.styleable.CustomRatingStyle_custom_rate_padding, 10);</div><div
+                                                        class="line">        array.recycle();</div><div
+                                                        class="line">    &#125;</div><div
+                                                        class="line">    activeBitmap = BitmapFactory.decodeResource(getResources(), activeId);</div><div
+                                                        class="line">    disactiveBitmap = BitmapFactory.decodeResource(getResources(), disactiveId);</div><div
+                                                        class="line">    stepSize = padding + activeBitmap.getWidth();</div><div
+                                                        class="line">    mPaint = new Paint();</div><div
+                                                        class="line">    if (singleHeight &lt;= 0) &#123;</div><div
+                                                        class="line">        singleHeight = activeBitmap.getHeight();</div><div
+                                                        class="line">    &#125;</div><div
+                                                        class="line">    if (singleWidth &lt;= 0) &#123;</div><div
+                                                        class="line">        singleWidth = activeBitmap.getWidth();</div><div
+                                                        class="line">    &#125;</div><div
+                                                        class="line">    //大小不同的话，对Bitmap进行压缩，</div><div
+                                                        class="line">    if (activeBitmap.getWidth() != disactiveBitmap.getWidth() || activeBitmap.getHeight() != disactiveBitmap.getHeight()) &#123;</div><div
+                                                        class="line">        //把dis压缩或者是放大的active的大小</div><div
+                                                        class="line">        disactiveBitmap = Bitmap.createScaledBitmap(disactiveBitmap, activeBitmap.getWidth(), activeBitmap.getHeight(), false);</div><div
+                                                        class="line">    &#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h3 id="逻辑实现"><a href="#逻辑实现" class="headerlink" title="逻辑实现"></a>逻辑实现
+                                </h3>
+                                <p>测量步长计算：我们是把五角星放在这个View的center位置，然后他所占的长度是5<em>width+4</em>padding。
+                                </p>
+                                <p>onMeasure 方法:</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div><div
+                                                        class="line">14</div><div
+                                                        class="line">15</div><div
+                                                        class="line">16</div><div
+                                                        class="line">17</div><div
+                                                        class="line">18</div><div
+                                                        class="line">19</div><div
+                                                        class="line">20</div><div
+                                                        class="line">21</div><div
+                                                        class="line">22</div><div
+                                                        class="line">23</div><div
+                                                        class="line">24</div><div
+                                                        class="line">25</div><div
+                                                        class="line">26</div><div
+                                                        class="line">27</div><div
+                                                        class="line">28</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">@Override</div><div
+                                                        class="line">   protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div
+                                                        class="line">       int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div
+                                                        class="line">       int widthSize = MeasureSpec.getSize(widthMeasureSpec);</div><div
+                                                        class="line">       int heightMode = MeasureSpec.getMode(heightMeasureSpec);</div><div
+                                                        class="line">       int heightSize = MeasureSpec.getSize(heightMeasureSpec);</div><div
+                                                        class="line">       int width;</div><div
+                                                        class="line">       int height;</div><div
+                                                        class="line">       //计算宽</div><div
+                                                        class="line">       if (widthMode == MeasureSpec.EXACTLY) &#123;</div><div
+                                                        class="line">           width = widthSize;</div><div
+                                                        class="line">       &#125; else &#123;</div><div
+                                                        class="line">           width = 5 * stepSize;</div><div
+                                                        class="line">       &#125;</div><div
+                                                        class="line">       //计算高</div><div
+                                                        class="line">       if (heightMode == MeasureSpec.EXACTLY) &#123;</div><div
+                                                        class="line">           height = heightSize;</div><div
+                                                        class="line">       &#125; else &#123;</div><div
+                                                        class="line">           height = (int) singleHeight;</div><div
+                                                        class="line">       &#125;</div><div
+                                                        class="line">       //总共应该的宽</div><div
+                                                        class="line">       int drawWidth = (int) (size * singleWidth + (size &lt;= 1 ? 0 : (size - 1) * padding));</div><div
+                                                        class="line">       //开始的y位置</div><div
+                                                        class="line">       int drawHeight = (int) ((height - singleHeight) / 2);</div><div
+                                                        class="line">       drawStartX = (width - drawWidth) / 2;</div><div
+                                                        class="line">       drawStartY = drawHeight &gt; 0 ? drawHeight : 0;</div><div
+                                                        class="line">       setMeasuredDimension(width, height);</div><div
+                                                        class="line">   &#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>onDraw方法:</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">@Override</div><div
+                                                        class="line">  protected void onDraw(Canvas canvas) &#123;</div><div
+                                                        class="line">      super.onDraw(canvas);</div><div
+                                                        class="line">      //开始画active</div><div
+                                                        class="line">      for (int i = 0; i &lt; activeSize; i++) &#123;</div><div
+                                                        class="line">          canvas.drawBitmap(activeBitmap, drawStartX + i * stepSize, drawStartY, mPaint);</div><div
+                                                        class="line">      &#125;</div><div
+                                                        class="line">      //开始画disactive</div><div
+                                                        class="line">      for (int i = activeSize; i &lt; size; i++) &#123;</div><div
+                                                        class="line">          canvas.drawBitmap(disactiveBitmap, drawStartX + i * stepSize, drawStartY, mPaint);</div><div
+                                                        class="line">      &#125;</div><div
+                                                        class="line">  &#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>然后，我们在对外提供一个设置activie的方法:</p>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><div class="line">1</div><div
+                                                        class="line">2</div><div
+                                                        class="line">3</div><div
+                                                        class="line">4</div><div
+                                                        class="line">5</div><div
+                                                        class="line">6</div><div
+                                                        class="line">7</div><div
+                                                        class="line">8</div><div
+                                                        class="line">9</div><div
+                                                        class="line">10</div><div
+                                                        class="line">11</div><div
+                                                        class="line">12</div><div
+                                                        class="line">13</div></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><div class="line">/**</div><div class="line"> * 设置激活的数量</div><div
+                                                        class="line"> *</div><div class="line"> * @param activeSize</div><div
+                                                        class="line"> */</div><div class="line">public void setActiveSize(int activeSize) &#123;</div><div
+                                                        class="line">    this.activeSize = activeSize;</div><div
+                                                        class="line">    if (CommentUtil.isUIThread()) &#123;</div><div
+                                                        class="line">        invalidate();</div><div
+                                                        class="line">    &#125; else &#123;</div><div
+                                                        class="line">        postInvalidate();</div><div
+                                                        class="line">    &#125;</div><div
+                                                        class="line">&#125;</div></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>这样子就完成了星星评分的UI了。<br>结果截图:</p>
+                                <p><img src="http://ocxgpwj6l.bkt.clouddn.com/ratingbar.png" alt="">
+                                </p>
+                                <p><a href="https://github.com/liweijieok/SilmpleView"
+                                      target="_blank" rel="external">源码下载</a></p>
 
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
+                            </div>
+
+                            <div>
 
 
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+                            </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
+                            <div>
 
-      
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
+                            </div>
 
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/images/avatar.jpg"
-               alt="liweijie" />
-          <p class="site-author-name" itemprop="name">liweijie</p>
-          <p class="site-description motion-element" itemprop="description">Android</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">43</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
+                            <footer class="post-footer">
 
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">19</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                                <div class="post-tags">
+
+                                    <a href="/tags/自定义View/" rel="tag">#自定义View</a>
+
+                                </div>
+
+
+                                <div class="post-nav">
+                                    <div class="post-nav-next post-nav-item">
+
+                                        <a href="/2017/04/20/Android/开源项目学习/modulesample/"
+                                           rel="next" title="使用Arouter实现组件化">
+                                            <i class="fa fa-chevron-left"></i> 使用Arouter实现组件化
+                                        </a>
+
+                                    </div>
+
+                                    <div class="post-nav-prev post-nav-item">
+
+                                        <a href="/2017/07/05/Android/Android基础/Activity的生命周期介绍/"
+                                           rel="prev" title="Activity的生命周期介绍">
+                                            Activity的生命周期介绍 <i class="fa fa-chevron-right"></i>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+
+                            </footer>
+                        </article>
+
+
+                        <div class="post-spread">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="comments" id="comments">
+
+                </div>
+
+
             </div>
-          
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">31</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
             </div>
-          
 
-        </nav>
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
 
-        
 
-        <div class="links-of-author motion-element">
-          
+                    <ul class="sidebar-nav motion-element">
+                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                            文章目录
+                        </li>
+                        <li class="sidebar-nav-overview" data-target="site-overview">
+                            站点概览
+                        </li>
+                    </ul>
+
+
+                    <section class="site-overview sidebar-panel ">
+                        <div class="site-author motion-element" itemprop="author" itemscope
+                             itemtype="//schema.org/Person">
+                            <img class="site-author-image" itemprop="image"
+                                 src="/uploads/images/avatar.jpg"
+                                 alt="liweijie"/>
+                            <p class="site-author-name" itemprop="name">liweijie</p>
+                            <p class="site-description motion-element" itemprop="description">
+                                Android</p>
+                        </div>
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <a href="/archives">
+                                    <span class="site-state-item-count">43</span>
+                                    <span class="site-state-item-name">日志</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-categories">
+                                <a href="/categories">
+                                    <span class="site-state-item-count">19</span>
+                                    <span class="site-state-item-name">分类</span>
+                                </a>
+                            </div>
+
+
+                            <div class="site-state-item site-state-tags">
+                                <a href="/tags">
+                                    <span class="site-state-item-count">31</span>
+                                    <span class="site-state-item-name">标签</span>
+                                </a>
+                            </div>
+
+
+                        </nav>
+
+
+                        <div class="links-of-author motion-element">
+
+                        </div>
+
+
+                    </section>
+
+
+                    <section
+                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                        <div class="post-toc">
+
+
+                            <div class="post-toc-content">
+                                <ol class="nav">
+                                    <li class="nav-item nav-level-1"><a class="nav-link"
+                                                                        href="#自定义五角星"><span
+                                            class="nav-number">1.</span> <span class="nav-text">自定义五角星</span></a>
+                                        <ol class="nav-child">
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#需求概述"><span
+                                                    class="nav-number">1.1.</span> <span
+                                                    class="nav-text">需求概述</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#分析"><span
+                                                    class="nav-number">1.2.</span> <span
+                                                    class="nav-text">分析</span></a></li>
+                                            <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                href="#实现"><span
+                                                    class="nav-number">1.3.</span> <span
+                                                    class="nav-text">实现</span></a>
+                                                <ol class="nav-child">
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#属性定义"><span
+                                                            class="nav-number">1.3.1.</span> <span
+                                                            class="nav-text">属性定义</span></a></li>
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#代码实现"><span
+                                                            class="nav-number">1.3.2.</span> <span
+                                                            class="nav-text">代码实现</span></a></li>
+                                                    <li class="nav-item nav-level-3"><a
+                                                            class="nav-link" href="#逻辑实现"><span
+                                                            class="nav-number">1.3.3.</span> <span
+                                                            class="nav-text">逻辑实现</span></a></li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                </div>
+            </aside>
+
+
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义五角星"><span class="nav-number">1.</span> <span class="nav-text">自定义五角星</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求概述"><span class="nav-number">1.1.</span> <span class="nav-text">需求概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">1.2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性定义"><span class="nav-number">1.3.1.</span> <span class="nav-text">属性定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">1.3.2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑实现"><span class="nav-number">1.3.3.</span> <span class="nav-text">逻辑实现</span></a></li></ol></li></ol></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="footer-inner">
+            <div class="copyright">
+
+                &copy;
+                <span itemprop="copyrightYear">2018</span>
+                <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">liweijie</span>
-</div>
+                <span class="author" itemprop="copyrightHolder">liweijie</span>
+            </div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+            <div class="powered-by">
+                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+            </div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+            <div class="theme-info">
+                主题 -
+                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                    NexT.Pisces
+                </a>
+            </div>
 
-        
 
-        
-      </div>
+        </div>
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+        <i class="fa fa-arrow-up"></i>
     </div>
-  </div>
+</div>
 
-  
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -573,85 +785,40 @@
 </script>
 
 
+<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
+<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
+<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-
-  
-
+<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-  
+<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-
-  
-  
+<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
 
 
+<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
