@@ -2,33 +2,33 @@
 
 
 <html class="theme-next pisces use-motion">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
-    <meta http-equiv="Cache-Control" content="no-transform"/>
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
-    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+    <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
     <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
-          rel="stylesheet" type="text/css">
+        rel="stylesheet" type="text/css">
 
 
-    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet"
-          type="text/css"/>
+    <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css"/>
-
-
-    <meta name="keywords" content="react,原生组件,"/>
+    <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2"/>
+    <meta name="keywords" content="react,原生组件," />
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
 
 
     <meta name="description" content="RN 使用原生组件和事件通讯RN嵌入原生ViewRN可以满足一般界面的绘制，但是对于一些特定的，还是需要通过原生实现会较为好。比如视频View，弹幕View。他的一般步骤是：
@@ -68,20 +68,20 @@ Js 引入
 
 
     <script type="text/javascript" id="hexo.configuration">
-      var NexT = window.NexT || {};
-      var CONFIG = {
-        scheme: 'Pisces',
-        sidebar: {"position": "left", "display": "post"},
-        fancybox: true,
-        motion: true,
-        duoshuo: {
-          userId: '0', author: '博主'
-        }
-      };
+        var NexT = window.NexT || {};
+        var CONFIG = {
+            scheme: 'Pisces',
+            sidebar: { "position": "left", "display": "post" },
+            fancybox: true,
+            motion: true,
+            duoshuo: {
+                userId: '0', author: '博主'
+            }
+        };
     </script>
 
 
-    <link rel="canonical" href="http://yoursite.com/2018/06/14/react/react_view/"/>
+    <link rel="canonical" href="http://yoursite.com/2018/06/14/react/react_view/" />
 
 
     <title> RN 使用原生组件和事件通讯 | Blog </title>
@@ -90,49 +90,49 @@ Js 引入
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
 
-<div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
+    <div class="container one-collumn sidebar-position-left page-post-detail ">
+        <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
-        <div class="header-inner">
-            <div class="site-meta ">
-
-
-                <div class="custom-logo-site-title">
-                    <a href="/" class="brand" rel="start">
-                        <span class="logo-line-before"><i></i></span>
-                        <span class="site-title">刘颖的Blog</span>
-                        <span class="logo-line-after"><i></i></span>
-                    </a>
-                </div>
-                <p class="site-subtitle">拾一枚思念放逐流年</p>
-            </div>
-
-            <div class="site-nav-toggle">
-                <button>
-                    <span class="btn-bar"></span>
-                    <span class="btn-bar"></span>
-                    <span class="btn-bar"></span>
-                </button>
-            </div>
-
-            <nav class="site-nav">
+        <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+            <div class="header-inner">
+                <div class="site-meta ">
 
 
-                <ul id="menu" class="menu">
-
-
-                    <li class="menu-item menu-item-home">
-                        <a href="/" rel="section">
-
-                            <i class="menu-item-icon fa fa-fw fa-home"></i> <br/>
-
-                            首页
+                    <div class="custom-logo-site-title">
+                        <a href="/" class="brand" rel="start">
+                            <span class="logo-line-before"><i></i></span>
+                            <span class="site-title">刘颖的Blog</span>
+                            <span class="logo-line-after"><i></i></span>
                         </a>
-                    </li>
+                    </div>
+                    <p class="site-subtitle">拾一枚思念放逐流年</p>
+                </div>
+
+                <div class="site-nav-toggle">
+                    <button>
+                        <span class="btn-bar"></span>
+                        <span class="btn-bar"></span>
+                        <span class="btn-bar"></span>
+                    </button>
+                </div>
+
+                <nav class="site-nav">
 
 
-                    <li class="menu-item menu-item-archives">
+                    <ul id="menu" class="menu">
+
+
+                        <li class="menu-item menu-item-home">
+                            <a href="/" rel="section">
+
+                                <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+
+                                首页
+                            </a>
+                        </li>
+
+
+                        <!-- <li class="menu-item menu-item-archives">
                         <a href="/archives" rel="section">
 
                             <i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>
@@ -159,118 +159,117 @@ Js 引入
 
                             标签
                         </a>
-                    </li>
+                    </li> -->
 
 
-                    <li class="menu-item menu-item-about">
-                        <a href="/about" rel="section">
+                        <li class="menu-item menu-item-about">
+                            <a href="/about" rel="section">
 
-                            <i class="menu-item-icon fa fa-fw fa-user"></i> <br/>
+                                <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
 
-                            关于
-                        </a>
-                    </li>
-
-
-                </ul>
+                                关于
+                            </a>
+                        </li>
 
 
-            </nav>
-
-        </div>
-    </header>
-
-    <main id="main" class="main">
-        <div class="main-inner">
-            <div class="content-wrap">
-                <div id="content" class="content">
+                    </ul>
 
 
-                    <div id="posts" class="posts-expand">
+                </nav>
+
+            </div>
+        </header>
+
+        <main id="main" class="main">
+            <div class="main-inner">
+                <div class="content-wrap">
+                    <div id="content" class="content">
 
 
-                        <article class="post post-type-normal " itemscope
-                                 itemtype="//schema.org/Article">
+                        <div id="posts" class="posts-expand">
 
 
-                            <header class="post-header">
+                            <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
 
-                                <h1 class="post-title" itemprop="name headline">
+                                <header class="post-header">
 
 
-                                    RN 使用原生组件和事件通讯
+                                    <h1 class="post-title" itemprop="name headline">
 
 
-                                </h1>
+                                        RN 使用原生组件和事件通讯
 
 
-                                <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-06-14T20:43:00+08:00" content="2018-06-14">
-              2018-06-14
-            </time>
-          </span>
+                                    </h1>
 
 
-                                    <span class="post-category">
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+                                    <div class="post-meta">
+                                        <span class="post-time">
+                                            <span class="post-meta-item-icon">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </span>
+                                            <span class="post-meta-item-text">发表于</span>
+                                            <time itemprop="dateCreated" datetime="2018-06-14T20:43:00+08:00"
+                                                content="2018-06-14">
+                                                2018-06-14
+                                            </time>
+                                        </span>
 
 
-                                </div>
-                            </header>
+                                        <span class="post-category">
+                                            &nbsp; | &nbsp;
+                                            <span class="post-meta-item-icon">
+                                                <i class="fa fa-folder-o"></i>
+                                            </span>
+                                            <span class="post-meta-item-text">分类于</span>
+
+                                            <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                                                <a href="/categories/react/" itemprop="url" rel="index">
+                                                    <span itemprop="name">react</span>
+                                                </a>
+                                            </span>
 
 
-                            <div class="post-body" itemprop="articleBody">
 
 
-                                <h1 id="RN-使用原生组件和事件通讯"><a href="#RN-使用原生组件和事件通讯" class="headerlink"
-                                                           title="RN 使用原生组件和事件通讯"></a>RN 使用原生组件和事件通讯
-                                </h1>
-                                <h2 id="RN嵌入原生View"><a href="#RN嵌入原生View" class="headerlink"
-                                                       title="RN嵌入原生View"></a>RN嵌入原生View</h2>
-                                <p>
-                                    RN可以满足一般界面的绘制，但是对于一些特定的，还是需要通过原生实现会较为好。比如视频View，弹幕View。他的一般步骤是：</p>
-                                <ol>
-                                    <li>定义原生View</li>
-                                    <li>编写ViewManager</li>
-                                    <li>Js 引入</li>
-                                </ol>
-                                <p>可以查看文档：<a
-                                        href="http://facebook.github.io/react-native/docs/native-components-android.html"
-                                        target="_blank" rel="external">Native UI Components</a></p>
-                                <h3 id="嵌入原生View例子"><a href="#嵌入原生View例子" class="headerlink"
-                                                       title="嵌入原生View例子"></a>嵌入原生View例子</h3><h4
-                                    id="Java端"><a href="#Java端" class="headerlink"
-                                                  title="Java端"></a>Java端</h4>
-                                <ul>
-                                    <li>定义View<br>比如我们需要使用比较简单的TextView作为例子，首先自定义View</li>
-                                </ul>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><div class="line">1</div><div
+
+                                        </span>
+
+
+                                    </div>
+                                </header>
+
+
+                                <div class="post-body" itemprop="articleBody">
+
+
+                                    <h1 id="RN-使用原生组件和事件通讯"><a href="#RN-使用原生组件和事件通讯" class="headerlink"
+                                            title="RN 使用原生组件和事件通讯"></a>RN 使用原生组件和事件通讯
+                                    </h1>
+                                    <h2 id="RN嵌入原生View"><a href="#RN嵌入原生View" class="headerlink"
+                                            title="RN嵌入原生View"></a>RN嵌入原生View</h2>
+                                    <p>
+                                        RN可以满足一般界面的绘制，但是对于一些特定的，还是需要通过原生实现会较为好。比如视频View，弹幕View。他的一般步骤是：</p>
+                                    <ol>
+                                        <li>定义原生View</li>
+                                        <li>编写ViewManager</li>
+                                        <li>Js 引入</li>
+                                    </ol>
+                                    <p>可以查看文档：<a
+                                            href="http://facebook.github.io/react-native/docs/native-components-android.html"
+                                            target="_blank" rel="external">Native UI Components</a></p>
+                                    <h3 id="嵌入原生View例子"><a href="#嵌入原生View例子" class="headerlink"
+                                            title="嵌入原生View例子"></a>嵌入原生View例子</h3>
+                                    <h4 id="Java端"><a href="#Java端" class="headerlink" title="Java端"></a>Java端</h4>
+                                    <ul>
+                                        <li>定义View<br>比如我们需要使用比较简单的TextView作为例子，首先自定义View</li>
+                                    </ul>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div
                                                         class="line">2</div><div
                                                         class="line">3</div><div
                                                         class="line">4</div><div
@@ -305,9 +304,9 @@ Js 引入
                                                         class="line">33</div><div
                                                         class="line">34</div><div
                                                         class="line">35</div></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><div class="line">public class MyTextView extends View &#123;</div><div
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">public class MyTextView extends View &#123;</div><div
                                                         class="line">    private String text;</div><div
                                                         class="line">    private int color;</div><div
                                                         class="line">    private int textSize;</div><div
@@ -341,18 +340,18 @@ Js 引入
                                                         class="line">        this.color = color;</div><div
                                                         class="line">    &#125;</div><div
                                                         class="line">&#125;</div></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <ul>
-                                    <li>然后，配置js端的RN</li>
-                                </ul>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><div class="line">1</div><div
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                    <ul>
+                                        <li>然后，配置js端的RN</li>
+                                    </ul>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div
                                                         class="line">2</div><div
                                                         class="line">3</div><div
                                                         class="line">4</div><div
@@ -374,9 +373,9 @@ Js 引入
                                                         class="line">20</div><div
                                                         class="line">21</div><div
                                                         class="line">22</div></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><div class="line">public class MyTextViewViewManager extends SimpleViewManager&lt;MyTextView&gt; &#123;</div><div
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">public class MyTextViewViewManager extends SimpleViewManager&lt;MyTextView&gt; &#123;</div><div
                                                         class="line">    @Override</div><div
                                                         class="line">    public String getName() &#123;</div><div
                                                         class="line">        return &quot;MyTextView&quot;;</div><div
@@ -398,39 +397,39 @@ Js 引入
                                                         class="line">        view.setTextSize(textSize);</div><div
                                                         class="line">    &#125;</div><div
                                                         class="line">&#125;</div></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <ul>
-                                    <li>配置ReactPackage，</li>
-                                </ul>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><div class="line">1</div><div
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                    <ul>
+                                        <li>配置ReactPackage，</li>
+                                    </ul>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div
                                                         class="line">2</div><div
                                                         class="line">3</div><div
                                                         class="line">4</div></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><div class="line">@Override</div><div
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">@Override</div><div
                                                         class="line">  public List&lt;ViewManager&gt; createViewManagers(ReactApplicationContext reactContext) &#123;</div><div
                                                         class="line">      return Arrays.&lt;ViewManager&gt;asList(new TestColorViewManager(), new MyTextViewViewManager());</div><div
                                                         class="line">  &#125;</div></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <p>然后设置给<code>ReactNativeHost</code>即可。</p>
-                                <h4 id="Js端"><a href="#Js端" class="headerlink" title="Js端"></a>Js端
-                                </h4>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><div class="line">1</div><div
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                    <p>然后设置给<code>ReactNativeHost</code>即可。</p>
+                                    <h4 id="Js端"><a href="#Js端" class="headerlink" title="Js端"></a>Js端
+                                    </h4>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><div class="line">1</div><div
                                                         class="line">2</div><div
                                                         class="line">3</div><div
                                                         class="line">4</div><div
@@ -444,9 +443,9 @@ Js 引入
                                                         class="line">12</div><div
                                                         class="line">13</div><div
                                                         class="line">14</div></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><div class="line">import &#123;requireNativeComponent, ViewPropTypes&#125; from &quot;react-native&quot;</div><div
+                                                </td>
+                                                <td class="code">
+                                                    <pre><div class="line">import &#123;requireNativeComponent, ViewPropTypes&#125; from &quot;react-native&quot;</div><div
                                                         class="line">import PropTypes from &quot;prop-types&quot;</div><div
                                                         class="line"></div><div class="line">const mt = &#123;</div><div
                                                         class="line">    name: &quot;MyTextView&quot;,</div><div
@@ -458,310 +457,302 @@ Js 引入
                                                         class="line">    &#125;</div><div
                                                         class="line">&#125;;</div><div
                                                         class="line"></div><div class="line">export const MyTextView = requireNativeComponent(&quot;MyTextView&quot;, mt);</div></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <p>
-                                    这里，我们需要导入<code>prop-types</code>，用来检测类型，使用<code>ViewPropTypes</code>表示剩余发View配置，然后就完成了把原生View引入RN中，使用按照正常的Component使用，比如<br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><div class="line">1</div><div class="line">2</div><div
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                    <p>
+                                        这里，我们需要导入<code>prop-types</code>，用来检测类型，使用<code>ViewPropTypes</code>表示剩余发View配置，然后就完成了把原生View引入RN中，使用按照正常的Component使用，比如<br>
+                                        <figure class="highlight plain">
+                                            <table>
+                                                <tr>
+                                                    <td class="gutter">
+                                                        <pre><div class="line">1</div><div class="line">2</div><div
                                                             class="line">3</div><div
                                                             class="line">4</div><div
                                                             class="line">5</div><div
                                                             class="line">6</div></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><div class="line">&lt;MyTextView</div><div
+                                                    </td>
+                                                    <td class="code">
+                                                        <pre><div class="line">&lt;MyTextView</div><div
                                                             class="line">                    textSize=&#123;60&#125;</div><div
                                                             class="line">                    text=&#123;&quot;heihei&quot;&#125;</div><div
                                                             class="line">                    color=&#123;&quot;#00ffff&quot;&#125;</div><div
                                                             class="line">                    style=&#123;&#123;width: 80, height: 80&#125;&#125;</div><div
                                                             class="line">                /&gt;</div></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <h3 id="属性解析"><a href="#属性解析" class="headerlink" title="属性解析"></a>属性解析
-                                </h3>
-                                <p>我们在Java端定义的时候，有一个注解是<code>ReactProps</code>，当然，我们可以使用<code>ReactPropGroup</code>注解。<br>首先，他是表明要导出的JavaScript属性，通过name指定，然后，被<code>ReactProps</code>注解的方法，他的第一个参数是该View实例对象，方法可以接受的参数有<code>boolean,
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </figure>
+                                    </p>
+                                    <h3 id="属性解析"><a href="#属性解析" class="headerlink" title="属性解析"></a>属性解析
+                                    </h3>
+                                    <p>我们在Java端定义的时候，有一个注解是<code>ReactProps</code>，当然，我们可以使用<code>ReactPropGroup</code>注解。<br>首先，他是表明要导出的JavaScript属性，通过name指定，然后，被<code>ReactProps</code>注解的方法，他的第一个参数是该View实例对象，方法可以接受的参数有<code>boolean,
                                     int, float, double, String, Boolean, Integer, ReadableArray,
                                     ReadableMap</code><br>对于使用<code>ReactProps</code>，他除了name属性之后，还有可选的<code>defaultBoolean</code>等其他一些default值，假如是自定义类型，比如是Color，可以通过customType指定。<br>对于使用<code>ReactPropGroup</code>,他与上面不同是他可以指定一个names数组属性。他的主要作用是给一些属性，比如border,padding,margin等减少方法编写。比如我们设置
-                                </p>
-                                <p>在js端，步骤是声明一个变量，name随便起，然后给他添加属性，属性与我们在java被声明的属性name一致，然后必须在最后添加上<code>...ViewPropTypes</code>。然后通过RN的<code>requireNativeComponent()</code>方法，抵押给参数是模块名称，第二个参数是我们的声明变量，就可以获得自定义Component了。
-                                </p>
-                                <h2 id="事件通讯"><a href="#事件通讯" class="headerlink" title="事件通讯"></a>事件通讯
-                                </h2>
-                                <p>在自定义和RN之间，总会有交互，比如View做了某些操作需要对RN页面进行更新等。</p>
-                                <p>未完待续…</p>
+                                    </p>
+                                    <p>在js端，步骤是声明一个变量，name随便起，然后给他添加属性，属性与我们在java被声明的属性name一致，然后必须在最后添加上<code>...ViewPropTypes</code>。然后通过RN的<code>requireNativeComponent()</code>方法，抵押给参数是模块名称，第二个参数是我们的声明变量，就可以获得自定义Component了。
+                                    </p>
+                                    <h2 id="事件通讯"><a href="#事件通讯" class="headerlink" title="事件通讯"></a>事件通讯
+                                    </h2>
+                                    <p>在自定义和RN之间，总会有交互，比如View做了某些操作需要对RN页面进行更新等。</p>
+                                    <p>未完待续…</p>
 
-
-                            </div>
-
-                            <div>
-
-
-                            </div>
-
-                            <div>
-
-
-                            </div>
-
-                            <footer class="post-footer">
-
-                                <div class="post-tags">
-
-                                    <a href="/tags/react-原生组件/" rel="tag">#react,原生组件</a>
 
                                 </div>
 
+                                <div>
 
-                                <div class="post-nav">
-                                    <div class="post-nav-next post-nav-item">
 
-                                        <a href="/2018/06/14/react/redux/" rel="next"
-                                           title="Redux 学习">
-                                            <i class="fa fa-chevron-left"></i> Redux 学习
-                                        </a>
-
-                                    </div>
-
-                                    <div class="post-nav-prev post-nav-item">
-
-                                    </div>
                                 </div>
 
-
-                            </footer>
-                        </article>
+                                <div>
 
 
-                        <div class="post-spread">
+                                </div>
 
+                                <footer class="post-footer">
+
+                                    <div class="post-tags">
+
+                                        <a href="/tags/react-原生组件/" rel="tag">#react,原生组件</a>
+
+                                    </div>
+
+
+                                    <div class="post-nav">
+                                        <div class="post-nav-next post-nav-item">
+
+                                            <a href="/2018/06/14/react/redux/" rel="next" title="Redux 学习">
+                                                <i class="fa fa-chevron-left"></i> Redux 学习
+                                            </a>
+
+                                        </div>
+
+                                        <div class="post-nav-prev post-nav-item">
+
+                                        </div>
+                                    </div>
+
+
+                                </footer>
+                            </article>
+
+
+                            <div class="post-spread">
+
+                            </div>
                         </div>
+
+
+                    </div>
+
+
+                    <div class="comments" id="comments">
+
                     </div>
 
 
                 </div>
 
 
-                <div class="comments" id="comments">
+                <div class="sidebar-toggle">
+                    <div class="sidebar-toggle-line-wrap">
+                        <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                        <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                        <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                    </div>
+                </div>
 
+                <aside id="sidebar" class="sidebar">
+                    <div class="sidebar-inner">
+
+
+                        <ul class="sidebar-nav motion-element">
+                            <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                                文章目录
+                            </li>
+                            <li class="sidebar-nav-overview" data-target="site-overview">
+                                站点概览
+                            </li>
+                        </ul>
+
+
+                        <section class="site-overview sidebar-panel ">
+                            <div class="site-author motion-element" itemprop="author" itemscope
+                                itemtype="//schema.org/Person">
+                                <img class="site-author-image" itemprop="image" src="/uploads/images/avatar.jpg"
+                                    alt="liuying" />
+                                <p class="site-author-name" itemprop="name">liuying</p>
+                                <p class="site-description motion-element" itemprop="description">
+                                    Android</p>
+                            </div>
+                            <nav class="site-state motion-element">
+                                <div class="site-state-item site-state-posts">
+                                    <a href="/archives">
+                                        <span class="site-state-item-count">--</span>
+                                        <span class="site-state-item-name">日志</span>
+                                    </a>
+                                </div>
+
+
+                                <div class="site-state-item site-state-categories">
+                                    <a href="/categories">
+                                        <span class="site-state-item-count">--</span>
+                                        <span class="site-state-item-name">分类</span>
+                                    </a>
+                                </div>
+
+
+                                <div class="site-state-item site-state-tags">
+                                    <a href="/tags">
+                                        <span class="site-state-item-count">--</span>
+                                        <span class="site-state-item-name">标签</span>
+                                    </a>
+                                </div>
+
+
+                            </nav>
+
+
+                            <div class="links-of-author motion-element">
+
+                            </div>
+
+
+                        </section>
+
+
+                        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                            <div class="post-toc">
+
+
+                                <div class="post-toc-content">
+                                    <ol class="nav">
+                                        <li class="nav-item nav-level-1"><a class="nav-link"
+                                                href="#RN-使用原生组件和事件通讯"><span class="nav-number">1.</span> <span
+                                                    class="nav-text">RN 使用原生组件和事件通讯</span></a>
+                                            <ol class="nav-child">
+                                                <li class="nav-item nav-level-2"><a class="nav-link"
+                                                        href="#RN嵌入原生View"><span class="nav-number">1.1.</span> <span
+                                                            class="nav-text">RN嵌入原生View</span></a>
+                                                    <ol class="nav-child">
+                                                        <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                href="#嵌入原生View例子"><span
+                                                                    class="nav-number">1.1.1.</span> <span
+                                                                    class="nav-text">嵌入原生View例子</span></a>
+                                                            <ol class="nav-child">
+                                                                <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                        href="#Java端"><span
+                                                                            class="nav-number">1.1.1.1.</span>
+                                                                        <span class="nav-text">Java端</span></a>
+                                                                </li>
+                                                                <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                        href="#Js端"><span
+                                                                            class="nav-number">1.1.1.2.</span>
+                                                                        <span class="nav-text">Js端</span></a>
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                        <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                href="#属性解析"><span class="nav-number">1.1.2.</span>
+                                                                <span class="nav-text">属性解析</span></a></li>
+                                                    </ol>
+                                                </li>
+                                                <li class="nav-item nav-level-2"><a class="nav-link" href="#事件通讯"><span
+                                                            class="nav-number">1.2.</span> <span
+                                                            class="nav-text">事件通讯</span></a></li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </section>
+
+
+                    </div>
+                </aside>
+
+
+            </div>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="footer-inner">
+                <div class="copyright">
+
+                    &copy;
+                    <span itemprop="copyrightYear">2018</span>
+                    <span class="with-love">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    <span class="author" itemprop="copyrightHolder">liuying</span>
+                </div>
+
+                <div class="powered-by">
+                    由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+                </div>
+
+                <div class="theme-info">
+                    主题 -
+                    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+                        NexT.Pisces
+                    </a>
                 </div>
 
 
             </div>
+        </footer>
 
-
-            <div class="sidebar-toggle">
-                <div class="sidebar-toggle-line-wrap">
-                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-                </div>
-            </div>
-
-            <aside id="sidebar" class="sidebar">
-                <div class="sidebar-inner">
-
-
-                    <ul class="sidebar-nav motion-element">
-                        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-                            文章目录
-                        </li>
-                        <li class="sidebar-nav-overview" data-target="site-overview">
-                            站点概览
-                        </li>
-                    </ul>
-
-
-                    <section class="site-overview sidebar-panel ">
-                        <div class="site-author motion-element" itemprop="author" itemscope
-                             itemtype="//schema.org/Person">
-                            <img class="site-author-image" itemprop="image"
-                                 src="/uploads/images/avatar.jpg"
-                                 alt="liuying"/>
-                            <p class="site-author-name" itemprop="name">liuying</p>
-                            <p class="site-description motion-element" itemprop="description">
-                                Android</p>
-                        </div>
-                        <nav class="site-state motion-element">
-                            <div class="site-state-item site-state-posts">
-                                <a href="/archives">
-                                    <span class="site-state-item-count">--</span>
-                                    <span class="site-state-item-name">日志</span>
-                                </a>
-                            </div>
-
-
-                            <div class="site-state-item site-state-categories">
-                                <a href="/categories">
-                                    <span class="site-state-item-count">--</span>
-                                    <span class="site-state-item-name">分类</span>
-                                </a>
-                            </div>
-
-
-                            <div class="site-state-item site-state-tags">
-                                <a href="/tags">
-                                    <span class="site-state-item-count">--</span>
-                                    <span class="site-state-item-name">标签</span>
-                                </a>
-                            </div>
-
-
-                        </nav>
-
-
-                        <div class="links-of-author motion-element">
-
-                        </div>
-
-
-                    </section>
-
-
-                    <section
-                            class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-                        <div class="post-toc">
-
-
-                            <div class="post-toc-content">
-                                <ol class="nav">
-                                    <li class="nav-item nav-level-1"><a class="nav-link"
-                                                                        href="#RN-使用原生组件和事件通讯"><span
-                                            class="nav-number">1.</span> <span class="nav-text">RN 使用原生组件和事件通讯</span></a>
-                                        <ol class="nav-child">
-                                            <li class="nav-item nav-level-2"><a class="nav-link"
-                                                                                href="#RN嵌入原生View"><span
-                                                    class="nav-number">1.1.</span> <span
-                                                    class="nav-text">RN嵌入原生View</span></a>
-                                                <ol class="nav-child">
-                                                    <li class="nav-item nav-level-3"><a
-                                                            class="nav-link"
-                                                            href="#嵌入原生View例子"><span
-                                                            class="nav-number">1.1.1.</span> <span
-                                                            class="nav-text">嵌入原生View例子</span></a>
-                                                        <ol class="nav-child">
-                                                            <li class="nav-item nav-level-4"><a
-                                                                    class="nav-link"
-                                                                    href="#Java端"><span
-                                                                    class="nav-number">1.1.1.1.</span>
-                                                                <span class="nav-text">Java端</span></a>
-                                                            </li>
-                                                            <li class="nav-item nav-level-4"><a
-                                                                    class="nav-link"
-                                                                    href="#Js端"><span
-                                                                    class="nav-number">1.1.1.2.</span>
-                                                                <span class="nav-text">Js端</span></a>
-                                                            </li>
-                                                        </ol>
-                                                    </li>
-                                                    <li class="nav-item nav-level-3"><a
-                                                            class="nav-link" href="#属性解析"><span
-                                                            class="nav-number">1.1.2.</span> <span
-                                                            class="nav-text">属性解析</span></a></li>
-                                                </ol>
-                                            </li>
-                                            <li class="nav-item nav-level-2"><a class="nav-link"
-                                                                                href="#事件通讯"><span
-                                                    class="nav-number">1.2.</span> <span
-                                                    class="nav-text">事件通讯</span></a></li>
-                                        </ol>
-                                    </li>
-                                </ol>
-                            </div>
-
-                        </div>
-                    </section>
-
-
-                </div>
-            </aside>
-
-
+        <div class="back-to-top">
+            <i class="fa fa-arrow-up"></i>
         </div>
-    </main>
-
-    <footer id="footer" class="footer">
-        <div class="footer-inner">
-            <div class="copyright">
-
-                &copy;
-                <span itemprop="copyrightYear">2018</span>
-                <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-                <span class="author" itemprop="copyrightHolder">liuying</span>
-            </div>
-
-            <div class="powered-by">
-                由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-            </div>
-
-            <div class="theme-info">
-                主题 -
-                <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-                    NexT.Pisces
-                </a>
-            </div>
-
-
-        </div>
-    </footer>
-
-    <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
     </div>
-</div>
 
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+    <script type="text/javascript">
+        if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+            window.Promise = null;
+        }
+    </script>
 
 
-<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
 
-<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
 
-<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
 
-<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
 
-<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
 
-<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-<script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+    <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
 
-<script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
-
-
-<script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
-
-<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+    <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
 
 
-<script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+    <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+    <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
 
 
-<script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+    <script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+    <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
 
 
 </body>
+
 </html>
